@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CBDD251418FF8CCA009043FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDD251318FF8CCA009043FE /* Foundation.framework */; };
+		CBDD251618FF8CCA009043FE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDD251518FF8CCA009043FE /* CoreGraphics.framework */; };
+		CBDD251818FF8CCA009043FE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDD251718FF8CCA009043FE /* UIKit.framework */; };
+		CBDD251E18FF8CCA009043FE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CBDD251C18FF8CCA009043FE /* InfoPlist.strings */; };
+		CBDD252018FF8CCA009043FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDD251F18FF8CCA009043FE /* main.m */; };
+		CBDD252418FF8CCA009043FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDD252318FF8CCA009043FE /* AppDelegate.m */; };
+		CBDD252618FF8CCA009043FE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBDD252518FF8CCA009043FE /* Images.xcassets */; };
+		CBDD252D18FF8CCA009043FE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDD252C18FF8CCA009043FE /* XCTest.framework */; };
+		CBDD252E18FF8CCA009043FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDD251318FF8CCA009043FE /* Foundation.framework */; };
+		CBDD252F18FF8CCA009043FE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDD251718FF8CCA009043FE /* UIKit.framework */; };
+		CBDD253718FF8CCA009043FE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CBDD253518FF8CCA009043FE /* InfoPlist.strings */; };
+		CBDD253918FF8CCA009043FE /* WinProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDD253818FF8CCA009043FE /* WinProjectTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CBDD253018FF8CCA009043FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CBDD250818FF8CC9009043FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBDD250F18FF8CCA009043FE;
+			remoteInfo = WinProject;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CBDD251018FF8CCA009043FE /* WinProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WinProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBDD251318FF8CCA009043FE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CBDD251518FF8CCA009043FE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CBDD251718FF8CCA009043FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CBDD251B18FF8CCA009043FE /* WinProject-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WinProject-Info.plist"; sourceTree = "<group>"; };
+		CBDD251D18FF8CCA009043FE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CBDD251F18FF8CCA009043FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CBDD252118FF8CCA009043FE /* WinProject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WinProject-Prefix.pch"; sourceTree = "<group>"; };
+		CBDD252218FF8CCA009043FE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CBDD252318FF8CCA009043FE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CBDD252518FF8CCA009043FE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CBDD252B18FF8CCA009043FE /* WinProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WinProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBDD252C18FF8CCA009043FE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		CBDD253418FF8CCA009043FE /* WinProjectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WinProjectTests-Info.plist"; sourceTree = "<group>"; };
+		CBDD253618FF8CCA009043FE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CBDD253818FF8CCA009043FE /* WinProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WinProjectTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CBDD250D18FF8CCA009043FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBDD251618FF8CCA009043FE /* CoreGraphics.framework in Frameworks */,
+				CBDD251818FF8CCA009043FE /* UIKit.framework in Frameworks */,
+				CBDD251418FF8CCA009043FE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBDD252818FF8CCA009043FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBDD252D18FF8CCA009043FE /* XCTest.framework in Frameworks */,
+				CBDD252F18FF8CCA009043FE /* UIKit.framework in Frameworks */,
+				CBDD252E18FF8CCA009043FE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CBDD250718FF8CC9009043FE = {
+			isa = PBXGroup;
+			children = (
+				CBDD251918FF8CCA009043FE /* WinProject */,
+				CBDD253218FF8CCA009043FE /* WinProjectTests */,
+				CBDD251218FF8CCA009043FE /* Frameworks */,
+				CBDD251118FF8CCA009043FE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CBDD251118FF8CCA009043FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CBDD251018FF8CCA009043FE /* WinProject.app */,
+				CBDD252B18FF8CCA009043FE /* WinProjectTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CBDD251218FF8CCA009043FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CBDD251318FF8CCA009043FE /* Foundation.framework */,
+				CBDD251518FF8CCA009043FE /* CoreGraphics.framework */,
+				CBDD251718FF8CCA009043FE /* UIKit.framework */,
+				CBDD252C18FF8CCA009043FE /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CBDD251918FF8CCA009043FE /* WinProject */ = {
+			isa = PBXGroup;
+			children = (
+				CBDD252218FF8CCA009043FE /* AppDelegate.h */,
+				CBDD252318FF8CCA009043FE /* AppDelegate.m */,
+				CBDD252518FF8CCA009043FE /* Images.xcassets */,
+				CBDD251A18FF8CCA009043FE /* Supporting Files */,
+			);
+			path = WinProject;
+			sourceTree = "<group>";
+		};
+		CBDD251A18FF8CCA009043FE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CBDD251B18FF8CCA009043FE /* WinProject-Info.plist */,
+				CBDD251C18FF8CCA009043FE /* InfoPlist.strings */,
+				CBDD251F18FF8CCA009043FE /* main.m */,
+				CBDD252118FF8CCA009043FE /* WinProject-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CBDD253218FF8CCA009043FE /* WinProjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				CBDD253818FF8CCA009043FE /* WinProjectTests.m */,
+				CBDD253318FF8CCA009043FE /* Supporting Files */,
+			);
+			path = WinProjectTests;
+			sourceTree = "<group>";
+		};
+		CBDD253318FF8CCA009043FE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CBDD253418FF8CCA009043FE /* WinProjectTests-Info.plist */,
+				CBDD253518FF8CCA009043FE /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CBDD250F18FF8CCA009043FE /* WinProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBDD253C18FF8CCA009043FE /* Build configuration list for PBXNativeTarget "WinProject" */;
+			buildPhases = (
+				CBDD250C18FF8CCA009043FE /* Sources */,
+				CBDD250D18FF8CCA009043FE /* Frameworks */,
+				CBDD250E18FF8CCA009043FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WinProject;
+			productName = WinProject;
+			productReference = CBDD251018FF8CCA009043FE /* WinProject.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CBDD252A18FF8CCA009043FE /* WinProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBDD253F18FF8CCA009043FE /* Build configuration list for PBXNativeTarget "WinProjectTests" */;
+			buildPhases = (
+				CBDD252718FF8CCA009043FE /* Sources */,
+				CBDD252818FF8CCA009043FE /* Frameworks */,
+				CBDD252918FF8CCA009043FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CBDD253118FF8CCA009043FE /* PBXTargetDependency */,
+			);
+			name = WinProjectTests;
+			productName = WinProjectTests;
+			productReference = CBDD252B18FF8CCA009043FE /* WinProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CBDD250818FF8CC9009043FE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Dean;
+				TargetAttributes = {
+					CBDD252A18FF8CCA009043FE = {
+						TestTargetID = CBDD250F18FF8CCA009043FE;
+					};
+				};
+			};
+			buildConfigurationList = CBDD250B18FF8CC9009043FE /* Build configuration list for PBXProject "WinProject" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CBDD250718FF8CC9009043FE;
+			productRefGroup = CBDD251118FF8CCA009043FE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CBDD250F18FF8CCA009043FE /* WinProject */,
+				CBDD252A18FF8CCA009043FE /* WinProjectTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CBDD250E18FF8CCA009043FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBDD251E18FF8CCA009043FE /* InfoPlist.strings in Resources */,
+				CBDD252618FF8CCA009043FE /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBDD252918FF8CCA009043FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBDD253718FF8CCA009043FE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CBDD250C18FF8CCA009043FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBDD252418FF8CCA009043FE /* AppDelegate.m in Sources */,
+				CBDD252018FF8CCA009043FE /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBDD252718FF8CCA009043FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBDD253918FF8CCA009043FE /* WinProjectTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CBDD253118FF8CCA009043FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CBDD250F18FF8CCA009043FE /* WinProject */;
+			targetProxy = CBDD253018FF8CCA009043FE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CBDD251C18FF8CCA009043FE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBDD251D18FF8CCA009043FE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CBDD253518FF8CCA009043FE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBDD253618FF8CCA009043FE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CBDD253A18FF8CCA009043FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CBDD253B18FF8CCA009043FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CBDD253D18FF8CCA009043FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WinProject/WinProject-Prefix.pch";
+				INFOPLIST_FILE = "WinProject/WinProject-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CBDD253E18FF8CCA009043FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WinProject/WinProject-Prefix.pch";
+				INFOPLIST_FILE = "WinProject/WinProject-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		CBDD254018FF8CCA009043FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WinProject.app/WinProject";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WinProject/WinProject-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "WinProjectTests/WinProjectTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		CBDD254118FF8CCA009043FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WinProject.app/WinProject";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WinProject/WinProject-Prefix.pch";
+				INFOPLIST_FILE = "WinProjectTests/WinProjectTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CBDD250B18FF8CC9009043FE /* Build configuration list for PBXProject "WinProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBDD253A18FF8CCA009043FE /* Debug */,
+				CBDD253B18FF8CCA009043FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBDD253C18FF8CCA009043FE /* Build configuration list for PBXNativeTarget "WinProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBDD253D18FF8CCA009043FE /* Debug */,
+				CBDD253E18FF8CCA009043FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CBDD253F18FF8CCA009043FE /* Build configuration list for PBXNativeTarget "WinProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBDD254018FF8CCA009043FE /* Debug */,
+				CBDD254118FF8CCA009043FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CBDD250818FF8CC9009043FE /* Project object */;
+}
