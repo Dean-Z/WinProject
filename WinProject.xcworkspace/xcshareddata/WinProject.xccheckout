@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A9070C28-B83F-439D-9CC7-46CEDE42CA07</string>
+	<key>IDESourceControlProjectName</key>
+	<string>WinProject</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0C5C0601-188F-4345-9F25-E52B48B59037</key>
+		<string>https://github.com/Dean-Z/WinProject.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>WinProject.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0C5C0601-188F-4345-9F25-E52B48B59037</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Dean-Z/WinProject.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0C5C0601-188F-4345-9F25-E52B48B59037</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0C5C0601-188F-4345-9F25-E52B48B59037</string>
+			<key>IDESourceControlWCCName</key>
+			<string>WinProject</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -13,4 +13,14 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #import "BaseXibViewController.h"
+    #import "UIView+XibView.h"
+    #import "UIView+Utils.h"
+    #import "Functions.h"
+    #import "AppDelegate.h"
+    #import "NSString+Extention.h"
+    #import "Configuration.h"
+    #import "Reachability.h"
+    #import "ASIHttpRequest.h"
+    #import "SBJson4.h"
 #endif

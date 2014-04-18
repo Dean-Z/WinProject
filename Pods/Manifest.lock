@@ -1,10 +1,28 @@
 PODS:
+  - ASIHTTPRequest (1.8.2):
+    - ASIHTTPRequest/ASIWebPageRequest
+    - ASIHTTPRequest/CloudFiles
+    - ASIHTTPRequest/Core
+    - ASIHTTPRequest/S3
+  - ASIHTTPRequest/ASIWebPageRequest (1.8.2):
+    - ASIHTTPRequest/Core
+  - ASIHTTPRequest/CloudFiles (1.8.2):
+    - ASIHTTPRequest/Core
+  - ASIHTTPRequest/Core (1.8.2):
+    - Reachability
+  - ASIHTTPRequest/S3 (1.8.2):
+    - ASIHTTPRequest/Core
   - Reachability (3.1.1)
+  - SBJson (4.0.1)
 
 DEPENDENCIES:
+  - ASIHTTPRequest (~> 1.8.2)
   - Reachability (~> 3.1.1)
+  - SBJson (~> 4.0.1)
 
 SPEC CHECKSUMS:
+  ASIHTTPRequest: 0b05282cf3c422c3474eff98c5bb8c1192b91b86
   Reachability: be4883bb93f31e38266ae3365e5600a317aae735
+  SBJson: a4f2b0dd2e1e79fc6ea990f021dfc6901d1f9cf1
 
-COCOAPODS: 0.29.0
+COCOAPODS: 0.32.1
