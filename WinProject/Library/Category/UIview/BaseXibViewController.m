@@ -18,7 +18,7 @@
 
 -(id)viewControllerFromXib
 {
-    return [self initWithNibName:nil bundle:nil];
+    return [self initWithNibName:NSStringFromClass([self class]) bundle:nil];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

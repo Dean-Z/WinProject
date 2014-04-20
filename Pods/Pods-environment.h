@@ -36,6 +36,12 @@
 #define COCOAPODS_VERSION_MINOR_ASIHTTPRequest_S3 8
 #define COCOAPODS_VERSION_PATCH_ASIHTTPRequest_S3 2
 
+// RDVTabBarController
+#define COCOAPODS_POD_AVAILABLE_RDVTabBarController
+#define COCOAPODS_VERSION_MAJOR_RDVTabBarController 1
+#define COCOAPODS_VERSION_MINOR_RDVTabBarController 1
+#define COCOAPODS_VERSION_PATCH_RDVTabBarController 3
+
 // Reachability
 #define COCOAPODS_POD_AVAILABLE_Reachability
 #define COCOAPODS_VERSION_MAJOR_Reachability 3

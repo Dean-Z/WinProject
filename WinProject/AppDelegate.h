@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Reachability.h"
+#import "RDVTabBarController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -15,6 +16,7 @@
 @property (nonatomic, strong) Reachability* reachability;
 @property (nonatomic) BOOL isNetworkAvailable;
 @property (nonatomic) BOOL hasNetworkChanged;
+@property (strong, nonatomic) UIViewController *viewController;
 
 +(id)shareAppDelegate;
 

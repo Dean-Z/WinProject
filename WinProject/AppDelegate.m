@@ -7,6 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "WPBuffetViewController.h"
+#import "WPSettingViewController.h"
+#import "WPMarketViewController.h"
+#import "WPWalletViewController.h"
+#import "RDVTabBarItem.h"
 
 @implementation AppDelegate
 
@@ -17,16 +22,126 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.isNetworkAvailable = YES;
+    self.hasNetworkChanged  = YES;
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleNetworkChange)
+                                                 name:kReachabilityChangedNotification
+                                               object:nil];
+    [self setReachability:[Reachability reachabilityForInternetConnection]];
+    [self.reachability startNotifier];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
+    [self setupViewControllers];
     
+    self.window.rootViewController = self.viewController;
+    
+    [self customizeInterface];
     
     return YES;
 }
 
+
+#pragma mark - Methods
+
+- (void)setupViewControllers
+{
+    UIViewController *wallet = [[WPWalletViewController alloc] viewControllerFromXib];
+    UIViewController *firstNavigationController = [[UINavigationController alloc]
+                                                   initWithRootViewController:wallet];
+    
+    UIViewController *buffet = [[WPBuffetViewController alloc] viewControllerFromXib];
+    UIViewController *secondNavigationController = [[UINavigationController alloc]
+                                                    initWithRootViewController:buffet];
+    
+    UIViewController *market = [[WPMarketViewController alloc] viewControllerFromXib];
+    UIViewController *thirdNavigationController = [[UINavigationController alloc]
+                                                   initWithRootViewController:market];
+    
+    UIViewController *setting = [[WPSettingViewController alloc] viewControllerFromXib];
+    UIViewController *fouthNavigationController = [[UINavigationController alloc]
+                                                   initWithRootViewController:setting];
+    
+    RDVTabBarController *tabBarController = [[RDVTabBarController alloc] init];
+    
+    [tabBarController setViewControllers:@[firstNavigationController, secondNavigationController,
+                                           thirdNavigationController,fouthNavigationController]];
+    self.viewController = tabBarController;
+    
+    [self customizeTabBarForController:tabBarController];
+}
+
+- (void)customizeTabBarForController:(RDVTabBarController *)tabBarController
+{
+    UIImage *finishedImage = [UIImage imageNamed:@"tabbar_selected_background"];
+    UIImage *unfinishedImage = [UIImage imageNamed:@"tabbar_normal_background"];
+    NSArray *tabBarItemImages = @[@"first", @"second", @"third",@"fouth"];
+    
+    NSInteger index = 0;
+    for (RDVTabBarItem *item in [[tabBarController tabBar] items]) {
+        
+        item.selectedTitleAttributes = @{
+                                         NSFontAttributeName: [UIFont boldSystemFontOfSize:12],
+                                         NSForegroundColorAttributeName: [UIColor whiteColor],
+                                         };
+        item.unselectedTitleAttributes = @{
+                                         NSFontAttributeName: [UIFont boldSystemFontOfSize:12],
+                                         NSForegroundColorAttributeName: [UIColor whiteColor],
+                                         };
+        
+        [item setBackgroundSelectedImage:finishedImage withUnselectedImage:unfinishedImage];
+        if (index == 3)
+        {
+            UIImage* image = [UIImage imageNamed:@"fouth"];
+            [item setFinishedSelectedImage:image withFinishedUnselectedImage:image];
+            return;
+        }
+        
+        UIImage *selectedimage = [UIImage imageNamed:[NSString stringWithFormat:@"%@_selected",
+                                                      [tabBarItemImages objectAtIndex:index]]];
+        UIImage *unselectedimage = [UIImage imageNamed:[NSString stringWithFormat:@"%@_normal",
+                                                        [tabBarItemImages objectAtIndex:index]]];
+        
+        [item setFinishedSelectedImage:selectedimage withFinishedUnselectedImage:unselectedimage];
+        
+        index++;
+    }
+}
+
+- (void)customizeInterface {
+    UINavigationBar *navigationBarAppearance = [UINavigationBar appearance];
+    
+    if ([[[UIDevice currentDevice] systemVersion] integerValue] >= 7.0) {
+        [navigationBarAppearance setBackgroundImage:[UIImage imageNamed:@"navigationbar_background_tall"]
+                                      forBarMetrics:UIBarMetricsDefault];
+    } else {
+        [navigationBarAppearance setBackgroundImage:[UIImage imageNamed:@"navigationbar_background"]
+                                      forBarMetrics:UIBarMetricsDefault];
+        
+        NSDictionary *textAttributes = nil;
+        
+        if ([[[UIDevice currentDevice] systemVersion] integerValue] >= 7.0) {
+            textAttributes = @{
+                               NSFontAttributeName: [UIFont boldSystemFontOfSize:20],
+                               NSForegroundColorAttributeName: [UIColor whiteColor],
+                               };
+        } else {
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_7_0
+            textAttributes = @{
+                               UITextAttributeFont: [UIFont boldSystemFontOfSize:20],
+                               UITextAttributeTextColor: [UIColor blackColor],
+                               UITextAttributeTextShadowColor: [UIColor clearColor],
+                               UITextAttributeTextShadowOffset: [NSValue valueWithUIOffset:UIOffsetZero],
+                               };
+#endif
+        }
+        
+        [navigationBarAppearance setTitleTextAttributes:textAttributes];
+    }
+}
 
 - (void) applicationDidBecomeActive:(UIApplication *)application
 {
