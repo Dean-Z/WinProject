@@ -54,3 +54,9 @@
 #define COCOAPODS_VERSION_MINOR_SBJson 0
 #define COCOAPODS_VERSION_PATCH_SBJson 1
 
+// TTTAttributedLabel
+#define COCOAPODS_POD_AVAILABLE_TTTAttributedLabel
+#define COCOAPODS_VERSION_MAJOR_TTTAttributedLabel 1
+#define COCOAPODS_VERSION_MINOR_TTTAttributedLabel 9
+#define COCOAPODS_VERSION_PATCH_TTTAttributedLabel 5
+

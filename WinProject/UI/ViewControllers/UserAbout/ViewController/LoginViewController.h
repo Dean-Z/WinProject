@@ -7,7 +7,10 @@
 //
 
 #import "BaseXibViewController.h"
+#import "WPSigninView.h"
+#import "WPSignupView.h"
 
-@interface LoginViewController : BaseXibViewController
+@interface LoginViewController : BaseXibViewController<WPSigninViewDelegate,WPSignupViewDelegate>
+
 
 @end

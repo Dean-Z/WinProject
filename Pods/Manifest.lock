@@ -15,17 +15,20 @@ PODS:
   - RDVTabBarController (1.1.3)
   - Reachability (3.1.1)
   - SBJson (4.0.1)
+  - TTTAttributedLabel (1.9.5)
 
 DEPENDENCIES:
   - ASIHTTPRequest (~> 1.8.2)
   - RDVTabBarController (~> 1.1.3)
   - Reachability (~> 3.1.1)
   - SBJson (~> 4.0.1)
+  - TTTAttributedLabel (~> 1.9.5)
 
 SPEC CHECKSUMS:
   ASIHTTPRequest: 0b05282cf3c422c3474eff98c5bb8c1192b91b86
   RDVTabBarController: 98bb589109d139821ac08e26ab9215b9057285f6
   Reachability: be4883bb93f31e38266ae3365e5600a317aae735
   SBJson: a4f2b0dd2e1e79fc6ea990f021dfc6901d1f9cf1
+  TTTAttributedLabel: 6154fd2407a03fb8d71abfa36f4710fff26a168e
 
 COCOAPODS: 0.32.1

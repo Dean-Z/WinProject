@@ -12,6 +12,7 @@
 #import "WPMarketViewController.h"
 #import "WPWalletViewController.h"
 #import "RDVTabBarItem.h"
+#import "LoginViewController.h"
 
 @implementation AppDelegate
 
@@ -35,9 +36,11 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    [self setupViewControllers];
+//    [self setupViewControllers];
     
-    self.window.rootViewController = self.viewController;
+    LoginViewController* login = [[LoginViewController alloc]viewControllerFromXib];
+    
+    self.window.rootViewController = login;
     
     [self customizeInterface];
     
@@ -111,7 +114,8 @@
     }
 }
 
-- (void)customizeInterface {
+- (void)customizeInterface
+{
     UINavigationBar *navigationBarAppearance = [UINavigationBar appearance];
     
     if ([[[UIDevice currentDevice] systemVersion] integerValue] >= 7.0) {

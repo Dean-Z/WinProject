@@ -14,11 +14,24 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
+        
     }
     return self;
 }
 
 
+- (void) renderView
+{
+    
+}
+
+- (IBAction)back:(id)sender
+{
+    if ([self.delegate respondsToSelector:@selector(signupBackAction)])
+    {
+        [self.phoneTextField resignFirstResponder];
+        [self.delegate signupBackAction];
+    }
+}
 
 @end

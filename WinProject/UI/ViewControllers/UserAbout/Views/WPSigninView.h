@@ -7,7 +7,20 @@
 //
 
 #import "WPBaseView.h"
+#import "TTTAttributedLabel.h"
 
-@interface WPSigninView : WPBaseView
+@protocol WPSigninViewDelegate;
+@interface WPSigninView : WPBaseView<TTTAttributedLabelDelegate>
+
+@property(nonatomic,weak) IBOutlet TTTAttributedLabel* forgotPasswordLabel;
+@property(nonatomic,assign) id<WPSigninViewDelegate> delegate;
+@property(nonatomic,weak) IBOutlet UITextField* phoneTextField;
+@property(nonatomic,weak) IBOutlet UITextField* passwordTextField;
+
+@end
+
+@protocol WPSigninViewDelegate <NSObject>
+
+-(void)signRegister;
 
 @end
