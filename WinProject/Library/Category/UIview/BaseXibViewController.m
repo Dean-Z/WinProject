@@ -59,6 +59,7 @@
 -(void)viewControllerRender
 {
     self.app  = [AppDelegate shareAppDelegate];
+    [self.navigationController setNavigationBarHidden:YES];
 }
 
 

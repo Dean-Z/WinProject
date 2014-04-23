@@ -10,4 +10,8 @@
 
 @interface WPSettingViewController : BaseXibViewController
 
+@property (nonatomic,weak) IBOutlet UIScrollView* scrollViewContainer;
+@property (nonatomic,weak) IBOutlet UIView* cell1Container;
+@property (nonatomic,weak) IBOutlet UIView* cell2Container;
+@property (nonatomic,weak) IBOutlet UIView* cell3Container;
 @end

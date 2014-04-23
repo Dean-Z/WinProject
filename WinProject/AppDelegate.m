@@ -36,11 +36,11 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-//    [self setupViewControllers];
+    [self setupViewControllers];
     
-    LoginViewController* login = [[LoginViewController alloc]viewControllerFromXib];
+//    self.viewController = [[LoginViewController alloc]viewControllerFromXib];
     
-    self.window.rootViewController = login;
+    self.window.rootViewController = self.viewController;
     
     [self customizeInterface];
     

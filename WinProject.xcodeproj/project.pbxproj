@@ -16,6 +16,9 @@
 		CB2FAD131902C3C000F46A0A /* WPMarketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB2FAD111902C3C000F46A0A /* WPMarketViewController.xib */; };
 		CB2FAD171902C3DA00F46A0A /* WPWalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2FAD151902C3DA00F46A0A /* WPWalletViewController.m */; };
 		CB2FAD181902C3DA00F46A0A /* WPWalletViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB2FAD161902C3DA00F46A0A /* WPWalletViewController.xib */; };
+		CB4211D41907A5DC001AC70B /* BufferProductView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4211D31907A5DC001AC70B /* BufferProductView.m */; };
+		CB4211D61907A5EC001AC70B /* BufferProductView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB4211D51907A5EC001AC70B /* BufferProductView.xib */; };
+		CB60BF66190525FC003190C7 /* CHDNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = CB60BF65190525FC003190C7 /* CHDNetwork.m */; };
 		CBA0E87E19012EED007119C0 /* Functions.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA0E87019012EED007119C0 /* Functions.m */; };
 		CBA0E87F19012EED007119C0 /* NSString+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA0E87319012EED007119C0 /* NSString+Extention.m */; };
 		CBA0E88019012EED007119C0 /* QQImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA0E87619012EED007119C0 /* QQImageView.m */; };
@@ -72,6 +75,11 @@
 		CB2FAD141902C3DA00F46A0A /* WPWalletViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPWalletViewController.h; sourceTree = "<group>"; };
 		CB2FAD151902C3DA00F46A0A /* WPWalletViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPWalletViewController.m; sourceTree = "<group>"; };
 		CB2FAD161902C3DA00F46A0A /* WPWalletViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPWalletViewController.xib; sourceTree = "<group>"; };
+		CB4211D21907A5DC001AC70B /* BufferProductView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BufferProductView.h; sourceTree = "<group>"; };
+		CB4211D31907A5DC001AC70B /* BufferProductView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BufferProductView.m; sourceTree = "<group>"; };
+		CB4211D51907A5EC001AC70B /* BufferProductView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BufferProductView.xib; sourceTree = "<group>"; };
+		CB60BF64190525FC003190C7 /* CHDNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHDNetwork.h; sourceTree = "<group>"; };
+		CB60BF65190525FC003190C7 /* CHDNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHDNetwork.m; sourceTree = "<group>"; };
 		CBA0E86F19012EED007119C0 /* Functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Functions.h; sourceTree = "<group>"; };
 		CBA0E87019012EED007119C0 /* Functions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Functions.m; sourceTree = "<group>"; };
 		CBA0E87219012EED007119C0 /* NSString+Extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extention.h"; sourceTree = "<group>"; };
@@ -148,6 +156,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB60BF63190525EB003190C7 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				CB60BF64190525FC003190C7 /* CHDNetwork.h */,
+				CB60BF65190525FC003190C7 /* CHDNetwork.m */,
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
 		CBA0E86619012DDD007119C0 /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +191,9 @@
 			children = (
 				CBA0E89819013A0C007119C0 /* WPBaseView.h */,
 				CBA0E89919013A0C007119C0 /* WPBaseView.m */,
+				CB4211D21907A5DC001AC70B /* BufferProductView.h */,
+				CB4211D31907A5DC001AC70B /* BufferProductView.m */,
+				CB4211D51907A5EC001AC70B /* BufferProductView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -361,6 +381,7 @@
 		CBDD251918FF8CCA009043FE /* WinProject */ = {
 			isa = PBXGroup;
 			children = (
+				CB60BF63190525EB003190C7 /* NetWork */,
 				CBA0E86C19012EBC007119C0 /* Library */,
 				CBA0E86619012DDD007119C0 /* UI */,
 				CBDD252218FF8CCA009043FE /* AppDelegate.h */,
@@ -480,6 +501,7 @@
 			files = (
 				CBA0E8A419013ABB007119C0 /* WPSignupView.xib in Resources */,
 				CBDD251E18FF8CCA009043FE /* InfoPlist.strings in Resources */,
+				CB4211D61907A5EC001AC70B /* BufferProductView.xib in Resources */,
 				CBDD252618FF8CCA009043FE /* Images.xcassets in Resources */,
 				CBA0E89719013908007119C0 /* LoginViewController.xib in Resources */,
 				CB2FAD181902C3DA00F46A0A /* WPWalletViewController.xib in Resources */,
@@ -538,8 +560,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB4211D41907A5DC001AC70B /* BufferProductView.m in Sources */,
 				CBA0E89A19013A0C007119C0 /* WPBaseView.m in Sources */,
 				CBA0E8A219013AAD007119C0 /* WPSignupView.m in Sources */,
+				CB60BF66190525FC003190C7 /* CHDNetwork.m in Sources */,
 				CBA0E87F19012EED007119C0 /* NSString+Extention.m in Sources */,
 				CBA0E88219012EED007119C0 /* UIView+Utils.m in Sources */,
 				CBA0E89619013908007119C0 /* LoginViewController.m in Sources */,
