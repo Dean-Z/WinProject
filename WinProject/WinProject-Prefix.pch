@@ -23,4 +23,5 @@
     #import "Reachability.h"
     #import "ASIHttpRequest.h"
     #import "SBJson4.h"
+    #import "InnerBand.h"
 #endif

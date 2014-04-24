@@ -9,6 +9,9 @@
 #import "WPSignupView.h"
 
 @implementation WPSignupView
+{
+    CheckItemView* checkItem;
+}
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -22,7 +25,25 @@
 
 - (void) renderView
 {
+    [self.phoneTextField setValue:[UIColor colorWithHexString:@"584f4a"]
+                          forKeyPath:@"_placeholderLabel.textColor"];
     
+    [self prepareCheckItem];
+}
+
+-(void) prepareCheckItem
+{
+    if (checkItem == nil)
+    {
+        checkItem = [CheckItemView viewFromXib];
+        checkItem.delegate = self;
+        [self.checkViewContainer addSubview:checkItem];
+    }
+}
+
+- (void) CheckItemViewisClicked:(BOOL)click
+{
+    [self.okButton setEnabled:click];
 }
 
 - (IBAction)back:(id)sender

@@ -7,13 +7,16 @@
 //
 
 #import "WPBaseView.h"
+#import "CheckItemView.h"
 
 @protocol WPSignupViewDelegate;
 
-@interface WPSignupView : WPBaseView
+@interface WPSignupView : WPBaseView<CheckItemViewDelegate>
 
 @property(nonatomic,assign) id<WPSignupViewDelegate> delegate;
 @property(nonatomic,weak) IBOutlet UITextField* phoneTextField;
+@property(nonatomic,weak) IBOutlet UIView* checkViewContainer;
+@property(nonatomic,weak) IBOutlet UIButton* okButton;
 
 @end
 

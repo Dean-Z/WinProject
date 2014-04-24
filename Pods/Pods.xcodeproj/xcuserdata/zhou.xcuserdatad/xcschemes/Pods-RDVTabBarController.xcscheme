@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1B2A44698C8A417ABE7671EA"
+               BlueprintIdentifier = "4CF40F9C6F704FD3BEBB4F60"
                BuildableName = "libPods-RDVTabBarController.a"
                BlueprintName = "Pods-RDVTabBarController"
                ReferencedContainer = "container:Pods.xcodeproj">
