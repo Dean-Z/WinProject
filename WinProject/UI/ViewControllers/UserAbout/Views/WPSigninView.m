@@ -21,6 +21,11 @@
 
 - (void) renderView
 {
+//    [self.phoneTextField setValue:[UIColor colorWithHexString:@"5f5d5d"]
+//                                forKeyPath:@"_placeholderLabel.textColor"];
+//    [self.passwordTextField setValue:[UIColor colorWithHexString:@"5f5d5d"]
+//                                forKeyPath:@"_placeholderLabel.textColor"];
+    
     NSMutableDictionary *linkAttributes = [NSMutableDictionary dictionary];
     [linkAttributes setValue:[NSNumber numberWithBool:YES] forKey:(NSString *)kCTUnderlineStyleAttributeName];
     self.forgotPasswordLabel.linkAttributes = linkAttributes;

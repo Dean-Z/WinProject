@@ -48,10 +48,10 @@
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="eW5-FB-y8i">
-                    <rect key="frame" x="106" y="238" width="53" height="31"/>
+                    <rect key="frame" x="115" y="233" width="35" height="36"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                    <state key="normal" title="返回">
+                    <state key="normal" image="login-left">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -66,4 +66,7 @@
             </connections>
         </view>
     </objects>
+    <resources>
+        <image name="login-left" width="35" height="36"/>
+    </resources>
 </document>
