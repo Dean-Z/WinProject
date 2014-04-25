@@ -11,7 +11,7 @@
             <rect key="frame" x="0.0" y="0.0" width="263" height="304"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="login-bg" id="3PH-ex-vh9">
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="bg_login" id="3PH-ex-vh9">
                     <rect key="frame" x="0.0" y="22" width="263" height="282"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                 </imageView>
@@ -89,8 +89,8 @@
         </view>
     </objects>
     <resources>
+        <image name="bg_login" width="263" height="282"/>
         <image name="button-blue" width="208" height="44"/>
-        <image name="login-bg" width="263" height="282"/>
         <image name="textfield-bg" width="207" height="38"/>
         <image name="topic-green" width="212" height="54"/>
     </resources>

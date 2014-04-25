@@ -36,9 +36,9 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-//    [self setupViewControllers];
+    [self setupViewControllers];
     
-    self.viewController = [[LoginViewController alloc]viewControllerFromXib];
+//    self.viewController = [[LoginViewController alloc]viewControllerFromXib];
     
     self.window.rootViewController = self.viewController;
     
@@ -81,37 +81,42 @@
 {
     UIImage *finishedImage = [UIImage imageNamed:@"tabbar_selected_background"];
     UIImage *unfinishedImage = [UIImage imageNamed:@"tabbar_normal_background"];
-    NSArray *tabBarItemImages = @[@"first", @"second", @"third",@"fouth"];
     
     NSInteger index = 0;
     for (RDVTabBarItem *item in [[tabBarController tabBar] items]) {
         
         item.selectedTitleAttributes = @{
-                                         NSFontAttributeName: [UIFont boldSystemFontOfSize:12],
+                                         NSFontAttributeName: [UIFont boldSystemFontOfSize:9],
                                          NSForegroundColorAttributeName: [UIColor whiteColor],
                                          };
         item.unselectedTitleAttributes = @{
-                                         NSFontAttributeName: [UIFont boldSystemFontOfSize:12],
+                                         NSFontAttributeName: [UIFont boldSystemFontOfSize:9],
                                          NSForegroundColorAttributeName: [UIColor whiteColor],
                                          };
         
+        item.titlePositionAdjustment = UIOffsetMake(0, 6);
+        
         [item setBackgroundSelectedImage:finishedImage withUnselectedImage:unfinishedImage];
-        if (index == 3)
-        {
-            UIImage* image = [UIImage imageNamed:@"fouth"];
-            [item setFinishedSelectedImage:image withFinishedUnselectedImage:image];
-            return;
-        }
-        
-        UIImage *selectedimage = [UIImage imageNamed:[NSString stringWithFormat:@"%@_selected",
-                                                      [tabBarItemImages objectAtIndex:index]]];
-        UIImage *unselectedimage = [UIImage imageNamed:[NSString stringWithFormat:@"%@_normal",
-                                                        [tabBarItemImages objectAtIndex:index]]];
-        
-        [item setFinishedSelectedImage:selectedimage withFinishedUnselectedImage:unselectedimage];
         
         index++;
     }
+    
+    RDVTabBarItem* item1 = [[[tabBarController tabBar] items] objectAtIndex:0];
+    UIImage* item1_image = [UIImage imageNamed:@"schedule"];
+    [item1 setFinishedSelectedImage:item1_image withFinishedUnselectedImage:item1_image];
+    
+    RDVTabBarItem* item2 = [[[tabBarController tabBar] items] objectAtIndex:1];
+    UIImage* item2_image = [UIImage imageNamed:@"shopping-bag"];
+    [item2 setFinishedSelectedImage:item2_image withFinishedUnselectedImage:item2_image];
+    
+    RDVTabBarItem* item3 = [[[tabBarController tabBar] items] objectAtIndex:2];
+    UIImage* item3_image = [UIImage imageNamed:@"market"];
+    [item3 setFinishedSelectedImage:item3_image withFinishedUnselectedImage:item3_image];
+    
+    RDVTabBarItem* item4 = [[[tabBarController tabBar] items] objectAtIndex:3];
+    UIImage* item4_image = [UIImage imageNamed:@"setting"];
+    [item4 setFinishedSelectedImage:item4_image withFinishedUnselectedImage:item4_image];
+    
 }
 
 - (void)customizeInterface
