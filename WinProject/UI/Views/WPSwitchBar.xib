@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="X3L-LL-dlf" customClass="WPSwitchBar">
+            <rect key="frame" x="0.0" y="0.0" width="210" height="35"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="market_white_bg" id="6jY-pS-nLd">
+                    <rect key="frame" x="0.0" y="1" width="210" height="35"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                </imageView>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="market_yellow" id="gjQ-Vf-GOe" userLabel="Image View - rightBg">
+                    <rect key="frame" x="104" y="3" width="104" height="31"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                </imageView>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="btn_chayedan_nol" id="y2c-JZ-b0y" userLabel="Image View - left_bg">
+                    <rect key="frame" x="2" y="3" width="104" height="31"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="进货" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="29v-D7-Qvm" userLabel="Label - Left">
+                    <rect key="frame" x="15" y="7" width="81" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <size key="shadowOffset" width="1" height="1"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NSF-ud-SMS" userLabel="Button - left">
+                    <rect key="frame" x="15" y="7" width="81" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onButtonClick:" destination="X3L-LL-dlf" eventType="touchUpInside" id="SWu-vu-DIn"/>
+                    </connections>
+                </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="茶叶蛋" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="I5Q-yF-ywg" userLabel="Label - Right">
+                    <rect key="frame" x="114" y="7" width="81" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <size key="shadowOffset" width="1" height="1"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kn9-eS-G2I" userLabel="Button - right">
+                    <rect key="frame" x="114" y="7" width="81" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onButtonClick:" destination="X3L-LL-dlf" eventType="touchUpInside" id="kt6-R5-sQV"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="switchLeftButton" destination="NSF-ud-SMS" id="cda-T2-mcR"/>
+                <outlet property="switchLeftLabel" destination="29v-D7-Qvm" id="w4n-FS-h3c"/>
+                <outlet property="switchLeftbg" destination="y2c-JZ-b0y" id="wTm-ud-SbB"/>
+                <outlet property="switchRightButton" destination="kn9-eS-G2I" id="LFe-8Z-6jx"/>
+                <outlet property="switchRightLabel" destination="I5Q-yF-ywg" id="7eb-WC-Hjg"/>
+                <outlet property="switchRightbg" destination="gjQ-Vf-GOe" id="IVM-rK-mjn"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_chayedan_nol" width="104" height="31"/>
+        <image name="market_white_bg" width="210" height="35"/>
+        <image name="market_yellow" width="104" height="31"/>
+    </resources>
+</document>

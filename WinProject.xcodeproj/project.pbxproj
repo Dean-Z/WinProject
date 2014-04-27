@@ -21,6 +21,8 @@
 		CB4211D91907ADBC001AC70B /* BufferCategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4211D81907ADBC001AC70B /* BufferCategoryView.m */; };
 		CB4211DB1907ADD7001AC70B /* BufferCategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB4211DA1907ADD7001AC70B /* BufferCategoryView.xib */; };
 		CB60BF66190525FC003190C7 /* CHDNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = CB60BF65190525FC003190C7 /* CHDNetwork.m */; };
+		CB7EDB64190D445600089DE8 /* WPSwitchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7EDB63190D445600089DE8 /* WPSwitchBar.m */; };
+		CB7EDB66190D449D00089DE8 /* WPSwitchBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB7EDB65190D449D00089DE8 /* WPSwitchBar.xib */; };
 		CB924BF519094578000389CB /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB924BF419094578000389CB /* MessageUI.framework */; };
 		CB924BF819094F04000389CB /* CheckItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB924BF719094F04000389CB /* CheckItemView.m */; };
 		CB924BFA19094F14000389CB /* CheckItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB924BF919094F14000389CB /* CheckItemView.xib */; };
@@ -88,6 +90,9 @@
 		CB4211DA1907ADD7001AC70B /* BufferCategoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BufferCategoryView.xib; sourceTree = "<group>"; };
 		CB60BF64190525FC003190C7 /* CHDNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHDNetwork.h; sourceTree = "<group>"; };
 		CB60BF65190525FC003190C7 /* CHDNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHDNetwork.m; sourceTree = "<group>"; };
+		CB7EDB62190D445600089DE8 /* WPSwitchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPSwitchBar.h; sourceTree = "<group>"; };
+		CB7EDB63190D445600089DE8 /* WPSwitchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPSwitchBar.m; sourceTree = "<group>"; };
+		CB7EDB65190D449D00089DE8 /* WPSwitchBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPSwitchBar.xib; sourceTree = "<group>"; };
 		CB924BF419094578000389CB /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		CB924BF619094F04000389CB /* CheckItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckItemView.h; sourceTree = "<group>"; };
 		CB924BF719094F04000389CB /* CheckItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckItemView.m; sourceTree = "<group>"; };
@@ -213,6 +218,9 @@
 				CB924BF619094F04000389CB /* CheckItemView.h */,
 				CB924BF719094F04000389CB /* CheckItemView.m */,
 				CB924BF919094F14000389CB /* CheckItemView.xib */,
+				CB7EDB62190D445600089DE8 /* WPSwitchBar.h */,
+				CB7EDB63190D445600089DE8 /* WPSwitchBar.m */,
+				CB7EDB65190D449D00089DE8 /* WPSwitchBar.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -525,6 +533,7 @@
 				CBDD252618FF8CCA009043FE /* Images.xcassets in Resources */,
 				CBA0E89719013908007119C0 /* LoginViewController.xib in Resources */,
 				CB2FAD181902C3DA00F46A0A /* WPWalletViewController.xib in Resources */,
+				CB7EDB66190D449D00089DE8 /* WPSwitchBar.xib in Resources */,
 				CB4211DB1907ADD7001AC70B /* BufferCategoryView.xib in Resources */,
 				CBA0E89F19013A8E007119C0 /* WPSigninView.xib in Resources */,
 				CB2FAD131902C3C000F46A0A /* WPMarketViewController.xib in Resources */,
@@ -601,6 +610,7 @@
 				CBA0E88319012EED007119C0 /* UIView+XibView.m in Sources */,
 				CB2FAD081902C37B00F46A0A /* WPBuffetViewController.m in Sources */,
 				CBA0E891190133D4007119C0 /* FTUtils+NSObject.m in Sources */,
+				CB7EDB64190D445600089DE8 /* WPSwitchBar.m in Sources */,
 				CBA0E892190133D4007119C0 /* UIView+CCAnimation.m in Sources */,
 				CBDD252418FF8CCA009043FE /* AppDelegate.m in Sources */,
 				CB2FAD0D1902C3A800F46A0A /* WPSettingViewController.m in Sources */,

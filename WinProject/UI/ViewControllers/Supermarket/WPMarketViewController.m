@@ -7,9 +7,12 @@
 //
 
 #import "WPMarketViewController.h"
+#import "WPSwitchBar.h"
 
 @interface WPMarketViewController ()
-
+{
+    WPSwitchBar* switchBar;
+}
 @end
 
 @implementation WPMarketViewController
@@ -26,8 +29,29 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    [self.navigationController setNavigationBarHidden:YES];
+    
+    [self perpareSwitchBar];
 }
+
+- (void) perpareSwitchBar
+{
+    if (switchBar)
+    {
+        switchBar = [WPSwitchBar viewFromXib];
+        [switchBar renderBarWithLeftContenct:@"进货" RightContent:@"鸡蛋饼" action:@selector(switchBarValueChanged) target:self];
+        switchBar.originX = 50;
+        switchBar.originY = 100;
+        [self.view addSubview:switchBar];
+    }
+}
+
+- (void) switchBarValueChanged
+{
+    
+}
+
 
 - (void)didReceiveMemoryWarning
 {

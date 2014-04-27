@@ -9,7 +9,9 @@
 #import "WPBuffetViewController.h"
 
 @interface WPBuffetViewController ()
+{
 
+}
 @end
 
 @implementation WPBuffetViewController
@@ -26,8 +28,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    [self.navigationController setNavigationBarHidden:YES];
+    
 }
+
 
 - (void)didReceiveMemoryWarning
 {
