@@ -8,6 +8,7 @@
 
 #import "WPMarketViewController.h"
 #import "WPSwitchBar.h"
+#import "MarketInTableViewCell.h"
 
 @interface WPMarketViewController ()
 {
@@ -37,19 +38,47 @@
 
 - (void) perpareSwitchBar
 {
-    if (switchBar)
+    if (switchBar == nil)
     {
         switchBar = [WPSwitchBar viewFromXib];
-        [switchBar renderBarWithLeftContenct:@"进货" RightContent:@"鸡蛋饼" action:@selector(switchBarValueChanged) target:self];
-        switchBar.originX = 50;
-        switchBar.originY = 100;
-        [self.view addSubview:switchBar];
+        [switchBar renderBarWithLeftContenct:@"进货" RightContent:@"出货" action:@selector(switchBarValueChanged) target:self];
+        [self.switchBarContainer addSubview:switchBar];
     }
 }
 
 - (void) switchBarValueChanged
 {
     
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 10;
+}
+
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    static NSString* identity = @"ProductCell";
+    
+    MarketInTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:identity];
+    
+    if (cell == nil)
+    {
+        cell = [[[NSBundle mainBundle]loadNibNamed:@"MarketInTableViewCell" owner:self options:nil]lastObject];
+    }
+    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    [cell renderCell];
+    
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 90.0f;
 }
 
 

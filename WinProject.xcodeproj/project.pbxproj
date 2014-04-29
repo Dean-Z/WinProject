@@ -43,6 +43,8 @@
 		CBA0E89F19013A8E007119C0 /* WPSigninView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBA0E89E19013A8E007119C0 /* WPSigninView.xib */; };
 		CBA0E8A219013AAD007119C0 /* WPSignupView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA0E8A119013AAD007119C0 /* WPSignupView.m */; };
 		CBA0E8A419013ABB007119C0 /* WPSignupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBA0E8A319013ABB007119C0 /* WPSignupView.xib */; };
+		CBCBF1FA190F48BF003439DB /* MarketInTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCBF1F8190F48BF003439DB /* MarketInTableViewCell.m */; };
+		CBCBF1FB190F48BF003439DB /* MarketInTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBCBF1F9190F48BF003439DB /* MarketInTableViewCell.xib */; };
 		CBDD251418FF8CCA009043FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDD251318FF8CCA009043FE /* Foundation.framework */; };
 		CBDD251618FF8CCA009043FE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDD251518FF8CCA009043FE /* CoreGraphics.framework */; };
 		CBDD251818FF8CCA009043FE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDD251718FF8CCA009043FE /* UIKit.framework */; };
@@ -130,6 +132,9 @@
 		CBA0E8A019013AAD007119C0 /* WPSignupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPSignupView.h; sourceTree = "<group>"; };
 		CBA0E8A119013AAD007119C0 /* WPSignupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPSignupView.m; sourceTree = "<group>"; };
 		CBA0E8A319013ABB007119C0 /* WPSignupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPSignupView.xib; sourceTree = "<group>"; };
+		CBCBF1F7190F48BF003439DB /* MarketInTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarketInTableViewCell.h; sourceTree = "<group>"; };
+		CBCBF1F8190F48BF003439DB /* MarketInTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarketInTableViewCell.m; sourceTree = "<group>"; };
+		CBCBF1F9190F48BF003439DB /* MarketInTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MarketInTableViewCell.xib; sourceTree = "<group>"; };
 		CBDD251018FF8CCA009043FE /* WinProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WinProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBDD251318FF8CCA009043FE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CBDD251518FF8CCA009043FE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -356,6 +361,7 @@
 		CBA0E8A719013B77007119C0 /* Supermarket */ = {
 			isa = PBXGroup;
 			children = (
+				CBCBF1F6190F488F003439DB /* Views */,
 				CB2FAD0F1902C3C000F46A0A /* WPMarketViewController.h */,
 				CB2FAD101902C3C000F46A0A /* WPMarketViewController.m */,
 				CB2FAD111902C3C000F46A0A /* WPMarketViewController.xib */,
@@ -371,6 +377,16 @@
 				CB2FAD161902C3DA00F46A0A /* WPWalletViewController.xib */,
 			);
 			path = Wallet;
+			sourceTree = "<group>";
+		};
+		CBCBF1F6190F488F003439DB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CBCBF1F7190F48BF003439DB /* MarketInTableViewCell.h */,
+				CBCBF1F8190F48BF003439DB /* MarketInTableViewCell.m */,
+				CBCBF1F9190F48BF003439DB /* MarketInTableViewCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		CBDD250718FF8CC9009043FE = {
@@ -535,6 +551,7 @@
 				CB2FAD181902C3DA00F46A0A /* WPWalletViewController.xib in Resources */,
 				CB7EDB66190D449D00089DE8 /* WPSwitchBar.xib in Resources */,
 				CB4211DB1907ADD7001AC70B /* BufferCategoryView.xib in Resources */,
+				CBCBF1FB190F48BF003439DB /* MarketInTableViewCell.xib in Resources */,
 				CBA0E89F19013A8E007119C0 /* WPSigninView.xib in Resources */,
 				CB2FAD131902C3C000F46A0A /* WPMarketViewController.xib in Resources */,
 				CB2FAD0E1902C3A800F46A0A /* WPSettingViewController.xib in Resources */,
@@ -613,6 +630,7 @@
 				CB7EDB64190D445600089DE8 /* WPSwitchBar.m in Sources */,
 				CBA0E892190133D4007119C0 /* UIView+CCAnimation.m in Sources */,
 				CBDD252418FF8CCA009043FE /* AppDelegate.m in Sources */,
+				CBCBF1FA190F48BF003439DB /* MarketInTableViewCell.m in Sources */,
 				CB2FAD0D1902C3A800F46A0A /* WPSettingViewController.m in Sources */,
 				CB2FAD171902C3DA00F46A0A /* WPWalletViewController.m in Sources */,
 				CBDD252018FF8CCA009043FE /* main.m in Sources */,

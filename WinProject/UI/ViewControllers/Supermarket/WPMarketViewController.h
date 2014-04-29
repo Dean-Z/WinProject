@@ -8,6 +8,9 @@
 
 #import "BaseXibViewController.h"
 
-@interface WPMarketViewController : BaseXibViewController
+@interface WPMarketViewController : BaseXibViewController<UITableViewDataSource,UITableViewDelegate>
+
+@property(nonatomic,weak) IBOutlet UITableView* productTabelView;
+@property(nonatomic,weak) IBOutlet UIView*      switchBarContainer;
 
 @end
