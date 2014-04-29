@@ -18,8 +18,8 @@
 @property(nonatomic,weak) IBOutlet UIButton*    switchRightButton;
 @property(nonatomic,assign) SEL  action;
 @property(nonatomic,assign) NSInteger selectAtIndex;
-@property(nonatomic,strong) UIViewController* target;
+@property(nonatomic,strong) id target;
 
--(void)renderBarWithLeftContenct:(NSString*)left RightContent:(NSString*)right action:(SEL)action target:(UIViewController*)target;
+-(void)renderBarWithLeftContenct:(NSString*)left RightContent:(NSString*)right action:(SEL)action target:(id)target;
 
 @end

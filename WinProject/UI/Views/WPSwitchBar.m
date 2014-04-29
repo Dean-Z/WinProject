@@ -20,7 +20,7 @@
     return self;
 }
 
--(void)renderBarWithLeftContenct:(NSString*)left RightContent:(NSString*)right action:(SEL)action target:(UIViewController *)target
+-(void)renderBarWithLeftContenct:(NSString*)left RightContent:(NSString*)right action:(SEL)action target:(id)target
 {
     self.switchLeftLabel.text = left;
     self.switchRightLabel.text = right;
