@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		44BBC5FDA0E54FBA986976C9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 622F65B179774E9BA8C6923B /* libPods.a */; };
+		CB2DAF3D1910E16600DD29C1 /* BillView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DAF3C1910E16600DD29C1 /* BillView.m */; };
+		CB2DAF3F1910E18700DD29C1 /* BillView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB2DAF3E1910E18700DD29C1 /* BillView.xib */; };
 		CB2FAD081902C37B00F46A0A /* WPBuffetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2FAD061902C37B00F46A0A /* WPBuffetViewController.m */; };
 		CB2FAD091902C37B00F46A0A /* WPBuffetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB2FAD071902C37B00F46A0A /* WPBuffetViewController.xib */; };
 		CB2FAD0D1902C3A800F46A0A /* WPSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2FAD0B1902C3A800F46A0A /* WPSettingViewController.m */; };
@@ -75,6 +77,9 @@
 /* Begin PBXFileReference section */
 		622F65B179774E9BA8C6923B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8143D71A6E014E09B8DAF4CC /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		CB2DAF3B1910E16600DD29C1 /* BillView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BillView.h; sourceTree = "<group>"; };
+		CB2DAF3C1910E16600DD29C1 /* BillView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillView.m; sourceTree = "<group>"; };
+		CB2DAF3E1910E18700DD29C1 /* BillView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BillView.xib; sourceTree = "<group>"; };
 		CB2FAD051902C37B00F46A0A /* WPBuffetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPBuffetViewController.h; sourceTree = "<group>"; };
 		CB2FAD061902C37B00F46A0A /* WPBuffetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPBuffetViewController.m; sourceTree = "<group>"; };
 		CB2FAD071902C37B00F46A0A /* WPBuffetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPBuffetViewController.xib; sourceTree = "<group>"; };
@@ -236,6 +241,9 @@
 				CB4E1397190FF0130048709B /* RakeView.h */,
 				CB4E1398190FF0130048709B /* RakeView.m */,
 				CB4E139A190FF0220048709B /* RakeView.xib */,
+				CB2DAF3B1910E16600DD29C1 /* BillView.h */,
+				CB2DAF3C1910E16600DD29C1 /* BillView.m */,
+				CB2DAF3E1910E18700DD29C1 /* BillView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -570,6 +578,7 @@
 				CB924BFA19094F14000389CB /* CheckItemView.xib in Resources */,
 				CB4E1395190FE6970048709B /* WawaSC-Regular.otf in Resources */,
 				CB2FAD091902C37B00F46A0A /* WPBuffetViewController.xib in Resources */,
+				CB2DAF3F1910E18700DD29C1 /* BillView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,6 +645,7 @@
 				CBA0E88F190133D4007119C0 /* CoreAnimationEffect.m in Sources */,
 				CBA0E88119012EED007119C0 /* BaseXibViewController.m in Sources */,
 				CBA0E87E19012EED007119C0 /* Functions.m in Sources */,
+				CB2DAF3D1910E16600DD29C1 /* BillView.m in Sources */,
 				CBA0E88019012EED007119C0 /* QQImageView.m in Sources */,
 				CBA0E88319012EED007119C0 /* UIView+XibView.m in Sources */,
 				CB2FAD081902C37B00F46A0A /* WPBuffetViewController.m in Sources */,

@@ -11,6 +11,7 @@
 @interface WPWalletViewController ()
 {
     RakeView* rakeView;
+    BillView* billView;
 }
 @end
 
@@ -38,6 +39,7 @@
     [self dealCoinLabel];
     
     [self prepareRakeView];
+    [self prepareBillView];
     
     [self.mainScrollView setContentSize:CGSizeMake(320*3, 0)];
 }
@@ -63,6 +65,18 @@
         rakeView.originY = (self.view.sizeH - 108 - rakeView.sizeH)/2;
         [rakeView renderView];
         [self.mainScrollView addSubview:rakeView];
+    }
+}
+
+- (void) prepareBillView
+{
+    if (billView == nil)
+    {
+        billView = [BillView viewFromXib];
+        billView.originX = self.view.sizeW*2 + (self.view.sizeW - billView.sizeW)/2;
+        billView.originY = (self.view.sizeH - 108 - billView.sizeH)/2;
+        [billView renderView];
+        [self.mainScrollView addSubview:billView];
     }
 }
 

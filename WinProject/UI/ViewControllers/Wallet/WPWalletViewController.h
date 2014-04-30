@@ -8,6 +8,7 @@
 
 #import "BaseXibViewController.h"
 #import "RakeView.h"
+#import "BillView.h"
 
 @interface WPWalletViewController : BaseXibViewController<UIScrollViewDelegate>
 
