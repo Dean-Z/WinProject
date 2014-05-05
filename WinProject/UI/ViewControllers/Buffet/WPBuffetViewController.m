@@ -10,7 +10,7 @@
 
 @interface WPBuffetViewController ()
 {
-
+    WPStockViewController* stock;
 }
 @end
 
@@ -34,10 +34,40 @@
 }
 
 
+- (IBAction)stockAction:(id)sender
+{
+    if (stock == nil)
+    {
+        stock = [[WPStockViewController alloc]viewControllerFromXib];
+        stock.delegate = self;
+        stock.view.originX = self.view.sizeW;
+        [self.view addSubview:stock.view];
+    }
+    
+    [UIView transitionWithView:stock.view duration:0.3 options:UIViewAnimationOptionCurveEaseIn animations:^{
+        stock.view.originX = 0;
+    } completion:^(BOOL finished) {
+        
+    }];
+}
+
+- (void) stockViewClose
+{
+    if (stock)
+    {
+        [UIView transitionWithView:stock.view duration:0.3 options:UIViewAnimationOptionCurveEaseIn animations:^{
+            stock.view.originX = self.view.sizeW;
+        } completion:^(BOOL finished) {
+            [stock.view removeFromSuperview];
+            stock = nil;
+        }];
+    }
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
 }
 
 @end

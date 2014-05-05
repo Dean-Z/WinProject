@@ -9,6 +9,9 @@
 #import "BufferProductView.h"
 
 @implementation BufferProductView
+{
+    WPProductButton* productBtn;
+}
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -18,6 +21,18 @@
     return self;
 }
 
+- (void) renderView
+{
+    [self prepareProductButton];
+}
 
+- (void) prepareProductButton
+{
+    if (productBtn == nil)
+    {
+        productBtn = [WPProductButton viewFromXib];
+        [self.priceBtnContainer addSubview:productBtn];
+    }
+}
 
 @end

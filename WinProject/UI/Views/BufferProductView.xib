@@ -11,40 +11,41 @@
             <rect key="frame" x="0.0" y="0.0" width="140" height="160"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="nWb-Fh-CQi">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test-01" id="nWb-Fh-CQi">
                     <rect key="frame" x="5" y="5" width="130" height="113"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ePy-ci-Idd">
-                    <rect key="frame" x="5" y="122" width="94" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Button">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                </button>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="有效期至: 05-14" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tWM-PZ-UFK">
-                    <rect key="frame" x="5" y="142" width="72" height="17"/>
+                    <rect key="frame" x="5" y="143" width="72" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="9"/>
                     <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3000份" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eYO-90-Rvn">
-                    <rect key="frame" x="93" y="144" width="42" height="13"/>
+                    <rect key="frame" x="93" y="145" width="42" height="13"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="9"/>
                     <color key="textColor" red="1" green="0.12870666059999999" blue="0.080662636859999998" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" id="Avd-X2-9ps">
+                    <rect key="frame" x="5" y="120" width="98" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="endTimeLabel" destination="tWM-PZ-UFK" id="Hae-UM-WfK"/>
                 <outlet property="numberProductLabel" destination="eYO-90-Rvn" id="LSY-ob-flX"/>
-                <outlet property="priceButton" destination="ePy-ci-Idd" id="7Im-yr-IRz"/>
+                <outlet property="priceBtnContainer" destination="Avd-X2-9ps" id="EUE-0r-HOF"/>
                 <outlet property="productImage" destination="nWb-Fh-CQi" id="335-W1-zLR"/>
             </connections>
         </view>
     </objects>
+    <resources>
+        <image name="test-01" width="266" height="229"/>
+    </resources>
 </document>

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WPStockViewController.h"
 
-@interface WPBuffetViewController : BaseXibViewController
+@interface WPBuffetViewController : BaseXibViewController<WPStockViewControllerDelegate>
 
 @end

@@ -8,12 +8,13 @@
 
 #import "WPBaseView.h"
 #import "UIImageView+WebCache.h"
+#import "WPProductButton.h"
 
 @interface BufferProductView : WPBaseView
 
 @property(nonatomic,weak) IBOutlet UIImageView* productImage;
 @property(nonatomic,weak) IBOutlet UILabel*     endTimeLabel;
 @property(nonatomic,weak) IBOutlet UILabel*     numberProductLabel;
-@property(nonatomic,weak) IBOutlet UIButton*    priceButton;
+@property(nonatomic,weak) IBOutlet UIView*      priceBtnContainer;
 
 @end

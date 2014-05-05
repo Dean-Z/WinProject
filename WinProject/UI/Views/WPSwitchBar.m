@@ -38,12 +38,18 @@
         self.selectAtIndex = 0;
         [self.switchRightbg setImage:[UIImage imageNamed:@"market_gray"]];
         [self.switchLeftbg setImage:[UIImage imageNamed:@"btn_chayedan_sel"]];
+        
+        self.switchLeftLabel.shadowColor = [UIColor colorWithHexString:@"894000"];
+        self.switchRightLabel.shadowColor = [UIColor colorWithHexString:@"525252"];
     }
     else if(button == self.switchRightButton)
     {
         self.selectAtIndex = 1;
         [self.switchRightbg setImage:[UIImage imageNamed:@"market_yellow"]];
         [self.switchLeftbg setImage:[UIImage imageNamed:@"btn_chayedan_nol"]];
+        
+        self.switchRightLabel.shadowColor = [UIColor colorWithHexString:@"894000"];
+        self.switchLeftLabel.shadowColor = [UIColor colorWithHexString:@"525252"];
     }
     
     if (self.action)

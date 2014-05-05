@@ -28,7 +28,7 @@
     [super viewDidLoad];
     [self.navigationController setNavigationBarHidden:YES];
     
-    [self.scrollViewContainer setContentSize:CGSizeMake(0, self.view.sizeH)];
+    [self.scrollViewContainer setContentSize:CGSizeMake(0, self.view.sizeH-64)];
     
     [self makeCornerRadiusAtView:self.cell1Container];
     [self makeCornerRadiusAtView:self.cell2Container];

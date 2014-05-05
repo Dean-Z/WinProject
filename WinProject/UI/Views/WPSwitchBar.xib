@@ -15,11 +15,11 @@
                     <rect key="frame" x="0.0" y="1" width="210" height="35"/>
                     <autoresizingMask key="autoresizingMask"/>
                 </imageView>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="market_yellow" id="gjQ-Vf-GOe" userLabel="Image View - rightBg">
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="market_gray" id="gjQ-Vf-GOe" userLabel="Image View - rightBg">
                     <rect key="frame" x="104" y="3" width="104" height="31"/>
                     <autoresizingMask key="autoresizingMask"/>
                 </imageView>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="btn_chayedan_nol" id="y2c-JZ-b0y" userLabel="Image View - left_bg">
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="btn_chayedan_sel" id="y2c-JZ-b0y" userLabel="Image View - left_bg">
                     <rect key="frame" x="2" y="3" width="104" height="31"/>
                     <autoresizingMask key="autoresizingMask"/>
                 </imageView>
@@ -29,7 +29,7 @@
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
-                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="shadowColor" red="0.53725490196078429" green="0.25098039215686274" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <size key="shadowOffset" width="1" height="1"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NSF-ud-SMS" userLabel="Button - left">
@@ -57,7 +57,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="18"/>
                     <state key="normal">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" red="0.32156862745098036" green="0.32156862745098036" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="onButtonClick:" destination="X3L-LL-dlf" eventType="touchUpInside" id="kt6-R5-sQV"/>
@@ -77,8 +77,8 @@
         </view>
     </objects>
     <resources>
-        <image name="btn_chayedan_nol" width="104" height="31"/>
+        <image name="btn_chayedan_sel" width="104" height="31"/>
+        <image name="market_gray" width="104" height="31"/>
         <image name="market_white_bg" width="210" height="35"/>
-        <image name="market_yellow" width="104" height="31"/>
     </resources>
 </document>
