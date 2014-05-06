@@ -1,1 +1,0 @@
-../../InnerBand/InnerBand/Core/Categories/UIImage+InnerBand.h
