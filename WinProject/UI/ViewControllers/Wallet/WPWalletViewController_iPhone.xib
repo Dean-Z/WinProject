@@ -22,11 +22,11 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="bg-1136x1280" id="xcE-hI-Jgh">
-                    <rect key="frame" x="0.0" y="-5" width="568" height="640"/>
+                    <rect key="frame" x="0.0" y="-88" width="568" height="640"/>
                     <autoresizingMask key="autoresizingMask"/>
                 </imageView>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="xPt-DE-0SW">
-                    <rect key="frame" x="0.0" y="64" width="320" height="363"/>
+                    <rect key="frame" x="0.0" y="63.999999460438403" width="320" height="363"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                     <subviews>
                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="home_qiandai" id="nek-ra-LzE">
