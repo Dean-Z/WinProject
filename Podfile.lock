@@ -20,6 +20,8 @@ PODS:
     - SDWebImage/Core
   - SDWebImage/Core (3.6)
   - TTTAttributedLabel (1.9.5)
+  - WeChatSDK (0.0.1)
+  - Weibo (2.4.2)
 
 DEPENDENCIES:
   - ASIHTTPRequest (~> 1.8.2)
@@ -29,6 +31,8 @@ DEPENDENCIES:
   - SBJson (~> 4.0.1)
   - SDWebImage (~> 3.6)
   - TTTAttributedLabel (~> 1.9.5)
+  - WeChatSDK (~> 0.0.1)
+  - Weibo (~> 2.4.2)
 
 SPEC CHECKSUMS:
   ASIHTTPRequest: 0b05282cf3c422c3474eff98c5bb8c1192b91b86
@@ -38,5 +42,7 @@ SPEC CHECKSUMS:
   SBJson: 9749a0365b005bcb0b7adf74579d79372c11cc4f
   SDWebImage: 7eb273e54ca8a2e506ad9bd5e80c35b2a4d7c95e
   TTTAttributedLabel: 6154fd2407a03fb8d71abfa36f4710fff26a168e
+  WeChatSDK: 8cabf6a191621494bc38e25c06b41c7bd2029322
+  Weibo: 6a997663c8022500eb30ee93d42c67f85149e372
 
 COCOAPODS: 0.32.1
