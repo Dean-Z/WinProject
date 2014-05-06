@@ -90,7 +90,7 @@
     {
         BufferCProcudtView* cProduct = [BufferCProcudtView viewFromXib];
         cProduct.originX = (self.view.sizeW - cProduct.sizeW)/2 + self.view.sizeW*i;
-        cProduct.originY = (self.cScrollViewController.sizeH - cProduct.sizeH)/2;
+        cProduct.originY = IS_IPHONE_5 ?(self.cScrollViewController.sizeH - cProduct.sizeH)/2 : 10;
         [cProduct renderView];
         [self.cScrollViewController addSubview:cProduct];
     }
