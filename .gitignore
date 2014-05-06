@@ -1,2 +1,5 @@
 Pods
 .DS_Store
+xcuserdata
+
+.gitignore.swp
