@@ -50,6 +50,9 @@
                             <state key="normal" title="分享" backgroundImage="home_share">
                                 <color key="titleShadowColor" red="0.53725490196078429" green="0.25098039215686274" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="share:" destination="-1" eventType="touchUpInside" id="P4a-0w-Des"/>
+                            </connections>
                         </button>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="X0c-JS-TMD">
                             <rect key="frame" x="118" y="261" width="62" height="38"/>

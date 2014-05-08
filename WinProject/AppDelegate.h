@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Reachability.h"
 #import "RDVTabBarController.h"
+#import "WeiboSDK.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

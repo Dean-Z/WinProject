@@ -23,6 +23,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [WeiboSDK enableDebugMode:YES];
+    [WeiboSDK registerApp:kAppKey];
+    
     self.isNetworkAvailable = YES;
     self.hasNetworkChanged  = YES;
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -36,9 +39,9 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    [self setupViewControllers];
+//    [self setupViewControllers];
     
-//    self.viewController = [[LoginViewController alloc]viewControllerFromXib];
+    self.viewController = [[LoginViewController alloc]viewControllerFromXib];
     
     self.window.rootViewController = self.viewController;
     

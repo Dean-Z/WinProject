@@ -19,4 +19,6 @@
 #define DLog(format, ...) NSLog((@"[LINE: %d]%s: " format), __LINE__, __PRETTY_FUNCTION__, ## __VA_ARGS__)
 #define AS_MESSAGE(o) NSLocalizedString(o, @"")
 
+#define kAppKey         @"3860363964"
+
 #endif

@@ -46,11 +46,18 @@
     [self.okButton setEnabled:click];
 }
 
+- (IBAction)signup:(id)sender
+{
+    if ([self.delegate respondsToSelector:@selector(signupWithNumber:)])
+    {
+        [self.delegate signupWithNumber:self.phoneTextField.text];
+    }
+}
+
 - (IBAction)back:(id)sender
 {
     if ([self.delegate respondsToSelector:@selector(signupBackAction)])
     {
-        [self.phoneTextField resignFirstResponder];
         [self.delegate signupBackAction];
     }
 }

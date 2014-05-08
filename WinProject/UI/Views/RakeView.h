@@ -8,10 +8,12 @@
 
 #import "WPBaseView.h"
 #import "WPSwitchBar.h"
+#import "WPPullView.h"
 
 @interface RakeView : WPBaseView
 {
     WPSwitchBar* switchBar;
+    WPPullView* pullView;
 }
 
 @property(nonatomic,weak) IBOutlet UIView* switchBarContainer;

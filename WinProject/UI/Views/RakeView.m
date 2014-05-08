@@ -22,6 +22,7 @@
 - (void)renderView
 {
     [self prepareSwithBar];
+    [self preparePullView];
 }
 
 - (void)prepareSwithBar
@@ -34,6 +35,18 @@
                                       action:@selector(switchBarChangeValue) target:self];
         
         [self.switchBarContainer addSubview:switchBar];
+    }
+}
+
+- (void) preparePullView
+{
+    if (pullView == nil)
+    {
+        pullView = [WPPullView viewFromXib];
+        [pullView renderView];
+        pullView.originX = 30;
+        pullView.originY = 140;
+        [self addSubview:pullView];
     }
 }
 

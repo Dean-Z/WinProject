@@ -44,6 +44,8 @@
     NSURL *url = [NSURL URLWithString:@"http://forgotpassword"];
     [self.forgotPasswordLabel addLinkToURL:url withRange:range];
     
+    [self.phoneTextField becomeFirstResponder];
+    
 }
 
 - (void)attributedLabel:(TTTAttributedLabel *)label didSelectLinkWithURL:(NSURL *)url

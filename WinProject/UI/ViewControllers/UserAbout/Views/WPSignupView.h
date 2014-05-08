@@ -24,4 +24,6 @@
 
 - (void) signupBackAction;
 
+- (void) signupWithNumber:(NSString*)number;
+
 @end

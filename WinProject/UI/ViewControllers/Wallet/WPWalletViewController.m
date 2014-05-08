@@ -7,6 +7,7 @@
 //
 
 #import "WPWalletViewController.h"
+#import "WPShareManager.h"
 
 @interface WPWalletViewController ()
 {
@@ -68,6 +69,7 @@
     }
 }
 
+
 - (void) prepareBillView
 {
     if (billView == nil)
@@ -92,6 +94,12 @@
         bgOriginX = -(self.bgImageView.sizeW - self.view.sizeW);
     }
     self.bgImageView.originX = bgOriginX;
+}
+
+- (IBAction)share:(id)sender
+{
+    WPShareManager* share = [[WPShareManager alloc]init];
+    [share shareWithSina:[UIImage imageNamed:@"refresh.png"] message:@"21121"];
 }
 
 - (void)didReceiveMemoryWarning

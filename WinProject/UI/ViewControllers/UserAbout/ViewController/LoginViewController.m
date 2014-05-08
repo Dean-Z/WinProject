@@ -12,7 +12,9 @@
 {
     WPSigninView* signinView;
     WPSignupView* signupView;
+    WPAuthView*   authView;
     
+    NSString* phoneNumber;
     BOOL isShowKeyBoard;
 }
 @end
@@ -32,13 +34,6 @@
 {
     [super viewDidLoad];
     
-    [self prepareSigninView];
-}
-
-- (void) viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(keyboardDidShow)
                                                  name:UIKeyboardWillShowNotification
@@ -48,17 +43,28 @@
                                              selector:@selector(keyboardDidHidden)
                                                  name:UIKeyboardWillHideNotification
                                                object:nil];
+    
+    [self prepareSigninView];
+}
+
+- (void) viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
 }
 
 - (void)keyboardDidShow
 {
     isShowKeyBoard = YES;
     [UIView transitionWithView:signinView duration:0.3 options:UIViewAnimationOptionCurveEaseOut animations:^{
-        signinView.originY -= 100;
+        
+        if (signinView)
+            signinView.originY -= 100;
         if (signupView)
-        {
             signupView.originY -= 100;
-        }
+        if (authView)
+            authView.originY -= 100;
+            
     } completion:^(BOOL finished) {
         
     }];
@@ -68,11 +74,14 @@
 {
     isShowKeyBoard = NO;
     [UIView transitionWithView:signinView duration:0.3 options:UIViewAnimationOptionCurveEaseOut animations:^{
-        signinView.originY += 100;
+        
+        if (signinView)
+            signinView.originY += 100;
         if (signupView)
-        {
             signupView.originY += 100;
-        }
+        if (authView)
+            authView.originY += 100;
+        
     } completion:^(BOOL finished) {
         
     }];
@@ -115,6 +124,33 @@
     }];
 }
 
+- (void)prepareAuthView
+{
+    if (authView == nil)
+    {
+        authView = [WPAuthView viewFromXib];
+        authView.delegate = self;
+        authView.phoneNumebrString = phoneNumber;
+        [authView renderView];
+        authView.originY = (self.view.sizeH - authView.sizeH)/2;
+        if (isShowKeyBoard)
+        {
+            authView.originY -= 100;
+        }
+        authView.originX = self.view.sizeW;
+         [self.view addSubview:authView];
+    }
+    
+    [authView.authCodeTextField becomeFirstResponder];
+    [UIView transitionWithView:signupView duration:0.3 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        authView.originX = (self.view.sizeW - signupView.sizeW)/2;
+        signupView.originX = -signinView.sizeW;
+        signinView.originX = -signinView.sizeW*2;
+    } completion:^(BOOL finished) {
+        
+    }];
+}
+
 #pragma mark SIGN DELEGATE
 
 - (void) signRegister
@@ -129,6 +165,26 @@
         signupView.originX = self.view.sizeW;
     } completion:^(BOOL finished) {
         
+    }];
+}
+
+- (void) signupWithNumber:(NSString *)number
+{
+    phoneNumber = number;
+    
+    [self prepareAuthView];
+}
+
+
+- (void)authBack
+{
+    [UIView transitionWithView:signupView duration:0.3 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        authView.originX = self.view.sizeW;
+        signupView.originX = (self.view.sizeW - signupView.sizeW)/2;
+        signinView.originX = -signinView.sizeW;
+    } completion:^(BOOL finished) {
+        [authView removeFromSuperview];
+        authView = nil;
     }];
 }
 

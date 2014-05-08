@@ -26,7 +26,7 @@
                     <autoresizingMask key="autoresizingMask"/>
                 </imageView>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="xPt-DE-0SW">
-                    <rect key="frame" x="0.0" y="63.999999460438403" width="320" height="363"/>
+                    <rect key="frame" x="0.0" y="63.999998853905439" width="320" height="363"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                     <subviews>
                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="home_qiandai" id="nek-ra-LzE">
@@ -50,6 +50,9 @@
                             <state key="normal" title="分享" backgroundImage="home_share">
                                 <color key="titleShadowColor" red="0.53725490196078429" green="0.25098039215686274" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="share:" destination="-1" eventType="touchUpInside" id="PC5-si-RLs"/>
+                            </connections>
                         </button>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="X0c-JS-TMD">
                             <rect key="frame" x="118" y="183" width="62" height="38"/>
