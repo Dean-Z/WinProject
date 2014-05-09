@@ -10,8 +10,11 @@
 #import "WPSigninView.h"
 #import "WPSignupView.h"
 #import "WPAuthView.h"
+#import "WPPasswordView.h"
+#import "WPNickName.h"
 
-@interface LoginViewController : BaseXibViewController<WPSigninViewDelegate,WPSignupViewDelegate,WPAuthViewDelegate>
+@interface LoginViewController : BaseXibViewController<WPSigninViewDelegate,WPSignupViewDelegate,WPAuthViewDelegate,WPPasswordViewDelegate,WPNickNameDelegate>
 
+@property(nonatomic,assign) BOOL showKeyBoard;
 
 @end

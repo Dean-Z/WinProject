@@ -16,6 +16,8 @@
 
 - (NSString*)MD5;
 
++ (BOOL)checkTel:(NSString *)str;
+
 - (BOOL) contains:(NSString *) value;
 
 -(NSString *)urlEncode;

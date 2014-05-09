@@ -48,4 +48,12 @@
     }
 }
 
+- (IBAction)authSucceed:(id)sender
+{
+    if ([self.delegate respondsToSelector:@selector(authSucceed)])
+    {
+        [self.delegate authSucceed];
+    }
+}
+
 @end

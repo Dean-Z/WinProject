@@ -39,17 +39,26 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-//    [self setupViewControllers];
-    
-    self.viewController = [[LoginViewController alloc]viewControllerFromXib];
-    
-    self.window.rootViewController = self.viewController;
-    
-    [self customizeInterface];
+    [self logoutSucceed:YES];
     
     return YES;
 }
 
+
+- (void)loginSucceed
+{
+    [self setupViewControllers];
+    self.window.rootViewController = self.viewController;
+    
+     [self customizeInterface];
+}
+
+- (void)logoutSucceed:(BOOL)showKeyboard
+{
+    LoginViewController* login = [[LoginViewController alloc]viewControllerFromXib];
+    login.showKeyBoard = showKeyboard;
+    self.window.rootViewController = login;
+}
 
 #pragma mark - Methods
 

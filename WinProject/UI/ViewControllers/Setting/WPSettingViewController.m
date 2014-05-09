@@ -83,7 +83,7 @@
 
 - (IBAction)logout:(id)sender
 {
-    
+    [self.app logoutSucceed:NO];
 }
 
 - (void)didReceiveMemoryWarning

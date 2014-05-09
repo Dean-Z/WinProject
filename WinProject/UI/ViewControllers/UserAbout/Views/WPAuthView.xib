@@ -66,6 +66,9 @@
                     <state key="normal" title="下一步" backgroundImage="button-blue">
                         <color key="titleShadowColor" red="0.098039215686274508" green="0.21568627450980393" blue="0.54509803921568623" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="authSucceed:" destination="luM-mr-TpD" eventType="touchUpInside" id="8YP-4B-MJk"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="DcB-fx-lXK">
                     <rect key="frame" x="119" y="275" width="35" height="36"/>

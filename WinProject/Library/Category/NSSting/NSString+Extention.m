@@ -106,6 +106,27 @@
     return platform;
 }
 
++ (BOOL)checkTel:(NSString *)str
+{
+    
+    if ([str length] == 0)
+    {
+        return NO;
+    }
+    
+    NSString *phoneRegex = @"^((13[0-9])|(15[^4,\\D])|(18[0,0-9]))\\d{8}$";
+    
+    NSPredicate *phoneTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",phoneRegex];
+    
+    BOOL isMatch = [phoneTest evaluateWithObject:str];
+    
+    if (!isMatch)
+    {
+        return NO;
+    }
+    return YES;
+}
+
 - (NSString*)MD5
 {
     const char *ptr = [self UTF8String];

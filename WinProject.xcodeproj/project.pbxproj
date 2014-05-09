@@ -44,6 +44,11 @@
 		CB6B7987191B7F8A00610CD6 /* WPPullView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB6B7986191B7F8A00610CD6 /* WPPullView.xib */; };
 		CB6B798A191B902600610CD6 /* WPAuthView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6B7989191B902600610CD6 /* WPAuthView.m */; };
 		CB6B798C191B903900610CD6 /* WPAuthView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB6B798B191B903900610CD6 /* WPAuthView.xib */; };
+		CB6B798E191C96D000610CD6 /* LoginViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB6B798D191C96D000610CD6 /* LoginViewController_iPhone.xib */; };
+		CB6B7991191C990F00610CD6 /* WPNickName.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6B7990191C990F00610CD6 /* WPNickName.m */; };
+		CB6B7993191C991D00610CD6 /* WPNickName.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB6B7992191C991D00610CD6 /* WPNickName.xib */; };
+		CB6B7996191C994B00610CD6 /* WPPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6B7995191C994B00610CD6 /* WPPasswordView.m */; };
+		CB6B7998191C995900610CD6 /* WPPasswordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB6B7997191C995900610CD6 /* WPPasswordView.xib */; };
 		CB7EDB64190D445600089DE8 /* WPSwitchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7EDB63190D445600089DE8 /* WPSwitchBar.m */; };
 		CB7EDB66190D449D00089DE8 /* WPSwitchBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB7EDB65190D449D00089DE8 /* WPSwitchBar.xib */; };
 		CB924BF519094578000389CB /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB924BF419094578000389CB /* MessageUI.framework */; };
@@ -60,7 +65,7 @@
 		CBA0E891190133D4007119C0 /* FTUtils+NSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA0E88B190133D4007119C0 /* FTUtils+NSObject.m */; };
 		CBA0E892190133D4007119C0 /* UIView+CCAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA0E88E190133D4007119C0 /* UIView+CCAnimation.m */; };
 		CBA0E89619013908007119C0 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA0E89419013907007119C0 /* LoginViewController.m */; };
-		CBA0E89719013908007119C0 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBA0E89519013907007119C0 /* LoginViewController.xib */; };
+		CBA0E89719013908007119C0 /* LoginViewController_iPhone5.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBA0E89519013907007119C0 /* LoginViewController_iPhone5.xib */; };
 		CBA0E89A19013A0C007119C0 /* WPBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA0E89919013A0C007119C0 /* WPBaseView.m */; };
 		CBA0E89D19013A7A007119C0 /* WPSigninView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA0E89C19013A7A007119C0 /* WPSigninView.m */; };
 		CBA0E89F19013A8E007119C0 /* WPSigninView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBA0E89E19013A8E007119C0 /* WPSigninView.xib */; };
@@ -147,6 +152,13 @@
 		CB6B7988191B902600610CD6 /* WPAuthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPAuthView.h; sourceTree = "<group>"; };
 		CB6B7989191B902600610CD6 /* WPAuthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPAuthView.m; sourceTree = "<group>"; };
 		CB6B798B191B903900610CD6 /* WPAuthView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPAuthView.xib; sourceTree = "<group>"; };
+		CB6B798D191C96D000610CD6 /* LoginViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController_iPhone.xib; sourceTree = "<group>"; };
+		CB6B798F191C990F00610CD6 /* WPNickName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPNickName.h; sourceTree = "<group>"; };
+		CB6B7990191C990F00610CD6 /* WPNickName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPNickName.m; sourceTree = "<group>"; };
+		CB6B7992191C991D00610CD6 /* WPNickName.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPNickName.xib; sourceTree = "<group>"; };
+		CB6B7994191C994B00610CD6 /* WPPasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPPasswordView.h; sourceTree = "<group>"; };
+		CB6B7995191C994B00610CD6 /* WPPasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPPasswordView.m; sourceTree = "<group>"; };
+		CB6B7997191C995900610CD6 /* WPPasswordView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPPasswordView.xib; sourceTree = "<group>"; };
 		CB7EDB62190D445600089DE8 /* WPSwitchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPSwitchBar.h; sourceTree = "<group>"; };
 		CB7EDB63190D445600089DE8 /* WPSwitchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPSwitchBar.m; sourceTree = "<group>"; };
 		CB7EDB65190D449D00089DE8 /* WPSwitchBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPSwitchBar.xib; sourceTree = "<group>"; };
@@ -178,7 +190,7 @@
 		CBA0E88E190133D4007119C0 /* UIView+CCAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CCAnimation.m"; sourceTree = "<group>"; };
 		CBA0E89319013907007119C0 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		CBA0E89419013907007119C0 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		CBA0E89519013907007119C0 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		CBA0E89519013907007119C0 /* LoginViewController_iPhone5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController_iPhone5.xib; sourceTree = "<group>"; };
 		CBA0E89819013A0C007119C0 /* WPBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPBaseView.h; sourceTree = "<group>"; };
 		CBA0E89919013A0C007119C0 /* WPBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPBaseView.m; sourceTree = "<group>"; };
 		CBA0E89B19013A7A007119C0 /* WPSigninView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPSigninView.h; sourceTree = "<group>"; };
@@ -319,7 +331,8 @@
 			children = (
 				CBA0E89319013907007119C0 /* LoginViewController.h */,
 				CBA0E89419013907007119C0 /* LoginViewController.m */,
-				CBA0E89519013907007119C0 /* LoginViewController.xib */,
+				CB6B798D191C96D000610CD6 /* LoginViewController_iPhone.xib */,
+				CBA0E89519013907007119C0 /* LoginViewController_iPhone5.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -336,6 +349,12 @@
 				CB6B7988191B902600610CD6 /* WPAuthView.h */,
 				CB6B7989191B902600610CD6 /* WPAuthView.m */,
 				CB6B798B191B903900610CD6 /* WPAuthView.xib */,
+				CB6B7994191C994B00610CD6 /* WPPasswordView.h */,
+				CB6B7995191C994B00610CD6 /* WPPasswordView.m */,
+				CB6B7997191C995900610CD6 /* WPPasswordView.xib */,
+				CB6B798F191C990F00610CD6 /* WPNickName.h */,
+				CB6B7990191C990F00610CD6 /* WPNickName.m */,
+				CB6B7992191C991D00610CD6 /* WPNickName.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -641,8 +660,9 @@
 				CB4211D61907A5EC001AC70B /* BufferProductView.xib in Resources */,
 				CB4542D01918E04B00BFE852 /* WPMarketViewController_iPhone.xib in Resources */,
 				CBDD252618FF8CCA009043FE /* Images.xcassets in Resources */,
-				CBA0E89719013908007119C0 /* LoginViewController.xib in Resources */,
+				CBA0E89719013908007119C0 /* LoginViewController_iPhone5.xib in Resources */,
 				CB2FAD181902C3DA00F46A0A /* WPWalletViewController_iPhone5.xib in Resources */,
+				CB6B7993191C991D00610CD6 /* WPNickName.xib in Resources */,
 				CB7EDB66190D449D00089DE8 /* WPSwitchBar.xib in Resources */,
 				CB4542BB1916007700BFE852 /* BufferCProcudtView.xib in Resources */,
 				CB4542D21918E09A00BFE852 /* WPWalletViewController_iPhone.xib in Resources */,
@@ -653,8 +673,10 @@
 				CB4E139B190FF0220048709B /* RakeView.xib in Resources */,
 				CB2FAD0E1902C3A800F46A0A /* WPSettingViewController_iPhone5.xib in Resources */,
 				CB924BFA19094F14000389CB /* CheckItemView.xib in Resources */,
+				CB6B7998191C995900610CD6 /* WPPasswordView.xib in Resources */,
 				CB4E1395190FE6970048709B /* WawaSC-Regular.otf in Resources */,
 				CB4542CA1918DCC800BFE852 /* WPBuffetViewController_iPhone.xib in Resources */,
+				CB6B798E191C96D000610CD6 /* LoginViewController_iPhone.xib in Resources */,
 				CB4542CC1918DD0500BFE852 /* WPStockViewController_iPhone.xib in Resources */,
 				CB6B798C191B903900610CD6 /* WPAuthView.xib in Resources */,
 				CB2FAD091902C37B00F46A0A /* WPBuffetViewController_iPhone5.xib in Resources */,
@@ -728,6 +750,7 @@
 				CB924BF819094F04000389CB /* CheckItemView.m in Sources */,
 				CBA0E890190133D4007119C0 /* FTAnimationManager.m in Sources */,
 				CBA0E88F190133D4007119C0 /* CoreAnimationEffect.m in Sources */,
+				CB6B7991191C990F00610CD6 /* WPNickName.m in Sources */,
 				CB4542B01915ED2A00BFE852 /* WPStockViewController.m in Sources */,
 				CB6B7982191A419200610CD6 /* WPShareManager.m in Sources */,
 				CBA0E88119012EED007119C0 /* BaseXibViewController.m in Sources */,
@@ -737,6 +760,7 @@
 				CB4542BE191603A100BFE852 /* WPCProductButton.m in Sources */,
 				CBA0E88319012EED007119C0 /* UIView+XibView.m in Sources */,
 				CB6B798A191B902600610CD6 /* WPAuthView.m in Sources */,
+				CB6B7996191C994B00610CD6 /* WPPasswordView.m in Sources */,
 				CB2FAD081902C37B00F46A0A /* WPBuffetViewController.m in Sources */,
 				CBA0E891190133D4007119C0 /* FTUtils+NSObject.m in Sources */,
 				CB7EDB64190D445600089DE8 /* WPSwitchBar.m in Sources */,

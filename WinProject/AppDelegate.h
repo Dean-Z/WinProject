@@ -21,4 +21,8 @@
 
 +(id)shareAppDelegate;
 
+- (void)loginSucceed;
+
+- (void)logoutSucceed:(BOOL)showKeyboard;
+
 @end

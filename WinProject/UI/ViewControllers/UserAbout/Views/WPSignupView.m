@@ -48,6 +48,12 @@
 
 - (IBAction)signup:(id)sender
 {
+    if (![NSString checkTel:self.phoneTextField.text])
+    {
+        Alert(@"请输入正确的电话号码");
+        return;
+    }
+    
     if ([self.delegate respondsToSelector:@selector(signupWithNumber:)])
     {
         [self.delegate signupWithNumber:self.phoneTextField.text];
