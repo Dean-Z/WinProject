@@ -8,6 +8,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WPStockViewController">
             <connections>
                 <outlet property="cScrollViewController" destination="N12-PR-Fky" id="OfN-jz-4i9"/>
+                <outlet property="nextButton" destination="Rz1-0N-2pH" id="ZgP-Oi-ePd"/>
+                <outlet property="preButton" destination="Yrj-JI-l3s" id="Gqz-F4-0Ik"/>
                 <outlet property="qScrollViewController" destination="LMK-zk-ToC" id="2Xj-zT-Erb"/>
                 <outlet property="switchBarContainer" destination="8g8-vI-iCS" id="mf5-ol-q7q"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -60,13 +62,38 @@
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="N12-PR-Fky">
                     <rect key="frame" x="320" y="115" width="320" height="407"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="mtp-mB-g29"/>
+                    </connections>
                 </scrollView>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Rz1-0N-2pH" userLabel="Button - next">
+                    <rect key="frame" x="283" y="301" width="35" height="36"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="btn_next">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="pageAction:" destination="-1" eventType="touchUpInside" id="k2j-7c-dSD"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Yrj-JI-l3s" userLabel="Button - pre">
+                    <rect key="frame" x="3" y="301" width="35" height="36"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="btn_gray_pre">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="pageAction:" destination="-1" eventType="touchUpInside" id="gXI-te-yPl"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
     <resources>
+        <image name="btn_gray_pre" width="24" height="20"/>
+        <image name="btn_next" width="24" height="20"/>
         <image name="buffer_close" width="22" height="22"/>
         <image name="view_bg" width="320" height="568"/>
     </resources>

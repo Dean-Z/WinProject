@@ -13,7 +13,7 @@
 
 @protocol WPStockViewControllerDelegate;
 
-@interface WPStockViewController : BaseXibViewController
+@interface WPStockViewController : BaseXibViewController<UIScrollViewDelegate>
 
 @property(nonatomic,weak) IBOutlet UIView*      switchBarContainer;
 
@@ -21,6 +21,9 @@
 
 @property(nonatomic,weak) IBOutlet UIScrollView*    qScrollViewController;
 @property(nonatomic,weak) IBOutlet UIScrollView*    cScrollViewController;
+
+@property(nonatomic,weak) IBOutlet UIButton* nextButton;
+@property(nonatomic,weak) IBOutlet UIButton* preButton;
 
 @end
 

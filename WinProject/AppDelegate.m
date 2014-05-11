@@ -39,7 +39,8 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    [self logoutSucceed:YES];
+//    [self logoutSucceed:YES];
+    [self loginSucceed];
     
     return YES;
 }

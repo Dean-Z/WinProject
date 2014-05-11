@@ -11,6 +11,7 @@
 @interface WPStockViewController ()
 {
     WPSwitchBar* switchBar;
+    NSInteger cCurrentPage;
 }
 @end
 
@@ -30,12 +31,13 @@
 {
     [super viewDidLoad];
     
+    cCurrentPage = 0;
+    
     [self prepareSwitchBar];
     
     [self prepareQScrollviewContainer];
     [self prepareCScrollviewContainer];
 }
-
 
 - (void)prepareSwitchBar
 {
@@ -55,11 +57,15 @@
             self.qScrollViewController.originX = -self.view.sizeW;
             self.cScrollViewController.originX = 0;
         } completion:^(BOOL finished) {
-            
+            self.nextButton.hidden = NO;
+            self.preButton.hidden = NO;
         }];
     }
     else
     {
+        self.nextButton.hidden = YES;
+        self.preButton.hidden = YES;
+        
         [UIView transitionWithView:self.view duration:0.3 options:UIViewAnimationOptionCurveEaseOut animations:^{
             self.qScrollViewController.originX = 0;
             self.cScrollViewController.originX = self.view.sizeW;
@@ -105,6 +111,59 @@
         [self.delegate stockViewClose];
     }
 }
+
+- (IBAction)pageAction:(id)sender
+{
+    UIButton* button = (UIButton*)sender;
+    
+    if (button ==  self.nextButton)
+    {
+        if (cCurrentPage<2)
+        {
+            cCurrentPage++;
+        }
+    }
+    else if(button == self.preButton)
+    {
+        if (cCurrentPage>0)
+        {
+            cCurrentPage--;
+        }
+    }
+    
+    [self resetButtons];
+    
+    [self.cScrollViewController setContentOffset:CGPointMake(cCurrentPage*self.view.sizeW, 0) animated:YES];
+}
+
+- (void) resetButtons
+{
+    if (cCurrentPage == 0)
+    {
+        [self.preButton setImage:[UIImage imageNamed:@"btn_gray_pre.png"] forState:UIControlStateNormal];
+    }
+    else if(cCurrentPage == 2)
+    {
+        [self.nextButton setImage:[UIImage imageNamed:@"btn_gray_next.png"] forState:UIControlStateNormal];
+    }
+    else
+    {
+        [self.nextButton setImage:[UIImage imageNamed:@"btn_next.png"] forState:UIControlStateNormal];
+        [self.preButton setImage:[UIImage imageNamed:@"btn_pre.png"] forState:UIControlStateNormal];
+    }
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    if (scrollView == self.cScrollViewController)
+    {
+        NSInteger currentPage = self.cScrollViewController.contentOffset.x/self.view.sizeW;
+        cCurrentPage = currentPage;
+        
+        [self resetButtons];
+    }
+}
+
 
 - (void)didReceiveMemoryWarning
 {
