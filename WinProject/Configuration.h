@@ -9,7 +9,7 @@
 #ifndef Call_Configuration_h
 #define Call_Configuration_h
 
-#define REST_API_URL @"http://dev.chdbits.org"
+#define REST_API_URL @"http://api.yingping.oneve.com"
 
 #define ACCOUNT_KEY_ROWDATA         @"ACCOUNT_KEY_ROWDATA"
 #define ACCOUNT_KEY_COOKIE          @"ACCOUNT_KEY_COOKIE"
@@ -20,5 +20,11 @@
 #define AS_MESSAGE(o) NSLocalizedString(o, @"")
 
 #define kAppKey         @"3860363964"
+
+#define APP_ID          @"861905235"
+#define App_Version     @"1.0"
+
+#define SERVICE_PHONE_NUMBER @"400399929993"
+#define IAD_PHONE_NUMBER @"02165656565"
 
 #endif

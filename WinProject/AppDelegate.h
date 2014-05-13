@@ -18,6 +18,7 @@
 @property (nonatomic) BOOL isNetworkAvailable;
 @property (nonatomic) BOOL hasNetworkChanged;
 @property (strong, nonatomic) UIViewController *viewController;
+@property (nonatomic,strong) NSString* urlString;
 
 +(id)shareAppDelegate;
 

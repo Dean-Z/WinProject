@@ -35,9 +35,27 @@
 		CB4542CE1918DFCD00BFE852 /* WPSettingViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB4542CD1918DFCD00BFE852 /* WPSettingViewController_iPhone.xib */; };
 		CB4542D01918E04B00BFE852 /* WPMarketViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB4542CF1918E04B00BFE852 /* WPMarketViewController_iPhone.xib */; };
 		CB4542D21918E09A00BFE852 /* WPWalletViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB4542D11918E09A00BFE852 /* WPWalletViewController_iPhone.xib */; };
+		CB45CBFD19206C950020D76C /* WPSyncService.m in Sources */ = {isa = PBXBuildFile; fileRef = CB45CBFC19206C950020D76C /* WPSyncService.m */; };
+		CB45CC2A192101510020D76C /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CB45CC13192101510020D76C /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CB45CC2B192101510020D76C /* JSONMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = CB45CC15192101510020D76C /* JSONMutableArray.m */; };
+		CB45CC2C192101510020D76C /* JsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CB45CC17192101510020D76C /* JsonParser.m */; };
+		CB45CC2D192101510020D76C /* NSArray+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = CB45CC19192101510020D76C /* NSArray+JSON.m */; };
+		CB45CC2E192101510020D76C /* NSObject+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = CB45CC1B192101510020D76C /* NSObject+JSON.m */; };
+		CB45CC2F192101510020D76C /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = CB45CC1F192101510020D76C /* NSObject+SBJSON.m */; };
+		CB45CC30192101510020D76C /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = CB45CC21192101510020D76C /* NSString+SBJSON.m */; };
+		CB45CC31192101510020D76C /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = CB45CC23192101510020D76C /* SBJSON.m */; };
+		CB45CC32192101510020D76C /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = CB45CC25192101510020D76C /* SBJsonBase.m */; };
+		CB45CC33192101510020D76C /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CB45CC27192101510020D76C /* SBJsonParser.m */; };
+		CB45CC34192101510020D76C /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = CB45CC29192101510020D76C /* SBJsonWriter.m */; };
+		CB45CC3A192106B30020D76C /* CCUpdataApp.m in Sources */ = {isa = PBXBuildFile; fileRef = CB45CC37192106B30020D76C /* CCUpdataApp.m */; };
+		CB45CC3B192106B30020D76C /* LoadData.m in Sources */ = {isa = PBXBuildFile; fileRef = CB45CC39192106B30020D76C /* LoadData.m */; };
+		CB45CC3E19210B250020D76C /* WPRegisterAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = CB45CC3D19210B250020D76C /* WPRegisterAlert.m */; };
+		CB45CC4019210B330020D76C /* WPRegisterAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB45CC3F19210B330020D76C /* WPRegisterAlert.xib */; };
 		CB4E1395190FE6970048709B /* WawaSC-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB4E1394190FE6970048709B /* WawaSC-Regular.otf */; };
 		CB4E1399190FF0130048709B /* RakeView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4E1398190FF0130048709B /* RakeView.m */; };
 		CB4E139B190FF0220048709B /* RakeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB4E139A190FF0220048709B /* RakeView.xib */; };
+		CB59813419211056000AF16A /* WPRultView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB59813319211056000AF16A /* WPRultView.m */; };
+		CB5981361921106C000AF16A /* WPRultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB5981351921106C000AF16A /* WPRultView.xib */; };
 		CB60BF66190525FC003190C7 /* CHDNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = CB60BF65190525FC003190C7 /* CHDNetwork.m */; };
 		CB6B7982191A419200610CD6 /* WPShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6B7981191A419200610CD6 /* WPShareManager.m */; };
 		CB6B7985191B7F7800610CD6 /* WPPullView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6B7984191B7F7800610CD6 /* WPPullView.m */; };
@@ -138,10 +156,45 @@
 		CB4542CD1918DFCD00BFE852 /* WPSettingViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPSettingViewController_iPhone.xib; sourceTree = "<group>"; };
 		CB4542CF1918E04B00BFE852 /* WPMarketViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPMarketViewController_iPhone.xib; sourceTree = "<group>"; };
 		CB4542D11918E09A00BFE852 /* WPWalletViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPWalletViewController_iPhone.xib; sourceTree = "<group>"; };
+		CB45CBFB19206C950020D76C /* WPSyncService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPSyncService.h; sourceTree = "<group>"; };
+		CB45CBFC19206C950020D76C /* WPSyncService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPSyncService.m; sourceTree = "<group>"; };
+		CB45CC12192101510020D76C /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		CB45CC13192101510020D76C /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		CB45CC14192101510020D76C /* JSONMutableArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONMutableArray.h; sourceTree = "<group>"; };
+		CB45CC15192101510020D76C /* JSONMutableArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONMutableArray.m; sourceTree = "<group>"; };
+		CB45CC16192101510020D76C /* JsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonParser.h; sourceTree = "<group>"; };
+		CB45CC17192101510020D76C /* JsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonParser.m; sourceTree = "<group>"; };
+		CB45CC18192101510020D76C /* NSArray+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+JSON.h"; sourceTree = "<group>"; };
+		CB45CC19192101510020D76C /* NSArray+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JSON.m"; sourceTree = "<group>"; };
+		CB45CC1A192101510020D76C /* NSObject+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JSON.h"; sourceTree = "<group>"; };
+		CB45CC1B192101510020D76C /* NSObject+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JSON.m"; sourceTree = "<group>"; };
+		CB45CC1D192101510020D76C /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		CB45CC1E192101510020D76C /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		CB45CC1F192101510020D76C /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		CB45CC20192101510020D76C /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		CB45CC21192101510020D76C /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		CB45CC22192101510020D76C /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		CB45CC23192101510020D76C /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
+		CB45CC24192101510020D76C /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		CB45CC25192101510020D76C /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		CB45CC26192101510020D76C /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		CB45CC27192101510020D76C /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		CB45CC28192101510020D76C /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		CB45CC29192101510020D76C /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		CB45CC36192106B30020D76C /* CCUpdataApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCUpdataApp.h; sourceTree = "<group>"; };
+		CB45CC37192106B30020D76C /* CCUpdataApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCUpdataApp.m; sourceTree = "<group>"; };
+		CB45CC38192106B30020D76C /* LoadData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadData.h; sourceTree = "<group>"; };
+		CB45CC39192106B30020D76C /* LoadData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadData.m; sourceTree = "<group>"; };
+		CB45CC3C19210B250020D76C /* WPRegisterAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPRegisterAlert.h; sourceTree = "<group>"; };
+		CB45CC3D19210B250020D76C /* WPRegisterAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPRegisterAlert.m; sourceTree = "<group>"; };
+		CB45CC3F19210B330020D76C /* WPRegisterAlert.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPRegisterAlert.xib; sourceTree = "<group>"; };
 		CB4E1394190FE6970048709B /* WawaSC-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WawaSC-Regular.otf"; sourceTree = "<group>"; };
 		CB4E1397190FF0130048709B /* RakeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RakeView.h; sourceTree = "<group>"; };
 		CB4E1398190FF0130048709B /* RakeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RakeView.m; sourceTree = "<group>"; };
 		CB4E139A190FF0220048709B /* RakeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RakeView.xib; sourceTree = "<group>"; };
+		CB59813219211056000AF16A /* WPRultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPRultView.h; sourceTree = "<group>"; };
+		CB59813319211056000AF16A /* WPRultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPRultView.m; sourceTree = "<group>"; };
+		CB5981351921106C000AF16A /* WPRultView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPRultView.xib; sourceTree = "<group>"; };
 		CB60BF64190525FC003190C7 /* CHDNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHDNetwork.h; sourceTree = "<group>"; };
 		CB60BF65190525FC003190C7 /* CHDNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHDNetwork.m; sourceTree = "<group>"; };
 		CB6B7980191A419200610CD6 /* WPShareManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPShareManager.h; sourceTree = "<group>"; };
@@ -246,6 +299,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB45CC10192101510020D76C /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				CB45CC11192101510020D76C /* JSONKit */,
+				CB45CC14192101510020D76C /* JSONMutableArray.h */,
+				CB45CC15192101510020D76C /* JSONMutableArray.m */,
+				CB45CC16192101510020D76C /* JsonParser.h */,
+				CB45CC17192101510020D76C /* JsonParser.m */,
+				CB45CC18192101510020D76C /* NSArray+JSON.h */,
+				CB45CC19192101510020D76C /* NSArray+JSON.m */,
+				CB45CC1A192101510020D76C /* NSObject+JSON.h */,
+				CB45CC1B192101510020D76C /* NSObject+JSON.m */,
+				CB45CC1C192101510020D76C /* SBJSON */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
+		CB45CC11192101510020D76C /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				CB45CC12192101510020D76C /* JSONKit.h */,
+				CB45CC13192101510020D76C /* JSONKit.m */,
+			);
+			path = JSONKit;
+			sourceTree = "<group>";
+		};
+		CB45CC1C192101510020D76C /* SBJSON */ = {
+			isa = PBXGroup;
+			children = (
+				CB45CC1D192101510020D76C /* JSON.h */,
+				CB45CC1E192101510020D76C /* NSObject+SBJSON.h */,
+				CB45CC1F192101510020D76C /* NSObject+SBJSON.m */,
+				CB45CC20192101510020D76C /* NSString+SBJSON.h */,
+				CB45CC21192101510020D76C /* NSString+SBJSON.m */,
+				CB45CC22192101510020D76C /* SBJSON.h */,
+				CB45CC23192101510020D76C /* SBJSON.m */,
+				CB45CC24192101510020D76C /* SBJsonBase.h */,
+				CB45CC25192101510020D76C /* SBJsonBase.m */,
+				CB45CC26192101510020D76C /* SBJsonParser.h */,
+				CB45CC27192101510020D76C /* SBJsonParser.m */,
+				CB45CC28192101510020D76C /* SBJsonWriter.h */,
+				CB45CC29192101510020D76C /* SBJsonWriter.m */,
+			);
+			path = SBJSON;
+			sourceTree = "<group>";
+		};
+		CB45CC35192106B30020D76C /* Upload APP */ = {
+			isa = PBXGroup;
+			children = (
+				CB45CC36192106B30020D76C /* CCUpdataApp.h */,
+				CB45CC37192106B30020D76C /* CCUpdataApp.m */,
+				CB45CC38192106B30020D76C /* LoadData.h */,
+				CB45CC39192106B30020D76C /* LoadData.m */,
+			);
+			path = "Upload APP";
+			sourceTree = "<group>";
+		};
 		CB60BF63190525EB003190C7 /* NetWork */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +363,8 @@
 				CB60BF65190525FC003190C7 /* CHDNetwork.m */,
 				CB6B7980191A419200610CD6 /* WPShareManager.h */,
 				CB6B7981191A419200610CD6 /* WPShareManager.m */,
+				CB45CBFB19206C950020D76C /* WPSyncService.h */,
+				CB45CBFC19206C950020D76C /* WPSyncService.m */,
 			);
 			path = NetWork;
 			sourceTree = "<group>";
@@ -355,6 +467,12 @@
 				CB6B798F191C990F00610CD6 /* WPNickName.h */,
 				CB6B7990191C990F00610CD6 /* WPNickName.m */,
 				CB6B7992191C991D00610CD6 /* WPNickName.xib */,
+				CB45CC3C19210B250020D76C /* WPRegisterAlert.h */,
+				CB45CC3D19210B250020D76C /* WPRegisterAlert.m */,
+				CB45CC3F19210B330020D76C /* WPRegisterAlert.xib */,
+				CB59813219211056000AF16A /* WPRultView.h */,
+				CB59813319211056000AF16A /* WPRultView.m */,
+				CB5981351921106C000AF16A /* WPRultView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -362,6 +480,8 @@
 		CBA0E86C19012EBC007119C0 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				CB45CC35192106B30020D76C /* Upload APP */,
+				CB45CC10192101510020D76C /* Json */,
 				CBA0E885190133D4007119C0 /* Animation */,
 				CBA0E86D19012EED007119C0 /* Category */,
 			);
@@ -653,6 +773,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB4542B11915ED2A00BFE852 /* WPStockViewController_iPhone5.xib in Resources */,
+				CB5981361921106C000AF16A /* WPRultView.xib in Resources */,
 				CBA0E8A419013ABB007119C0 /* WPSignupView.xib in Resources */,
 				CB6B7987191B7F8A00610CD6 /* WPPullView.xib in Resources */,
 				CBDD251E18FF8CCA009043FE /* InfoPlist.strings in Resources */,
@@ -660,6 +781,7 @@
 				CB4211D61907A5EC001AC70B /* BufferProductView.xib in Resources */,
 				CB4542D01918E04B00BFE852 /* WPMarketViewController_iPhone.xib in Resources */,
 				CBDD252618FF8CCA009043FE /* Images.xcassets in Resources */,
+				CB45CC4019210B330020D76C /* WPRegisterAlert.xib in Resources */,
 				CBA0E89719013908007119C0 /* LoginViewController_iPhone5.xib in Resources */,
 				CB2FAD181902C3DA00F46A0A /* WPWalletViewController_iPhone5.xib in Resources */,
 				CB6B7993191C991D00610CD6 /* WPNickName.xib in Resources */,
@@ -738,10 +860,13 @@
 				CB4542B91916006700BFE852 /* BufferCProcudtView.m in Sources */,
 				CBA0E89A19013A0C007119C0 /* WPBaseView.m in Sources */,
 				CBA0E8A219013AAD007119C0 /* WPSignupView.m in Sources */,
+				CB45CC2D192101510020D76C /* NSArray+JSON.m in Sources */,
 				CB6B7985191B7F7800610CD6 /* WPPullView.m in Sources */,
 				CB4211D91907ADBC001AC70B /* BufferCategoryView.m in Sources */,
 				CB60BF66190525FC003190C7 /* CHDNetwork.m in Sources */,
+				CB45CBFD19206C950020D76C /* WPSyncService.m in Sources */,
 				CBA0E87F19012EED007119C0 /* NSString+Extention.m in Sources */,
+				CB45CC30192101510020D76C /* NSString+SBJSON.m in Sources */,
 				CBA0E88219012EED007119C0 /* UIView+Utils.m in Sources */,
 				CBA0E89619013908007119C0 /* LoginViewController.m in Sources */,
 				CBA0E89D19013A7A007119C0 /* WPSigninView.m in Sources */,
@@ -749,28 +874,41 @@
 				CB4542B41915F78C00BFE852 /* WPProductButton.m in Sources */,
 				CB924BF819094F04000389CB /* CheckItemView.m in Sources */,
 				CBA0E890190133D4007119C0 /* FTAnimationManager.m in Sources */,
+				CB45CC2B192101510020D76C /* JSONMutableArray.m in Sources */,
 				CBA0E88F190133D4007119C0 /* CoreAnimationEffect.m in Sources */,
 				CB6B7991191C990F00610CD6 /* WPNickName.m in Sources */,
+				CB45CC33192101510020D76C /* SBJsonParser.m in Sources */,
+				CB45CC3A192106B30020D76C /* CCUpdataApp.m in Sources */,
 				CB4542B01915ED2A00BFE852 /* WPStockViewController.m in Sources */,
 				CB6B7982191A419200610CD6 /* WPShareManager.m in Sources */,
 				CBA0E88119012EED007119C0 /* BaseXibViewController.m in Sources */,
+				CB45CC32192101510020D76C /* SBJsonBase.m in Sources */,
 				CBA0E87E19012EED007119C0 /* Functions.m in Sources */,
+				CB45CC3E19210B250020D76C /* WPRegisterAlert.m in Sources */,
 				CB2DAF3D1910E16600DD29C1 /* BillView.m in Sources */,
+				CB45CC34192101510020D76C /* SBJsonWriter.m in Sources */,
 				CBA0E88019012EED007119C0 /* QQImageView.m in Sources */,
 				CB4542BE191603A100BFE852 /* WPCProductButton.m in Sources */,
+				CB45CC31192101510020D76C /* SBJSON.m in Sources */,
 				CBA0E88319012EED007119C0 /* UIView+XibView.m in Sources */,
 				CB6B798A191B902600610CD6 /* WPAuthView.m in Sources */,
+				CB45CC2C192101510020D76C /* JsonParser.m in Sources */,
 				CB6B7996191C994B00610CD6 /* WPPasswordView.m in Sources */,
 				CB2FAD081902C37B00F46A0A /* WPBuffetViewController.m in Sources */,
 				CBA0E891190133D4007119C0 /* FTUtils+NSObject.m in Sources */,
+				CB45CC3B192106B30020D76C /* LoadData.m in Sources */,
 				CB7EDB64190D445600089DE8 /* WPSwitchBar.m in Sources */,
+				CB59813419211056000AF16A /* WPRultView.m in Sources */,
 				CB4E1399190FF0130048709B /* RakeView.m in Sources */,
+				CB45CC2A192101510020D76C /* JSONKit.m in Sources */,
 				CBA0E892190133D4007119C0 /* UIView+CCAnimation.m in Sources */,
 				CBDD252418FF8CCA009043FE /* AppDelegate.m in Sources */,
+				CB45CC2F192101510020D76C /* NSObject+SBJSON.m in Sources */,
 				CBCBF1FA190F48BF003439DB /* MarketInTableViewCell.m in Sources */,
 				CB2FAD0D1902C3A800F46A0A /* WPSettingViewController.m in Sources */,
 				CB2FAD171902C3DA00F46A0A /* WPWalletViewController.m in Sources */,
 				CBDD252018FF8CCA009043FE /* main.m in Sources */,
+				CB45CC2E192101510020D76C /* NSObject+JSON.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

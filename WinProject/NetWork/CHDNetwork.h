@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "ASIHTTPRequest.h"
+#import "ASIFormDataRequest.h"
 #import "AppDelegate.h"
 
 typedef enum {
@@ -36,16 +37,18 @@ typedef enum {
 @property (nonatomic) int timeout;
 @property (nonatomic) RESTfulFormat format;
 @property (nonatomic, strong) NSDate *expiration;
-@property (nonatomic, strong) ASIHTTPRequest *request;
+@property (nonatomic, strong) ASIFormDataRequest *request;
 
 + (NSInteger)getResponseCodes;
 
 - (void)ensureRequestContext;
 - (void)cancelRequest;
-- (void)createRESTfulRequest;
+- (void)createRESTfulRequest:(NSDictionary *)param;
 - (void)startAsynchronousWithProcessBlock:(void (^)(id))processBlock
                        responseBuildBlock:(id (^)(NSString *))responseBuildBlock;
 
 - (NSString *)sign;
+
+- (void)addPostValue:(NSDictionary *)term;
 
 @end

@@ -18,10 +18,12 @@
     #import "UIView+Utils.h"
     #import "Functions.h"
     #import "AppDelegate.h"
+    #import "WPSyncService.h"
     #import "NSString+Extention.h"
     #import "Configuration.h"
     #import "Reachability.h"
     #import "ASIHttpRequest.h"
     #import "SBJson4.h"
     #import "InnerBand.h"
+    #import "NSObject+JSON.h"
 #endif

@@ -7,6 +7,7 @@
 //
 
 #import "WPSigninView.h"
+#import "NSString+Extention.h"
 
 @implementation WPSigninView
 
@@ -25,6 +26,10 @@
                                 forKeyPath:@"_placeholderLabel.textColor"];
     [self.passwordTextField setValue:[UIColor colorWithHexString:@"584f4a"]
                                 forKeyPath:@"_placeholderLabel.textColor"];
+#ifdef DEBUG
+    [self.phoneTextField setText:@"rirny"];
+    [self.passwordTextField setText:@"123123"];
+#endif
     
     NSMutableDictionary *linkAttributes = [NSMutableDictionary dictionary];
     [linkAttributes setValue:[NSNumber numberWithBool:YES] forKey:(NSString *)kCTUnderlineStyleAttributeName];
@@ -59,6 +64,23 @@
     if ([self.delegate respondsToSelector:@selector(signRegister)])
     {
         [self.delegate signRegister];
+    }
+}
+
+- (IBAction)login:(id)sender
+{
+    if (![NSString isNilOrEmpty:self.phoneTextField.text] && ![NSString isNilOrEmpty:self.passwordTextField.text])
+    {
+        NSMutableDictionary* dict = [@{@"app":@"index",@"act":@"login"} mutableCopy];
+        [dict setValue:self.phoneTextField.text forKey:@"Phone"];
+        [dict setValue:[self.passwordTextField.text MD5] forKey:@"Password"];
+        [[WPSyncService alloc]syncWithRoute:dict Block:^(id resp) {
+            
+        }];
+    }
+    else
+    {
+        Alert(@"手机号或密码不能为空!");
     }
 }
 

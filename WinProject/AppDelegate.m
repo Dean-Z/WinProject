@@ -13,6 +13,7 @@
 #import "WPWalletViewController.h"
 #import "RDVTabBarItem.h"
 #import "LoginViewController.h"
+#import "CCUpdataApp.h"
 
 @implementation AppDelegate
 
@@ -39,8 +40,10 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-//    [self logoutSucceed:YES];
-    [self loginSucceed];
+    [self logoutSucceed:YES];
+//    [self loginSucceed];
+    
+    [self versionCheck];
     
     return YES;
 }
@@ -200,6 +203,42 @@
     
 }
 
+
+-(void)versionCheck
+{
+    [[CCUpdataApp alloc]detectionIfNewVersion:^(id resp) {
+        if (resp !=nil && [resp isKindOfClass:[NSDictionary class]])
+        {
+            NSArray* tmpArray = [resp objectForKey:@"results"];
+            if (tmpArray !=nil && tmpArray.count > 0)
+            {
+                NSDictionary* result = tmpArray[0];
+                
+                NSString* version = [result objectForKey:@"version"];
+                
+                if (![version isEqualToString:App_Version])
+                {
+                    UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"更新" message:[NSString stringWithFormat:@"最新版本%@",[result objectForKey:@"version"]] delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"更新", nil];
+                    self.urlString  = [result objectForKey:@"trackViewUrl"];
+                    [alert show];
+                    alert = nil;
+                }
+                
+            }
+        }
+    }];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1)
+    {
+        if (![NSString isNilOrEmpty:self.urlString])
+        {
+            [[CCUpdataApp alloc]update:self.urlString];
+        }
+    }
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

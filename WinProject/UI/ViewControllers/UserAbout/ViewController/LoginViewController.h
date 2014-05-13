@@ -12,6 +12,7 @@
 #import "WPAuthView.h"
 #import "WPPasswordView.h"
 #import "WPNickName.h"
+#import "WPRegisterAlert.h"
 
 @interface LoginViewController : BaseXibViewController<WPSigninViewDelegate,WPSignupViewDelegate,WPAuthViewDelegate,WPPasswordViewDelegate,WPNickNameDelegate>
 

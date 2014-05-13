@@ -14,4 +14,7 @@
 @property (nonatomic,weak) IBOutlet UIView* cell1Container;
 @property (nonatomic,weak) IBOutlet UIView* cell2Container;
 @property (nonatomic,weak) IBOutlet UIView* cell3Container;
+
+@property (nonatomic,strong) NSString* urlString;
+
 @end

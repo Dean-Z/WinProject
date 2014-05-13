@@ -15,6 +15,7 @@
     WPAuthView*   authView;
     WPPasswordView* password;
     WPNickName*   nickView;
+    WPRegisterAlert* alertView;
     
     NSString* phoneNumber;
     BOOL isShowKeyBoard;
@@ -66,6 +67,8 @@
             signupView.originY -= 100;
         if (authView)
             authView.originY -= 100;
+        if (nickView)
+            nickView.originY -= 100;
             
     } completion:^(BOOL finished) {
         
@@ -83,6 +86,8 @@
             signupView.originY += 100;
         if (authView)
             authView.originY += 100;
+        if (nickView)
+            nickView.originY += 100;
         
     } completion:^(BOOL finished) {
         
@@ -208,6 +213,15 @@
     }];
 }
 
+- (void)parpareAlertView
+{
+    if (alertView == nil)
+    {
+        alertView = [WPRegisterAlert viewFromXib];
+        [alertView renderView];
+    }
+}
+
 #pragma mark SIGN DELEGATE
 
 - (void) signRegister
@@ -289,7 +303,8 @@
 
 - (void)nickNameCompliation
 {
-    [self.app loginSucceed];
+    [self parpareAlertView];
+//    [self.app loginSucceed];
 }
 
 - (void)didReceiveMemoryWarning

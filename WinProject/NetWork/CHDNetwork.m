@@ -47,50 +47,26 @@ NSInteger MAX_RETRY_LIMIT = 3;
     return self;
 }
 
-- (void)createRESTfulRequest
+- (void)createRESTfulRequest:(NSDictionary *)param
 {
     [self cancelRequest];
     
     [self ensureRequestContext];
     
-    self.request = [[ASIHTTPRequest alloc] initWithURL:self.url];
+    self.request = [[ASIFormDataRequest alloc] initWithURL:[NSURL URLWithString:REST_API_URL]];
     
-    [self.request addRequestHeader:@"Content-Type" value:@"application/x-www-form-urlencoded"];
+    self.request.timeOutSeconds = 45.0f;
     
-    switch (self.method)
-    {
-        case RESTFUL_METHOD_POST:
-        case RESTFUL_METHOD_PUT:
-        {
-            [self.request appendPostData:[self.data dataUsingEncoding:NSUTF8StringEncoding]];
-        }
-            break;
-            
-        case RESTFUL_METHOD_GET:
-            [self.request setDownloadCache:[ASIDownloadCache sharedCache]];
-            [self.request setCacheStoragePolicy:ASICacheForSessionDurationCacheStoragePolicy];
-            [self.request setSecondsToCache:30];
-            [self.request setCachePolicy:ASIFallbackToCacheIfLoadFailsCachePolicy |
-             ASIAskServerIfModifiedWhenStaleCachePolicy];
-            break;
-            
-        default:
-            break;
-    }
+    [self addPostValue:param];
     
-    [self.request setRequestMethod:[self methodString]];
-    
-    
-    //DEBUG
-#ifdef REST_API_DEBUG
-    [self.request addRequestHeader:@"DEBUG" value:REST_API_DEBUG];
-#endif
-    
-    if (self.timeout > 0)
-    {
-        self.request.timeOutSeconds = self.timeout;
-    }
+}
 
+- (void)addPostValue:(NSDictionary *)term
+{
+    for (NSString *key in term.allKeys)
+    {
+        [self.request addPostValue:term[key] forKey:key];
+    }
 }
 
 // 下载数据
@@ -107,6 +83,8 @@ NSInteger MAX_RETRY_LIMIT = 3;
     
     failedBlock = ^
     {
+        
+        DLog(@"%@",ser.request.responseString);
         response_codes += 1;
         processBlock(nil);
         ser = nil;
@@ -149,42 +127,7 @@ NSInteger MAX_RETRY_LIMIT = 3;
 
 - (void) ensureRequestContext
 {
-    NSMutableString *url = [[NSMutableString alloc] init];
-    
-    [url appendString:REST_API_URL];
-//    [url appendString:[NSString stringWithFormat:@"v%d", self.version]];
-//    [url appendString:@"/"];
-    [url appendString:self.route];
-//    [url appendString:@"."];
-//    [url appendString:[self formatString]];
-    
-    NSUInteger i     = 0;
-    NSUInteger count = [self.query count] - 1;
-    
-    if (self.query.count > 0)
-    {
-        [url appendString:@"?"];
-        
-        for (NSString *key in self.query.allKeys)
-        {
-            [url appendString:[key urlEncode]];
-            [url appendString:@"="];
-            [url appendString:[[self.query objectForKey:key] urlEncode]];
-            
-            if (i < count)
-            {
-                [url appendString:@"&"];
-            }
-            i++;
-        }
-    }
-    
-    self.url = [NSURL URLWithString:url];
-    
-    if ([NSString isNilOrEmpty:self.data])
-    {
-        self.data = @"";
-    }
+    self.url = [NSURL URLWithString:REST_API_URL];
 }
 
 - (NSString *) sign

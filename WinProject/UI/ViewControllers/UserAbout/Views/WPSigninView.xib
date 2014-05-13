@@ -33,6 +33,9 @@
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" red="0.098039215686274508" green="0.21568627450980393" blue="0.54509803921568623" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="login:" destination="Twy-7N-Xr9" eventType="touchUpInside" id="NNM-n9-RcY"/>
+                    </connections>
                 </button>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="忘记密码？" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zZZ-6X-0Fs" customClass="TTTAttributedLabel">
                     <rect key="frame" x="181" y="183" width="51" height="21"/>
