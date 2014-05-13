@@ -229,6 +229,11 @@
     [self prepareSignupView];
 }
 
+- (void) signinSucceed
+{
+     [self.app loginSucceed];
+}
+
 - (void) signupBackAction
 {
     [UIView transitionWithView:signupView duration:0.3 options:UIViewAnimationOptionCurveEaseOut animations:^{
@@ -304,7 +309,7 @@
 - (void)nickNameCompliation
 {
     [self parpareAlertView];
-//    [self.app loginSucceed];
+    [self.app loginSucceed];
 }
 
 - (void)didReceiveMemoryWarning

@@ -75,7 +75,13 @@
         [dict setValue:self.phoneTextField.text forKey:@"Phone"];
         [dict setValue:[self.passwordTextField.text MD5] forKey:@"Password"];
         [[WPSyncService alloc]syncWithRoute:dict Block:^(id resp) {
-            
+            if (resp)
+            {
+                if ([self.delegate respondsToSelector:@selector(signinSucceed)])
+                {
+                    [self.delegate signinSucceed];
+                }
+            }
         }];
     }
     else

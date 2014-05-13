@@ -21,6 +21,7 @@
 
 @protocol WPSigninViewDelegate <NSObject>
 
+-(void)signinSucceed;
 -(void)signRegister;
 
 @end

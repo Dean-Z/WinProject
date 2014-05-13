@@ -27,10 +27,15 @@
              if ([date[@"state"] intValue] != 1)
              {
                  Alert(date[@"message"]);
+                 processBlock(nil);
+             }
+             else
+             {
+                 processBlock(resp);
              }
          }
+         
          DLog(@"%@",resp);
-         processBlock(resp);
          
      } responseBuildBlock:^id(NSString *respText) {
          return respText;
