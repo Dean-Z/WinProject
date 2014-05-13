@@ -49,6 +49,27 @@
     NSURL *url = [NSURL URLWithString:@"http://forgotpassword"];
     [self.forgotPasswordLabel addLinkToURL:url withRange:range];
     
+    ValidationBlock validatedFieldBlock = ^(ValidationResult result, BOOL isEditing)
+    {
+        switch (result) {
+            case ValidationPassed:
+                DLog(@"Field is valid.");
+                break;
+                
+            case ValidationFailed:
+                DLog(@"Field is invalid.");
+                break;
+                
+            case ValueTooShortToValidate:
+                DLog(@"Value too short to validate. Type longer");
+                break;
+        }
+    };
+    
+    self.phoneTextField.validatedFieldBlock = validatedFieldBlock;
+    self.phoneTextField.inputAccessoryView = [self inputAccessoryBar];
+    self.passwordTextField.validatedFieldBlock = validatedFieldBlock;
+    self.passwordTextField.inputAccessoryView = [self inputAccessoryBar];
 }
 
 - (void)attributedLabel:(TTTAttributedLabel *)label didSelectLinkWithURL:(NSURL *)url
@@ -89,5 +110,12 @@
         Alert(@"手机号或密码不能为空!");
     }
 }
+
+- (void)dismissKeyBoard
+{
+    [self.phoneTextField resignFirstResponder];
+    [self.passwordTextField resignFirstResponder];
+}
+
 
 @end

@@ -41,6 +41,11 @@
 
 - (IBAction)sure:(id)sender
 {
+    if ([self.delegate respondsToSelector:@selector(registerSucceed)])
+    {
+        [self.delegate registerSucceed];
+    }
+    
     CAAnimation* popAnim = [[FTAnimationManager sharedManager]popOutAnimationFor:self duration:0.3 delegate:nil startSelector:nil stopSelector:nil];
     [self.layer addAnimation:popAnim forKey:@"POP"];
     

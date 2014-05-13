@@ -8,14 +8,15 @@
 
 #import "WPBaseView.h"
 #import "TTTAttributedLabel.h"
+#import "TSValidatedTextField.h"
 
 @protocol WPSigninViewDelegate;
 @interface WPSigninView : WPBaseView<TTTAttributedLabelDelegate>
 
 @property(nonatomic,weak) IBOutlet TTTAttributedLabel* forgotPasswordLabel;
 @property(nonatomic,assign) id<WPSigninViewDelegate> delegate;
-@property(nonatomic,weak) IBOutlet UITextField* phoneTextField;
-@property(nonatomic,weak) IBOutlet UITextField* passwordTextField;
+@property(nonatomic,weak) IBOutlet TSValidatedTextField* phoneTextField;
+@property(nonatomic,weak) IBOutlet TSValidatedTextField* passwordTextField;
 
 @end
 

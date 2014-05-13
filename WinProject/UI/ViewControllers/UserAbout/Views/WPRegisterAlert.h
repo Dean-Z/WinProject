@@ -8,6 +8,17 @@
 
 #import "WPBaseView.h"
 
+@protocol WPRegisterAlertDelegate;
+
 @interface WPRegisterAlert : WPBaseView
+
+@property(nonatomic,assign) id<WPRegisterAlertDelegate> delegate;
+
+@end
+
+
+@protocol WPRegisterAlertDelegate <NSObject>
+
+- (void) registerSucceed;
 
 @end

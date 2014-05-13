@@ -27,7 +27,7 @@
 {
     [self.phoneTextField setValue:[UIColor colorWithHexString:@"584f4a"]
                           forKeyPath:@"_placeholderLabel.textColor"];
-    
+    [self.phoneTextField setInputAccessoryView:[self inputAccessoryBar]];
     [self prepareCheckItem];
 }
 
@@ -66,6 +66,11 @@
     {
         [self.delegate signupBackAction];
     }
+}
+
+- (void)dismissKeyBoard
+{
+    [self.phoneTextField resignFirstResponder];
 }
 
 @end

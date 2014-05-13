@@ -8,6 +8,8 @@
 
 #import "LoginViewController.h"
 
+#define InputAccessory IS_IPHONE_5? 0 : 50
+
 @interface LoginViewController ()
 {
     WPSigninView* signinView;
@@ -37,15 +39,15 @@
 {
     [super viewDidLoad];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(keyboardDidShow)
-                                                 name:UIKeyboardWillShowNotification
-                                               object:nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(keyboardDidHidden)
-                                                 name:UIKeyboardWillHideNotification
-                                               object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self
+//                                             selector:@selector(keyboardDidShow)
+//                                                 name:UIKeyboardWillShowNotification
+//                                               object:nil];
+//    
+//    [[NSNotificationCenter defaultCenter] addObserver:self
+//                                             selector:@selector(keyboardDidHidden)
+//                                                 name:UIKeyboardWillHideNotification
+//                                               object:nil];
     
     [self prepareSigninView];
 }
@@ -62,13 +64,13 @@
     [UIView transitionWithView:signinView duration:0.3 options:UIViewAnimationOptionCurveEaseOut animations:^{
         
         if (signinView)
-            signinView.originY -= 100;
+            signinView.originY -= InputAccessory;
         if (signupView)
-            signupView.originY -= 100;
+            signupView.originY -= InputAccessory;
         if (authView)
-            authView.originY -= 100;
+            authView.originY -= InputAccessory;
         if (nickView)
-            nickView.originY -= 100;
+            nickView.originY -= InputAccessory;
             
     } completion:^(BOOL finished) {
         
@@ -81,13 +83,13 @@
     [UIView transitionWithView:signinView duration:0.3 options:UIViewAnimationOptionCurveEaseOut animations:^{
         
         if (signinView)
-            signinView.originY += 100;
+            signinView.originY += InputAccessory;
         if (signupView)
-            signupView.originY += 100;
+            signupView.originY += InputAccessory;
         if (authView)
-            authView.originY += 100;
+            authView.originY += InputAccessory;
         if (nickView)
-            nickView.originY += 100;
+            nickView.originY += InputAccessory;
         
     } completion:^(BOOL finished) {
         
@@ -101,7 +103,8 @@
         signinView = [WPSigninView viewFromXib];
         [signinView renderView];
         signinView.delegate = self;
-        signinView.center = self.view.center;
+        signinView.centerX = self.view.centerX;
+        signinView.originY = (self.view.sizeH - signinView.sizeH)/2 - 50;
         [self.view addSubview:signinView];
         
         if (self.showKeyBoard)
@@ -119,11 +122,7 @@
         [signupView renderView];
         signupView.delegate = self;
         signupView.originX = self.view.sizeW;
-        signupView.originY = (self.view.sizeH - signupView.sizeH)/2;
-        if (isShowKeyBoard)
-        {
-            signupView.originY -= 100;
-        }
+        signupView.originY = (self.view.sizeH - signupView.sizeH)/2 - 50;
         [self.view addSubview:signupView];
     }
     
@@ -144,11 +143,8 @@
         authView.delegate = self;
         authView.phoneNumebrString = phoneNumber;
         [authView renderView];
-        authView.originY = (self.view.sizeH - authView.sizeH)/2;
-        if (isShowKeyBoard)
-        {
-            authView.originY -= 100;
-        }
+        authView.originY = (self.view.sizeH - authView.sizeH)/2 - 50;
+        
         authView.originX = self.view.sizeW;
          [self.view addSubview:authView];
     }
@@ -172,10 +168,7 @@
         [password renderView];
         password.originX = self.view.sizeW;
         password.originY = (self.view.sizeH - password.sizeH)/2;
-        if (isShowKeyBoard)
-        {
-            password.originY -= 100;
-        }
+        password.originY -= InputAccessory;
         [self.view addSubview:password];
     }
     
@@ -196,11 +189,7 @@
         nickView.delegate = self;
         [nickView renderView];
         nickView.originX = self.view.sizeW;
-        nickView.originY = (self.view.sizeH - nickView.sizeH)/2;
-        if (isShowKeyBoard)
-        {
-            nickView.originY -= 100;
-        }
+        nickView.originY = (self.view.sizeH - nickView.sizeH)/2 - 50;
         [self.view addSubview:nickView];
     }
     
@@ -218,6 +207,7 @@
     if (alertView == nil)
     {
         alertView = [WPRegisterAlert viewFromXib];
+        alertView.delegate = self;
         [alertView renderView];
     }
 }
@@ -309,7 +299,11 @@
 - (void)nickNameCompliation
 {
     [self parpareAlertView];
-    [self.app loginSucceed];
+}
+
+- (void)registerSucceed
+{
+    [self nickNameBack];
 }
 
 - (void)didReceiveMemoryWarning

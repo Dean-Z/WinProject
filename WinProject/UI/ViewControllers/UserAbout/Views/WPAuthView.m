@@ -25,6 +25,8 @@
                           forKeyPath:@"_placeholderLabel.textColor"];
     self.phoneNumber.text = self.phoneNumebrString;
     
+    [self.authCodeTextField setInputAccessoryView:[self inputAccessoryBar]];
+    
     count = 60;
     [self performSelector:@selector(downcount) withObject:nil afterDelay:1.0f];
 }
@@ -54,6 +56,11 @@
     {
         [self.delegate authSucceed];
     }
+}
+
+- (void)dismissKeyBoard
+{
+    [self.authCodeTextField resignFirstResponder];
 }
 
 @end

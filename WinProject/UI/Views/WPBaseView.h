@@ -14,4 +14,7 @@
 
 - (void) renderView;
 
+- (UIView*)inputAccessoryBar;
+- (void)dismissKeyBoard;
+
 @end

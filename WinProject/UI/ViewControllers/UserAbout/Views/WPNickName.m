@@ -23,6 +23,7 @@
 {
     [self.nickTextField setValue:[UIColor colorWithHexString:@"584f4a"]
                        forKeyPath:@"_placeholderLabel.textColor"];
+    [self.nickTextField setInputAccessoryView:[self inputAccessoryBar]];
 }
 
 - (IBAction)complation:(id)sender
@@ -40,6 +41,11 @@
     {
         [self.delegate nickNameBack];
     }
+}
+
+- (void)dismissKeyBoard
+{
+    [self.nickTextField resignFirstResponder];
 }
 
 @end

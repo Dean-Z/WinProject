@@ -25,6 +25,9 @@
                        forKeyPath:@"_placeholderLabel.textColor"];
     [self.password_2 setValue:[UIColor colorWithHexString:@"584f4a"]
                           forKeyPath:@"_placeholderLabel.textColor"];
+    
+    [self.password_1 setInputAccessoryView:[self inputAccessoryBar]];
+    [self.password_2 setInputAccessoryView:[self inputAccessoryBar]];
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
@@ -33,6 +36,7 @@
     {
         if ([textField.text length]<6)
         {
+            self.errorLabel_1.hidden = NO;
             [self.errorLabel_1 setText:@"密码不能少于6位数"];
         }
         else
@@ -55,13 +59,25 @@
 {
     if (![self.password_1.text isEqualToString:self.password_2.text])
     {
+        self.errorLabel_2.hidden = NO;
         [self.errorLabel_2 setText:@"2次输入的密码不一致"];
+        return;
+    }
+    else
+    {
+        self.errorLabel_2.hidden = YES;
     }
     
     if ([self.delegate respondsToSelector:@selector(passwordSucceed)])
     {
         [self.delegate passwordSucceed];
     }
+}
+
+- (void) dismissKeyBoard
+{
+    [self.password_1 resignFirstResponder];
+    [self.password_2 resignFirstResponder];
 }
 
 @end

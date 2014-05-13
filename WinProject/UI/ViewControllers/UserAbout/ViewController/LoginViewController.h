@@ -14,7 +14,7 @@
 #import "WPNickName.h"
 #import "WPRegisterAlert.h"
 
-@interface LoginViewController : BaseXibViewController<WPSigninViewDelegate,WPSignupViewDelegate,WPAuthViewDelegate,WPPasswordViewDelegate,WPNickNameDelegate>
+@interface LoginViewController : BaseXibViewController<WPSigninViewDelegate,WPSignupViewDelegate,WPAuthViewDelegate,WPPasswordViewDelegate,WPNickNameDelegate,WPRegisterAlertDelegate>
 
 @property(nonatomic,assign) BOOL showKeyBoard;
 

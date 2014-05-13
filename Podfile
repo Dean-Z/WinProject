@@ -1,4 +1,4 @@
-platform :ios,'5.0'
+platform :ios,'6.0'
 
 pod 'Reachability', '~>3.1.1'
 pod 'ASIHTTPRequest', '~> 1.8.2'
@@ -9,3 +9,4 @@ pod 'SDWebImage', '~> 3.6'
 pod 'InnerBand', '~> 1.0.6'
 pod 'Weibo', '~> 2.4.2'
 pod 'WeChatSDK', '~> 0.0.1'
+pod 'TSValidatedTextField', '~> 1.0.0'

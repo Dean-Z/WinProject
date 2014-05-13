@@ -43,6 +43,7 @@
     [self prepareBillView];
     
     [self.mainScrollView setContentSize:CGSizeMake(320*3, 0)];
+    [self.mainScrollView setContentOffset:CGPointMake(320, 0)];
 }
 
 - (void) dealCoinLabel
@@ -53,8 +54,8 @@
     
     CGFloat containerWidth = self.coinLabel.sizeW+ self.yuanLabel.sizeW;
     
-    self.coinLabel.originX = (self.view.sizeW-containerWidth)/2;
-    self.yuanLabel.originX = self.coinLabel.sizeW+self.coinLabel.originX+3.0f;
+    self.coinLabel.originX = self.view.sizeW + (self.view.sizeW-containerWidth)/2;
+    self.yuanLabel.originX = self.coinLabel.sizeW + self.coinLabel.originX+3.0f;
 }
 
 - (void) prepareRakeView
@@ -62,7 +63,7 @@
     if (rakeView == nil)
     {
         rakeView = [RakeView viewFromXib];
-        rakeView.originX = self.view.sizeW + (self.view.sizeW - rakeView.sizeW)/2;
+        rakeView.originX = (self.view.sizeW - rakeView.sizeW)/2;
         rakeView.originY = (self.view.sizeH - 108 - rakeView.sizeH)/2;
         [rakeView renderView];
         [self.mainScrollView addSubview:rakeView];
