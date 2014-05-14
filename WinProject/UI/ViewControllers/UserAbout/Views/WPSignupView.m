@@ -29,6 +29,19 @@
                           forKeyPath:@"_placeholderLabel.textColor"];
     [self.phoneTextField setInputAccessoryView:[self inputAccessoryBar]];
     [self prepareCheckItem];
+    
+    if (self.isFindPassword)
+    {
+        self.signupAlertContainer.hidden = YES;
+        self.titleLabel.text = @"找回密码";
+        [self.okButton setEnabled:YES];
+    }
+    else
+    {
+        self.signupAlertContainer.hidden = NO;
+        self.titleLabel.text = @"注册";
+        [self.okButton setEnabled:NO];
+    }
 }
 
 -(void) prepareCheckItem
@@ -53,7 +66,25 @@
         Alert(@"请输入正确的电话号码");
         return;
     }
+    NSMutableDictionary* term = [@{@"app":@"index",@"act":@"codeRegister"} mutableCopy];
+    [term setObject:self.phoneTextField.text forKey:@"phone"];
     
+    if (self.isFindPassword)
+    {
+        [term setObject:@"codeFind" forKey:@"act"];
+    }
+    
+    [[WPSyncService alloc]syncWithRoute:term Block:^(id resp) {
+        if (resp)
+        {
+            [self next];
+        }
+    }];
+    
+}
+
+- (void)next
+{
     if ([self.delegate respondsToSelector:@selector(signupWithNumber:)])
     {
         [self.delegate signupWithNumber:self.phoneTextField.text];

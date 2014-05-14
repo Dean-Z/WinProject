@@ -76,7 +76,10 @@
 {
     if ([label.text isEqualToString:self.forgotPasswordLabel.text])
     {
-        DLog(@"Forgot password!!");
+        if ([self.delegate respondsToSelector:@selector(findPassword)])
+        {
+            [self.delegate findPassword];
+        }
     }
 }
 

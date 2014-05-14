@@ -114,11 +114,12 @@
     }
 }
 
-- (void)prepareSignupView
+- (void)prepareSignupView:(BOOL)isFind
 {
     if (signupView == nil)
     {
         signupView = [WPSignupView viewFromXib];
+        signupView.isFindPassword = isFind;
         [signupView renderView];
         signupView.delegate = self;
         signupView.originX = self.view.sizeW;
@@ -216,12 +217,17 @@
 
 - (void) signRegister
 {
-    [self prepareSignupView];
+    [self prepareSignupView:NO];
 }
 
 - (void) signinSucceed
 {
      [self.app loginSucceed];
+}
+
+- (void) findPassword
+{
+    [self prepareSignupView:YES];
 }
 
 - (void) signupBackAction
@@ -230,7 +236,8 @@
         signinView.originX = (self.view.sizeW - signupView.sizeW)/2;
         signupView.originX = self.view.sizeW;
     } completion:^(BOOL finished) {
-        
+        [signupView removeFromSuperview];
+        signupView = nil;
     }];
 }
 

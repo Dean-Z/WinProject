@@ -24,5 +24,6 @@
 
 -(void)signinSucceed;
 -(void)signRegister;
+-(void)findPassword;
 
 @end

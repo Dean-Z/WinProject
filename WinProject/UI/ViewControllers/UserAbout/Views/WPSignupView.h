@@ -17,7 +17,9 @@
 @property(nonatomic,weak) IBOutlet UITextField* phoneTextField;
 @property(nonatomic,weak) IBOutlet UIView* checkViewContainer;
 @property(nonatomic,weak) IBOutlet UIButton* okButton;
-
+@property(nonatomic,assign) BOOL isFindPassword;
+@property(nonatomic,weak) IBOutlet UIView* signupAlertContainer;
+@property(nonatomic,weak) IBOutlet UILabel* titleLabel;
 @end
 
 @protocol WPSignupViewDelegate <NSObject>
