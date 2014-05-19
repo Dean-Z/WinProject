@@ -19,6 +19,7 @@
 @property (nonatomic) BOOL hasNetworkChanged;
 @property (strong, nonatomic) UIViewController *viewController;
 @property (nonatomic,strong) NSString* urlString;
+@property (nonatomic,strong)  RDVTabBarController *aTabBarController;
 
 +(id)shareAppDelegate;
 

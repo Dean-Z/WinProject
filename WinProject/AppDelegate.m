@@ -40,8 +40,8 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    [self logoutSucceed:YES];
-//    [self loginSucceed];
+//    [self logoutSucceed:YES];
+    [self loginSucceed];
     
     [self versionCheck];
     
@@ -84,13 +84,15 @@
     UIViewController *fouthNavigationController = [[UINavigationController alloc]
                                                    initWithRootViewController:setting];
     
-    RDVTabBarController *tabBarController = [[RDVTabBarController alloc] init];
+    self.aTabBarController = [[RDVTabBarController alloc] init];
+    UINavigationController* nav = [[UINavigationController alloc]initWithRootViewController:self.aTabBarController];
+    [nav.navigationBar setHidden:YES];
     
-    [tabBarController setViewControllers:@[firstNavigationController, secondNavigationController,
+    [self.aTabBarController setViewControllers:@[firstNavigationController, secondNavigationController,
                                            thirdNavigationController,fouthNavigationController]];
-    self.viewController = tabBarController;
+    self.viewController = nav;
     
-    [self customizeTabBarForController:tabBarController];
+    [self customizeTabBarForController:self.aTabBarController];
 }
 
 - (void)customizeTabBarForController:(RDVTabBarController *)tabBarController

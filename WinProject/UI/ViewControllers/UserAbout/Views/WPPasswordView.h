@@ -15,10 +15,14 @@
 @property(nonatomic,weak) IBOutlet UITextField* password_1;
 @property(nonatomic,weak) IBOutlet UITextField* password_2;
 
+@property(nonatomic,weak) IBOutlet UIButton* nextButton;
+
 @property(nonatomic,weak) IBOutlet UILabel*     errorLabel_1;
 @property(nonatomic,weak) IBOutlet UILabel*     errorLabel_2;
 
 @property(nonatomic,assign) id<WPPasswordViewDelegate> delegate;
+
+@property(nonatomic,assign) ViewType viewType;
 
 @end
 

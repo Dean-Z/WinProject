@@ -17,5 +17,5 @@
 @interface LoginViewController : BaseXibViewController<WPSigninViewDelegate,WPSignupViewDelegate,WPAuthViewDelegate,WPPasswordViewDelegate,WPNickNameDelegate,WPRegisterAlertDelegate>
 
 @property(nonatomic,assign) BOOL showKeyBoard;
-
+@property(nonatomic,assign) ViewType viewType;
 @end

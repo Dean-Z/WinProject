@@ -8,6 +8,7 @@
 
 #import "WPSettingViewController.h"
 #import "CCUpdataApp.h"
+#import "LoginViewController.h"
 
 @interface WPSettingViewController ()
 
@@ -31,7 +32,6 @@
     
     [self.scrollViewContainer setContentSize:CGSizeMake(0, self.view.sizeH-64)];
     
-    [self makeCornerRadiusAtView:self.cell1Container];
     [self makeCornerRadiusAtView:self.cell2Container];
     [self makeCornerRadiusAtView:self.cell3Container];
 }
@@ -42,24 +42,22 @@
     view.layer.cornerRadius = 3.0f;
 }
 
-- (IBAction)openWp:(id)sender
-{
-    
-}
-
-- (IBAction)individuation:(id)sender
-{
-    
-}
-
 - (IBAction)resetPassword:(id)sender
 {
+    LoginViewController* login = [[LoginViewController alloc]viewControllerFromXib];
+    login.viewType = VIEW_RESET_PASSWORD;
+    [self.app.aTabBarController.navigationController pushViewController:login animated:YES];
     
+    [self.tabBarController hidesBottomBarWhenPushed];
 }
 
 - (IBAction)resetName:(id)sender
 {
+    LoginViewController* login = [[LoginViewController alloc]viewControllerFromXib];
+    login.viewType = VIEW_RESET_NICKNAME;
+    [self.app.aTabBarController.navigationController pushViewController:login animated:YES];
     
+    [self.tabBarController hidesBottomBarWhenPushed];
 }
 
 - (IBAction)callServe:(id)sender

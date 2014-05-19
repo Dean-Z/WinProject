@@ -27,8 +27,8 @@
     [self.passwordTextField setValue:[UIColor colorWithHexString:@"584f4a"]
                                 forKeyPath:@"_placeholderLabel.textColor"];
 #ifdef DEBUG
-    [self.phoneTextField setText:@"rirny"];
-    [self.passwordTextField setText:@"123123"];
+    [self.phoneTextField setText:@"test1"];
+    [self.passwordTextField setText:@"yingping"];
 #endif
     
     NSMutableDictionary *linkAttributes = [NSMutableDictionary dictionary];

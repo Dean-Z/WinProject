@@ -49,7 +49,56 @@
 //                                                 name:UIKeyboardWillHideNotification
 //                                               object:nil];
     
-    [self prepareSigninView];
+    switch (self.viewType)
+    {
+        case VIEW_RESET_PASSWORD:
+        {
+            [self prepareResetPasswordOnly];
+        }
+            break;
+        case VIEW_RESET_NICKNAME:
+        {
+            [self prepareResetNickNameOnly];
+        }
+            break;
+        default:
+        {
+            [self prepareSigninView];
+        }
+            break;
+    }
+}
+
+- (void)prepareResetPasswordOnly
+{
+    if (password == nil)
+    {
+        password = [WPPasswordView viewFromXib];
+        password.viewType = self.viewType;
+        password.delegate = self;
+        [password renderView];
+        password.originX = (self.view.sizeW - password.sizeW)/2;
+        password.originY = (self.view.sizeH - password.sizeH)/2;
+        password.originY -= InputAccessory;
+        [self.view addSubview:password];
+    }
+    
+    [password.password_1 becomeFirstResponder];
+}
+
+- (void)prepareResetNickNameOnly
+{
+    if (nickView == nil)
+    {
+        nickView = [WPNickName viewFromXib];
+        nickView.delegate = self;
+        [nickView renderView];
+        nickView.originX = (self.view.sizeW - nickView.sizeW)/2;
+        nickView.originY = (self.view.sizeH - nickView.sizeH)/2 - 50;
+        [self.view addSubview:nickView];
+    }
+    
+    [nickView.nickTextField becomeFirstResponder];
 }
 
 - (void) viewDidAppear:(BOOL)animated
@@ -269,6 +318,12 @@
 
 - (void)passwordBack
 {
+    if (self.viewType == VIEW_RESET_PASSWORD)
+    {
+        [self.navigationController popViewControllerAnimated:YES];
+        return;
+    }
+    
     [UIView transitionWithView:password duration:0.3 options:UIViewAnimationOptionCurveEaseOut animations:^{
         password.originX = self.view.sizeW;
         signupView.originX = self.view.sizeW;
@@ -283,11 +338,22 @@
 
 - (void)passwordSucceed
 {
+    if (self.viewType == VIEW_RESET_PASSWORD)
+    {
+        [self.navigationController popViewControllerAnimated:YES];
+        return;
+    }
     [self prepareNickView];
 }
 
 - (void)nickNameBack
 {
+    if (self.viewType == VIEW_RESET_NICKNAME)
+    {
+        [self.navigationController popViewControllerAnimated:YES];
+        return;
+    }
+    
     [UIView transitionWithView:self.view duration:0.3 options:UIViewAnimationOptionCurveEaseOut animations:^{
         password.originX = self.view.sizeW;
         nickView.originX = self.view.sizeW;
@@ -305,6 +371,12 @@
 
 - (void)nickNameCompliation
 {
+    if (self.viewType == VIEW_RESET_NICKNAME)
+    {
+        [self.navigationController popViewControllerAnimated:YES];
+        return;
+    }
+    
     [self parpareAlertView];
 }
 

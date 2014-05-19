@@ -28,6 +28,11 @@
     
     [self.password_1 setInputAccessoryView:[self inputAccessoryBar]];
     [self.password_2 setInputAccessoryView:[self inputAccessoryBar]];
+    
+    if (self.viewType == VIEW_RESET_PASSWORD)
+    {
+        [self.nextButton setTitle:@"确定" forState:UIControlStateNormal];
+    }
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField

@@ -14,6 +14,14 @@
 #define ACCOUNT_KEY_ROWDATA         @"ACCOUNT_KEY_ROWDATA"
 #define ACCOUNT_KEY_COOKIE          @"ACCOUNT_KEY_COOKIE"
 
+typedef enum
+{
+    VIEW_LOGIN = 1,
+    VIEW_RESET_PASSWORD = 2,
+    VIEW_RESET_NICKNAME = 3,
+    
+}ViewType;
+
 #define IS_SYSTEM_IOS7 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7)
 
 #define DLog(format, ...) NSLog((@"[LINE: %d]%s: " format), __LINE__, __PRETTY_FUNCTION__, ## __VA_ARGS__)
