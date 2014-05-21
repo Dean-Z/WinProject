@@ -247,7 +247,7 @@
     NSUserDefaults* userDefault = [NSUserDefaults standardUserDefaults];
     NSString* userRowDate = [userDefault objectForKey:USER_INFO_ROWDATA];
     
-    if (![NSString isNilOrEmpty:userRowDate])
+    if ([NSString isNilOrEmpty:userRowDate])
     {
         [self.userInfo setRowDate:userRowDate];
         [self loginSucceed];

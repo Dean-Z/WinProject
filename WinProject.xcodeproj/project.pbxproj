@@ -71,6 +71,8 @@
 		CB7EDB66190D449D00089DE8 /* WPSwitchBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB7EDB65190D449D00089DE8 /* WPSwitchBar.xib */; };
 		CB827E13192BA6AB00AFDBBF /* WPUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CB827E12192BA6AB00AFDBBF /* WPUserInfo.m */; };
 		CB827E17192BAB0400AFDBBF /* WPBaseInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CB827E16192BAB0400AFDBBF /* WPBaseInfo.m */; };
+		CB827E1C192CE19E00AFDBBF /* WPQDateInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CB827E1B192CE19E00AFDBBF /* WPQDateInfo.m */; };
+		CB827E1F192CE93200AFDBBF /* WPCDataInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CB827E1E192CE93200AFDBBF /* WPCDataInfo.m */; };
 		CB924BF519094578000389CB /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB924BF419094578000389CB /* MessageUI.framework */; };
 		CB924BF819094F04000389CB /* CheckItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB924BF719094F04000389CB /* CheckItemView.m */; };
 		CB924BFA19094F14000389CB /* CheckItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB924BF919094F14000389CB /* CheckItemView.xib */; };
@@ -221,6 +223,10 @@
 		CB827E12192BA6AB00AFDBBF /* WPUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPUserInfo.m; sourceTree = "<group>"; };
 		CB827E15192BAB0400AFDBBF /* WPBaseInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPBaseInfo.h; sourceTree = "<group>"; };
 		CB827E16192BAB0400AFDBBF /* WPBaseInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPBaseInfo.m; sourceTree = "<group>"; };
+		CB827E1A192CE19E00AFDBBF /* WPQDateInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPQDateInfo.h; sourceTree = "<group>"; };
+		CB827E1B192CE19E00AFDBBF /* WPQDateInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPQDateInfo.m; sourceTree = "<group>"; };
+		CB827E1D192CE93200AFDBBF /* WPCDataInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPCDataInfo.h; sourceTree = "<group>"; };
+		CB827E1E192CE93200AFDBBF /* WPCDataInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPCDataInfo.m; sourceTree = "<group>"; };
 		CB924BF419094578000389CB /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		CB924BF619094F04000389CB /* CheckItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckItemView.h; sourceTree = "<group>"; };
 		CB924BF719094F04000389CB /* CheckItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckItemView.m; sourceTree = "<group>"; };
@@ -382,6 +388,10 @@
 				CB827E12192BA6AB00AFDBBF /* WPUserInfo.m */,
 				CB827E15192BAB0400AFDBBF /* WPBaseInfo.h */,
 				CB827E16192BAB0400AFDBBF /* WPBaseInfo.m */,
+				CB827E1A192CE19E00AFDBBF /* WPQDateInfo.h */,
+				CB827E1B192CE19E00AFDBBF /* WPQDateInfo.m */,
+				CB827E1D192CE93200AFDBBF /* WPCDataInfo.h */,
+				CB827E1E192CE93200AFDBBF /* WPCDataInfo.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -900,6 +910,7 @@
 				CB45CC3A192106B30020D76C /* CCUpdataApp.m in Sources */,
 				CB4542B01915ED2A00BFE852 /* WPStockViewController.m in Sources */,
 				CB6B7982191A419200610CD6 /* WPShareManager.m in Sources */,
+				CB827E1C192CE19E00AFDBBF /* WPQDateInfo.m in Sources */,
 				CBA0E88119012EED007119C0 /* BaseXibViewController.m in Sources */,
 				CB45CC32192101510020D76C /* SBJsonBase.m in Sources */,
 				CBA0E87E19012EED007119C0 /* Functions.m in Sources */,
@@ -925,6 +936,7 @@
 				CBDD252418FF8CCA009043FE /* AppDelegate.m in Sources */,
 				CB45CC2F192101510020D76C /* NSObject+SBJSON.m in Sources */,
 				CBCBF1FA190F48BF003439DB /* MarketInTableViewCell.m in Sources */,
+				CB827E1F192CE93200AFDBBF /* WPCDataInfo.m in Sources */,
 				CB2FAD0D1902C3A800F46A0A /* WPSettingViewController.m in Sources */,
 				CB2FAD171902C3DA00F46A0A /* WPWalletViewController.m in Sources */,
 				CBDD252018FF8CCA009043FE /* main.m in Sources */,

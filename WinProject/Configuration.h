@@ -12,6 +12,8 @@
 #define REST_API_URL @"http://api.yingping.oneve.com"
 
 #define USER_INFO_ROWDATA       @"USER_INFO_ROWDATA"
+#define ACCOUNT_KEY_ROWDATA     @"ACCOUNT_KEY_ROWDATA"
+#define ACCOUNT_KEY_COOKIE      @"ACCOUNT_KEY_COOKIE"
 
 typedef enum
 {

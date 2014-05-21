@@ -8,6 +8,7 @@
 
 #import "CHDNetwork.h"
 #import "ASIDownloadCache.h"
+#import "NSObject+JSON.h"
 
 NSInteger response_codes  = 0;
 NSInteger MAX_RETRY_LIMIT = 3;
@@ -55,6 +56,14 @@ NSInteger MAX_RETRY_LIMIT = 3;
     
     self.request = [[ASIFormDataRequest alloc] initWithURL:[NSURL URLWithString:REST_API_URL]];
     
+    AppDelegate* app = [AppDelegate shareAppDelegate];
+    if (![NSString isNilOrEmpty:app.userInfo.cookies])
+    {
+        [self.request addRequestHeader:@"Cookie" value:[NSString stringWithFormat:@"Session=%@",app.userInfo.cookies]];
+    }
+    
+    self.request.requestCookies = [NSMutableArray arrayWithArray:self.app.cookies];
+    self.request.useSessionPersistence = YES;
     self.request.timeOutSeconds = 45.0f;
     
     [self addPostValue:param];

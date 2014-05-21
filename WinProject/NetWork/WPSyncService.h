@@ -10,6 +10,10 @@
 
 @interface WPSyncService : CHDNetwork
 
+- (void)loginWithRoute:(NSDictionary*)term Block: (void (^)(id))processBlock;
+
 - (void) syncWithRoute:(NSDictionary*)term Block: (void (^)(id))processBlock;
+
+- (void)downloadImageWithRoute:(NSDictionary*)term Block: (void (^)(id))processBlock;
 
 @end

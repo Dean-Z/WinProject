@@ -13,6 +13,7 @@
 @property (nonatomic,weak) IBOutlet UIScrollView* scrollViewContainer;
 @property (nonatomic,weak) IBOutlet UIView* cell2Container;
 @property (nonatomic,weak) IBOutlet UIView* cell3Container;
+@property (nonatomic,weak) IBOutlet UIView* loadingView;
 
 @property (nonatomic,strong) NSString* urlString;
 

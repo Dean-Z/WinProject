@@ -10,6 +10,8 @@
 #import "WPSwitchBar.h"
 #import "BufferProductView.h"
 #import "BufferCProcudtView.h"
+#import "WPQDateInfo.h"
+#import "WPCDataInfo.h"
 
 @protocol WPStockViewControllerDelegate;
 

@@ -26,6 +26,7 @@
 - (void) renderView
 {
     [self prepareProductBtn];
+    [self.productImageView setImageWithURL:[NSURL URLWithString:self.dataInfo.url]];
 }
 
 - (void) prepareProductBtn

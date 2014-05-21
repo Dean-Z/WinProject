@@ -29,7 +29,7 @@
                                 forKeyPath:@"_placeholderLabel.textColor"];
 #ifdef DEBUG
     [self.phoneTextField setText:@"18217144855"];
-    [self.passwordTextField setText:@"123123"];
+    [self.passwordTextField setText:@"123456"];
 #endif
     
     NSMutableDictionary *linkAttributes = [NSMutableDictionary dictionary];
@@ -99,13 +99,15 @@
         NSMutableDictionary* dict = [@{@"app":@"index",@"act":@"login"} mutableCopy];
         [dict setValue:self.phoneTextField.text forKey:@"account"];
         [dict setValue:[self.passwordTextField.text MD5] forKey:@"password"];
-        [[WPSyncService alloc]syncWithRoute:dict Block:^(id resp) {
+        [[WPSyncService alloc]loginWithRoute:dict Block:^(id resp)
+        {
             if (resp)
             {
                 if ([self.delegate respondsToSelector:@selector(signinSucceed)])
                 {
                     
                     Alert(@"登陆成功");
+                    self.app.phoneNumber = self.phoneTextField.text;
                     [self.app.userInfo setRowDate:resp];
                     [self.app.userInfo save:USER_INFO_ROWDATA];
                     

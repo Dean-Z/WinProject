@@ -9,6 +9,7 @@
 #import "WPBaseView.h"
 #import "UIImageView+WebCache.h"
 #import "WPProductButton.h"
+#import "WPQDateInfo.h"
 
 @interface BufferProductView : WPBaseView
 
@@ -16,5 +17,7 @@
 @property(nonatomic,weak) IBOutlet UILabel*     endTimeLabel;
 @property(nonatomic,weak) IBOutlet UILabel*     numberProductLabel;
 @property(nonatomic,weak) IBOutlet UIView*      priceBtnContainer;
+
+@property(nonatomic,weak) WPQBaseDateInfo* dateInfo;
 
 @end

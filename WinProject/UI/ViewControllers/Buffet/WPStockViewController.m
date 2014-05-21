@@ -12,6 +12,8 @@
 {
     WPSwitchBar* switchBar;
     NSInteger cCurrentPage;
+    WPQDateInfo* qDataInfo;
+    WPCDataInfo* cDataInfo;
 }
 @end
 
@@ -34,9 +36,8 @@
     cCurrentPage = 0;
     
     [self prepareSwitchBar];
-    
-    [self prepareQScrollviewContainer];
-    [self prepareCScrollviewContainer];
+    switchBar.selectAtIndex = 0;
+    [self switchBarSelected];
 }
 
 - (void)prepareSwitchBar
@@ -57,8 +58,34 @@
             self.qScrollViewController.originX = -self.view.sizeW;
             self.cScrollViewController.originX = 0;
         } completion:^(BOOL finished) {
-            self.nextButton.hidden = NO;
-            self.preButton.hidden = NO;
+            if (cDataInfo.cBaseDateArray.count>0)
+            {
+                self.nextButton.hidden = NO;
+                self.preButton.hidden = NO;
+            }
+        }];
+        
+        [[WPSyncService alloc]syncWithRoute:@{@"app":@"screen",@"act":@"index",@"phone":self.app.phoneNumber,@"page":@"1",@"type":@"0"} Block:^(id resp) {
+            if (resp)
+            {
+                cDataInfo = [[WPCDataInfo alloc]init];
+                cDataInfo.rowDate = resp;
+                [self prepareCScrollviewContainer];
+                
+                if (cDataInfo.cBaseDateArray.count>0)
+                {
+                    self.nextButton.hidden = NO;
+                    self.preButton.hidden = NO;
+                }
+            }
+            else
+            {
+                if (cDataInfo == nil)
+                {
+                    self.nextButton.hidden = YES;
+                    self.preButton.hidden = YES;
+                }
+            }
         }];
     }
     else
@@ -72,14 +99,27 @@
         } completion:^(BOOL finished) {
             
         }];
+        
+        [[WPSyncService alloc]syncWithRoute:@{@"app":@"screen",@"act":@"index",@"phone":self.app.phoneNumber,@"page":@"1",@"type":@"1"} Block:^(id resp) {
+            if (resp)
+            {
+                qDataInfo = [[WPQDateInfo alloc]init];
+                qDataInfo.rowDate = resp;
+                [self prepareQScrollviewContainer];
+            }
+            else
+            {
+            }
+        }];
     }
 }
 
 - (void) prepareQScrollviewContainer
 {
-    for (NSInteger i=0; i<6; i++)
+    for (NSInteger i=0; i<qDataInfo.qBaseDateArray.count; i++)
     {
         BufferProductView* product = [BufferProductView viewFromXib];
+        product.dateInfo = qDataInfo.qBaseDateArray[i];
         product.originX = i%2 * (product.sizeW + 20)+10;
         product.originY = i/2 * (product.sizeH + 20);
         [product renderView];
@@ -92,9 +132,10 @@
 
 - (void) prepareCScrollviewContainer
 {
-    for (NSInteger i=0; i<3; i++)
+    for (NSInteger i=0; i<cDataInfo.cBaseDateArray.count; i++)
     {
         BufferCProcudtView* cProduct = [BufferCProcudtView viewFromXib];
+        cProduct.dataInfo = cDataInfo.cBaseDateArray[i];
         cProduct.originX = (self.view.sizeW - cProduct.sizeW)/2 + self.view.sizeW*i;
         cProduct.originY = IS_IPHONE_5 ?(self.cScrollViewController.sizeH - cProduct.sizeH)/2 : 10;
         [cProduct renderView];

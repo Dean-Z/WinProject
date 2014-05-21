@@ -10,6 +10,8 @@
 
 @interface WPUserInfo : WPBaseInfo
 
+@property (nonatomic,strong) NSString* cookies;
+
 @property (nonatomic,strong) NSString* userId;
 @property (nonatomic,strong) NSString* account;
 @property (nonatomic,strong) NSString* nickname;

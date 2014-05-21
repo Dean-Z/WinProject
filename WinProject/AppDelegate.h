@@ -23,6 +23,9 @@
 @property (nonatomic,strong)  RDVTabBarController *aTabBarController;
 @property (nonatomic,strong) WPUserInfo* userInfo;
 
+@property (nonatomic,strong) NSArray* cookies;
+@property (nonatomic,strong) NSString* phoneNumber;
+
 +(id)shareAppDelegate;
 
 - (void)loginSucceed;

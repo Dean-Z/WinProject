@@ -36,7 +36,15 @@
     [self.exchangeButton.titleLabel setFont:[UIFont fontWithName:@"DFWaWaSC-W5" size:21]];
     [self.shareButton.titleLabel setFont:[UIFont fontWithName:@"DFWaWaSC-W5" size:21]];
     
-    self.coinLabel.text = @"3.4";
+    if ([NSString isNilOrEmpty:self.app.userInfo.coins])
+    {
+      self.coinLabel.text = @"0.0";
+    }
+    else
+    {
+        self.coinLabel.text = self.app.userInfo.coins;
+    }
+    
     [self dealCoinLabel];
     
     [self prepareRakeView];
@@ -44,6 +52,7 @@
     
     [self.mainScrollView setContentSize:CGSizeMake(320*3, 0)];
     [self.mainScrollView setContentOffset:CGPointMake(320, 0)];
+    
 }
 
 - (void) dealCoinLabel
