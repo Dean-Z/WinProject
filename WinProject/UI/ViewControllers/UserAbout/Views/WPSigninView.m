@@ -22,13 +22,14 @@
 
 - (void) renderView
 {
+    [super renderView];
     [self.phoneTextField setValue:[UIColor colorWithHexString:@"584f4a"]
                                 forKeyPath:@"_placeholderLabel.textColor"];
     [self.passwordTextField setValue:[UIColor colorWithHexString:@"584f4a"]
                                 forKeyPath:@"_placeholderLabel.textColor"];
 #ifdef DEBUG
-    [self.phoneTextField setText:@"test1"];
-    [self.passwordTextField setText:@"yingping"];
+    [self.phoneTextField setText:@"18217144855"];
+    [self.passwordTextField setText:@"123123"];
 #endif
     
     NSMutableDictionary *linkAttributes = [NSMutableDictionary dictionary];
@@ -96,13 +97,18 @@
     if (![NSString isNilOrEmpty:self.phoneTextField.text] && ![NSString isNilOrEmpty:self.passwordTextField.text])
     {
         NSMutableDictionary* dict = [@{@"app":@"index",@"act":@"login"} mutableCopy];
-        [dict setValue:self.phoneTextField.text forKey:@"Phone"];
-        [dict setValue:[self.passwordTextField.text MD5] forKey:@"Password"];
+        [dict setValue:self.phoneTextField.text forKey:@"account"];
+        [dict setValue:[self.passwordTextField.text MD5] forKey:@"password"];
         [[WPSyncService alloc]syncWithRoute:dict Block:^(id resp) {
             if (resp)
             {
                 if ([self.delegate respondsToSelector:@selector(signinSucceed)])
                 {
+                    
+                    Alert(@"登陆成功");
+                    [self.app.userInfo setRowDate:resp];
+                    [self.app.userInfo save:USER_INFO_ROWDATA];
+                    
                     [self.delegate signinSucceed];
                 }
             }

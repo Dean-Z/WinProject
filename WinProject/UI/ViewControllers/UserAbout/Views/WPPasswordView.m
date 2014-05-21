@@ -73,9 +73,9 @@
         self.errorLabel_2.hidden = YES;
     }
     
-    if ([self.delegate respondsToSelector:@selector(passwordSucceed)])
+    if ([self.delegate respondsToSelector:@selector(passwordSucceed:)])
     {
-        [self.delegate passwordSucceed];
+        [self.delegate passwordSucceed:self.password_1.text];
     }
 }
 

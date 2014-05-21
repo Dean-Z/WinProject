@@ -18,4 +18,7 @@
 
 @property(nonatomic,assign) BOOL showKeyBoard;
 @property(nonatomic,assign) ViewType viewType;
+
+@property(nonatomic,assign) BOOL isRegister;
+
 @end

@@ -27,6 +27,6 @@
 @protocol WPAuthViewDelegate <NSObject>
 
 - (void) authBack;
-- (void) authSucceed;
+- (void) authSucceed:(NSString*)authCode;
 
 @end

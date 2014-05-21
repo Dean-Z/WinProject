@@ -52,9 +52,14 @@
 
 - (IBAction)authSucceed:(id)sender
 {
-    if ([self.delegate respondsToSelector:@selector(authSucceed)])
+    if ([NSString isNilOrEmpty:self.authCodeTextField.text])
     {
-        [self.delegate authSucceed];
+        Alert(@"验证码不能为空!!");
+        return;
+    }
+    if ([self.delegate respondsToSelector:@selector(authSucceed:)])
+    {
+        [self.delegate authSucceed:self.authCodeTextField.text];
     }
 }
 

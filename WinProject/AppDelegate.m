@@ -40,8 +40,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-//    [self logoutSucceed:YES];
-    [self loginSucceed];
+    [self checkUserInfo];
     
     [self versionCheck];
     
@@ -239,6 +238,23 @@
         {
             [[CCUpdataApp alloc]update:self.urlString];
         }
+    }
+}
+
+- (void)checkUserInfo
+{
+    self.userInfo = [[WPUserInfo alloc]init];
+    NSUserDefaults* userDefault = [NSUserDefaults standardUserDefaults];
+    NSString* userRowDate = [userDefault objectForKey:USER_INFO_ROWDATA];
+    
+    if (![NSString isNilOrEmpty:userRowDate])
+    {
+        [self.userInfo setRowDate:userRowDate];
+        [self loginSucceed];
+    }
+    else
+    {
+        [self logoutSucceed:YES];
     }
 }
 

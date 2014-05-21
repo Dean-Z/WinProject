@@ -30,6 +30,6 @@
 
 - (void) passwordBack;
 
-- (void) passwordSucceed;
+- (void) passwordSucceed:(NSString*)password;
 
 @end

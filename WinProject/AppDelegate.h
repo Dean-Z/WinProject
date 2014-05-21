@@ -10,6 +10,7 @@
 #import "Reachability.h"
 #import "RDVTabBarController.h"
 #import "WeiboSDK.h"
+#import "WPUserInfo.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -20,6 +21,7 @@
 @property (strong, nonatomic) UIViewController *viewController;
 @property (nonatomic,strong) NSString* urlString;
 @property (nonatomic,strong)  RDVTabBarController *aTabBarController;
+@property (nonatomic,strong) WPUserInfo* userInfo;
 
 +(id)shareAppDelegate;
 

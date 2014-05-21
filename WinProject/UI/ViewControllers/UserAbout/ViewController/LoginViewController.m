@@ -20,7 +20,11 @@
     WPRegisterAlert* alertView;
     
     NSString* phoneNumber;
+    NSString* passwordString;
+    NSString* authCode;
+    
     BOOL isShowKeyBoard;
+    
 }
 @end
 
@@ -310,8 +314,9 @@
     }];
 }
 
-- (void)authSucceed
+- (void)authSucceed:(NSString *)aAuthCode
 {
+    authCode = aAuthCode;
     [self preparePasswordView];
 }
 
@@ -336,13 +341,16 @@
     }];
 }
 
-- (void)passwordSucceed
+- (void)passwordSucceed:(NSString *)aPassword
 {
     if (self.viewType == VIEW_RESET_PASSWORD)
     {
         [self.navigationController popViewControllerAnimated:YES];
         return;
     }
+    
+    passwordString = aPassword;
+    
     [self prepareNickView];
 }
 
@@ -377,7 +385,14 @@
         return;
     }
     
-    [self parpareAlertView];
+    NSDictionary* term = @{@"app":@"index",@"act":@"register",@"phone":phoneNumber,@"password":[passwordString MD5],@"code":authCode};
+    
+    [[WPSyncService alloc]syncWithRoute:term Block:^(id resp) {
+        if (![NSString isNilOrEmpty:resp])
+        {
+            [self parpareAlertView];
+        }
+    }];
 }
 
 - (void)registerSucceed
