@@ -10,6 +10,27 @@
 
 @implementation WPQBaseDateInfo
 
+- (void)setData:(NSDictionary *)data
+{
+    if(_data)
+    {
+        _data = nil;
+    }
+    
+    _data = data;
+    
+    self.picId = [data objectForKey:@"id"];
+    self.title = [data objectForKey:@"title"];
+    self.logo = [data objectForKey:@"logo"];
+    self.type = [data objectForKey:@"type"];
+    self.url = [data objectForKey:@"url"];
+    self.exprie = [data objectForKey:@"exprie"];
+    self.copies = [data objectForKey:@"copies"];
+    self.remain = [data objectForKey:@"remain"];
+    self.coin = [data objectForKey:@"coin"];
+    self.status = [data objectForKey:@"status"];
+}
+
 @end
 
 @implementation WPQDateInfo
@@ -40,16 +61,7 @@
                 for (NSDictionary* dict in datas)
                 {
                     WPQBaseDateInfo* info = [[WPQBaseDateInfo alloc]init];
-                    info.picId = [dict objectForKey:@"id"];
-                    info.title = [dict objectForKey:@"title"];
-                    info.logo = [dict objectForKey:@"logo"];
-                    info.type = [dict objectForKey:@"type"];
-                    info.url = [dict objectForKey:@"url"];
-                    info.exprie = [dict objectForKey:@"exprie"];
-                    info.copies = [dict objectForKey:@"copies"];
-                    info.remain = [dict objectForKey:@"remain"];
-                    info.coin = [dict objectForKey:@"coin"];
-                    info.status = [dict objectForKey:@"status"];
+                    info.data = dict;
                     [self.qBaseDateArray addObject:info];
                 }
             }

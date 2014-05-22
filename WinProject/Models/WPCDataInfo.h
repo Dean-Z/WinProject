@@ -20,6 +20,9 @@
 @property(nonatomic,strong) NSString* remain;
 @property(nonatomic,strong) NSString* coin;
 @property(nonatomic,strong) NSString* status;
+
+@property(nonatomic,strong) NSDictionary* data;
+
 @end
 
 @interface WPCDataInfo : WPBaseInfo

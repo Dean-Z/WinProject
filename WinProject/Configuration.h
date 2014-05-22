@@ -15,6 +15,8 @@
 #define ACCOUNT_KEY_ROWDATA     @"ACCOUNT_KEY_ROWDATA"
 #define ACCOUNT_KEY_COOKIE      @"ACCOUNT_KEY_COOKIE"
 
+#define CORVER_DATA             @"CORVER_DATA"
+
 typedef enum
 {
     VIEW_LOGIN = 1,

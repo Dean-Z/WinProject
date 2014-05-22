@@ -42,8 +42,53 @@
 {
     if (buttonIndex == 1)
     {
+        [self saveDate];
         UIImageWriteToSavedPhotosAlbum([self.productImage image], nil, nil,nil);
         [self performSelector:@selector(showSucceed) withObject:nil afterDelay:1];
+    }
+}
+
+- (void)saveDate
+{
+    NSUserDefaults* user = [NSUserDefaults standardUserDefaults];
+    NSString* dateString = [user objectForKey:CORVER_DATA];
+    
+    if([NSString isNilOrEmpty:dateString])
+    {
+        NSMutableDictionary* productDatas = [@{} mutableCopy];
+        dateString = [NSObject toJSONString:self.dateInfo.data];
+        [productDatas setObject:dateString forKey:@"0"];
+        dateString = [NSObject toJSONString:productDatas];
+        [user setObject:dateString forKey:CORVER_DATA];
+        [user synchronize];
+        return;
+    }
+    
+    id dataDict = [NSObject toJSONValue:dateString];
+    
+    if([dataDict isKindOfClass:[NSDictionary class]])
+    {
+        NSMutableDictionary* productDatas = [NSMutableDictionary dictionaryWithDictionary:dataDict];
+        
+        BOOL hasDownload = NO;
+        for(NSInteger i=0;i<[productDatas allKeys].count;i++)
+        {
+            NSDictionary* dict = (NSDictionary*)[NSObject toJSONValue:productDatas[[productDatas allKeys][i]]];
+            if([[dict objectForKey:@"url"] isEqualToString:self.dateInfo.url])
+            {
+                hasDownload = YES;
+                break;
+            }
+        }
+        if(!hasDownload)
+        {
+            
+            NSString* tmpString = [NSObject toJSONString:self.dateInfo.data];
+            [productDatas setObject:tmpString forKey:[NSString stringWithFormat:@"%d",[productDatas allKeys].count]];
+            dateString = [NSObject toJSONString:productDatas];
+            [user setObject:dateString forKey:CORVER_DATA];
+            [user synchronize];
+        }
     }
 }
 

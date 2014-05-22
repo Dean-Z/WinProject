@@ -11,4 +11,6 @@
 
 @interface WPBuffetViewController : BaseXibViewController<WPStockViewControllerDelegate>
 
+@property(nonatomic,weak) IBOutlet UIScrollView* productContainerView;
+
 @end

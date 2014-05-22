@@ -19,6 +19,7 @@ PODS:
   - SDWebImage (3.6):
     - SDWebImage/Core
   - SDWebImage/Core (3.6)
+  - SVProgressHUD (1.0)
   - TSValidatedTextField (1.0.0)
   - TTTAttributedLabel (1.9.5)
   - WeChatSDK (0.0.1)
@@ -31,6 +32,7 @@ DEPENDENCIES:
   - Reachability (~> 3.1.1)
   - SBJson (~> 4.0.1)
   - SDWebImage (~> 3.6)
+  - SVProgressHUD (~> 1.0)
   - TSValidatedTextField (~> 1.0.0)
   - TTTAttributedLabel (~> 1.9.5)
   - WeChatSDK (~> 0.0.1)
@@ -43,6 +45,7 @@ SPEC CHECKSUMS:
   Reachability: be4883bb93f31e38266ae3365e5600a317aae735
   SBJson: 9749a0365b005bcb0b7adf74579d79372c11cc4f
   SDWebImage: 7eb273e54ca8a2e506ad9bd5e80c35b2a4d7c95e
+  SVProgressHUD: 5e10939a296debf5fe5a5895eda9539b8b2114f1
   TSValidatedTextField: bf275ccfaa61e29efed284a8a564f59e275abfdb
   TTTAttributedLabel: 6154fd2407a03fb8d71abfa36f4710fff26a168e
   WeChatSDK: 8cabf6a191621494bc38e25c06b41c7bd2029322
