@@ -1,45 +1,24 @@
 //
-//  WPRultView.m
+//  WPAlertView.m
 //  WinProject
 //
-//  Created by Dean-Z on 14-5-12.
+//  Created by Dean-Z on 14-5-23.
 //  Copyright (c) 2014年 Dean. All rights reserved.
 //
 
-#import "WPRultView.h"
+#import "WPAlertView.h"
 #import "FTAnimationManager.h"
 
-@implementation WPRultView
+@implementation WPAlertView
 
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-    }
-    return self;
-}
-
-
--(void)showWithMessage:(NSString*)message title:(NSString*)title
+-(void)showWithMessage:(NSString*)message
 {
     self.app = [AppDelegate shareAppDelegate];
     UIWindow* window = self.app.window;
     
-    self.titleLabel.text = title;
-    
-    self.messageLabel.text = [NSString stringWithFormat:@"%@%@%@%@",message,message,message,message];
-    
-    CGSize size = [self.messageLabel.text sizeWithFont:self.messageLabel.font constrainedToSize:CGSizeMake(190, 2000) lineBreakMode:self.messageLabel.lineBreakMode];
-    
-    self.messageLabel.numberOfLines = 0;
-    self.messageLabel.sizeH = size.height;
-    
-    self.containScrollView.contentSize = CGSizeMake(0, self.messageLabel.height);
-    
     UIView* view = [[UIView alloc]initWithFrame:window.bounds];
     view.backgroundColor = COLOR(0, 0, 0, 0.5);
-    view.tag = 10001;
+    view.tag = 10000;
     [window addSubview:view];
     
     self.center = window.center;
@@ -49,6 +28,7 @@
     CAAnimation* popAnim = [[FTAnimationManager sharedManager]popInAnimationFor:self duration:0.3 delegate:nil startSelector:nil stopSelector:nil];
     [self.layer addAnimation:popAnim forKey:@"POP"];
     
+    self.messageLabel.text = message;
 }
 
 - (IBAction)close:(id)sender
@@ -57,7 +37,7 @@
     [self.layer addAnimation:popAnim forKey:@"POP"];
     
     UIWindow* window = self.app.window;
-    UIView *view = [window viewWithTag:10001];
+    UIView *view = [window viewWithTag:10000];
     [view removeFromSuperview];
     view = nil;
     
@@ -72,11 +52,10 @@
     }
     
     UIWindow* window = self.app.window;
-    UIView *view = [window viewWithTag:10001];
+    UIView *view = [window viewWithTag:10000];
     [view removeFromSuperview];
     view = nil;
     
     [self removeFromSuperview];
 }
-
 @end

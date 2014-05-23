@@ -53,7 +53,9 @@
     [self setupViewControllers];
     self.window.rootViewController = self.viewController;
     
-     [self customizeInterface];
+    [self customizeInterface];
+    
+    [[WPAlertView viewFromXib]showWithMessage:@"登陆成功"];
 }
 
 - (void)logoutSucceed:(BOOL)showKeyboard

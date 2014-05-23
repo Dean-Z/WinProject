@@ -26,4 +26,5 @@
     #import "SBJson4.h"
     #import "InnerBand.h"
     #import "NSObject+JSON.h"
+    #import "WPAlertView.h"
 #endif

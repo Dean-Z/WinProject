@@ -105,8 +105,6 @@
             {
                 if ([self.delegate respondsToSelector:@selector(signinSucceed)])
                 {
-                    
-                    Alert(@"登陆成功");
                     self.app.phoneNumber = self.phoneTextField.text;
                     [self.app.userInfo setRowDate:resp];
                     [self.app.userInfo save:USER_INFO_ROWDATA];
@@ -118,7 +116,7 @@
     }
     else
     {
-        Alert(@"手机号或密码不能为空!");
+        [[WPAlertView viewFromXib]showWithMessage:@"手机号或密码不能为空!"];
     }
 }
 

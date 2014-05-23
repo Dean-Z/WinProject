@@ -27,7 +27,7 @@
          {
              if ([date[@"state"] intValue] != 1)
              {
-                 Alert(date[@"message"]);
+                 [[WPAlertView viewFromXib] showWithMessage:date[@"message"]];
                  processBlock(nil);
              }
              else
@@ -81,7 +81,7 @@
          {
              if ([date[@"state"] intValue] != 1)
              {
-                 Alert(date[@"message"]);
+                 [[WPAlertView viewFromXib] showWithMessage:date[@"message"]];
                  processBlock(nil);
              }
              else

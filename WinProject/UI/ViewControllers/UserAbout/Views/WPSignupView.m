@@ -99,6 +99,12 @@
     }
 }
 
+- (IBAction)showRult:(id)sender
+{
+    [[WPRultView viewFromXib]showWithMessage:@"gygyguyyugyuguygyugyuguyguyuygyugyugyuguygyugyuguyguygyuguyguyguygyuguyguyguyguyguyguybiuibbjkbkjbkjbjbkjbbkjbkjbkjbkjbkjbkjvyuvyjhfyucucuycuyuyuycuycuycuyucucucuycuy" title:@"条款协议"];
+}
+
+
 - (void)dismissKeyBoard
 {
     [self.phoneTextField resignFirstResponder];

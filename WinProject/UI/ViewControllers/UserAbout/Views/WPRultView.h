@@ -10,4 +10,11 @@
 
 @interface WPRultView : WPBaseView
 
+@property(nonatomic,weak) IBOutlet UILabel* titleLabel;
+@property(nonatomic,weak) IBOutlet UIScrollView* containScrollView;
+@property(nonatomic,weak) IBOutlet UILabel* messageLabel;
+@property(nonatomic,weak) IBOutlet UIImageView* scrollBarItem;
+
+-(void)showWithMessage:(NSString*)message title:(NSString*)title;
+
 @end

@@ -94,7 +94,7 @@
 
 - (void)showSucceed
 {
-    Alert(@"保存成功");
+    [[WPAlertView viewFromXib]showWithMessage:@"保存成功"];
 }
 
 - (void) prepareProductButton

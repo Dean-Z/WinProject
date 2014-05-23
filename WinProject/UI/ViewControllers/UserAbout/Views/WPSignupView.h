@@ -8,6 +8,7 @@
 
 #import "WPBaseView.h"
 #import "CheckItemView.h"
+#import "WPRultView.h"
 
 @protocol WPSignupViewDelegate;
 
