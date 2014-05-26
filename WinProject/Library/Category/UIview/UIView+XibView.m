@@ -16,11 +16,11 @@
     
     NSString *viewClassName = [NSString stringWithFormat:@"%@", viewClass];
     
-    if (IS_IPHONE())
+    if (IS_IPHONE_5)
     {
         NSString *originViewClassName = viewClassName;
         
-        viewClassName = [viewClassName stringByAppendingString:@"_iPhone"];
+        viewClassName = [viewClassName stringByAppendingString:@"_iPhone5"];
         
         NSString *nibPath = [[NSBundle mainBundle] pathForResource:viewClassName ofType:@"nib"];
         

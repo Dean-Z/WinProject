@@ -44,8 +44,8 @@
     {
         pullView = [WPPullView viewFromXib];
         [pullView renderView];
-        pullView.originX = 30;
-        pullView.originY = 140;
+        pullView.originX = self.sizeW/2 - pullView.sizeW/2;
+        pullView.originY = 145;
         [self addSubview:pullView];
     }
 }

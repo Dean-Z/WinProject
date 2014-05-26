@@ -7,6 +7,8 @@
 //
 
 #import "BufferProductView.h"
+#import "WPProductInfo.h"
+#import "WPProductDetailView.h"
 
 @implementation BufferProductView
 {
@@ -35,7 +37,9 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [[[UIAlertView alloc]initWithTitle:@"提示" message:@"是否确定下载此壁纸" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil] show];
+    [self prepareInfo:self.dateInfo.picId];
+    
+//    [[[UIAlertView alloc]initWithTitle:@"提示" message:@"是否确定下载此壁纸" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil] show];
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
@@ -104,6 +108,24 @@
         productBtn = [WPProductButton viewFromXib];
         [self.priceBtnContainer addSubview:productBtn];
     }
+}
+
+- (void) prepareInfo:(NSString*)productId
+{
+    NSDictionary* term = @{@"app":@"screen",@"act":@"info",@"id":productId};
+    
+    [[WPSyncService alloc]syncWithRoute:term Block:^(id resp) {
+        
+        if (resp)
+        {
+            WPProductInfo* productInfo = [[WPProductInfo alloc]init];
+            [productInfo setRowDate:resp];
+            
+            WPProductDetailView* detailView = [WPProductDetailView viewFromXib];
+            detailView.productInfo = productInfo;
+            [detailView renderView];
+        }
+    }];
 }
 
 @end

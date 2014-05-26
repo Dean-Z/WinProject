@@ -24,6 +24,7 @@
     NSString* authCode;
     
     BOOL isShowKeyBoard;
+    BOOL isFindPassword;
     
 }
 @end
@@ -173,6 +174,7 @@
     {
         signupView = [WPSignupView viewFromXib];
         signupView.isFindPassword = isFind;
+        isFindPassword = isFind;
         [signupView renderView];
         signupView.delegate = self;
         signupView.originX = self.view.sizeW;
@@ -286,7 +288,7 @@
 - (void) signupBackAction
 {
     [UIView transitionWithView:signupView duration:0.3 options:UIViewAnimationOptionCurveEaseOut animations:^{
-        signinView.originX = (self.view.sizeW - signupView.sizeW)/2;
+        signinView.originX = (self.view.sizeW - signinView.sizeW)/2;
         signupView.originX = self.view.sizeW;
     } completion:^(BOOL finished) {
         [signupView removeFromSuperview];
@@ -386,6 +388,11 @@
     }
     
     NSDictionary* term = @{@"app":@"index",@"act":@"register",@"phone":phoneNumber,@"password":[passwordString MD5],@"code":authCode};
+    
+    if (isFindPassword)
+    {
+        [term setValue:@"ForgetPwd" forKey:@"act"];
+    }
     
     [[WPSyncService alloc]syncWithRoute:term Block:^(id resp) {
         if (![NSString isNilOrEmpty:resp])

@@ -97,6 +97,13 @@
 		CBCBF1FB190F48BF003439DB /* MarketInTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBCBF1F9190F48BF003439DB /* MarketInTableViewCell.xib */; };
 		CBD9624F192F6D7800825CE7 /* WPAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD9624E192F6D7800825CE7 /* WPAlertView.m */; };
 		CBD96251192F6F2E00825CE7 /* WPAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBD96250192F6F2E00825CE7 /* WPAlertView.xib */; };
+		CBD9626A193368D600825CE7 /* WPSigninView_iPhone5.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBD96269193368D600825CE7 /* WPSigninView_iPhone5.xib */; };
+		CBD9626C193369F300825CE7 /* RakeView_iPhone5.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBD9626B193369F300825CE7 /* RakeView_iPhone5.xib */; };
+		CBD9626E19336A7D00825CE7 /* WPPullView_iPhone5.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBD9626D19336A7D00825CE7 /* WPPullView_iPhone5.xib */; };
+		CBD9627019336BF500825CE7 /* BillView_iPhone5.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBD9626F19336BF500825CE7 /* BillView_iPhone5.xib */; };
+		CBD9627319336EF500825CE7 /* WPProductDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD9627219336EF500825CE7 /* WPProductDetailView.m */; };
+		CBD9627519336F3800825CE7 /* WPProductDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBD9627419336F3800825CE7 /* WPProductDetailView.xib */; };
+		CBD96278193376FA00825CE7 /* WPProductInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD96277193376FA00825CE7 /* WPProductInfo.m */; };
 		CBDD251418FF8CCA009043FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDD251318FF8CCA009043FE /* Foundation.framework */; };
 		CBDD251618FF8CCA009043FE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDD251518FF8CCA009043FE /* CoreGraphics.framework */; };
 		CBDD251818FF8CCA009043FE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDD251718FF8CCA009043FE /* UIKit.framework */; };
@@ -272,6 +279,15 @@
 		CBD9624D192F6D7800825CE7 /* WPAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPAlertView.h; sourceTree = "<group>"; };
 		CBD9624E192F6D7800825CE7 /* WPAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPAlertView.m; sourceTree = "<group>"; };
 		CBD96250192F6F2E00825CE7 /* WPAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPAlertView.xib; sourceTree = "<group>"; };
+		CBD96269193368D600825CE7 /* WPSigninView_iPhone5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPSigninView_iPhone5.xib; sourceTree = "<group>"; };
+		CBD9626B193369F300825CE7 /* RakeView_iPhone5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RakeView_iPhone5.xib; sourceTree = "<group>"; };
+		CBD9626D19336A7D00825CE7 /* WPPullView_iPhone5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPPullView_iPhone5.xib; sourceTree = "<group>"; };
+		CBD9626F19336BF500825CE7 /* BillView_iPhone5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BillView_iPhone5.xib; sourceTree = "<group>"; };
+		CBD9627119336EF500825CE7 /* WPProductDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPProductDetailView.h; sourceTree = "<group>"; };
+		CBD9627219336EF500825CE7 /* WPProductDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPProductDetailView.m; sourceTree = "<group>"; };
+		CBD9627419336F3800825CE7 /* WPProductDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPProductDetailView.xib; sourceTree = "<group>"; };
+		CBD96276193376FA00825CE7 /* WPProductInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPProductInfo.h; sourceTree = "<group>"; };
+		CBD96277193376FA00825CE7 /* WPProductInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPProductInfo.m; sourceTree = "<group>"; };
 		CBDD251018FF8CCA009043FE /* WinProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WinProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBDD251318FF8CCA009043FE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CBDD251518FF8CCA009043FE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -397,6 +413,8 @@
 				CB827E1B192CE19E00AFDBBF /* WPQDateInfo.m */,
 				CB827E1D192CE93200AFDBBF /* WPCDataInfo.h */,
 				CB827E1E192CE93200AFDBBF /* WPCDataInfo.m */,
+				CBD96276193376FA00825CE7 /* WPProductInfo.h */,
+				CBD96277193376FA00825CE7 /* WPProductInfo.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -445,9 +463,11 @@
 				CB4E1397190FF0130048709B /* RakeView.h */,
 				CB4E1398190FF0130048709B /* RakeView.m */,
 				CB4E139A190FF0220048709B /* RakeView.xib */,
+				CBD9626B193369F300825CE7 /* RakeView_iPhone5.xib */,
 				CB2DAF3B1910E16600DD29C1 /* BillView.h */,
 				CB2DAF3C1910E16600DD29C1 /* BillView.m */,
 				CB2DAF3E1910E18700DD29C1 /* BillView.xib */,
+				CBD9626F19336BF500825CE7 /* BillView_iPhone5.xib */,
 				CB4542BC191603A100BFE852 /* WPCProductButton.h */,
 				CB4542BD191603A100BFE852 /* WPCProductButton.m */,
 				CB4542BF191603B200BFE852 /* WPCProductButton.xib */,
@@ -457,9 +477,13 @@
 				CB6B7983191B7F7800610CD6 /* WPPullView.h */,
 				CB6B7984191B7F7800610CD6 /* WPPullView.m */,
 				CB6B7986191B7F8A00610CD6 /* WPPullView.xib */,
+				CBD9626D19336A7D00825CE7 /* WPPullView_iPhone5.xib */,
 				CBD9624D192F6D7800825CE7 /* WPAlertView.h */,
 				CBD9624E192F6D7800825CE7 /* WPAlertView.m */,
 				CBD96250192F6F2E00825CE7 /* WPAlertView.xib */,
+				CBD9627119336EF500825CE7 /* WPProductDetailView.h */,
+				CBD9627219336EF500825CE7 /* WPProductDetailView.m */,
+				CBD9627419336F3800825CE7 /* WPProductDetailView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -490,6 +514,7 @@
 				CBA0E89B19013A7A007119C0 /* WPSigninView.h */,
 				CBA0E89C19013A7A007119C0 /* WPSigninView.m */,
 				CBA0E89E19013A8E007119C0 /* WPSigninView.xib */,
+				CBD96269193368D600825CE7 /* WPSigninView_iPhone5.xib */,
 				CBA0E8A019013AAD007119C0 /* WPSignupView.h */,
 				CBA0E8A119013AAD007119C0 /* WPSignupView.m */,
 				CBA0E8A319013ABB007119C0 /* WPSignupView.xib */,
@@ -816,8 +841,10 @@
 				CB4542C0191603B200BFE852 /* WPCProductButton.xib in Resources */,
 				CB4211D61907A5EC001AC70B /* BufferProductView.xib in Resources */,
 				CB4542D01918E04B00BFE852 /* WPMarketViewController_iPhone.xib in Resources */,
+				CBD9626E19336A7D00825CE7 /* WPPullView_iPhone5.xib in Resources */,
 				CBDD252618FF8CCA009043FE /* Images.xcassets in Resources */,
 				CB45CC4019210B330020D76C /* WPRegisterAlert.xib in Resources */,
+				CBD9626C193369F300825CE7 /* RakeView_iPhone5.xib in Resources */,
 				CBA0E89719013908007119C0 /* LoginViewController_iPhone5.xib in Resources */,
 				CB2FAD181902C3DA00F46A0A /* WPWalletViewController_iPhone5.xib in Resources */,
 				CB6B7993191C991D00610CD6 /* WPNickName.xib in Resources */,
@@ -833,8 +860,11 @@
 				CBD96251192F6F2E00825CE7 /* WPAlertView.xib in Resources */,
 				CB924BFA19094F14000389CB /* CheckItemView.xib in Resources */,
 				CB6B7998191C995900610CD6 /* WPPasswordView.xib in Resources */,
+				CBD9626A193368D600825CE7 /* WPSigninView_iPhone5.xib in Resources */,
 				CB4E1395190FE6970048709B /* WawaSC-Regular.otf in Resources */,
 				CB4542CA1918DCC800BFE852 /* WPBuffetViewController_iPhone.xib in Resources */,
+				CBD9627019336BF500825CE7 /* BillView_iPhone5.xib in Resources */,
+				CBD9627519336F3800825CE7 /* WPProductDetailView.xib in Resources */,
 				CB6B798E191C96D000610CD6 /* LoginViewController_iPhone.xib in Resources */,
 				CB4542CC1918DD0500BFE852 /* WPStockViewController_iPhone.xib in Resources */,
 				CB6B798C191B903900610CD6 /* WPAuthView.xib in Resources */,
@@ -912,6 +942,7 @@
 				CB4542B41915F78C00BFE852 /* WPProductButton.m in Sources */,
 				CB924BF819094F04000389CB /* CheckItemView.m in Sources */,
 				CBA0E890190133D4007119C0 /* FTAnimationManager.m in Sources */,
+				CBD9627319336EF500825CE7 /* WPProductDetailView.m in Sources */,
 				CB45CC2B192101510020D76C /* JSONMutableArray.m in Sources */,
 				CBA0E88F190133D4007119C0 /* CoreAnimationEffect.m in Sources */,
 				CB6B7991191C990F00610CD6 /* WPNickName.m in Sources */,
@@ -926,6 +957,7 @@
 				CBA0E87E19012EED007119C0 /* Functions.m in Sources */,
 				CB45CC3E19210B250020D76C /* WPRegisterAlert.m in Sources */,
 				CB2DAF3D1910E16600DD29C1 /* BillView.m in Sources */,
+				CBD96278193376FA00825CE7 /* WPProductInfo.m in Sources */,
 				CB45CC34192101510020D76C /* SBJsonWriter.m in Sources */,
 				CBA0E88019012EED007119C0 /* QQImageView.m in Sources */,
 				CB4542BE191603A100BFE852 /* WPCProductButton.m in Sources */,
