@@ -9,8 +9,9 @@
 #import "WPBaseView.h"
 #import "WPCDataInfo.h"
 #import "UIImageView+WebCache.h"
+#import "WPProductDetailView.h"
 
-@interface BufferCProcudtView : WPBaseView
+@interface BufferCProcudtView : WPBaseView<WPProductDetailViewDelegate>
 
 @property(nonatomic,weak) IBOutlet UIView* productBtnContainer;
 @property(nonatomic,weak) IBOutlet UIImageView* productImageView;

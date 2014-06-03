@@ -8,7 +8,6 @@
 
 #import "BufferProductView.h"
 #import "WPProductInfo.h"
-#import "WPProductDetailView.h"
 
 @implementation BufferProductView
 {
@@ -38,19 +37,21 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [self prepareInfo:self.dateInfo.picId];
-    
-//    [[[UIAlertView alloc]initWithTitle:@"提示" message:@"是否确定下载此壁纸" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil] show];
 }
 
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+#pragma mark WPProductDetailViewDelegate
+- (void)productDownload:(WPProductInfo *)productInfo
 {
-    if (buttonIndex == 1)
-    {
-        [self saveDate];
-        UIImageWriteToSavedPhotosAlbum([self.productImage image], nil, nil,nil);
-        [self performSelector:@selector(showSucceed) withObject:nil afterDelay:1];
-    }
+    NSDictionary* parm = @{@"app":@"screen",@"act":@"download",@"id":productInfo.picId};
+    
+    [[WPSyncService alloc]downloadImageWithRoute:parm Block:^(id respData)
+     {
+        UIImage *picImage = [UIImage imageWithData:respData];
+        UIImageWriteToSavedPhotosAlbum(picImage, nil, nil,nil);
+        [[WPAlertView viewFromXib]showWithMessage:@"保存成功"];
+    }];
 }
+
 
 - (void)saveDate
 {
@@ -96,11 +97,6 @@
     }
 }
 
-- (void)showSucceed
-{
-    [[WPAlertView viewFromXib]showWithMessage:@"保存成功"];
-}
-
 - (void) prepareProductButton
 {
     if (productBtn == nil)
@@ -122,6 +118,7 @@
             [productInfo setRowDate:resp];
             
             WPProductDetailView* detailView = [WPProductDetailView viewFromXib];
+            detailView.delegate = self;
             detailView.productInfo = productInfo;
             [detailView renderView];
         }

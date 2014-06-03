@@ -208,7 +208,7 @@
     [authView.authCodeTextField becomeFirstResponder];
     [UIView transitionWithView:signupView duration:0.3 options:UIViewAnimationOptionCurveEaseOut animations:^{
         authView.originX = (self.view.sizeW - signupView.sizeW)/2;
-        signupView.originX = -signinView.sizeW;
+        signupView.originX = -signinView.sizeW - 50;
         signinView.originX = -signinView.sizeW;
     } completion:^(BOOL finished) {
         

@@ -56,6 +56,8 @@
 		CB4E139B190FF0220048709B /* RakeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB4E139A190FF0220048709B /* RakeView.xib */; };
 		CB59813419211056000AF16A /* WPRultView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB59813319211056000AF16A /* WPRultView.m */; };
 		CB5981361921106C000AF16A /* WPRultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB5981351921106C000AF16A /* WPRultView.xib */; };
+		CB5FD99C193E109C000BC33F /* RakeFriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB5FD99B193E109C000BC33F /* RakeFriendCell.xib */; };
+		CB5FD99F193E111B000BC33F /* RakeFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB5FD99E193E111B000BC33F /* RakeFriendCell.m */; };
 		CB60BF66190525FC003190C7 /* CHDNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = CB60BF65190525FC003190C7 /* CHDNetwork.m */; };
 		CB6B7982191A419200610CD6 /* WPShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6B7981191A419200610CD6 /* WPShareManager.m */; };
 		CB6B7985191B7F7800610CD6 /* WPPullView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6B7984191B7F7800610CD6 /* WPPullView.m */; };
@@ -93,6 +95,8 @@
 		CBA0E89F19013A8E007119C0 /* WPSigninView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBA0E89E19013A8E007119C0 /* WPSigninView.xib */; };
 		CBA0E8A219013AAD007119C0 /* WPSignupView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA0E8A119013AAD007119C0 /* WPSignupView.m */; };
 		CBA0E8A419013ABB007119C0 /* WPSignupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBA0E8A319013ABB007119C0 /* WPSignupView.xib */; };
+		CBB0B589193C30AC0069C360 /* QuestionnaireView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB0B588193C30AC0069C360 /* QuestionnaireView.m */; };
+		CBB0B58B193C30BE0069C360 /* QuestionnaireView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB0B58A193C30BE0069C360 /* QuestionnaireView.xib */; };
 		CBCBF1FA190F48BF003439DB /* MarketInTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCBF1F8190F48BF003439DB /* MarketInTableViewCell.m */; };
 		CBCBF1FB190F48BF003439DB /* MarketInTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBCBF1F9190F48BF003439DB /* MarketInTableViewCell.xib */; };
 		CBD9624F192F6D7800825CE7 /* WPAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD9624E192F6D7800825CE7 /* WPAlertView.m */; };
@@ -208,6 +212,9 @@
 		CB59813219211056000AF16A /* WPRultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPRultView.h; sourceTree = "<group>"; };
 		CB59813319211056000AF16A /* WPRultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPRultView.m; sourceTree = "<group>"; };
 		CB5981351921106C000AF16A /* WPRultView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPRultView.xib; sourceTree = "<group>"; };
+		CB5FD99B193E109C000BC33F /* RakeFriendCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RakeFriendCell.xib; sourceTree = "<group>"; };
+		CB5FD99D193E111B000BC33F /* RakeFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RakeFriendCell.h; sourceTree = "<group>"; };
+		CB5FD99E193E111B000BC33F /* RakeFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RakeFriendCell.m; sourceTree = "<group>"; };
 		CB60BF64190525FC003190C7 /* CHDNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHDNetwork.h; sourceTree = "<group>"; };
 		CB60BF65190525FC003190C7 /* CHDNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHDNetwork.m; sourceTree = "<group>"; };
 		CB6B7980191A419200610CD6 /* WPShareManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPShareManager.h; sourceTree = "<group>"; };
@@ -273,6 +280,9 @@
 		CBA0E8A019013AAD007119C0 /* WPSignupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPSignupView.h; sourceTree = "<group>"; };
 		CBA0E8A119013AAD007119C0 /* WPSignupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPSignupView.m; sourceTree = "<group>"; };
 		CBA0E8A319013ABB007119C0 /* WPSignupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPSignupView.xib; sourceTree = "<group>"; };
+		CBB0B587193C30AC0069C360 /* QuestionnaireView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionnaireView.h; sourceTree = "<group>"; };
+		CBB0B588193C30AC0069C360 /* QuestionnaireView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionnaireView.m; sourceTree = "<group>"; };
+		CBB0B58A193C30BE0069C360 /* QuestionnaireView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionnaireView.xib; sourceTree = "<group>"; };
 		CBCBF1F7190F48BF003439DB /* MarketInTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarketInTableViewCell.h; sourceTree = "<group>"; };
 		CBCBF1F8190F48BF003439DB /* MarketInTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarketInTableViewCell.m; sourceTree = "<group>"; };
 		CBCBF1F9190F48BF003439DB /* MarketInTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MarketInTableViewCell.xib; sourceTree = "<group>"; };
@@ -389,6 +399,16 @@
 			path = "Upload APP";
 			sourceTree = "<group>";
 		};
+		CB5FD99A193E1069000BC33F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CB5FD99D193E111B000BC33F /* RakeFriendCell.h */,
+				CB5FD99E193E111B000BC33F /* RakeFriendCell.m */,
+				CB5FD99B193E109C000BC33F /* RakeFriendCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		CB60BF63190525EB003190C7 /* NetWork */ = {
 			isa = PBXGroup;
 			children = (
@@ -484,6 +504,9 @@
 				CBD9627119336EF500825CE7 /* WPProductDetailView.h */,
 				CBD9627219336EF500825CE7 /* WPProductDetailView.m */,
 				CBD9627419336F3800825CE7 /* WPProductDetailView.xib */,
+				CBB0B587193C30AC0069C360 /* QuestionnaireView.h */,
+				CBB0B588193C30AC0069C360 /* QuestionnaireView.m */,
+				CBB0B58A193C30BE0069C360 /* QuestionnaireView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -656,6 +679,7 @@
 		CBA0E8A819013B77007119C0 /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
+				CB5FD99A193E1069000BC33F /* Cells */,
 				CB2FAD141902C3DA00F46A0A /* WPWalletViewController.h */,
 				CB2FAD151902C3DA00F46A0A /* WPWalletViewController.m */,
 				CB4542D11918E09A00BFE852 /* WPWalletViewController_iPhone.xib */,
@@ -833,6 +857,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBB0B58B193C30BE0069C360 /* QuestionnaireView.xib in Resources */,
 				CB4542B11915ED2A00BFE852 /* WPStockViewController_iPhone5.xib in Resources */,
 				CB5981361921106C000AF16A /* WPRultView.xib in Resources */,
 				CBA0E8A419013ABB007119C0 /* WPSignupView.xib in Resources */,
@@ -841,6 +866,7 @@
 				CB4542C0191603B200BFE852 /* WPCProductButton.xib in Resources */,
 				CB4211D61907A5EC001AC70B /* BufferProductView.xib in Resources */,
 				CB4542D01918E04B00BFE852 /* WPMarketViewController_iPhone.xib in Resources */,
+				CB5FD99C193E109C000BC33F /* RakeFriendCell.xib in Resources */,
 				CBD9626E19336A7D00825CE7 /* WPPullView_iPhone5.xib in Resources */,
 				CBDD252618FF8CCA009043FE /* Images.xcassets in Resources */,
 				CB45CC4019210B330020D76C /* WPRegisterAlert.xib in Resources */,
@@ -949,6 +975,7 @@
 				CBD9624F192F6D7800825CE7 /* WPAlertView.m in Sources */,
 				CB45CC33192101510020D76C /* SBJsonParser.m in Sources */,
 				CB45CC3A192106B30020D76C /* CCUpdataApp.m in Sources */,
+				CB5FD99F193E111B000BC33F /* RakeFriendCell.m in Sources */,
 				CB4542B01915ED2A00BFE852 /* WPStockViewController.m in Sources */,
 				CB6B7982191A419200610CD6 /* WPShareManager.m in Sources */,
 				CB827E1C192CE19E00AFDBBF /* WPQDateInfo.m in Sources */,
@@ -968,6 +995,7 @@
 				CB6B7996191C994B00610CD6 /* WPPasswordView.m in Sources */,
 				CB2FAD081902C37B00F46A0A /* WPBuffetViewController.m in Sources */,
 				CBA0E891190133D4007119C0 /* FTUtils+NSObject.m in Sources */,
+				CBB0B589193C30AC0069C360 /* QuestionnaireView.m in Sources */,
 				CB45CC3B192106B30020D76C /* LoadData.m in Sources */,
 				CB7EDB64190D445600089DE8 /* WPSwitchBar.m in Sources */,
 				CB59813419211056000AF16A /* WPRultView.m in Sources */,
@@ -1102,14 +1130,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: The eve of the Shanghai information technology co., LTD";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: The eve of the Shanghai information technology co., LTD";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Zhou Dean (7KC978Z4P2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Zhou Dean (7KC978Z4P2)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WinProject/WinProject-Prefix.pch";
 				INFOPLIST_FILE = "WinProject/WinProject-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "82EDE1A4-DAF5-4DF5-8E16-AB9FB04C93DB";
+				PROVISIONING_PROFILE = "284A015A-5A35-48C3-B527-91DDE936E655";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1120,14 +1148,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: The eve of the Shanghai information technology co., LTD";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: The eve of the Shanghai information technology co., LTD";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Zhou Dean (7KC978Z4P2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Zhou Dean (7KC978Z4P2)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WinProject/WinProject-Prefix.pch";
 				INFOPLIST_FILE = "WinProject/WinProject-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "82EDE1A4-DAF5-4DF5-8E16-AB9FB04C93DB";
+				PROVISIONING_PROFILE = "284A015A-5A35-48C3-B527-91DDE936E655";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

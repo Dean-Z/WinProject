@@ -42,6 +42,8 @@
     
     [self checkUserInfo];
     
+//    [self loginSucceed];
+    
     [self versionCheck];
     
     return YES;

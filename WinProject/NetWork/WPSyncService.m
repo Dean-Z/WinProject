@@ -105,27 +105,19 @@
     
     [network createRESTfulRequest:term];
     
-    [network startAsynchronousWithProcessBlock:^(id resp)
-     {
-         id date = [NSObject toJSONValue:resp];
-         if (date)
-         {
-             if ([date[@"state"] intValue] != 1)
-             {
-                 Alert(date[@"message"]);
-                 processBlock(nil);
-             }
-             else
-             {
-                 processBlock(resp);
-             }
-         }
-         
-         DLog(@"%@",resp);
-         
-     } responseBuildBlock:^id(NSString *respText) {
-         return respText;
-     }];
+    [network startAsynchronousDownloadPicBlock:^(id respData)
+    {
+        if (respData != nil)
+        {
+            processBlock(respData);
+        }
+        else
+        {
+            [[WPAlertView viewFromXib] showWithMessage:@"下载失败"];
+        }
+    } responseBuildBlock:^id(NSString *respText) {
+        return respText;
+    }];
 }
 
 - (NSString*)routeWithTerm:(NSDictionary*)term

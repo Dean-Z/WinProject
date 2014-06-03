@@ -10,8 +10,9 @@
 #import "UIImageView+WebCache.h"
 #import "WPProductButton.h"
 #import "WPQDateInfo.h"
+#import "WPProductDetailView.h"
 
-@interface BufferProductView : WPBaseView
+@interface BufferProductView : WPBaseView<WPProductDetailViewDelegate>
 
 @property(nonatomic,weak) IBOutlet UIImageView* productImage;
 @property(nonatomic,weak) IBOutlet UILabel*     endTimeLabel;

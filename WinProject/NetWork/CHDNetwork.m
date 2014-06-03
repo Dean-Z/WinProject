@@ -120,6 +120,47 @@ NSInteger MAX_RETRY_LIMIT = 3;
     }
 }
 
+- (void)startAsynchronousDownloadPicBlock:(void (^)(id))processBlock
+                       responseBuildBlock:(id (^)(NSString *))responseBuildBlock
+{
+    __block CHDNetwork *ser = self;
+    
+    completionBlock = ^
+    {
+        processBlock(ser.request.responseData);
+        ser = nil;
+    };
+    
+    failedBlock = ^
+    {
+        
+        DLog(@"%@",ser.request.responseString);
+        response_codes += 1;
+        processBlock(nil);
+        ser = nil;
+    };
+    
+    [self.request setCompletionBlock:completionBlock];
+    
+    [self.request setFailedBlock:failedBlock];
+    
+    if (self.app.isNetworkAvailable)
+    {
+        [self.request startAsynchronous];
+    }
+    else
+    {
+        DLog(@"STOP LOADING: REASON: (RESTFUL NETWORK EXCEPTION)");
+        
+        response_codes += 1;
+        Alert(@"网络链接错误,请检查网络");
+        
+        //call back directly
+        [self cancelRequest];
+        processBlock(nil);
+    }
+}
+
 - (void) cancelRequest
 {
     if (self.request != nil)

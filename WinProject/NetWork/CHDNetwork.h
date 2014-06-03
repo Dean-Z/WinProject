@@ -46,6 +46,8 @@ typedef enum {
 - (void)createRESTfulRequest:(NSDictionary *)param;
 - (void)startAsynchronousWithProcessBlock:(void (^)(id))processBlock
                        responseBuildBlock:(id (^)(NSString *))responseBuildBlock;
+- (void)startAsynchronousDownloadPicBlock:(void (^)(id))processBlock
+                       responseBuildBlock:(id (^)(NSString *))responseBuildBlock;
 
 - (NSString *)sign;
 

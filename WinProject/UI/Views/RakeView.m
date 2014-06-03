@@ -7,6 +7,7 @@
 //
 
 #import "RakeView.h"
+#import "RakeFriendCell.h"
 
 @implementation RakeView
 
@@ -31,9 +32,8 @@
     {
         switchBar = [WPSwitchBar viewFromXib];
         
-        [switchBar renderBarWithLeftContenct:@"全国排名" RightContent:@"好友排名"
+        [switchBar renderBarWithLeftContenct:@"好友排名" RightContent:@"全国排名"
                                       action:@selector(switchBarChangeValue) target:self];
-        
         [self.switchBarContainer addSubview:switchBar];
     }
 }
@@ -52,7 +52,46 @@
 
 -(void)switchBarChangeValue
 {
-    DLog(@"dasdas");
+    if (switchBar.selectAtIndex == 0)
+    {
+       pullView.hidden = NO;
+    }
+    else
+    {
+        pullView.hidden = YES;
+    }
+}
+
+
+#pragma mark UITableViewDataSource,UITableViewDelegate
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 8;
+}
+
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (tableView == self.friendTableView)
+    {
+        static NSString* friendRake = @"friendRake";
+        
+        RakeFriendCell* cell = [tableView dequeueReusableCellWithIdentifier:friendRake];
+        
+        if (cell == nil)
+        {
+            cell = [[[NSBundle mainBundle]loadNibNamed:@"RakeFriendCell" owner:self options:nil]lastObject];
+        }
+        
+        [cell renderView];
+        
+        return cell;
+    }
+    return nil;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 27.0f;
 }
 
 @end

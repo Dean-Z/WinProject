@@ -126,7 +126,7 @@
         [self.qScrollViewController addSubview:product];
     }
     
-    [self.qScrollViewController setContentSize:CGSizeMake(0, 200*3)];
+    [self.qScrollViewController setContentSize:CGSizeMake(0, 200*qDataInfo.qBaseDateArray.count)];
 }
 
 
@@ -142,7 +142,7 @@
         [self.cScrollViewController addSubview:cProduct];
     }
     
-    [self.cScrollViewController setContentSize:CGSizeMake(self.view.sizeW*3, 0)];
+    [self.cScrollViewController setContentSize:CGSizeMake(self.view.sizeW*cDataInfo.cBaseDateArray.count, 0)];
 }
 
 - (IBAction)close:(id)sender
@@ -183,7 +183,7 @@
     {
         [self.preButton setImage:[UIImage imageNamed:@"btn_gray_pre.png"] forState:UIControlStateNormal];
     }
-    else if(cCurrentPage == 2)
+    else if(cCurrentPage == cDataInfo.cBaseDateArray.count-1)
     {
         [self.nextButton setImage:[UIImage imageNamed:@"btn_gray_next.png"] forState:UIControlStateNormal];
     }

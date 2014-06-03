@@ -10,12 +10,14 @@
 #import "WPSwitchBar.h"
 #import "WPPullView.h"
 
-@interface RakeView : WPBaseView
+@interface RakeView : WPBaseView<UITableViewDataSource,UITableViewDelegate>
 {
     WPSwitchBar* switchBar;
     WPPullView* pullView;
 }
 
 @property(nonatomic,weak) IBOutlet UIView* switchBarContainer;
+@property(nonatomic,weak) IBOutlet UITableView* friendTableView;
+@property(nonatomic,weak) IBOutlet UITableView* countryTableView;
 
 @end

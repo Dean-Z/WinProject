@@ -50,6 +50,11 @@
 - (IBAction)download:(id)sender
 {
     [self dismiss];
+    
+    if ([self.delegate respondsToSelector:@selector(productDownload:)])
+    {
+        [self.delegate productDownload:self.productInfo];
+    }
 }
 
 - (void)dismiss
