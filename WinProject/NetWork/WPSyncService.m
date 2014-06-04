@@ -107,14 +107,7 @@
     
     [network startAsynchronousDownloadPicBlock:^(id respData)
     {
-        if (respData != nil)
-        {
-            processBlock(respData);
-        }
-        else
-        {
-            [[WPAlertView viewFromXib] showWithMessage:@"下载失败"];
-        }
+        processBlock(respData);
     } responseBuildBlock:^id(NSString *respText) {
         return respText;
     }];

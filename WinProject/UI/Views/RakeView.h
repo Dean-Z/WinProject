@@ -14,6 +14,9 @@
 {
     WPSwitchBar* switchBar;
     WPPullView* pullView;
+    
+    NSMutableArray* _friendsRake;
+    NSMutableArray* _countryRake;
 }
 
 @property(nonatomic,weak) IBOutlet UIView* switchBarContainer;

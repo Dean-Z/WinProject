@@ -7,12 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WPRakeInfo.h"
 
 @interface RakeFriendCell : UITableViewCell
 
 @property (nonatomic,weak) IBOutlet UILabel* nameLabel;
 @property (nonatomic,weak) IBOutlet UILabel* rakeLabel;
 @property (nonatomic,weak) IBOutlet UILabel* coinLabel;
+
+@property (nonatomic,strong) WPRakeInfo* rakeInfo;
+@property (nonatomic,assign) NSInteger rakeIndex;
 
 - (UIColor*)colorWithRake:(NSInteger)rake;
 - (UIColor*)selfColor;

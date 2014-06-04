@@ -127,7 +127,7 @@ NSInteger MAX_RETRY_LIMIT = 3;
     
     completionBlock = ^
     {
-        processBlock(ser.request.responseData);
+        processBlock(ser.request);
         ser = nil;
     };
     

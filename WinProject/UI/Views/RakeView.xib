@@ -93,17 +93,26 @@
                     <rect key="frame" x="8" y="139" width="240" height="205"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="dHZ-EY-LGX" id="uuu-28-hU7"/>
+                        <outlet property="delegate" destination="dHZ-EY-LGX" id="t99-Xc-eF4"/>
+                    </connections>
                 </tableView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Zhe-x5-spK" userLabel="Table View - firend">
-                    <rect key="frame" x="8" y="139" width="240" height="205"/>
+                    <rect key="frame" x="8" y="169" width="240" height="175"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <inset key="contentInset" minX="0.0" minY="30" maxX="0.0" maxY="0.0"/>
+                    <connections>
+                        <outlet property="dataSource" destination="dHZ-EY-LGX" id="edf-cp-dbZ"/>
+                        <outlet property="delegate" destination="dHZ-EY-LGX" id="SaX-RK-Toi"/>
+                    </connections>
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="countryTableView" destination="Fb8-oS-G6a" id="lKP-Oo-aht"/>
+                <outlet property="friendTableView" destination="Zhe-x5-spK" id="Vj9-BI-daN"/>
                 <outlet property="switchBarContainer" destination="5vx-YI-fMp" id="sWB-kC-ZEr"/>
             </connections>
         </view>

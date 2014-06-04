@@ -33,14 +33,18 @@
 
 - (void)renderView
 {
-    [self.nameLabel setFont:[UIFont fontWithName:@"DFWaWaSC-W5" size:[self sizeWithRake:1]]];
-    [self.nameLabel setTextColor:[self colorWithRake:1]];
+    [self.nameLabel setFont:[UIFont fontWithName:@"DFWaWaSC-W5" size:[self sizeWithRake:self.rakeIndex]]];
+    [self.nameLabel setTextColor:[self colorWithRake:self.rakeIndex]];
     
-    [self.rakeLabel setFont:[UIFont fontWithName:@"DFWaWaSC-W5" size:[self sizeWithRake:1]]];
-    [self.rakeLabel setTextColor:[self colorWithRake:1]];
+    [self.rakeLabel setFont:[UIFont fontWithName:@"DFWaWaSC-W5" size:[self sizeWithRake:self.rakeIndex]]];
+    [self.rakeLabel setTextColor:[self colorWithRake:self.rakeIndex]];
     
-    [self.coinLabel setFont:[UIFont fontWithName:@"DFWaWaSC-W5" size:[self sizeWithRake:1]]];
-    [self.coinLabel setTextColor:[self colorWithRake:1]];
+    [self.coinLabel setFont:[UIFont fontWithName:@"DFWaWaSC-W5" size:[self sizeWithRake:self.rakeIndex]]];
+    [self.coinLabel setTextColor:[self colorWithRake:self.rakeIndex]];
+    
+    self.nameLabel.text = self.rakeInfo.nickname;
+    self.coinLabel.text = [NSString stringWithFormat:@"%@金币",self.rakeInfo.coins];
+    self.rakeLabel.text = [NSString stringWithFormat:@"%d",self.rakeIndex];
 }
 
 - (UIColor*)colorWithRake:(NSInteger)rake

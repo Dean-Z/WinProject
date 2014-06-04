@@ -8,6 +8,7 @@
 
 #import "RakeView.h"
 #import "RakeFriendCell.h"
+#import "WPRakeInfo.h"
 
 @implementation RakeView
 
@@ -15,7 +16,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
+        
     }
     return self;
 }
@@ -24,6 +25,8 @@
 {
     [self prepareSwithBar];
     [self preparePullView];
+    
+    [self prepareData];
 }
 
 - (void)prepareSwithBar
@@ -55,19 +58,96 @@
     if (switchBar.selectAtIndex == 0)
     {
        pullView.hidden = NO;
+        self.friendTableView.hidden = NO;
+        self.countryTableView.hidden = YES;
     }
     else
     {
         pullView.hidden = YES;
+        self.friendTableView.hidden = YES;
+        self.countryTableView.hidden = NO;
     }
 }
 
+
+- (void)prepareData
+{
+    NSMutableDictionary* parm = [@{@"app":@"rank",@"act":@"index"} mutableCopy];
+    
+    _countryRake = [@[] mutableCopy];
+    _friendsRake = [@[] mutableCopy];
+    
+    // 全国用户
+    [[WPSyncService alloc]syncWithRoute:parm Block:^(id resp) {
+        if (resp)
+        {
+            id date = [NSObject toJSONValue:resp];
+            
+            if ([date isKindOfClass:[NSDictionary class]])
+            {
+                NSArray* result = [date objectForKey:@"result"];
+                
+                if (result > 0)
+                {
+                    for (NSDictionary* dict in result)
+                    {
+                        WPRakeInfo* info = [[WPRakeInfo alloc] init];
+                        info.data = dict;
+                        [_countryRake addObject:info];
+                    }
+                    [self.countryTableView reloadData];
+                }
+                else
+                {
+                    DLog(@"NO DATA");
+                }
+            }
+        }
+    }];
+    
+    parm = [@{@"app":@"rank",@"act":@"user",@"address":@"address"} mutableCopy];
+    
+    // 好友
+    [[WPSyncService alloc]syncWithRoute:parm Block:^(id resp) {
+        if (resp)
+        {
+            id date = [NSObject toJSONValue:resp];
+            
+            if ([date isKindOfClass:[NSDictionary class]])
+            {
+                NSArray* result = [date objectForKey:@"result"];
+                if (result > 0)
+                {
+                    for (NSDictionary* dict in result)
+                    {
+                        WPRakeInfo* info = [[WPRakeInfo alloc] init];
+                        info.data = dict;
+                        [_friendsRake addObject:info];
+                    }
+                    
+                    [self.friendTableView reloadData];
+                }
+                else
+                {
+                    DLog(@"NO DATA");
+                }
+            }
+        }
+    }];
+}
 
 #pragma mark UITableViewDataSource,UITableViewDelegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 8;
+    if (tableView == self.friendTableView)
+    {
+        return [_friendsRake count];
+    }
+    else
+    {
+        return [_countryRake count];
+    }
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -81,12 +161,30 @@
         {
             cell = [[[NSBundle mainBundle]loadNibNamed:@"RakeFriendCell" owner:self options:nil]lastObject];
         }
+        cell.rakeIndex = indexPath.row + 1;
+        cell.rakeInfo = _friendsRake[indexPath.row];
+        [cell renderView];
+        
+        return cell;
+    }
+    else
+    {
+        static NSString* countryRake = @"countryRake";
+        
+        RakeFriendCell* cell = [tableView dequeueReusableCellWithIdentifier:countryRake];
+        
+        if (cell == nil)
+        {
+            cell = [[[NSBundle mainBundle]loadNibNamed:@"RakeFriendCell" owner:self options:nil]lastObject];
+        }
+        
+        cell.rakeIndex = indexPath.row + 1;
+        cell.rakeInfo = _countryRake[indexPath.row];
         
         [cell renderView];
         
         return cell;
     }
-    return nil;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

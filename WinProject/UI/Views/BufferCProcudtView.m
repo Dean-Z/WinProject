@@ -71,7 +71,7 @@
     
     [[WPSyncService alloc]downloadImageWithRoute:parm Block:^(id respData)
      {
-         UIImage *picImage = [UIImage imageWithData:respData];
+         UIImage *picImage = self.productImageView.image;
          UIImageWriteToSavedPhotosAlbum(picImage, nil, nil,nil);
          [[WPAlertView viewFromXib]showWithMessage:@"保存成功"];
      }];

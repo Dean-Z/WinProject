@@ -78,6 +78,7 @@
 		CB924BF519094578000389CB /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB924BF419094578000389CB /* MessageUI.framework */; };
 		CB924BF819094F04000389CB /* CheckItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB924BF719094F04000389CB /* CheckItemView.m */; };
 		CB924BFA19094F14000389CB /* CheckItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB924BF919094F14000389CB /* CheckItemView.xib */; };
+		CB9589B3193F4B6100C94AD5 /* WPRakeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9589B2193F4B6100C94AD5 /* WPRakeInfo.m */; };
 		CBA0E87E19012EED007119C0 /* Functions.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA0E87019012EED007119C0 /* Functions.m */; };
 		CBA0E87F19012EED007119C0 /* NSString+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA0E87319012EED007119C0 /* NSString+Extention.m */; };
 		CBA0E88019012EED007119C0 /* QQImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA0E87619012EED007119C0 /* QQImageView.m */; };
@@ -247,6 +248,8 @@
 		CB924BF619094F04000389CB /* CheckItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckItemView.h; sourceTree = "<group>"; };
 		CB924BF719094F04000389CB /* CheckItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckItemView.m; sourceTree = "<group>"; };
 		CB924BF919094F14000389CB /* CheckItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckItemView.xib; sourceTree = "<group>"; };
+		CB9589B1193F4B6100C94AD5 /* WPRakeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPRakeInfo.h; sourceTree = "<group>"; };
+		CB9589B2193F4B6100C94AD5 /* WPRakeInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPRakeInfo.m; sourceTree = "<group>"; };
 		CBA0E86F19012EED007119C0 /* Functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Functions.h; sourceTree = "<group>"; };
 		CBA0E87019012EED007119C0 /* Functions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Functions.m; sourceTree = "<group>"; };
 		CBA0E87219012EED007119C0 /* NSString+Extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extention.h"; sourceTree = "<group>"; };
@@ -435,6 +438,8 @@
 				CB827E1E192CE93200AFDBBF /* WPCDataInfo.m */,
 				CBD96276193376FA00825CE7 /* WPProductInfo.h */,
 				CBD96277193376FA00825CE7 /* WPProductInfo.m */,
+				CB9589B1193F4B6100C94AD5 /* WPRakeInfo.h */,
+				CB9589B2193F4B6100C94AD5 /* WPRakeInfo.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -973,6 +978,7 @@
 				CBA0E88F190133D4007119C0 /* CoreAnimationEffect.m in Sources */,
 				CB6B7991191C990F00610CD6 /* WPNickName.m in Sources */,
 				CBD9624F192F6D7800825CE7 /* WPAlertView.m in Sources */,
+				CB9589B3193F4B6100C94AD5 /* WPRakeInfo.m in Sources */,
 				CB45CC33192101510020D76C /* SBJsonParser.m in Sources */,
 				CB45CC3A192106B30020D76C /* CCUpdataApp.m in Sources */,
 				CB5FD99F193E111B000BC33F /* RakeFriendCell.m in Sources */,
