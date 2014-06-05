@@ -57,11 +57,27 @@
     _inProductArray = [@[] mutableCopy];
     WPMarketInfo* info = [[WPMarketInfo alloc]init];
     info.cover = @"icon-invite.png";
-    info.title = @"初来咋到";
-    info.desc = @"填写完整个人信息";
+    info.title = @"推荐好友";
+    info.desc = @"推荐好友使用【赢屏】";
     info.timeLimit = @"长期有效";
     info.coins = @"20";
     [_inProductArray addObject:info];
+    
+    WPMarketInfo* info2 = [[WPMarketInfo alloc]init];
+    info2.cover = @"icon-invite.png";
+    info2.title = @"问卷调查";
+    info2.desc = @"完成【赢屏】的问卷调查";
+    info2.timeLimit = @"长期有效";
+    info2.coins = @"20";
+    [_inProductArray addObject:info2];
+    
+    WPMarketInfo* info3 = [[WPMarketInfo alloc]init];
+    info3.cover = @"icon-invite.png";
+    info3.title = @"初来咋到";
+    info3.desc = @"填写完整个人信息";
+    info3.timeLimit = @"长期有效";
+    info3.coins = @"20";
+    [_inProductArray addObject:info3];
     
     [self.productTabelView reloadData];
 }
@@ -105,7 +121,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 0)
+    if (indexPath.row == 2)
     {
         [self showInformationView];
     }
@@ -118,22 +134,29 @@
         informationView = [WPInformationView viewFromXib];
         [self.informationViewContainer addSubview:informationView];
         [informationView renderView];
+        self.informationViewContainer.originX = self.view.sizeW;
     }
     
     self.informationViewContainer.hidden = NO;
-    self.productTabelView.hidden = YES;
-    self.switchBarContainer.hidden = YES;
     self.refreshButton.hidden = YES;
     self.cancelButton.hidden = NO;
+    [UIView animateWithDuration:0.3 animations:^{
+        self.informationViewContainer.originX = 0;
+        self.productTabelView.alpha = 0.0f;
+        self.switchBarContainer.alpha = 0.0f;
+    }];
 }
 
 - (IBAction)cancel:(id)sender
 {
-    self.informationViewContainer.hidden = YES;
-    self.productTabelView.hidden = NO;
-    self.switchBarContainer.hidden = NO;
-    self.refreshButton.hidden = NO;
-    self.cancelButton.hidden = YES;
+    [UIView animateWithDuration:0.3 animations:^{
+        self.informationViewContainer.originX = self.view.sizeW;
+        self.productTabelView.alpha = 1.0f;
+        self.switchBarContainer.alpha = 1.0f;
+    } completion:^(BOOL finished) {
+        self.refreshButton.hidden = NO;
+        self.cancelButton.hidden = YES;
+    }];
 }
 
 - (void)didReceiveMemoryWarning
