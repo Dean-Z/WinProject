@@ -10,6 +10,7 @@
 #import "WPSwitchBar.h"
 #import "WPMarketInfo.h"
 #import "MarketInTableViewCell.h"
+#import "WPInviteView.h"
 
 @interface WPMarketViewController ()
 {
@@ -64,7 +65,7 @@
     [_inProductArray addObject:info];
     
     WPMarketInfo* info2 = [[WPMarketInfo alloc]init];
-    info2.cover = @"icon-invite.png";
+    info2.cover = @"icon-ask.png";
     info2.title = @"问卷调查";
     info2.desc = @"完成【赢屏】的问卷调查";
     info2.timeLimit = @"长期有效";
@@ -72,7 +73,7 @@
     [_inProductArray addObject:info2];
     
     WPMarketInfo* info3 = [[WPMarketInfo alloc]init];
-    info3.cover = @"icon-invite.png";
+    info3.cover = @"icon-information.png";
     info3.title = @"初来咋到";
     info3.desc = @"填写完整个人信息";
     info3.timeLimit = @"长期有效";
@@ -121,6 +122,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (indexPath.row == 0)
+    {
+        WPInviteView* invite = [WPInviteView viewFromXib];
+        [invite renderView];
+    }
+    
     if (indexPath.row == 2)
     {
         [self showInformationView];
@@ -162,7 +169,7 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
 @end

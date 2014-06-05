@@ -131,6 +131,8 @@
 		CBF4AFBE19405C820028588E /* WPConversionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF4AFBD19405C820028588E /* WPConversionInfo.m */; };
 		CBF4AFC219405E600028588E /* ConversionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF4AFC019405E600028588E /* ConversionCell.m */; };
 		CBF4AFC319405E600028588E /* ConversionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBF4AFC119405E600028588E /* ConversionCell.xib */; };
+		CBF4AFC619407C730028588E /* WPInviteView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF4AFC519407C730028588E /* WPInviteView.m */; };
+		CBF4AFC819407C830028588E /* WPInviteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBF4AFC719407C830028588E /* WPInviteView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -343,6 +345,9 @@
 		CBF4AFBF19405E600028588E /* ConversionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversionCell.h; sourceTree = "<group>"; };
 		CBF4AFC019405E600028588E /* ConversionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversionCell.m; sourceTree = "<group>"; };
 		CBF4AFC119405E600028588E /* ConversionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConversionCell.xib; sourceTree = "<group>"; };
+		CBF4AFC419407C730028588E /* WPInviteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPInviteView.h; sourceTree = "<group>"; };
+		CBF4AFC519407C730028588E /* WPInviteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPInviteView.m; sourceTree = "<group>"; };
+		CBF4AFC719407C830028588E /* WPInviteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPInviteView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -741,6 +746,9 @@
 				CBCBF1F7190F48BF003439DB /* MarketInTableViewCell.h */,
 				CBCBF1F8190F48BF003439DB /* MarketInTableViewCell.m */,
 				CBCBF1F9190F48BF003439DB /* MarketInTableViewCell.xib */,
+				CBF4AFC419407C730028588E /* WPInviteView.h */,
+				CBF4AFC519407C730028588E /* WPInviteView.m */,
+				CBF4AFC719407C830028588E /* WPInviteView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -920,6 +928,7 @@
 				CBDD252618FF8CCA009043FE /* Images.xcassets in Resources */,
 				CB45CC4019210B330020D76C /* WPRegisterAlert.xib in Resources */,
 				CBD9626C193369F300825CE7 /* RakeView_iPhone5.xib in Resources */,
+				CBF4AFC819407C830028588E /* WPInviteView.xib in Resources */,
 				CBA0E89719013908007119C0 /* LoginViewController_iPhone5.xib in Resources */,
 				CB2FAD181902C3DA00F46A0A /* WPWalletViewController_iPhone5.xib in Resources */,
 				CB6B7993191C991D00610CD6 /* WPNickName.xib in Resources */,
@@ -1022,6 +1031,7 @@
 				CBA0E890190133D4007119C0 /* FTAnimationManager.m in Sources */,
 				CBD9627319336EF500825CE7 /* WPProductDetailView.m in Sources */,
 				CB45CC2B192101510020D76C /* JSONMutableArray.m in Sources */,
+				CBF4AFC619407C730028588E /* WPInviteView.m in Sources */,
 				CBA0E88F190133D4007119C0 /* CoreAnimationEffect.m in Sources */,
 				CB6B7991191C990F00610CD6 /* WPNickName.m in Sources */,
 				CBD9624F192F6D7800825CE7 /* WPAlertView.m in Sources */,

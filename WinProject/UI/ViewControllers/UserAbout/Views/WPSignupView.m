@@ -63,7 +63,7 @@
 {
     if (![NSString checkTel:self.phoneTextField.text])
     {
-        Alert(@"请输入正确的电话号码");
+        [[WPAlertView viewFromXib] showWithMessage:@"请输入正确的电话号码"];
         return;
     }
     NSMutableDictionary* term = [@{@"app":@"index",@"act":@"codeRegister"} mutableCopy];

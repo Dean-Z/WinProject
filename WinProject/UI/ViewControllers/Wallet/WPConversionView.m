@@ -38,13 +38,13 @@
     WPConversionInfo* info = [[WPConversionInfo alloc]init];
     info.title = @"提现充值";
     info.desc = @"毛爷爷、Q币、话费通通在这里";
-    info.cover = @"icon-invite.png";
+    info.cover = @"icon-con-m.png";
     [_conversionArray addObject:info];
     
     WPConversionInfo* info2 = [[WPConversionInfo alloc]init];
     info2.title = @"疯狂商城";
     info2.desc = @"精彩商品换不停";
-    info2.cover = @"icon-invite.png";
+    info2.cover = @"icon-con-w.png";
     [_conversionArray addObject:info2];
 }
 
