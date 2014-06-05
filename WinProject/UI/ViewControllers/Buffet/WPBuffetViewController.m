@@ -92,6 +92,7 @@
     
     [UIView transitionWithView:stock.view duration:0.3 options:UIViewAnimationOptionCurveEaseIn animations:^{
         stock.view.originX = 0;
+        self.productContainerView.alpha = 0.0f;
     } completion:^(BOOL finished) {
         
     }];
@@ -107,6 +108,7 @@
         [UIView transitionWithView:stock.view duration:0.3 options:UIViewAnimationOptionCurveEaseIn animations:^{
             stock.view.originX = self.view.sizeW;
         } completion:^(BOOL finished) {
+            self.productContainerView.alpha = 1.0f;
             [stock.view removeFromSuperview];
             stock = nil;
         }];

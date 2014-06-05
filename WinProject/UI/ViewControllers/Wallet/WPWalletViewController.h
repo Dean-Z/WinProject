@@ -9,8 +9,9 @@
 #import "BaseXibViewController.h"
 #import "RakeView.h"
 #import "BillView.h"
+#import "WPConversionView.h"
 
-@interface WPWalletViewController : BaseXibViewController<UIScrollViewDelegate>
+@interface WPWalletViewController : BaseXibViewController<UIScrollViewDelegate,WPConversionViewDelegate>
 
 @property(nonatomic,weak) IBOutlet UIButton* exchangeButton;
 @property(nonatomic,weak) IBOutlet UIButton* shareButton;

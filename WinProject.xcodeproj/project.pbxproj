@@ -126,6 +126,11 @@
 		CBDD252F18FF8CCA009043FE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDD251718FF8CCA009043FE /* UIKit.framework */; };
 		CBDD253718FF8CCA009043FE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CBDD253518FF8CCA009043FE /* InfoPlist.strings */; };
 		CBDD253918FF8CCA009043FE /* WinProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDD253818FF8CCA009043FE /* WinProjectTests.m */; };
+		CBF4AFB9194059E00028588E /* WPConversionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF4AFB8194059E00028588E /* WPConversionView.m */; };
+		CBF4AFBB19405A0E0028588E /* WPConversionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBF4AFBA19405A0E0028588E /* WPConversionView.xib */; };
+		CBF4AFBE19405C820028588E /* WPConversionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF4AFBD19405C820028588E /* WPConversionInfo.m */; };
+		CBF4AFC219405E600028588E /* ConversionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF4AFC019405E600028588E /* ConversionCell.m */; };
+		CBF4AFC319405E600028588E /* ConversionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBF4AFC119405E600028588E /* ConversionCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -330,6 +335,14 @@
 		CBDD253418FF8CCA009043FE /* WinProjectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WinProjectTests-Info.plist"; sourceTree = "<group>"; };
 		CBDD253618FF8CCA009043FE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CBDD253818FF8CCA009043FE /* WinProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WinProjectTests.m; sourceTree = "<group>"; };
+		CBF4AFB7194059E00028588E /* WPConversionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPConversionView.h; sourceTree = "<group>"; };
+		CBF4AFB8194059E00028588E /* WPConversionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPConversionView.m; sourceTree = "<group>"; };
+		CBF4AFBA19405A0E0028588E /* WPConversionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPConversionView.xib; sourceTree = "<group>"; };
+		CBF4AFBC19405C820028588E /* WPConversionInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPConversionInfo.h; sourceTree = "<group>"; };
+		CBF4AFBD19405C820028588E /* WPConversionInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPConversionInfo.m; sourceTree = "<group>"; };
+		CBF4AFBF19405E600028588E /* ConversionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversionCell.h; sourceTree = "<group>"; };
+		CBF4AFC019405E600028588E /* ConversionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversionCell.m; sourceTree = "<group>"; };
+		CBF4AFC119405E600028588E /* ConversionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConversionCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -421,6 +434,12 @@
 				CB5FD99D193E111B000BC33F /* RakeFriendCell.h */,
 				CB5FD99E193E111B000BC33F /* RakeFriendCell.m */,
 				CB5FD99B193E109C000BC33F /* RakeFriendCell.xib */,
+				CBF4AFB7194059E00028588E /* WPConversionView.h */,
+				CBF4AFB8194059E00028588E /* WPConversionView.m */,
+				CBF4AFBA19405A0E0028588E /* WPConversionView.xib */,
+				CBF4AFBF19405E600028588E /* ConversionCell.h */,
+				CBF4AFC019405E600028588E /* ConversionCell.m */,
+				CBF4AFC119405E600028588E /* ConversionCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -455,6 +474,8 @@
 				CB9589B2193F4B6100C94AD5 /* WPRakeInfo.m */,
 				CB9589BE1940325700C94AD5 /* WPMarketInfo.h */,
 				CB9589BF1940325700C94AD5 /* WPMarketInfo.m */,
+				CBF4AFBC19405C820028588E /* WPConversionInfo.h */,
+				CBF4AFBD19405C820028588E /* WPConversionInfo.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -884,11 +905,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBB0B58B193C30BE0069C360 /* QuestionnaireView.xib in Resources */,
+				CBF4AFBB19405A0E0028588E /* WPConversionView.xib in Resources */,
 				CB4542B11915ED2A00BFE852 /* WPStockViewController_iPhone5.xib in Resources */,
 				CB5981361921106C000AF16A /* WPRultView.xib in Resources */,
 				CBA0E8A419013ABB007119C0 /* WPSignupView.xib in Resources */,
 				CB6B7987191B7F8A00610CD6 /* WPPullView.xib in Resources */,
 				CBDD251E18FF8CCA009043FE /* InfoPlist.strings in Resources */,
+				CBF4AFC319405E600028588E /* ConversionCell.xib in Resources */,
 				CB4542C0191603B200BFE852 /* WPCProductButton.xib in Resources */,
 				CB4211D61907A5EC001AC70B /* BufferProductView.xib in Resources */,
 				CB4542D01918E04B00BFE852 /* WPMarketViewController_iPhone.xib in Resources */,
@@ -1020,8 +1043,10 @@
 				CBA0E88019012EED007119C0 /* QQImageView.m in Sources */,
 				CB4542BE191603A100BFE852 /* WPCProductButton.m in Sources */,
 				CB45CC31192101510020D76C /* SBJSON.m in Sources */,
+				CBF4AFB9194059E00028588E /* WPConversionView.m in Sources */,
 				CBA0E88319012EED007119C0 /* UIView+XibView.m in Sources */,
 				CB6B798A191B902600610CD6 /* WPAuthView.m in Sources */,
+				CBF4AFBE19405C820028588E /* WPConversionInfo.m in Sources */,
 				CB45CC2C192101510020D76C /* JsonParser.m in Sources */,
 				CB6B7996191C994B00610CD6 /* WPPasswordView.m in Sources */,
 				CB2FAD081902C37B00F46A0A /* WPBuffetViewController.m in Sources */,
@@ -1032,6 +1057,7 @@
 				CB59813419211056000AF16A /* WPRultView.m in Sources */,
 				CB827E13192BA6AB00AFDBBF /* WPUserInfo.m in Sources */,
 				CB4E1399190FF0130048709B /* RakeView.m in Sources */,
+				CBF4AFC219405E600028588E /* ConversionCell.m in Sources */,
 				CB45CC2A192101510020D76C /* JSONKit.m in Sources */,
 				CB9589B6193F571600C94AD5 /* WPInformationView.m in Sources */,
 				CBA0E892190133D4007119C0 /* UIView+CCAnimation.m in Sources */,

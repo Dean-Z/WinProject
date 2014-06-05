@@ -13,6 +13,7 @@
 {
     RakeView* rakeView;
     BillView* billView;
+    WPConversionView* conversionView;
 }
 @end
 
@@ -112,10 +113,51 @@
     [share shareWithSina:[UIImage imageNamed:@"refresh.png"] message:@"21121"];
 }
 
+- (IBAction)conversion:(id)sender
+{
+    [self showConversionView];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     
+}
+
+#pragma mark About ConversionView
+
+- (void)prepareConversionView
+{
+    if (conversionView == nil)
+    {
+        conversionView = [WPConversionView viewFromXib];
+        conversionView.sizeH = self.view.sizeH;
+        conversionView.delegate = self;
+        conversionView.originX = self.view.sizeW;
+        [self.view addSubview:conversionView];
+        [conversionView renderView];
+    }
+}
+
+- (void)showConversionView
+{
+    [self prepareConversionView];
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        conversionView.originX = 0;
+        self.mainScrollView.alpha = 0.0f;
+    }];
+}
+
+- (void)conversionCancel
+{
+    [UIView animateWithDuration:0.3 animations:^{
+        conversionView.originX = self.view.sizeW;
+        self.mainScrollView.alpha = 1.0f;
+    } completion:^(BOOL finished) {
+        [conversionView removeFromSuperview];
+        conversionView = nil;
+    }];
 }
 
 @end

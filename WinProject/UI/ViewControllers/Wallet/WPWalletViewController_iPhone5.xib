@@ -41,6 +41,9 @@
                             <state key="normal" title="兑换" backgroundImage="home_exchange">
                                 <color key="titleShadowColor" red="0.082352941176470587" green="0.45882352941176469" blue="0.023529411764705882" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="conversion:" destination="-1" eventType="touchUpInside" id="Z4f-LD-UNE"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="WZC-1Q-ieQ">
                             <rect key="frame" x="550" y="393" width="54" height="55"/>
