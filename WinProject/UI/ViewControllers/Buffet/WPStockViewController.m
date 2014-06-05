@@ -159,7 +159,7 @@
     
     if (button ==  self.nextButton)
     {
-        if (cCurrentPage<2)
+        if (cCurrentPage<cDataInfo.cBaseDateArray.count-1)
         {
             cCurrentPage++;
         }

@@ -7,10 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WPMarketInfo.h"
 
 @interface MarketInTableViewCell : UITableViewCell
 
 @property(nonatomic,weak) IBOutlet UIView* cellbgView;
+@property(nonatomic,strong) WPMarketInfo* marketInfo;
+@property(nonatomic,weak) IBOutlet UIImageView* coverImage;
+@property(nonatomic,weak) IBOutlet UIButton* coinButton;
+@property(nonatomic,weak) IBOutlet UILabel* titleLabel;
+@property(nonatomic,weak) IBOutlet UILabel* descLabel;
+@property(nonatomic,weak) IBOutlet UILabel* timeLabel;
 
 - (void) renderCell;
 

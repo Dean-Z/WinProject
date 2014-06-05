@@ -7,10 +7,15 @@
 //
 
 #import "BaseXibViewController.h"
+#import "WPInformationView.h"
 
 @interface WPMarketViewController : BaseXibViewController<UITableViewDataSource,UITableViewDelegate>
 
 @property(nonatomic,weak) IBOutlet UITableView* productTabelView;
 @property(nonatomic,weak) IBOutlet UIView*      switchBarContainer;
+@property(nonatomic,weak) IBOutlet UIView*      informationViewContainer;
+
+@property(nonatomic,weak) IBOutlet UIButton* refreshButton;
+@property(nonatomic,weak) IBOutlet UIButton* cancelButton;
 
 @end

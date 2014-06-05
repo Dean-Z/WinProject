@@ -28,7 +28,7 @@
     [self.passwordTextField setValue:[UIColor colorWithHexString:@"584f4a"]
                                 forKeyPath:@"_placeholderLabel.textColor"];
 #ifdef DEBUG
-    [self.phoneTextField setText:@"18217144855"];
+    [self.phoneTextField setText:@"18217144856"];
     [self.passwordTextField setText:@"123456"];
 #endif
     

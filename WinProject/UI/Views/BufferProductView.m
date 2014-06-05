@@ -46,6 +46,7 @@
     
     [[WPSyncService alloc]downloadImageWithRoute:parm Block:^(id respData)
      {
+         [self saveDate];
          UIImage *picImage = self.productImage.image;
          UIImageWriteToSavedPhotosAlbum(picImage, nil, nil,nil);
          [[WPAlertView viewFromXib]showWithMessage:@"保存成功"];

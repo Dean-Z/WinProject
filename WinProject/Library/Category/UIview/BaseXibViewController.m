@@ -60,6 +60,8 @@
 {
     self.app  = [AppDelegate shareAppDelegate];
     [self.navigationController setNavigationBarHidden:YES];
+    
+    [[UIApplication sharedApplication]setStatusBarHidden:YES];
 }
 
 

@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductCell" id="KGk-i7-Jjw" customClass="MarketInTableViewCell">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ProductCell" id="KGk-i7-Jjw" customClass="MarketInTableViewCell">
             <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -62,6 +62,11 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="cellbgView" destination="LII-9H-K8I" id="RnF-hY-6ih"/>
+                <outlet property="coinButton" destination="biy-Xi-Y7G" id="FHN-2d-4Ou"/>
+                <outlet property="coverImage" destination="6V1-TE-a2v" id="4Ip-MB-WQz"/>
+                <outlet property="descLabel" destination="gSm-JE-U3U" id="k6F-6M-lys"/>
+                <outlet property="timeLabel" destination="3sI-Bb-Ydx" id="l3r-dg-xVy"/>
+                <outlet property="titleLabel" destination="TVp-Pk-YPu" id="g9b-C0-ZK8"/>
             </connections>
         </tableViewCell>
     </objects>

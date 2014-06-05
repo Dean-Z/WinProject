@@ -25,6 +25,12 @@
 {
     self.cellbgView.layer.masksToBounds = YES;
     self.cellbgView.layer.cornerRadius = 3.0f;
+    
+    self.coverImage.image = [UIImage imageNamed:self.marketInfo.cover];
+    [self.coinButton setTitle:[NSString stringWithFormat:@"奖励%@金币",self.marketInfo.coins] forState:UIControlStateNormal];
+    self.titleLabel.text = self.marketInfo.title;
+    self.descLabel.text = self.marketInfo.desc;
+    self.timeLabel.text = self.marketInfo.timeLimit;
 }
 
 @end
