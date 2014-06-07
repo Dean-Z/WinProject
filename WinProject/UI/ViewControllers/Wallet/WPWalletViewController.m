@@ -14,6 +14,7 @@
     RakeView* rakeView;
     BillView* billView;
     WPConversionView* conversionView;
+    WPAlipayView* alipayView;
 }
 @end
 
@@ -45,6 +46,8 @@
     {
         self.coinLabel.text = self.app.userInfo.coins;
     }
+    
+    self.titleLabel.text = self.app.userInfo.nickname;
     
     [self dealCoinLabel];
     
@@ -149,6 +152,14 @@
     }];
 }
 
+- (void)conversionSelectAtIndex:(NSInteger)index
+{
+    if (index == 0)
+    {
+        [self showAlipayView];
+    }
+}
+
 - (void)conversionCancel
 {
     [UIView animateWithDuration:0.3 animations:^{
@@ -157,6 +168,42 @@
     } completion:^(BOOL finished) {
         [conversionView removeFromSuperview];
         conversionView = nil;
+    }];
+}
+
+#pragma mark About AlipayView
+
+- (void)prepareAlipayView
+{
+    if (alipayView == nil)
+    {
+        alipayView = [WPAlipayView viewFromXib];
+        alipayView.sizeH = self.view.sizeH;
+        alipayView.delegate = self;
+        alipayView.originX = self.view.sizeW;
+        [self.view addSubview:alipayView];
+        [alipayView renderView];
+    }
+}
+
+- (void)alipayCancel
+{
+    [UIView animateWithDuration:0.3 animations:^{
+        conversionView.alpha = 1.0f;
+        alipayView.originX = self.view.sizeW;
+    } completion:^(BOOL finished) {
+        [alipayView removeFromSuperview];
+        alipayView = nil;
+    }];
+}
+
+- (void)showAlipayView
+{
+    [self prepareAlipayView];
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        alipayView.originX = 0;
+        conversionView.alpha = 0.0f;
     }];
 }
 

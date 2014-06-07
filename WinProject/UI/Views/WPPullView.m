@@ -50,4 +50,9 @@
     }
 }
 
+- (void)fillDate
+{
+    self.firstCellLabel.text = [NSString stringWithFormat:@"%@兑换了%@金币",self.rakeInfo.nickname,self.rakeInfo.coins];
+}
+
 @end

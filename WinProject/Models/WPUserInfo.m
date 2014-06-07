@@ -28,14 +28,14 @@
         
         if ([result isKindOfClass:[NSDictionary class]])
         {
-            self.userId = [date objectForKey:@"id"];
-            self.account = [date objectForKey:@"account"];
-            self.nickname = [date objectForKey:@"nickname"];
-            self.phone = [date objectForKey:@"phone"];
-            self.coins = [date objectForKey:@"coins"];
-            self.income = [date objectForKey:@"income"];
-            self.login_times = [date objectForKey:@"login_times"];
-            self.token = [date objectForKey:@"token"];
+            self.userId = [result objectForKey:@"id"];
+            self.account = [result objectForKey:@"account"];
+            self.nickname = [result objectForKey:@"nickname"];
+            self.phone = [result objectForKey:@"phone"];
+            self.coins = [result objectForKey:@"coins"];
+            self.income = [result objectForKey:@"income"];
+            self.login_times = [result objectForKey:@"login_times"];
+            self.token = [result objectForKey:@"token"];
         }
     }
 }

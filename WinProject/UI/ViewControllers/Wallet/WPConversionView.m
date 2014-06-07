@@ -75,6 +75,11 @@
     return 68.0f;
 }
 
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.delegate conversionSelectAtIndex:indexPath.row];
+}
+
 - (IBAction)cancel:(id)sender
 {
     [self.delegate conversionCancel];

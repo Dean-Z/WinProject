@@ -7,6 +7,7 @@
 //
 
 #import "WPBaseView.h"
+#import "WPRakeInfo.h"
 
 @interface WPPullView : WPBaseView
 {
@@ -17,5 +18,8 @@
 @property(nonatomic,weak) IBOutlet UIImageView* pullViewNormal;
 @property(nonatomic,weak) IBOutlet UIImageView* pullViewSelected;
 @property(nonatomic,strong) NSMutableArray* exchangeArray;
+@property(nonatomic,strong) WPRakeInfo* rakeInfo;
+
+- (void)fillDate;
 
 @end

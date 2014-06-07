@@ -10,8 +10,9 @@
 #import "RakeView.h"
 #import "BillView.h"
 #import "WPConversionView.h"
+#import "WPAlipayView.h"
 
-@interface WPWalletViewController : BaseXibViewController<UIScrollViewDelegate,WPConversionViewDelegate>
+@interface WPWalletViewController : BaseXibViewController<UIScrollViewDelegate,WPConversionViewDelegate,WPAlipayViewDelegate>
 
 @property(nonatomic,weak) IBOutlet UIButton* exchangeButton;
 @property(nonatomic,weak) IBOutlet UIButton* shareButton;
@@ -20,5 +21,6 @@
 
 @property(nonatomic,weak) IBOutlet UILabel*  coinLabel;
 @property(nonatomic,weak) IBOutlet UILabel*  yuanLabel;
+@property(nonatomic,weak) IBOutlet UILabel*  titleLabel;
 
 @end

@@ -147,6 +147,9 @@
                             <state key="normal" title="完成" backgroundImage="button-blue">
                                 <color key="titleShadowColor" red="0.16862745098039217" green="0.29803921568627451" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="send:" destination="6F5-8K-gwo" eventType="touchUpInside" id="mkB-9G-2ge"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

@@ -57,7 +57,10 @@
 {
     if (switchBar.selectAtIndex == 0)
     {
-       pullView.hidden = NO;
+        if (!noData)
+        {
+            pullView.hidden = NO;
+        }
         self.friendTableView.hidden = NO;
         self.countryTableView.hidden = YES;
     }
@@ -116,7 +119,7 @@
             if ([date isKindOfClass:[NSDictionary class]])
             {
                 NSArray* result = [date objectForKey:@"result"];
-                if (result > 0)
+                if (result.count > 0)
                 {
                     for (NSDictionary* dict in result)
                     {
@@ -126,10 +129,14 @@
                     }
                     
                     [self.friendTableView reloadData];
+                    pullView.rakeInfo = [_friendsRake firstObject];
+                    [pullView fillDate];
                 }
                 else
                 {
                     DLog(@"NO DATA");
+                    noData = YES;
+                    pullView.hidden = YES;
                 }
             }
         }

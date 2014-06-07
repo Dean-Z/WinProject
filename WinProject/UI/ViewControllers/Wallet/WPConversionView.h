@@ -21,5 +21,6 @@
 @protocol WPConversionViewDelegate <NSObject>
 
 - (void)conversionCancel;
+- (void)conversionSelectAtIndex:(NSInteger)index;
 
 @end

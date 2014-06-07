@@ -14,6 +14,7 @@
 {
     WPSwitchBar* switchBar;
     WPPullView* pullView;
+    BOOL noData;
     
     NSMutableArray* _friendsRake;
     NSMutableArray* _countryRake;

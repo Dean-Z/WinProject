@@ -43,8 +43,10 @@
     UIImage *fieldImage = [UIImage imageNamed:@"icon-info-input-bg.png"];
     fieldImage = [fieldImage resizableImageWithCapInsets:UIEdgeInsetsMake(11, 16, 11, 16)];
     self.ageBgImageView.image = fieldImage;
+    self.ageField.inputAccessoryView = [self inputAccessoryBar];
     
     self.currentMonthIndex = 1;
+    self.sexIndex = 1;
 }
 
 - (IBAction)sexAction:(UIButton*)sender
@@ -54,6 +56,7 @@
         self.girlImageView.layer.borderColor = [UIColor colorWithHexString:@"f28c0c"].CGColor;
         self.boyImageView.layer.borderWidth = 2.f;
         self.boyImageView.layer.borderColor = [UIColor colorWithHexString:@"d9d9d9"].CGColor;
+        self.sexIndex = 1;
     }
     else
     {
@@ -61,6 +64,7 @@
         self.girlImageView.layer.borderColor = [UIColor colorWithHexString:@"d9d9d9"].CGColor;
         self.boyImageView.layer.borderWidth = 2.f;
         self.boyImageView.layer.borderColor = [UIColor colorWithHexString:@"f28c0c"].CGColor;
+        self.sexIndex = 0;
     }
 }
 
@@ -106,6 +110,37 @@
         [self.mouthButton setTitle:[NSString stringWithFormat:@"%d",index] forState:UIControlStateNormal];
     else
         [self.dayButton setTitle:[NSString stringWithFormat:@"%d",index] forState:UIControlStateNormal];
+}
+
+- (IBAction)send:(id)sender
+{
+    if ([NSString isNilOrEmpty:self.ageField.text])
+    {
+        [[WPAlertView viewFromXib]showWithMessage:@"年龄不能为空"];
+        return;
+    }
+    
+    NSDateFormatter* formatter = [[NSDateFormatter alloc]init];
+    [formatter setDateFormat:@"yyyy"];
+    
+    NSInteger year = [[formatter stringFromDate:[NSDate date]] integerValue]-[self.ageField.text integerValue];
+    NSInteger mon = [self.mouthButton.titleLabel.text integerValue];
+    NSInteger day = [self.dayButton.titleLabel.text integerValue];
+    NSString* date = [NSString stringWithFormat:@"%d-%d-%d",year,mon,day];
+    
+    NSDictionary* parm = @{@"app":@"user",@"act":@"complete",@"age":date,@"sex":[NSString stringWithFormat:@"%d",self.sexIndex]};
+    
+    [[WPSyncService alloc]syncWithRoute:parm Block:^(id resp) {
+        if (resp)
+        {
+            [[WPAlertView viewFromXib]showWithMessage:@"任务完成"];
+        }
+    }];
+}
+
+- (void)dismissKeyBoard
+{
+    [self.ageField resignFirstResponder];
 }
 
 @end

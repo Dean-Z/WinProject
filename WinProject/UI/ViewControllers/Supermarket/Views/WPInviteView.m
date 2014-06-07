@@ -60,7 +60,18 @@
     CAAnimation* popAnim = [[FTAnimationManager sharedManager]popOutAnimationFor:self duration:0.3 delegate:nil startSelector:nil stopSelector:nil];
     [self.layer addAnimation:popAnim forKey:@"POP"];
     
+    [self performSelector:@selector(removeFromWindow) withObject:nil afterDelay:0.5];
+    
     [self.backgroundView removeFromSuperview];
+}
+
+- (void)removeFromWindow
+{
+    for (UIView* view in self.subviews)
+    {
+        [view removeFromSuperview];
+    }
+    [self removeFromSuperview];
 }
 
 - (IBAction)invite:(id)sender
