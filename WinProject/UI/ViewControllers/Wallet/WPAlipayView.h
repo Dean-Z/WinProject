@@ -11,10 +11,11 @@
 #import "AlipayView.h"
 
 @protocol WPAlipayViewDelegate;
-@interface WPAlipayView : WPBaseView<UITableViewDataSource,UITableViewDelegate>
+@interface WPAlipayView : WPBaseView<UITableViewDataSource,UITableViewDelegate,AlipayViewDelegate>
 {
     NSMutableArray* _conversionArray;
     AlipayView* alipayView;
+    UIScrollView* alipayViewContainer;
     BOOL alipayShowing;
 }
 

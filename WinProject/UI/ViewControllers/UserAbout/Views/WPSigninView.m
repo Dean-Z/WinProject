@@ -94,6 +94,7 @@
 
 - (IBAction)login:(id)sender
 {
+    [SVProgressHUD showWithStatus:@"正在加载"];
     if (![NSString isNilOrEmpty:self.phoneTextField.text] && ![NSString isNilOrEmpty:self.passwordTextField.text])
     {
         NSMutableDictionary* dict = [@{@"app":@"index",@"act":@"login"} mutableCopy];
@@ -112,6 +113,8 @@
                     [self.delegate signinSucceed];
                 }
             }
+            
+            [SVProgressHUD dismiss];
         }];
     }
     else

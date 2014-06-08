@@ -27,4 +27,5 @@
     #import "InnerBand.h"
     #import "NSObject+JSON.h"
     #import "WPAlertView.h"
+    #import "SVProgressHUD.h"
 #endif

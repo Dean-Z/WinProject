@@ -65,28 +65,33 @@
             }
         }];
         
-        [[WPSyncService alloc]syncWithRoute:@{@"app":@"screen",@"act":@"index",@"phone":self.app.phoneNumber,@"page":@"1",@"type":@"0"} Block:^(id resp) {
-            if (resp)
-            {
-                cDataInfo = [[WPCDataInfo alloc]init];
-                cDataInfo.rowDate = resp;
-                [self prepareCScrollviewContainer];
-                
-                if (cDataInfo.cBaseDateArray.count>0)
+        if (cDataInfo == nil)
+        {
+            [SVProgressHUD showWithStatus:@"正在加载"];
+            [[WPSyncService alloc]syncWithRoute:@{@"app":@"screen",@"act":@"index",@"phone":self.app.phoneNumber,@"page":@"1",@"type":@"0"} Block:^(id resp) {
+                [SVProgressHUD dismiss];
+                if (resp)
                 {
-                    self.nextButton.hidden = NO;
-                    self.preButton.hidden = NO;
+                    cDataInfo = [[WPCDataInfo alloc]init];
+                    cDataInfo.rowDate = resp;
+                    [self prepareCScrollviewContainer];
+                    
+                    if (cDataInfo.cBaseDateArray.count>0)
+                    {
+                        self.nextButton.hidden = NO;
+                        self.preButton.hidden = NO;
+                    }
                 }
-            }
-            else
-            {
-                if (cDataInfo == nil)
+                else
                 {
-                    self.nextButton.hidden = YES;
-                    self.preButton.hidden = YES;
+                    if (cDataInfo == nil)
+                    {
+                        self.nextButton.hidden = YES;
+                        self.preButton.hidden = YES;
+                    }
                 }
-            }
-        }];
+            }];
+        }
     }
     else
     {
@@ -100,17 +105,20 @@
             
         }];
         
-        [[WPSyncService alloc]syncWithRoute:@{@"app":@"screen",@"act":@"index",@"phone":self.app.phoneNumber,@"page":@"1",@"type":@"1"} Block:^(id resp) {
-            if (resp)
-            {
-                qDataInfo = [[WPQDateInfo alloc]init];
-                qDataInfo.rowDate = resp;
-                [self prepareQScrollviewContainer];
-            }
-            else
-            {
-            }
-        }];
+        if (qDataInfo == nil)
+        {
+            [SVProgressHUD showWithStatus:@"正在加载"];
+            [[WPSyncService alloc]syncWithRoute:@{@"app":@"screen",@"act":@"index",@"phone":self.app.phoneNumber,@"page":@"1",@"type":@"1"} Block:^(id resp) {
+                [SVProgressHUD dismiss];
+                if (resp)
+                {
+                    qDataInfo = [[WPQDateInfo alloc]init];
+                    qDataInfo.rowDate = resp;
+                    [self prepareQScrollviewContainer];
+                }
+            }];
+        }
+        
     }
 }
 

@@ -15,6 +15,7 @@
     BillView* billView;
     WPConversionView* conversionView;
     WPAlipayView* alipayView;
+    WPConversionProductView* conversionProductView;
 }
 @end
 
@@ -158,6 +159,10 @@
     {
         [self showAlipayView];
     }
+    else if(index == 1)
+    {
+        [self showConversionProudctView];
+    }
 }
 
 - (void)conversionCancel
@@ -204,6 +209,42 @@
     [UIView animateWithDuration:0.3 animations:^{
         alipayView.originX = 0;
         conversionView.alpha = 0.0f;
+    }];
+}
+
+#pragma mark About ConversionProductView
+
+- (void)prepareConversionProudctView
+{
+    if (conversionProductView == nil)
+    {
+        conversionProductView = [WPConversionProductView viewFromXib];
+        conversionProductView.sizeH = self.view.sizeH;
+        conversionProductView.originX = self.view.sizeW;
+        conversionProductView.delegate = self;
+        [conversionProductView renderView];
+        [self.view addSubview:conversionProductView];
+    }
+}
+
+- (void)showConversionProudctView
+{
+    [self prepareConversionProudctView];
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        conversionProductView.originX = 0;
+        conversionView.alpha = 0.0f;
+    }];
+}
+
+- (void)conversionProductCancel
+{
+    [UIView animateWithDuration:0.3 animations:^{
+        conversionView.alpha = 1.0f;
+        conversionProductView.originX = self.view.sizeW;
+    } completion:^(BOOL finished) {
+        [conversionProductView removeFromSuperview];
+        conversionProductView = nil;
     }];
 }
 

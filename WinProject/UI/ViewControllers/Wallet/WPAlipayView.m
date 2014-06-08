@@ -78,17 +78,24 @@
 {
     if (alipayView == nil)
     {
+        alipayViewContainer = [[UIScrollView alloc]initWithFrame:CGRectMake(self.sizeW, 44, self.sizeW, self.tableview.sizeH - 44)];
+        alipayViewContainer.showsHorizontalScrollIndicator = NO;
+        alipayViewContainer.showsVerticalScrollIndicator = NO;
+        alipayViewContainer.backgroundColor = [UIColor clearColor];
+        [self addSubview:alipayViewContainer];
+        
         alipayView = [AlipayView viewFromXib];
-        alipayView.originX = self.sizeW;
-        alipayView.originY = (self.sizeH - alipayView.sizeH)/2;
+        alipayView.originX = 0;
+        alipayView.originY = 0;
         [alipayView renderView];
-        [self addSubview:alipayView];
+        [alipayViewContainer addSubview:alipayView];
         alipayShowing = YES;
+        alipayViewContainer.contentSize = CGSizeMake(0, alipayView.sizeH);
     }
 
     [UIView animateWithDuration:0.3 animations:^{
         self.tableview.alpha = 0.0f;
-        alipayView.originX = 0;
+        alipayViewContainer.originX = 0;
     }];
 }
 
@@ -98,14 +105,22 @@
     {
         [UIView animateWithDuration:0.3 animations:^{
             self.tableview.alpha = 1.0f;
-            alipayView.originX = self.sizeW;
+            alipayViewContainer.originX = self.sizeW;
         } completion:^(BOOL finished) {
             [alipayView removeFromSuperview];
             alipayView = nil;
+            [alipayViewContainer removeFromSuperview];
+            alipayViewContainer = nil;
             alipayShowing = NO;
         }];
         return;
     }
     [self.delegate alipayCancel];
 }
+
+- (void)alipayDismiss
+{
+    [self cancel:nil];
+}
+
 @end

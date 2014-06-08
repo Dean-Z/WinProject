@@ -28,10 +28,19 @@
     self.coinsContainer.layer.masksToBounds = YES;
     self.alertContainer.layer.cornerRadius = 3.0f;
     self.alertContainer.layer.masksToBounds = YES;
+    self.nameContainer.layer.cornerRadius = 3.0f;
+    self.nameContainer.layer.masksToBounds = YES;
+    self.accountContainer.layer.cornerRadius = 3.0f;
+    self.accountContainer.layer.masksToBounds = YES;
     
     UIImage *fieldImage = [UIImage imageNamed:@"icon-info-input-bg.png"];
     fieldImage = [fieldImage resizableImageWithCapInsets:UIEdgeInsetsMake(11, 16, 11, 16)];
     self.passwordBgImageView.image = fieldImage;
+    self.accountBgImageView.image = fieldImage;
+    self.nameBgImageView.image = fieldImage;
+    
+    self.accountField.inputAccessoryView = [self inputAccessoryBar];
+    self.nameField.inputAccessoryView = [self inputAccessoryBar];
     self.passwordField.inputAccessoryView = [self inputAccessoryBar];
     
     [self drawButtonsWithButton:self.coin1 isSelected:YES];
@@ -101,7 +110,15 @@
 
 - (IBAction)send:(id)sender
 {
+    NSDictionary* parm = @{@"app":@"cash",@"act":@"do",@"email":self.accountField.text,@"name":self.nameField.text,@"coin":[NSString stringWithFormat:@"%d",_currentCoins*10]};
     
+    [[WPSyncService alloc]syncWithRoute:parm Block:^(id resp) {
+        if (resp)
+        {
+            Alert(@"兑换成功");
+            [self.delegate alipayDismiss];
+        }
+    }];
 }
 
 - (IBAction)forgetPassword:(id)sender
@@ -112,6 +129,8 @@
 - (void)dismissKeyBoard
 {
     [self.passwordField resignFirstResponder];
+    [self.nameField resignFirstResponder];
+    [self.accountField resignFirstResponder];
 }
 
 @end

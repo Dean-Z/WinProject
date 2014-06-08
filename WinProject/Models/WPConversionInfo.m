@@ -10,15 +10,26 @@
 
 @implementation WPConversionInfo
 
-- (id)initWithFrame:(CGRect)frame
+@synthesize data = _data;
+
+- (void)setData:(NSDictionary *)data
 {
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
+    if (_data)
+    {
+        _data = nil;
     }
-    return self;
+    
+    _data = data;
+    
+    self.producId = [data objectForKey:@"id"];
+    self.logo = [data objectForKey:@"logo"];
+    self.title = [data objectForKey:@"title"];
+    self.desc = [data objectForKey:@"description"];
+    self.type = [data objectForKey:@"type"];
+    self.coins = [data objectForKey:@"coins"];
+    self.amount = [data objectForKey:@"amount"];
+    self.remain = [data objectForKey:@"remain"];
+    self.status = [data objectForKey:@"status"];
 }
-
-
 
 @end
