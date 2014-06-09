@@ -41,6 +41,7 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="logoLabel" destination="b0Q-7k-74T" id="5jx-w7-w9a"/>
                 <outlet property="productBtnContainer" destination="By1-pO-0a9" id="BBx-Go-6Ap"/>
                 <outlet property="productImageView" destination="a0M-Bv-yEU" id="Kzh-4A-RDF"/>
             </connections>

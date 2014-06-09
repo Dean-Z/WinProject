@@ -10,4 +10,7 @@
 
 @interface WPProductButton : WPBaseView
 
+@property(nonatomic,assign) NSInteger coins;
+@property(nonatomic,weak) IBOutlet UILabel *coinsLabel;
+
 @end

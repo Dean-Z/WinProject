@@ -28,6 +28,7 @@
 {
     [self prepareProductBtn];
     [self.productImageView setImageWithURL:[NSURL URLWithString:self.dataInfo.url] placeholderImage:[UIImage imageNamed:@"icon-cProduct-loading.png"]];
+    self.logoLabel.text = self.dataInfo.logo;
 }
 
 - (IBAction)touched:(id)sender
@@ -40,6 +41,7 @@
     if(productBtn == nil)
     {
         productBtn = [WPCProductButton viewFromXib];
+        productBtn.coins = [self.dataInfo.coin integerValue];
         [productBtn renderView];
         [self.productBtnContainer addSubview:productBtn];
     }

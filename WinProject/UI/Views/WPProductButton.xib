@@ -31,6 +31,9 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="coinsLabel" destination="bQJ-XL-DUA" id="CbN-U7-OFB"/>
+            </connections>
         </view>
     </objects>
     <resources>
