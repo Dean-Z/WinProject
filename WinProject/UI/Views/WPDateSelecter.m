@@ -64,7 +64,7 @@
 - (void)dismiss
 {
     [UIView animateWithDuration:0.3 animations:^{
-        self.originY = self.app.window.sizeH - self.sizeH;
+        self.originY = self.app.window.sizeH;
     } completion:^(BOOL finished) {
         [self removeFromSuperview];
     }];

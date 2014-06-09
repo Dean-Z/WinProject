@@ -91,6 +91,15 @@
     return 192;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    ConversionAlertView* alertView = [ConversionAlertView viewFromXib];
+    alertView.conversionInfo = _coinversionArray[indexPath.row];
+    alertView.delegate = self;
+    [alertView renderView];
+    [alertView showInWindows];
+}
+
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     DLog(@"%f ----- %f",scrollView.contentSize.height,scrollView.contentOffset.y);

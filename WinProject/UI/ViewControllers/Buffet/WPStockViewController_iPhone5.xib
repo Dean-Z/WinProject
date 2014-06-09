@@ -7,9 +7,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WPStockViewController">
             <connections>
+                <outlet property="cNoDataImageView" destination="203-cb-h0y" id="ysA-vN-7dI"/>
                 <outlet property="cScrollViewController" destination="N12-PR-Fky" id="OfN-jz-4i9"/>
                 <outlet property="nextButton" destination="Rz1-0N-2pH" id="ZgP-Oi-ePd"/>
                 <outlet property="preButton" destination="Yrj-JI-l3s" id="Gqz-F4-0Ik"/>
+                <outlet property="qNoDataImageView" destination="Te2-WF-4Sb" id="Yg9-YC-qoe"/>
                 <outlet property="qScrollViewController" destination="LMK-zk-ToC" id="2Xj-zT-Erb"/>
                 <outlet property="switchBarContainer" destination="8g8-vI-iCS" id="mf5-ol-q7q"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -54,10 +56,22 @@
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="LMK-zk-ToC">
                     <rect key="frame" x="0.0" y="97" width="320" height="425"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="noData" id="Te2-WF-4Sb">
+                            <rect key="frame" x="39" y="121" width="243" height="184"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </imageView>
+                    </subviews>
                 </scrollView>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="N12-PR-Fky">
                     <rect key="frame" x="320" y="97" width="320" height="407"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <subviews>
+                        <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="noData" id="203-cb-h0y">
+                            <rect key="frame" x="38" y="112" width="243" height="184"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </imageView>
+                    </subviews>
                     <connections>
                         <outlet property="delegate" destination="-1" id="mtp-mB-g29"/>
                     </connections>
@@ -91,5 +105,6 @@
         <image name="btn_gray_pre" width="24" height="20"/>
         <image name="btn_next" width="24" height="20"/>
         <image name="buffer_close" width="22" height="22"/>
+        <image name="noData" width="243" height="184"/>
     </resources>
 </document>

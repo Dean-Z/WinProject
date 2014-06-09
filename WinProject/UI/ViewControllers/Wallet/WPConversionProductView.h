@@ -7,10 +7,11 @@
 //
 
 #import "WPBaseView.h"
+#import "ConversionAlertView.h"
 
 @protocol WPConversionProductViewDelegate;
 
-@interface WPConversionProductView : WPBaseView<UITableViewDataSource,UITableViewDelegate>
+@interface WPConversionProductView : WPBaseView<UITableViewDataSource,UITableViewDelegate,ConversionAlertViewDelegate>
 
 @property(nonatomic,weak) IBOutlet UITableView* tableview;
 @property(nonatomic,assign) NSInteger page;

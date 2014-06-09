@@ -80,6 +80,11 @@
                     {
                         self.nextButton.hidden = NO;
                         self.preButton.hidden = NO;
+                        self.cNoDataImageView.hidden = YES;
+                    }
+                    else
+                    {
+                        self.cNoDataImageView.hidden = NO;
                     }
                 }
                 else
@@ -88,6 +93,7 @@
                     {
                         self.nextButton.hidden = YES;
                         self.preButton.hidden = YES;
+                        self.cNoDataImageView.hidden = NO;
                     }
                 }
             }];
@@ -115,6 +121,12 @@
                     qDataInfo = [[WPQDateInfo alloc]init];
                     qDataInfo.rowDate = resp;
                     [self prepareQScrollviewContainer];
+                    self.qNoDataImageView.hidden = YES;
+                }
+                
+                if (qDataInfo.qBaseDateArray.count == 0)
+                {
+                    self.qNoDataImageView.hidden = NO;
                 }
             }];
         }

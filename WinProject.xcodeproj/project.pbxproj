@@ -67,6 +67,8 @@
 		CB5FD99C193E109C000BC33F /* RakeFriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB5FD99B193E109C000BC33F /* RakeFriendCell.xib */; };
 		CB5FD99F193E111B000BC33F /* RakeFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB5FD99E193E111B000BC33F /* RakeFriendCell.m */; };
 		CB60BF66190525FC003190C7 /* CHDNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = CB60BF65190525FC003190C7 /* CHDNetwork.m */; };
+		CB6342B01945E607001D40D0 /* ConversionAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6342AF1945E607001D40D0 /* ConversionAlertView.m */; };
+		CB6342B21945E616001D40D0 /* ConversionAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB6342B11945E616001D40D0 /* ConversionAlertView.xib */; };
 		CB6B7982191A419200610CD6 /* WPShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6B7981191A419200610CD6 /* WPShareManager.m */; };
 		CB6B7985191B7F7800610CD6 /* WPPullView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6B7984191B7F7800610CD6 /* WPPullView.m */; };
 		CB6B7987191B7F8A00610CD6 /* WPPullView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB6B7986191B7F8A00610CD6 /* WPPullView.xib */; };
@@ -250,6 +252,9 @@
 		CB5FD99E193E111B000BC33F /* RakeFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RakeFriendCell.m; sourceTree = "<group>"; };
 		CB60BF64190525FC003190C7 /* CHDNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHDNetwork.h; sourceTree = "<group>"; };
 		CB60BF65190525FC003190C7 /* CHDNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHDNetwork.m; sourceTree = "<group>"; };
+		CB6342AE1945E607001D40D0 /* ConversionAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversionAlertView.h; sourceTree = "<group>"; };
+		CB6342AF1945E607001D40D0 /* ConversionAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversionAlertView.m; sourceTree = "<group>"; };
+		CB6342B11945E616001D40D0 /* ConversionAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConversionAlertView.xib; sourceTree = "<group>"; };
 		CB6B7980191A419200610CD6 /* WPShareManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPShareManager.h; sourceTree = "<group>"; };
 		CB6B7981191A419200610CD6 /* WPShareManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPShareManager.m; sourceTree = "<group>"; };
 		CB6B7983191B7F7800610CD6 /* WPPullView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WPPullView.h; path = ../../Views/WPPullView.h; sourceTree = "<group>"; };
@@ -489,6 +494,9 @@
 				CB39659319444A2400ADE846 /* WPConversionProductView.h */,
 				CB39659419444A2400ADE846 /* WPConversionProductView.m */,
 				CB39659619444A3200ADE846 /* WPConversionProductView.xib */,
+				CB6342AE1945E607001D40D0 /* ConversionAlertView.h */,
+				CB6342AF1945E607001D40D0 /* ConversionAlertView.m */,
+				CB6342B11945E616001D40D0 /* ConversionAlertView.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -961,6 +969,7 @@
 				CBDD252618FF8CCA009043FE /* Images.xcassets in Resources */,
 				CB45CC4019210B330020D76C /* WPRegisterAlert.xib in Resources */,
 				CBD9626C193369F300825CE7 /* RakeView_iPhone5.xib in Resources */,
+				CB6342B21945E616001D40D0 /* ConversionAlertView.xib in Resources */,
 				CBF4AFC819407C830028588E /* WPInviteView.xib in Resources */,
 				CBA0E89719013908007119C0 /* LoginViewController_iPhone5.xib in Resources */,
 				CB2FAD181902C3DA00F46A0A /* WPWalletViewController_iPhone5.xib in Resources */,
@@ -1088,6 +1097,7 @@
 				CB2DAF3D1910E16600DD29C1 /* BillView.m in Sources */,
 				CBD96278193376FA00825CE7 /* WPProductInfo.m in Sources */,
 				CB45CC34192101510020D76C /* SBJsonWriter.m in Sources */,
+				CB6342B01945E607001D40D0 /* ConversionAlertView.m in Sources */,
 				CBA0E88019012EED007119C0 /* QQImageView.m in Sources */,
 				CB4542BE191603A100BFE852 /* WPCProductButton.m in Sources */,
 				CB45CC31192101510020D76C /* SBJSON.m in Sources */,

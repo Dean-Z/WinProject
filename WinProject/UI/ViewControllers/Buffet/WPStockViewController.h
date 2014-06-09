@@ -24,6 +24,9 @@
 @property(nonatomic,weak) IBOutlet UIScrollView*    qScrollViewController;
 @property(nonatomic,weak) IBOutlet UIScrollView*    cScrollViewController;
 
+@property(nonatomic,weak) IBOutlet UIImageView* qNoDataImageView;
+@property(nonatomic,weak) IBOutlet UIImageView* cNoDataImageView;
+
 @property(nonatomic,weak) IBOutlet UIButton* nextButton;
 @property(nonatomic,weak) IBOutlet UIButton* preButton;
 
