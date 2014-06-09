@@ -109,6 +109,9 @@
                             <color key="textColor" red="0.28627450980000002" green="0.25490196079999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="13"/>
                             <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="6tG-4H-K6o" id="FAM-VR-Ska"/>
+                            </connections>
                         </textField>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

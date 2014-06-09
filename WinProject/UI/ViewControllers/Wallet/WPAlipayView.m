@@ -87,6 +87,7 @@
         alipayView = [AlipayView viewFromXib];
         alipayView.originX = 0;
         alipayView.originY = 0;
+        alipayView.delegate = self;
         [alipayView renderView];
         [alipayViewContainer addSubview:alipayView];
         alipayShowing = YES;
@@ -121,6 +122,11 @@
 - (void)alipayDismiss
 {
     [self cancel:nil];
+}
+
+- (void)alipayViewAccountFieldDidBeginEditing
+{
+    [alipayViewContainer setContentOffset:CGPointMake(0, 200) animated:YES];
 }
 
 @end

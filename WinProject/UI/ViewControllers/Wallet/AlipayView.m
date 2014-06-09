@@ -121,6 +121,14 @@
     }];
 }
 
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    if (textField == self.accountField)
+    {
+        [self.delegate alipayViewAccountFieldDidBeginEditing];
+    }
+}
+
 - (IBAction)forgetPassword:(id)sender
 {
     

@@ -9,7 +9,7 @@
 #import "WPBaseView.h"
 
 @protocol AlipayViewDelegate;
-@interface AlipayView : WPBaseView
+@interface AlipayView : WPBaseView<UITextFieldDelegate>
 {
     NSInteger _currentCoins;
 }
@@ -41,6 +41,7 @@
 
 @protocol AlipayViewDelegate <NSObject>
 
+- (void)alipayViewAccountFieldDidBeginEditing;
 - (void)alipayDismiss;
 
 @end
