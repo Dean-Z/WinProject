@@ -60,6 +60,14 @@
     
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    DLog(@"%f",self.view.originY);
+    
+}
+
 - (void) dealCoinLabel
 {
     CGSize size = [self.coinLabel.text sizeWithFont:self.coinLabel.font constrainedToSize:CGSizeMake(160, 40) lineBreakMode:self.coinLabel.lineBreakMode];

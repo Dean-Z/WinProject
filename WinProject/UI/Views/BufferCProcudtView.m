@@ -27,10 +27,10 @@
 - (void) renderView
 {
     [self prepareProductBtn];
-    [self.productImageView setImageWithURL:[NSURL URLWithString:self.dataInfo.url]];
+    [self.productImageView setImageWithURL:[NSURL URLWithString:self.dataInfo.url] placeholderImage:[UIImage imageNamed:@"icon-cProduct-loading.png"]];
 }
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+- (IBAction)touched:(id)sender
 {
     [self prepareInfo:self.dataInfo.picId];
 }

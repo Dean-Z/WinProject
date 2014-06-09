@@ -31,12 +31,12 @@
     [formatter setDateFormat:@"MM-dd"];
 
     self.endTimeLabel.text = [NSString stringWithFormat:@"有效期至: %@",[formatter stringFromDate:endDate]];
-    [self.productImage setImageWithURL:[NSURL URLWithString:self.dateInfo.url]];
+    [self.productImage setImageWithURL:[NSURL URLWithString:self.dateInfo.url] placeholderImage:[UIImage imageNamed:@"icon-qProduct-loading.png"]];
 }
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+- (IBAction)touched:(id)sender
 {
-    [self prepareInfo:self.dateInfo.picId];
+   [self prepareInfo:self.dateInfo.picId];
 }
 
 #pragma mark WPProductDetailViewDelegate

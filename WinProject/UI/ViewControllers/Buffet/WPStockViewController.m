@@ -134,7 +134,7 @@
         [self.qScrollViewController addSubview:product];
     }
     
-    [self.qScrollViewController setContentSize:CGSizeMake(0, 200*qDataInfo.qBaseDateArray.count)];
+    [self.qScrollViewController setContentSize:CGSizeMake(0, MAX(self.view.sizeH, 200*qDataInfo.qBaseDateArray.count))];
 }
 
 

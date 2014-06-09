@@ -73,7 +73,7 @@
         [buffer renderView];
     }
     
-    self.productContainerView.contentSize = CGSizeMake(0, MAX(self.view.sizeH-64, 3/2*120+10));
+    self.productContainerView.contentSize = CGSizeMake(0, MAX(self.view.sizeH, 3/2*120+10));
     
     [dataInfoArray removeAllObjects];
     dataInfoArray = nil;

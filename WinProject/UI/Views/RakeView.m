@@ -79,7 +79,7 @@
     
     _countryRake = [@[] mutableCopy];
     _friendsRake = [@[] mutableCopy];
-    
+    return;
     // 全国用户
     [[WPSyncService alloc]syncWithRoute:parm Block:^(id resp) {
         if (resp)
