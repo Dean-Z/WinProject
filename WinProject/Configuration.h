@@ -19,6 +19,9 @@
 #define MARKET_INVITE                   @"MARKET_INVITE"
 #define MARKET_INFORMATION              @"MARKET_INFORMATION"
 
+#define UserName                            @"UserName"
+#define UserPassword                        @"UserPassword"
+
 typedef enum
 {
     VIEW_LOGIN = 1,

@@ -135,6 +135,7 @@
 
 - (IBAction)logout:(id)sender
 {
+    [self.app removeUserInfoMessage];
     [self.app logoutSucceed:NO];
 }
 

@@ -48,7 +48,10 @@
         self.coinLabel.text = self.app.userInfo.coins;
     }
     
-    self.titleLabel.text = self.app.userInfo.nickname;
+    if ([NSString isNilOrEmpty:self.app.userInfo.nickname])
+        self.titleLabel.text = @"收钱柜";
+    else
+        self.titleLabel.text = self.app.userInfo.nickname;
     
     [self dealCoinLabel];
     

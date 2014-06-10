@@ -40,9 +40,10 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    [self checkUserInfo];
-    
-//    [self loginSucceed];
+    if (![self autoLogin])
+    {
+        [self checkUserInfo];
+    }
     
     [self versionCheck];
     
@@ -260,6 +261,69 @@
 //    {
         [self logoutSucceed:YES];
 //    }
+}
+
+- (BOOL)autoLogin
+{
+    BOOL canAutoLogin = NO;
+    NSUserDefaults* user = [NSUserDefaults standardUserDefaults];
+    
+    NSString* phone = [user objectForKey:UserName];
+    NSString* password = [user objectForKey:UserPassword];
+    
+    if ([NSString isNilOrEmpty:phone])
+    {
+        return canAutoLogin;
+    }
+    
+    canAutoLogin = YES;
+    
+    self.backgroundImageView = [[UIImageView alloc]initWithFrame:self.window.bounds];
+    self.backgroundImageView.image = [UIImage imageNamed:@"view_bg.png"];
+    [self.window addSubview:self.backgroundImageView];
+    
+    [SVProgressHUD showWithStatus:@"正在加载"];
+    NSMutableDictionary* dict = [@{@"app":@"index",@"act":@"login"} mutableCopy];
+    [dict setValue:phone forKey:@"account"];
+    [dict setValue:[password MD5] forKey:@"password"];
+    
+    [[WPSyncService alloc]loginWithRoute:dict Block:^(id resp)
+     {
+         if (resp)
+         {
+            self.userInfo = [[WPUserInfo alloc]init];
+            self.phoneNumber = phone;
+            [self.userInfo setRowDate:resp];
+            [self.userInfo save:USER_INFO_ROWDATA];
+             
+            [self setupViewControllers];
+            self.window.rootViewController = self.viewController;
+            [self customizeInterface];
+         }
+         else
+         {
+             [self logoutSucceed:YES];
+         }
+         [self.backgroundImageView removeFromSuperview];
+         [SVProgressHUD dismiss];
+     }];
+    return canAutoLogin;
+}
+
+- (void)saveUserPhone:(NSString*)phone password:(NSString*)password
+{
+    NSUserDefaults* user = [NSUserDefaults standardUserDefaults];
+    [user setObject:phone forKey:UserName];
+    [user setObject:password forKey:UserPassword];
+    [user synchronize];
+}
+
+- (void)removeUserInfoMessage
+{
+    NSUserDefaults* user = [NSUserDefaults standardUserDefaults];
+    [user setObject:@"" forKey:UserName];
+    [user setObject:@"" forKey:UserPassword];
+    [user synchronize];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

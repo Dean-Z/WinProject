@@ -28,8 +28,8 @@
     [self.passwordTextField setValue:[UIColor colorWithHexString:@"584f4a"]
                                 forKeyPath:@"_placeholderLabel.textColor"];
 #ifdef DEBUG
-    [self.phoneTextField setText:@"13817618830"];
-    [self.passwordTextField setText:@"aaaaaa"];
+//    [self.phoneTextField setText:@"13817618830"];
+//    [self.passwordTextField setText:@"aaaaaa"];
 #endif
     
     NSMutableDictionary *linkAttributes = [NSMutableDictionary dictionary];
@@ -94,9 +94,9 @@
 
 - (IBAction)login:(id)sender
 {
-    [SVProgressHUD showWithStatus:@"正在加载"];
     if (![NSString isNilOrEmpty:self.phoneTextField.text] && ![NSString isNilOrEmpty:self.passwordTextField.text])
     {
+        [SVProgressHUD showWithStatus:@"正在加载"];
         NSMutableDictionary* dict = [@{@"app":@"index",@"act":@"login"} mutableCopy];
         [dict setValue:self.phoneTextField.text forKey:@"account"];
         [dict setValue:[self.passwordTextField.text MD5] forKey:@"password"];
@@ -109,6 +109,8 @@
                     self.app.phoneNumber = self.phoneTextField.text;
                     [self.app.userInfo setRowDate:resp];
                     [self.app.userInfo save:USER_INFO_ROWDATA];
+                    
+                    [self.app saveUserPhone:self.phoneTextField.text password:self.passwordTextField.text];
                     
                     [self.delegate signinSucceed];
                 }

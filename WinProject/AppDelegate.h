@@ -22,14 +22,16 @@
 @property (nonatomic,strong) NSString* urlString;
 @property (nonatomic,strong)  RDVTabBarController *aTabBarController;
 @property (nonatomic,strong) WPUserInfo* userInfo;
-
+@property (nonatomic,strong) UIImageView *backgroundImageView;
 @property (nonatomic,strong) NSArray* cookies;
 @property (nonatomic,strong) NSString* phoneNumber;
 
 +(id)shareAppDelegate;
 
 - (void)loginSucceed;
-
 - (void)logoutSucceed:(BOOL)showKeyboard;
+
+- (void)removeUserInfoMessage;
+- (void)saveUserPhone:(NSString*)phone password:(NSString*)password;
 
 @end
