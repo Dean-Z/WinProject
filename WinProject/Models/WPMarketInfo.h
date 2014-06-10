@@ -8,6 +8,12 @@
 
 #import "WPBaseInfo.h"
 
+typedef enum
+{
+    Market_Invite_Type = 1,
+    Market_Information_Type = 2,
+}MarketType;
+
 @interface WPMarketInfo : WPBaseInfo
 
 @property (nonatomic,strong) NSString* cover;
@@ -15,5 +21,6 @@
 @property (nonatomic,strong) NSString* desc;
 @property (nonatomic,strong) NSString* timeLimit;
 @property (nonatomic,strong) NSString* coins;
+@property (nonatomic,assign) MarketType type;
 
 @end

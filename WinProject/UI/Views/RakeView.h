@@ -24,4 +24,6 @@
 @property(nonatomic,weak) IBOutlet UITableView* friendTableView;
 @property(nonatomic,weak) IBOutlet UITableView* countryTableView;
 
+- (void)prepareData;
+
 @end

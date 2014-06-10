@@ -11,6 +11,7 @@
 @interface WPAlertView : WPBaseView
 
 @property(nonatomic,weak) IBOutlet UILabel* messageLabel;
+@property(nonatomic,strong) UIView *backgroundView;
 
 -(void)showWithMessage:(NSString*)message;
 

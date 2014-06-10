@@ -26,7 +26,9 @@
     [self prepareSwithBar];
     [self preparePullView];
     
-    [self prepareData];
+    _countryRake = [@[] mutableCopy];
+    _friendsRake = [@[] mutableCopy];
+    
 }
 
 - (void)prepareSwithBar
@@ -77,9 +79,6 @@
 {
     NSMutableDictionary* parm = [@{@"app":@"rank",@"act":@"index"} mutableCopy];
     
-    _countryRake = [@[] mutableCopy];
-    _friendsRake = [@[] mutableCopy];
-    return;
     // 全国用户
     [[WPSyncService alloc]syncWithRoute:parm Block:^(id resp) {
         if (resp)

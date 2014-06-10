@@ -87,6 +87,7 @@
     [[WPSyncService alloc]syncWithRoute:parm Block:^(id resp) {
         if (resp)
         {
+            [self.delegate inviteSucceed];
             [[WPAlertView viewFromXib] showWithMessage:@"发送成功"];
             [self dismiss];
         }

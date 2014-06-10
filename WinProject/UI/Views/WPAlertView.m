@@ -16,10 +16,10 @@
     self.app = [AppDelegate shareAppDelegate];
     UIWindow* window = self.app.window;
     
-    UIView* view = [[UIView alloc]initWithFrame:window.bounds];
-    view.backgroundColor = COLOR(0, 0, 0, 0.5);
-    view.tag = 10000;
-    [window addSubview:view];
+    self.backgroundView = [[UIView alloc]initWithFrame:window.bounds];
+    [self.backgroundView addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(dismiss)]];
+    self.backgroundView.backgroundColor = COLOR(0, 0, 0, 0.5);
+    [window addSubview:self.backgroundView];
     
     self.center = window.center;
     [window addSubview:self];
@@ -36,12 +36,15 @@
     CAAnimation* popAnim = [[FTAnimationManager sharedManager]popOutAnimationFor:self duration:0.3 delegate:nil startSelector:nil stopSelector:nil];
     [self.layer addAnimation:popAnim forKey:@"POP"];
     
-    UIWindow* window = self.app.window;
-    UIView *view = [window viewWithTag:10000];
-    [view removeFromSuperview];
-    view = nil;
+    [self.backgroundView removeFromSuperview];
+    self.backgroundView = nil;
     
     [self performSelector:@selector(cleanView) withObject:nil afterDelay:0.5];
+}
+
+- (void)dismiss
+{
+    [self close:nil];
 }
 
 -(void)cleanView
@@ -50,12 +53,6 @@
     {
         [view removeFromSuperview];
     }
-    
-    UIWindow* window = self.app.window;
-    UIView *view = [window viewWithTag:10000];
-    [view removeFromSuperview];
-    view = nil;
-    
     [self removeFromSuperview];
 }
 @end

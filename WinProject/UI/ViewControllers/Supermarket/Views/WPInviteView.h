@@ -8,12 +8,20 @@
 
 #import "WPBaseView.h"
 
+@protocol WPInviteViewDelegate;
 @interface WPInviteView : WPBaseView
 
 @property (nonatomic,strong) UIView* backgroundView;
 @property (nonatomic,weak) IBOutlet UITextField* phoneTextField;
+@property (nonatomic,assign) id<WPInviteViewDelegate> delegate;
 
 - (void)showInWindow;
 - (void)dismiss;
+
+@end
+
+@protocol WPInviteViewDelegate <NSObject>
+
+- (void)inviteSucceed;
 
 @end

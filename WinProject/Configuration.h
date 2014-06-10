@@ -15,7 +15,9 @@
 #define ACCOUNT_KEY_ROWDATA     @"ACCOUNT_KEY_ROWDATA"
 #define ACCOUNT_KEY_COOKIE      @"ACCOUNT_KEY_COOKIE"
 
-#define CORVER_DATA             @"CORVER_DATA"
+#define CORVER_DATA                     @"CORVER_DATA"
+#define MARKET_INVITE                   @"MARKET_INVITE"
+#define MARKET_INFORMATION              @"MARKET_INFORMATION"
 
 typedef enum
 {

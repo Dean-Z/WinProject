@@ -10,7 +10,6 @@
 #import "WPSwitchBar.h"
 #import "WPMarketInfo.h"
 #import "MarketInTableViewCell.h"
-#import "WPInviteView.h"
 
 @interface WPMarketViewController ()
 {
@@ -18,6 +17,7 @@
     WPInformationView* informationView;
     NSMutableArray* _inProductArray;
     NSMutableArray* _outProductArray;
+    BOOL  isInProduct;
 }
 @end
 
@@ -38,8 +38,10 @@
     
     [self.navigationController setNavigationBarHidden:YES];
     
-    [self perpareSwitchBar];
+    _inProductArray = [@[] mutableCopy];
+    _outProductArray = [@[] mutableCopy];
     
+    [self perpareSwitchBar];
     [self prepareData];
 }
 
@@ -55,14 +57,24 @@
 
 - (void)prepareData
 {
-    _inProductArray = [@[] mutableCopy];
+    NSUserDefaults* userDefault = [NSUserDefaults standardUserDefaults];
+    
     WPMarketInfo* info = [[WPMarketInfo alloc]init];
     info.cover = @"icon-invite.png";
     info.title = @"推荐好友";
     info.desc = @"推荐好友使用【赢屏】";
     info.timeLimit = @"长期有效";
     info.coins = @"20";
-    [_inProductArray addObject:info];
+    info.type = Market_Invite_Type;
+    
+    if ([[userDefault objectForKey:MARKET_INVITE] isEqualToString:MARKET_INVITE])
+    {
+        [_outProductArray addObject:info];
+    }
+    else
+    {
+        [_inProductArray addObject:info];
+    }
     
     WPMarketInfo* info2 = [[WPMarketInfo alloc]init];
     info2.cover = @"icon-ask.png";
@@ -78,23 +90,42 @@
     info3.desc = @"填写完整个人信息";
     info3.timeLimit = @"长期有效";
     info3.coins = @"20";
-    [_inProductArray addObject:info3];
-    
+    info3.type = Market_Information_Type;
+    if ([[userDefault objectForKey:MARKET_INFORMATION] isEqualToString:MARKET_INFORMATION])
+    {
+        [_outProductArray addObject:info3];
+    }
+    else
+    {
+        [_inProductArray addObject:info3];
+    }
+
+    isInProduct = YES;
     [self.productTabelView reloadData];
 }
 
 - (void) switchBarValueChanged
 {
-    if (switchBar.selectAtIndex == 1)
+    if (switchBar.selectAtIndex == 0)
     {
-        
+        isInProduct = YES;
     }
+    else
+    {
+        isInProduct = NO;
+    }
+    
+    [self.productTabelView reloadData];
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _inProductArray.count;
+    if (isInProduct)
+    {
+        return _inProductArray.count;
+    }
+    return _outProductArray.count;
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -109,7 +140,15 @@
         cell = [[[NSBundle mainBundle]loadNibNamed:@"MarketInTableViewCell" owner:self options:nil]lastObject];
     }
     
-    cell.marketInfo = _inProductArray[indexPath.row];
+    if (isInProduct)
+    {
+        cell.marketInfo = _inProductArray[indexPath.row];
+    }
+    else
+    {
+        cell.marketInfo = _outProductArray[indexPath.row];
+    }
+    
     [cell renderCell];
     
     return cell;
@@ -122,13 +161,20 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 0)
+    if (!isInProduct)
     {
-        WPInviteView* invite = [WPInviteView viewFromXib];
-        [invite renderView];
+        return;
     }
     
-    if (indexPath.row == 2)
+    MarketInTableViewCell* cell = (MarketInTableViewCell*)[self tableView:tableView cellForRowAtIndexPath:indexPath];
+    
+    if (cell.marketInfo.type == Market_Invite_Type)
+    {
+        WPInviteView* invite = [WPInviteView viewFromXib];
+        invite.delegate = self;
+        [invite renderView];
+    }
+    else if (cell.marketInfo.type == Market_Information_Type)
     {
         [self showInformationView];
     }
@@ -139,6 +185,7 @@
     if (informationView == nil)
     {
         informationView = [WPInformationView viewFromXib];
+        informationView.delegate = self;
         [self.informationViewContainer addSubview:informationView];
         [informationView renderView];
         self.informationViewContainer.originX = self.view.sizeW;
@@ -164,6 +211,29 @@
         self.refreshButton.hidden = NO;
         self.cancelButton.hidden = YES;
     }];
+}
+
+#pragma mark WPInformationViewDelegate
+- (void)completeInformation
+{
+    [_outProductArray addObject:[_inProductArray lastObject]];
+    [_inProductArray removeObject:[_inProductArray lastObject]];
+    NSUserDefaults* user = [NSUserDefaults standardUserDefaults];
+    [user setObject:MARKET_INFORMATION forKey:MARKET_INFORMATION];
+    [user synchronize];
+    [self cancel:nil];
+    [self.productTabelView reloadData];
+}
+
+#pragma mark WPInviteViewDelegate
+- (void)inviteSucceed
+{
+    [_outProductArray addObject:[_inProductArray firstObject]];
+    [_inProductArray removeObject:[_inProductArray firstObject]];
+    NSUserDefaults* user = [NSUserDefaults standardUserDefaults];
+    [user setObject:MARKET_INVITE forKey:MARKET_INVITE];
+    [user synchronize];
+    [self.productTabelView reloadData];
 }
 
 - (void)didReceiveMemoryWarning

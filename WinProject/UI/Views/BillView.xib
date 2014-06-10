@@ -87,9 +87,21 @@
                         <color key="titleShadowColor" red="0.098039215686274508" green="0.21568627450980393" blue="0.54509803921568623" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                 </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Qch-Bc-Zzy">
+                    <rect key="frame" x="8" y="68" width="241" height="187"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="hGr-kz-DHT" id="Y69-Mr-sfC"/>
+                        <outlet property="delegate" destination="hGr-kz-DHT" id="9ip-Hw-H0B"/>
+                    </connections>
+                </tableView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="tableview" destination="Qch-Bc-Zzy" id="bgB-2W-ZzM"/>
+            </connections>
         </view>
     </objects>
     <resources>

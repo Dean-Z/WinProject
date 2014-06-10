@@ -9,6 +9,8 @@
 #import "WPBaseView.h"
 #import "WPDateSelecter.h"
 
+@protocol WPInformationViewDelegate;
+
 @interface WPInformationView : WPBaseView<WPDateSelecterDelegate>
 
 @property (nonatomic,weak) IBOutlet UITextField* ageField;
@@ -24,7 +26,13 @@
 
 @property (nonatomic,assign) NSInteger currentMonthIndex;
 @property (nonatomic,assign) BOOL isMonth;
-
 @property (nonatomic,assign) NSInteger sexIndex;
+@property (nonatomic,assign) id<WPInformationViewDelegate> delegate;
+@end
+
+
+@protocol WPInformationViewDelegate <NSObject>
+
+- (void)completeInformation;
 
 @end

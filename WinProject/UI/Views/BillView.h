@@ -8,6 +8,11 @@
 
 #import "WPBaseView.h"
 
-@interface BillView : WPBaseView
+@interface BillView : WPBaseView <UITableViewDataSource,UITableViewDelegate>
+{
+    NSMutableArray* _billDataArray;
+}
+
+@property(nonatomic,weak) IBOutlet UITableView* tableview;
 
 @end

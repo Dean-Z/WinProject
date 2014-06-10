@@ -63,9 +63,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
-    DLog(@"%f",self.view.originY);
-    
 }
 
 - (void) dealCoinLabel
@@ -117,6 +114,11 @@
         bgOriginX = -(self.bgImageView.sizeW - self.view.sizeW);
     }
     self.bgImageView.originX = bgOriginX;
+    
+    if (scrollView.contentOffset.y == 0)
+    {
+        [rakeView prepareData];
+    }
 }
 
 - (IBAction)share:(id)sender

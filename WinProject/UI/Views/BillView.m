@@ -10,14 +10,32 @@
 
 @implementation BillView
 
-- (id)initWithFrame:(CGRect)frame
+- (void)renderView
 {
-    self = [super initWithFrame:frame];
-    if (self) {
-        
-    }
-    return self;
+    [super renderView];
+    
+    [self prepareData];
 }
 
+- (void)prepareData
+{
+    NSDictionary* parm = @{@"app":@"cash",@"act":@"history",@"page":@"1"};
+    
+    [[WPSyncService alloc]syncWithRoute:parm Block:^(id resp) {
+        if (resp)
+        {
+            
+        }
+    }];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 0;
+}
+
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return nil;
+}
 
 @end

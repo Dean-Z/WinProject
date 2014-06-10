@@ -135,6 +135,7 @@
         {
             [[WPAlertView viewFromXib]showWithMessage:@"任务完成"];
         }
+        [self.delegate completeInformation];
     }];
 }
 
