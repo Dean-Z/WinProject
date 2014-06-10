@@ -28,8 +28,8 @@
     [self.passwordTextField setValue:[UIColor colorWithHexString:@"584f4a"]
                                 forKeyPath:@"_placeholderLabel.textColor"];
 #ifdef DEBUG
-    [self.phoneTextField setText:@"13817618830"];
-    [self.passwordTextField setText:@"aaaaaa"];
+    [self.phoneTextField setText:@"18217144856"];
+    [self.passwordTextField setText:@"123456"];
 #endif
     
     NSMutableDictionary *linkAttributes = [NSMutableDictionary dictionary];

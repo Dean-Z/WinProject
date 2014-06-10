@@ -22,7 +22,6 @@
 @protocol WPNickNameDelegate <NSObject>
 
 - (void) nickNameBack;
-
-- (void) nickNameCompliation;
+- (void) nickNameCompliation:(NSString*)nickName;
 
 @end

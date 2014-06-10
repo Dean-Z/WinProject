@@ -63,6 +63,11 @@
     
 }
 
+- (void)updateUserInfo
+{
+    self.titleLabel.text = self.app.userInfo.nickname;
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];

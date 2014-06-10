@@ -91,6 +91,7 @@
                                                    initWithRootViewController:setting];
     
     self.aTabBarController = [[RDVTabBarController alloc] init];
+    self.aTabBarController.delegate = self;
     UINavigationController* nav = [[UINavigationController alloc]initWithRootViewController:self.aTabBarController];
     [nav.navigationBar setHidden:YES];
     
@@ -173,6 +174,16 @@
         }
         
         [navigationBarAppearance setTitleTextAttributes:textAttributes];
+    }
+}
+
+- (void)tabBarController:(RDVTabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+{
+    if ([viewController.title isEqualToString:@"收钱柜"])
+    {
+        UINavigationController* nav = (UINavigationController*)viewController;
+        WPWalletViewController* wallet = nav.viewControllers[0];
+        [wallet updateUserInfo];
     }
 }
 

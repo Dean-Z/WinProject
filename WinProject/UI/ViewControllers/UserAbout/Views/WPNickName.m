@@ -28,10 +28,15 @@
 
 - (IBAction)complation:(id)sender
 {
-    [self.nickTextField resignFirstResponder];
-    if ([self.delegate respondsToSelector:@selector(nickNameCompliation)])
+    if ([NSString isNilOrEmpty:self.nickTextField.text])
     {
-        [self.delegate nickNameCompliation];
+        return;
+    }
+    
+    [self.nickTextField resignFirstResponder];
+    if ([self.delegate respondsToSelector:@selector(nickNameCompliation:)])
+    {
+        [self.delegate nickNameCompliation:self.nickTextField.text];
     }
 }
 

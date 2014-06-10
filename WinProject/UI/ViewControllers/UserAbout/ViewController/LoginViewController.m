@@ -347,7 +347,16 @@
 {
     if (self.viewType == VIEW_RESET_PASSWORD)
     {
-        [self.navigationController popViewControllerAnimated:YES];
+        [[WPSyncService alloc]syncWithRoute:@{@"app":@"user",@"act":@"pwd",@"password":[aPassword MD5]} Block:^(id resp) {
+            if (resp)
+            {
+                [[WPAlertView viewFromXib] showWithMessage:@"修改成功"];
+                NSUserDefaults* user = [NSUserDefaults standardUserDefaults];
+                [user setObject:aPassword forKey:UserPassword];
+                [user synchronize];
+            }
+            [self.navigationController popViewControllerAnimated:YES];
+        }];
         return;
     }
     
@@ -379,11 +388,18 @@
     }];
 }
 
-- (void)nickNameCompliation
+- (void)nickNameCompliation:(NSString *)nickName
 {
     if (self.viewType == VIEW_RESET_NICKNAME)
     {
-        [self.navigationController popViewControllerAnimated:YES];
+        [[WPSyncService alloc]syncWithRoute:@{@"app":@"user",@"act":@"update",@"nickname":nickName} Block:^(id resp) {
+            if (resp)
+            {
+                [[WPAlertView viewFromXib] showWithMessage:@"修改成功"];
+                self.app.userInfo.nickname = nickName;
+            }
+            [self.navigationController popViewControllerAnimated:YES];
+        }];
         return;
     }
     

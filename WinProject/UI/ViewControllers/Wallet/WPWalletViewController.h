@@ -24,4 +24,6 @@
 @property(nonatomic,weak) IBOutlet UILabel*  yuanLabel;
 @property(nonatomic,weak) IBOutlet UILabel*  titleLabel;
 
+- (void)updateUserInfo;
+
 @end

@@ -12,7 +12,7 @@
 #import "WeiboSDK.h"
 #import "WPUserInfo.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate,RDVTabBarControllerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic, strong) Reachability* reachability;
