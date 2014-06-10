@@ -77,6 +77,12 @@
 
 - (void)prepareData
 {
+    if (self.hasLoadData)
+    {
+        return;
+    }
+    self.hasLoadData = YES;
+    
     NSMutableDictionary* parm = [@{@"app":@"rank",@"act":@"index"} mutableCopy];
     
     // 全国用户

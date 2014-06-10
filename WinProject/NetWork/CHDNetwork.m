@@ -57,6 +57,10 @@ NSInteger MAX_RETRY_LIMIT = 3;
     self.request = [[ASIFormDataRequest alloc] initWithURL:[NSURL URLWithString:REST_API_URL]];
     
     AppDelegate* app = [AppDelegate shareAppDelegate];
+    
+    NSString* device = [NSString stringWithFormat:@"%@,%@,%@",app.device_.name,app.device_.systemName,app.device_.identifierForVendor.UUIDString];
+    [self.request addRequestHeader:@"HTTP-DEVICE" value:device];
+    
     if (![NSString isNilOrEmpty:app.userInfo.cookies])
     {
         [self.request addRequestHeader:@"Cookie" value:[NSString stringWithFormat:@"Session=%@",app.userInfo.cookies]];

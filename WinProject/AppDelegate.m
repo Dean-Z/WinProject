@@ -27,6 +27,8 @@
     [WeiboSDK enableDebugMode:YES];
     [WeiboSDK registerApp:kAppKey];
     
+    self.device_ = [[UIDevice alloc] init];
+    
     self.isNetworkAvailable = YES;
     self.hasNetworkChanged  = YES;
     [[NSNotificationCenter defaultCenter] addObserver:self
