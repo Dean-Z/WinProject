@@ -106,7 +106,7 @@
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
     [UIView animateWithDuration:0.4 animations:^{
-        self.originY = 20;
+        self.originY = 0;
     }];
 }
 

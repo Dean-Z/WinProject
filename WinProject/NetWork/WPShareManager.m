@@ -14,7 +14,14 @@
 {
     WBSendMessageToWeiboRequest *request = [WBSendMessageToWeiboRequest requestWithMessage:[self messageToShareWithSina:image message:message]];
     
-    [WeiboSDK sendRequest:request];
+    if ([WeiboSDK isWeiboAppInstalled])
+    {
+        [WeiboSDK sendRequest:request];
+    }
+    else
+    {
+        [[WPAlertView viewFromXib]showWithMessage:@"未安装微博客户端！"];
+    }
 }
 
 - (WBMessageObject *)messageToShareWithSina:(UIImage*)image message:(NSString*)messages
