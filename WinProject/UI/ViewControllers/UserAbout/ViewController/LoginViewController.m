@@ -27,9 +27,14 @@
     BOOL isFindPassword;
     
 }
+
+@property(nonatomic,assign,getter = isFindPassword) BOOL forFindPassword;
+
 @end
 
 @implementation LoginViewController
+
+@synthesize forFindPassword;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -272,6 +277,7 @@
 
 - (void) signRegister
 {
+    self.forFindPassword = NO;
     [self prepareSignupView:NO];
 }
 
@@ -282,6 +288,7 @@
 
 - (void) findPassword
 {
+    self.forFindPassword = YES;
     [self prepareSignupView:YES];
 }
 
@@ -345,18 +352,38 @@
 
 - (void)passwordSucceed:(NSString *)aPassword
 {
+    if (self.forFindPassword)
+    {
+        [[WPSyncService alloc]syncWithRoute:@{@"app":@"index",
+                                             @"act":@"forgetPwd",
+                                             @"phone":phoneNumber,
+                                             @"code":authCode,
+                                             @"password":[aPassword MD5]} Block:^(id resp) {
+                                                 if (resp)
+                                                 {
+                                                     [[WPAlertView viewFromXib] showWithMessage:@"修改成功,请重新登陆！"];
+                                                     ;
+                                                     [self passwordBack];
+                                                     self.forFindPassword = NO;
+                                                 }
+                                             }];
+        return;
+    }
+    
     if (self.viewType == VIEW_RESET_PASSWORD)
     {
-        [[WPSyncService alloc]syncWithRoute:@{@"app":@"user",@"act":@"pwd",@"password":[aPassword MD5]} Block:^(id resp) {
-            if (resp)
-            {
-                [[WPAlertView viewFromXib] showWithMessage:@"修改成功"];
-                NSUserDefaults* user = [NSUserDefaults standardUserDefaults];
-                [user setObject:aPassword forKey:UserPassword];
-                [user synchronize];
-            }
-            [self.navigationController popViewControllerAnimated:YES];
-        }];
+        [[WPSyncService alloc]syncWithRoute:@{@"app":@"user",
+                                              @"act":@"pwd",
+                                              @"password":[aPassword MD5]} Block:^(id resp) {
+                                                  if (resp)
+                                                  {
+                                                      [[WPAlertView viewFromXib] showWithMessage:@"修改成功"];
+                                                      NSUserDefaults* user = [NSUserDefaults standardUserDefaults];
+                                                      [user setObject:aPassword forKey:UserPassword];
+                                                      [user synchronize];
+                                                  }
+                                                  [self.navigationController popViewControllerAnimated:YES];
+                                              }];
         return;
     }
     
@@ -392,19 +419,24 @@
 {
     if (self.viewType == VIEW_RESET_NICKNAME)
     {
-        [[WPSyncService alloc]syncWithRoute:@{@"app":@"user",@"act":@"update",@"nickname":nickName} Block:^(id resp) {
-            if (resp)
-            {
-                [[WPAlertView viewFromXib] showWithMessage:@"修改成功"];
-                self.app.userInfo.nickname = nickName;
-            }
-            [self.navigationController popViewControllerAnimated:YES];
-        }];
+        [[WPSyncService alloc]syncWithRoute:@{@"app":@"user",
+                                              @"act":@"update",
+                                              @"nickname":nickName} Block:^(id resp) {
+                                                  if (resp)
+                                                  {
+                                                      [[WPAlertView viewFromXib] showWithMessage:@"修改成功"];
+                                                      self.app.userInfo.nickname = nickName;
+                                                  }
+                                                  [self.navigationController popViewControllerAnimated:YES];
+                                              }];
         return;
     }
     
-    NSDictionary* term = @{@"app":@"index",@"act":@"register",@"phone":phoneNumber,@"password":[passwordString MD5],@"code":authCode};
-    
+    NSDictionary* term = @{@"app":@"index",
+                           @"act":@"register",
+                           @"phone":phoneNumber,
+                           @"password":[passwordString MD5],
+                           @"code":authCode};
     if (isFindPassword)
     {
         [term setValue:@"ForgetPwd" forKey:@"act"];

@@ -123,7 +123,7 @@
     }
     self.bgImageView.originX = bgOriginX;
     
-    if (scrollView.contentOffset.y == 0)
+    if (scrollView.contentOffset.y == 0 && rakeView != nil)
     {
         [rakeView prepareData];
     }

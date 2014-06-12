@@ -68,6 +68,12 @@
         [self.errorLabel_2 setText:@"2次输入的密码不一致"];
         return;
     }
+    else if ([NSString isNilOrEmpty:self.password_1.text])
+    {
+        self.errorLabel_1.hidden = NO;
+        [self.errorLabel_1 setText:@"密码不能为空"];
+        return;
+    }
     else
     {
         self.errorLabel_2.hidden = YES;

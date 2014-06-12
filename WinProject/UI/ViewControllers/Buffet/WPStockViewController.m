@@ -12,9 +12,11 @@
 {
     WPSwitchBar* switchBar;
     NSInteger cCurrentPage;
-    WPQDateInfo* qDataInfo;
-    WPCDataInfo* cDataInfo;
 }
+
+@property (nonatomic,strong) NSMutableArray* cDataArray;
+@property (nonatomic,strong) NSMutableArray* qDataArray;
+
 @end
 
 @implementation WPStockViewController
@@ -34,6 +36,8 @@
     [super viewDidLoad];
     
     cCurrentPage = 0;
+    self.cDataArray = [@[] mutableCopy];
+    self.qDataArray = [@[] mutableCopy];
     
     [self prepareSwitchBar];
     switchBar.selectAtIndex = 0;
@@ -58,22 +62,23 @@
             self.qScrollViewController.originX = -self.view.sizeW;
             self.cScrollViewController.originX = 0;
         } completion:^(BOOL finished) {
-            if (cDataInfo.cBaseDateArray.count>0)
+            if (self.cDataArray.count>0)
             {
                 self.nextButton.hidden = NO;
                 self.preButton.hidden = NO;
             }
         }];
         
-        if (cDataInfo == nil)
+        if (self.cDataArray.count == 0)
         {
             [SVProgressHUD showWithStatus:@"正在加载"];
             [[WPSyncService alloc]syncWithRoute:@{@"app":@"screen",@"act":@"index",@"phone":self.app.phoneNumber,@"page":@"1",@"type":@"0"} Block:^(id resp) {
                 [SVProgressHUD dismiss];
                 if (resp)
                 {
-                    cDataInfo = [[WPCDataInfo alloc]init];
+                   WPCDataInfo* cDataInfo = [[WPCDataInfo alloc]init];
                     cDataInfo.rowDate = resp;
+                    self.cDataArray = [NSMutableArray arrayWithArray:cDataInfo.cBaseDateArray];
                     [self prepareCScrollviewContainer];
                     
                     if (cDataInfo.cBaseDateArray.count>0)
@@ -89,7 +94,7 @@
                 }
                 else
                 {
-                    if (cDataInfo == nil)
+                    if (self.cDataArray.count == 0)
                     {
                         self.nextButton.hidden = YES;
                         self.preButton.hidden = YES;
@@ -111,20 +116,21 @@
             
         }];
         
-        if (qDataInfo == nil)
+        if (self.qDataArray.count == 0)
         {
             [SVProgressHUD showWithStatus:@"正在加载"];
             [[WPSyncService alloc]syncWithRoute:@{@"app":@"screen",@"act":@"index",@"phone":self.app.phoneNumber,@"page":@"1",@"type":@"1"} Block:^(id resp) {
                 [SVProgressHUD dismiss];
                 if (resp)
                 {
-                    qDataInfo = [[WPQDateInfo alloc]init];
+                    WPQDateInfo *qDataInfo = [[WPQDateInfo alloc]init];
                     qDataInfo.rowDate = resp;
+                    self.qDataArray = [NSMutableArray arrayWithArray:qDataInfo.qBaseDateArray];
                     [self prepareQScrollviewContainer];
                     self.qNoDataImageView.hidden = YES;
                 }
                 
-                if (qDataInfo.qBaseDateArray.count == 0)
+                if (self.qDataArray.count == 0)
                 {
                     self.qNoDataImageView.hidden = NO;
                 }
@@ -136,33 +142,33 @@
 
 - (void) prepareQScrollviewContainer
 {
-    for (NSInteger i=0; i<qDataInfo.qBaseDateArray.count; i++)
+    for (NSInteger i=0; i<self.qDataArray.count; i++)
     {
         BufferProductView* product = [BufferProductView viewFromXib];
-        product.dateInfo = qDataInfo.qBaseDateArray[i];
+        product.dateInfo = self.qDataArray[i];
         product.originX = i%2 * (product.sizeW + 20)+10;
         product.originY = i/2 * (product.sizeH + 20);
         [product renderView];
         [self.qScrollViewController addSubview:product];
     }
     
-    [self.qScrollViewController setContentSize:CGSizeMake(0, MAX(self.view.sizeH, 200*qDataInfo.qBaseDateArray.count))];
+    [self.qScrollViewController setContentSize:CGSizeMake(0, MAX(self.view.sizeH, 180*(self.qDataArray.count/2+1)))];
 }
 
 
 - (void) prepareCScrollviewContainer
 {
-    for (NSInteger i=0; i<cDataInfo.cBaseDateArray.count; i++)
+    for (NSInteger i=0; i<self.cDataArray.count; i++)
     {
         BufferCProcudtView* cProduct = [BufferCProcudtView viewFromXib];
-        cProduct.dataInfo = cDataInfo.cBaseDateArray[i];
+        cProduct.dataInfo = self.cDataArray[i];
         cProduct.originX = (self.view.sizeW - cProduct.sizeW)/2 + self.view.sizeW*i;
         cProduct.originY = IS_IPHONE_5 ?(self.cScrollViewController.sizeH - cProduct.sizeH)/2 : 10;
         [cProduct renderView];
         [self.cScrollViewController addSubview:cProduct];
     }
     
-    [self.cScrollViewController setContentSize:CGSizeMake(self.view.sizeW*cDataInfo.cBaseDateArray.count, 0)];
+    [self.cScrollViewController setContentSize:CGSizeMake(self.view.sizeW*self.cDataArray.count, 0)];
 }
 
 - (IBAction)close:(id)sender
@@ -179,7 +185,7 @@
     
     if (button ==  self.nextButton)
     {
-        if (cCurrentPage<cDataInfo.cBaseDateArray.count-1)
+        if (cCurrentPage<self.cDataArray.count-1)
         {
             cCurrentPage++;
         }
@@ -203,7 +209,7 @@
     {
         [self.preButton setImage:[UIImage imageNamed:@"btn_gray_pre.png"] forState:UIControlStateNormal];
     }
-    else if(cCurrentPage == cDataInfo.cBaseDateArray.count-1)
+    else if(cCurrentPage == self.cDataArray.count-1)
     {
         [self.nextButton setImage:[UIImage imageNamed:@"btn_gray_next.png"] forState:UIControlStateNormal];
     }
@@ -230,6 +236,21 @@
 {
     [super didReceiveMemoryWarning];
     
+}
+
+- (void) loadMoreCProduct:(NSInteger)page
+{
+    [[WPSyncService alloc]syncWithRoute:@{@"app":@"screen",
+                                          @"act":@"index",
+                                          @"phone":self.app.phoneNumber,
+                                          @"page":[NSString stringWithFormat:@"%d",page],
+                                          @"type":@"0"}
+                                  Block:^(id resp) {
+                                      if (resp)
+                                      {
+                                          
+                                      }
+                                  }];
 }
 
 @end

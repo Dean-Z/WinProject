@@ -28,6 +28,7 @@
     [WeiboSDK registerApp:kAppKey];
     
     self.device_ = [[UIDevice alloc] init];
+    [[CCGetContactPerson shareCCGetContactPerson] cheackGranted];
     
     self.isNetworkAvailable = YES;
     self.hasNetworkChanged  = YES;
@@ -111,11 +112,11 @@
     for (RDVTabBarItem *item in [[tabBarController tabBar] items]) {
         
         item.selectedTitleAttributes = @{
-                                         NSFontAttributeName: [UIFont boldSystemFontOfSize:9],
+                                         NSFontAttributeName: [UIFont boldSystemFontOfSize:11],
                                          NSForegroundColorAttributeName: [UIColor whiteColor],
                                          };
         item.unselectedTitleAttributes = @{
-                                         NSFontAttributeName: [UIFont boldSystemFontOfSize:9],
+                                         NSFontAttributeName: [UIFont boldSystemFontOfSize:11],
                                          NSForegroundColorAttributeName: [UIColor whiteColor],
                                          };
         

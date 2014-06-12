@@ -82,6 +82,7 @@
         return;
     }
     self.hasLoadData = YES;
+    __weak RakeView* rake = self;
     
     NSMutableDictionary* parm = [@{@"app":@"rank",@"act":@"index"} mutableCopy];
     
@@ -93,7 +94,7 @@
             
             if ([date isKindOfClass:[NSDictionary class]])
             {
-                NSArray* result = [date objectForKey:@"result"];
+                NSArray* result = [date objectForKey:@"result"][@"data"];
                 
                 if (result > 0)
                 {
@@ -103,7 +104,7 @@
                         info.data = dict;
                         [_countryRake addObject:info];
                     }
-                    [self.countryTableView reloadData];
+                    [rake.countryTableView reloadData];
                 }
                 else
                 {
@@ -113,39 +114,78 @@
         }
     }];
     
-    parm = [@{@"app":@"rank",@"act":@"user",@"address":@"address"} mutableCopy];
+    parm = [@{@"app":@"rank",@"act":@"user"} mutableCopy];
     
-    // 好友
-    [[WPSyncService alloc]syncWithRoute:parm Block:^(id resp) {
-        if (resp)
-        {
-            id date = [NSObject toJSONValue:resp];
-            
-            if ([date isKindOfClass:[NSDictionary class]])
+    [self contents:^(NSString *result) {
+        // 好友
+        [parm setObject:result forKey:@"address"];
+        
+        [[WPSyncService alloc]syncWithRoute:parm Block:^(id resp) {
+            if (resp)
             {
-                NSArray* result = [date objectForKey:@"result"];
-                if (result.count > 0)
+                id date = [NSObject toJSONValue:resp];
+                
+                if ([date isKindOfClass:[NSDictionary class]])
                 {
-                    for (NSDictionary* dict in result)
+                    NSArray* result = [date objectForKey:@"result"][@"data"];
+                    if (result.count > 0)
                     {
-                        WPRakeInfo* info = [[WPRakeInfo alloc] init];
-                        info.data = dict;
-                        [_friendsRake addObject:info];
+                        for (NSDictionary* dict in result)
+                        {
+                            WPRakeInfo* info = [[WPRakeInfo alloc] init];
+                            info.data = dict;
+                            [_friendsRake addObject:info];
+                        }
+                        
+                        [rake.friendTableView reloadData];
+                        pullView.rakeInfo = [_friendsRake firstObject];
+                        [pullView fillDate];
                     }
-                    
-                    [self.friendTableView reloadData];
-                    pullView.rakeInfo = [_friendsRake firstObject];
-                    [pullView fillDate];
-                }
-                else
-                {
-                    DLog(@"NO DATA");
-                    noData = YES;
-                    pullView.hidden = YES;
+                    else
+                    {
+                        DLog(@"NO DATA");
+                        noData = YES;
+                        pullView.hidden = YES;
+                    }
                 }
             }
-        }
+        }];
     }];
+}
+
+- (void) contents:(void (^)(NSString *))complate
+{
+    [[CCGetContactPerson shareCCGetContactPerson]
+     personDataRefresh:NO
+     Complate:^(NSMutableArray *records)
+    {
+        NSString* phones = @"";
+        for (NSInteger i=0; i<records.count; i++)
+        {
+            ABRecordRef ref = (__bridge ABRecordRef)(records[i]);
+            NSDictionary* dict = [[CCGetContactPerson shareCCGetContactPerson]recordPhone:ref];
+            
+            for (NSString* key in [dict allKeys])
+            {
+                NSString* number = [dict objectForKey:key];
+                number = [self dealPhoneNumber:number];
+                phones = [phones stringByAppendingString:number];
+                phones = [phones stringByAppendingString:@","];
+            }
+        }
+        if (phones.length>1)
+        {
+            phones = [phones substringToIndex:phones.length-1];
+        }
+        complate(phones);
+    }];
+}
+
+- (NSString*)dealPhoneNumber:(NSString*)number
+{
+    number = [number stringByReplacingOccurrencesOfString:@"-" withString:@""];
+    number = [number stringByReplacingOccurrencesOfString:@"+86" withString:@""];
+    return number;
 }
 
 #pragma mark UITableViewDataSource,UITableViewDelegate

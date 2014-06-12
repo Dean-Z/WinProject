@@ -66,8 +66,10 @@
         [[WPAlertView viewFromXib] showWithMessage:@"请输入正确的电话号码"];
         return;
     }
+    
     NSMutableDictionary* term = [@{@"app":@"index",@"act":@"codeRegister"} mutableCopy];
     [term setObject:self.phoneTextField.text forKey:@"phone"];
+//    [term setObject:@"1" forKey:@"test"];
     
     if (self.isFindPassword)
     {

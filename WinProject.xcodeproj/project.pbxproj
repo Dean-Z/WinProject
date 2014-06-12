@@ -111,6 +111,8 @@
 		CBA0E89F19013A8E007119C0 /* WPSigninView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBA0E89E19013A8E007119C0 /* WPSigninView.xib */; };
 		CBA0E8A219013AAD007119C0 /* WPSignupView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA0E8A119013AAD007119C0 /* WPSignupView.m */; };
 		CBA0E8A419013ABB007119C0 /* WPSignupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBA0E8A319013ABB007119C0 /* WPSignupView.xib */; };
+		CBABE33019495A130099B13F /* CCGetContactPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = CBABE32F19495A130099B13F /* CCGetContactPerson.m */; };
+		CBABE33219495A240099B13F /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBABE33119495A240099B13F /* AddressBook.framework */; };
 		CBB0B589193C30AC0069C360 /* QuestionnaireView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB0B588193C30AC0069C360 /* QuestionnaireView.m */; };
 		CBB0B58B193C30BE0069C360 /* QuestionnaireView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB0B58A193C30BE0069C360 /* QuestionnaireView.xib */; };
 		CBCBF1FA190F48BF003439DB /* MarketInTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCBF1F8190F48BF003439DB /* MarketInTableViewCell.m */; };
@@ -328,6 +330,9 @@
 		CBA0E8A019013AAD007119C0 /* WPSignupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPSignupView.h; sourceTree = "<group>"; };
 		CBA0E8A119013AAD007119C0 /* WPSignupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPSignupView.m; sourceTree = "<group>"; };
 		CBA0E8A319013ABB007119C0 /* WPSignupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPSignupView.xib; sourceTree = "<group>"; };
+		CBABE32E19495A130099B13F /* CCGetContactPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCGetContactPerson.h; sourceTree = "<group>"; };
+		CBABE32F19495A130099B13F /* CCGetContactPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCGetContactPerson.m; sourceTree = "<group>"; };
+		CBABE33119495A240099B13F /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		CBB0B587193C30AC0069C360 /* QuestionnaireView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionnaireView.h; sourceTree = "<group>"; };
 		CBB0B588193C30AC0069C360 /* QuestionnaireView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionnaireView.m; sourceTree = "<group>"; };
 		CBB0B58A193C30BE0069C360 /* QuestionnaireView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionnaireView.xib; sourceTree = "<group>"; };
@@ -380,6 +385,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBABE33219495A240099B13F /* AddressBook.framework in Frameworks */,
 				CB924BF519094578000389CB /* MessageUI.framework in Frameworks */,
 				CBDD251618FF8CCA009043FE /* CoreGraphics.framework in Frameworks */,
 				CBDD251818FF8CCA009043FE /* UIKit.framework in Frameworks */,
@@ -663,6 +669,7 @@
 		CBA0E86D19012EED007119C0 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				CBABE32D19495A130099B13F /* Contanct */,
 				CBA0E86E19012EED007119C0 /* NSObject */,
 				CBA0E87119012EED007119C0 /* NSSting */,
 				CBA0E87419012EED007119C0 /* UIImageView */,
@@ -777,6 +784,15 @@
 			path = Wallet;
 			sourceTree = "<group>";
 		};
+		CBABE32D19495A130099B13F /* Contanct */ = {
+			isa = PBXGroup;
+			children = (
+				CBABE32E19495A130099B13F /* CCGetContactPerson.h */,
+				CBABE32F19495A130099B13F /* CCGetContactPerson.m */,
+			);
+			path = Contanct;
+			sourceTree = "<group>";
+		};
 		CBCBF1F6190F488F003439DB /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -816,6 +832,7 @@
 		CBDD251218FF8CCA009043FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CBABE33119495A240099B13F /* AddressBook.framework */,
 				CB924BF419094578000389CB /* MessageUI.framework */,
 				CBDD251318FF8CCA009043FE /* Foundation.framework */,
 				CBDD251518FF8CCA009043FE /* CoreGraphics.framework */,
@@ -1090,6 +1107,7 @@
 				CB4542B01915ED2A00BFE852 /* WPStockViewController.m in Sources */,
 				CB6B7982191A419200610CD6 /* WPShareManager.m in Sources */,
 				CB827E1C192CE19E00AFDBBF /* WPQDateInfo.m in Sources */,
+				CBABE33019495A130099B13F /* CCGetContactPerson.m in Sources */,
 				CBA0E88119012EED007119C0 /* BaseXibViewController.m in Sources */,
 				CB45CC32192101510020D76C /* SBJsonBase.m in Sources */,
 				CBA0E87E19012EED007119C0 /* Functions.m in Sources */,
@@ -1252,14 +1270,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: The eve of the Shanghai information technology co., LTD";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: The eve of the Shanghai information technology co., LTD";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Zhou Dean (7KC978Z4P2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Zhou Dean (7KC978Z4P2)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WinProject/WinProject-Prefix.pch";
 				INFOPLIST_FILE = "WinProject/WinProject-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "82EDE1A4-DAF5-4DF5-8E16-AB9FB04C93DB";
+				PROVISIONING_PROFILE = "284A015A-5A35-48C3-B527-91DDE936E655";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1270,14 +1288,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: The eve of the Shanghai information technology co., LTD";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: The eve of the Shanghai information technology co., LTD";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Zhou Dean (7KC978Z4P2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Zhou Dean (7KC978Z4P2)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WinProject/WinProject-Prefix.pch";
 				INFOPLIST_FILE = "WinProject/WinProject-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "82EDE1A4-DAF5-4DF5-8E16-AB9FB04C93DB";
+				PROVISIONING_PROFILE = "284A015A-5A35-48C3-B527-91DDE936E655";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

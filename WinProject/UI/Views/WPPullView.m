@@ -21,8 +21,9 @@
 
 - (void)renderView
 {
+    [super renderView];
     [self.firstCellLabel setFont:[UIFont fontWithName:@"DFWaWaSC-W5" size:10]];
-    self.firstCellLabel = [self.exchangeArray firstObject];
+    self.firstCellLabel.text = [self.exchangeArray firstObject];
     isPull = YES;
 }
 

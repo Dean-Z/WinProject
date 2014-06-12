@@ -11,6 +11,7 @@
 #import "RDVTabBarController.h"
 #import "WeiboSDK.h"
 #import "WPUserInfo.h"
+#import "CCGetContactPerson.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate,RDVTabBarControllerDelegate>
 
