@@ -12,6 +12,7 @@ typedef enum
 {
     Market_Invite_Type = 1,
     Market_Information_Type = 2,
+    Market_Question_Type = 3,
 }MarketType;
 
 @interface WPMarketInfo : WPBaseInfo

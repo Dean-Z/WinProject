@@ -10,11 +10,13 @@
 #import "WPSwitchBar.h"
 #import "WPMarketInfo.h"
 #import "MarketInTableViewCell.h"
+#import "QuestionnaireView.h"
 
 @interface WPMarketViewController ()
 {
     WPSwitchBar* switchBar;
     WPInformationView* informationView;
+    QuestionnaireView* questionContainer;
     NSMutableArray* _inProductArray;
     NSMutableArray* _outProductArray;
     BOOL  isInProduct;
@@ -82,6 +84,7 @@
     info2.desc = @"完成【赢屏】的问卷调查";
     info2.timeLimit = @"长期有效";
     info2.coins = @"20";
+    info2.type = Market_Question_Type;
     [_inProductArray addObject:info2];
     
     WPMarketInfo* info3 = [[WPMarketInfo alloc]init];
@@ -177,6 +180,20 @@
     else if (cell.marketInfo.type == Market_Information_Type)
     {
         [self showInformationView];
+    }
+    else if(cell.marketInfo.type == Market_Question_Type)
+    {
+        [self showQusetionContainer];
+    }
+}
+
+- (void)showQusetionContainer
+{
+    if (questionContainer == nil)
+    {
+        questionContainer = [QuestionnaireView viewFromXib];
+        [questionContainer renderView];
+        [questionContainer showInView:self.view];
     }
 }
 

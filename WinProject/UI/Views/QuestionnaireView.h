@@ -12,5 +12,8 @@
 @interface QuestionnaireView : WPBaseView<TTTAttributedLabelDelegate>
 
 @property(nonatomic,weak) IBOutlet TTTAttributedLabel* rultLabel;
+@property(nonatomic,weak) IBOutlet UIScrollView* questionContainer;
+
+- (void)showInView:(UIView*)view;
 
 @end

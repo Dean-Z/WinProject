@@ -94,6 +94,9 @@
 		CB9589BB1940216B00C94AD5 /* WPDateSelecter.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9589BA1940216B00C94AD5 /* WPDateSelecter.m */; };
 		CB9589BD1940218100C94AD5 /* WPDateSelecter.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB9589BC1940218100C94AD5 /* WPDateSelecter.xib */; };
 		CB9589C01940325700C94AD5 /* WPMarketInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9589BF1940325700C94AD5 /* WPMarketInfo.m */; };
+		CB9B02BC1949E611002FAAD6 /* QuestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB9B02BB1949E611002FAAD6 /* QuestionCell.xib */; };
+		CB9B02BF1949E641002FAAD6 /* QuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9B02BE1949E641002FAAD6 /* QuestionCell.m */; };
+		CB9B02C21949E804002FAAD6 /* WPQuestionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9B02C11949E804002FAAD6 /* WPQuestionInfo.m */; };
 		CBA0E87E19012EED007119C0 /* Functions.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA0E87019012EED007119C0 /* Functions.m */; };
 		CBA0E87F19012EED007119C0 /* NSString+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA0E87319012EED007119C0 /* NSString+Extention.m */; };
 		CBA0E88019012EED007119C0 /* QQImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA0E87619012EED007119C0 /* QQImageView.m */; };
@@ -297,6 +300,11 @@
 		CB9589BC1940218100C94AD5 /* WPDateSelecter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPDateSelecter.xib; sourceTree = "<group>"; };
 		CB9589BE1940325700C94AD5 /* WPMarketInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPMarketInfo.h; sourceTree = "<group>"; };
 		CB9589BF1940325700C94AD5 /* WPMarketInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPMarketInfo.m; sourceTree = "<group>"; };
+		CB9B02BB1949E611002FAAD6 /* QuestionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionCell.xib; sourceTree = "<group>"; };
+		CB9B02BD1949E641002FAAD6 /* QuestionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionCell.h; sourceTree = "<group>"; };
+		CB9B02BE1949E641002FAAD6 /* QuestionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionCell.m; sourceTree = "<group>"; };
+		CB9B02C01949E804002FAAD6 /* WPQuestionInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPQuestionInfo.h; sourceTree = "<group>"; };
+		CB9B02C11949E804002FAAD6 /* WPQuestionInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPQuestionInfo.m; sourceTree = "<group>"; };
 		CBA0E86F19012EED007119C0 /* Functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Functions.h; sourceTree = "<group>"; };
 		CBA0E87019012EED007119C0 /* Functions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Functions.m; sourceTree = "<group>"; };
 		CBA0E87219012EED007119C0 /* NSString+Extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extention.h"; sourceTree = "<group>"; };
@@ -539,6 +547,8 @@
 				CB9589BF1940325700C94AD5 /* WPMarketInfo.m */,
 				CBF4AFBC19405C820028588E /* WPConversionInfo.h */,
 				CBF4AFBD19405C820028588E /* WPConversionInfo.m */,
+				CB9B02C01949E804002FAAD6 /* WPQuestionInfo.h */,
+				CB9B02C11949E804002FAAD6 /* WPQuestionInfo.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -599,6 +609,9 @@
 				CBB0B587193C30AC0069C360 /* QuestionnaireView.h */,
 				CBB0B588193C30AC0069C360 /* QuestionnaireView.m */,
 				CBB0B58A193C30BE0069C360 /* QuestionnaireView.xib */,
+				CB9B02BD1949E641002FAAD6 /* QuestionCell.h */,
+				CB9B02BE1949E641002FAAD6 /* QuestionCell.m */,
+				CB9B02BB1949E611002FAAD6 /* QuestionCell.xib */,
 				CB9589B91940216B00C94AD5 /* WPDateSelecter.h */,
 				CB9589BA1940216B00C94AD5 /* WPDateSelecter.m */,
 				CB9589BC1940218100C94AD5 /* WPDateSelecter.xib */,
@@ -1010,6 +1023,7 @@
 				CB39659C19444B0700ADE846 /* ConversionProductCell.xib in Resources */,
 				CB4E1395190FE6970048709B /* WawaSC-Regular.otf in Resources */,
 				CB4542CA1918DCC800BFE852 /* WPBuffetViewController_iPhone.xib in Resources */,
+				CB9B02BC1949E611002FAAD6 /* QuestionCell.xib in Resources */,
 				CBD9627019336BF500825CE7 /* BillView_iPhone5.xib in Resources */,
 				CBD9627519336F3800825CE7 /* WPProductDetailView.xib in Resources */,
 				CB6B798E191C96D000610CD6 /* LoginViewController_iPhone.xib in Resources */,
@@ -1121,11 +1135,13 @@
 				CB45CC31192101510020D76C /* SBJSON.m in Sources */,
 				CBF4AFB9194059E00028588E /* WPConversionView.m in Sources */,
 				CBA0E88319012EED007119C0 /* UIView+XibView.m in Sources */,
+				CB9B02BF1949E641002FAAD6 /* QuestionCell.m in Sources */,
 				CB6B798A191B902600610CD6 /* WPAuthView.m in Sources */,
 				CBF4AFBE19405C820028588E /* WPConversionInfo.m in Sources */,
 				CB45CC2C192101510020D76C /* JsonParser.m in Sources */,
 				CB6B7996191C994B00610CD6 /* WPPasswordView.m in Sources */,
 				CB2FAD081902C37B00F46A0A /* WPBuffetViewController.m in Sources */,
+				CB9B02C21949E804002FAAD6 /* WPQuestionInfo.m in Sources */,
 				CBA0E891190133D4007119C0 /* FTUtils+NSObject.m in Sources */,
 				CBB0B589193C30AC0069C360 /* QuestionnaireView.m in Sources */,
 				CB45CC3B192106B30020D76C /* LoadData.m in Sources */,
