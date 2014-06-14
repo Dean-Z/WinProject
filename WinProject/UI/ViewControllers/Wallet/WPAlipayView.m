@@ -78,7 +78,8 @@
 {
     if (alipayView == nil)
     {
-        alipayViewContainer = [[UIScrollView alloc]initWithFrame:CGRectMake(self.sizeW, 44, self.sizeW, self.tableview.sizeH - 44)];
+        alipayViewContainer = [[UIScrollView alloc]initWithFrame:CGRectMake(self.sizeW, 44, self.sizeW, self.tableview.sizeH)];
+        alipayViewContainer.contentInset = UIEdgeInsetsMake(0, 0, 44, 0);
         alipayViewContainer.showsHorizontalScrollIndicator = NO;
         alipayViewContainer.showsVerticalScrollIndicator = NO;
         alipayViewContainer.backgroundColor = [UIColor clearColor];
