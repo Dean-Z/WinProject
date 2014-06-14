@@ -110,6 +110,17 @@
 
 - (IBAction)send:(id)sender
 {
+    NSUserDefaults* user = [NSUserDefaults standardUserDefaults];
+    if (![self.passwordField.text isEqualToString:[user objectForKey:UserPassword]])
+    {
+        [[WPAlertView viewFromXib] showWithMessage:@"登陆密码错误"];
+        return;
+    }
+    else if ([NSString isNilOrEmpty:self.nameField.text] || [NSString isNilOrEmpty:self.accountField.text])
+    {
+       [[WPAlertView viewFromXib] showWithMessage:@"请完善信息！"];
+        return;
+    }
     NSDictionary* parm = @{@"app":@"cash",@"act":@"do",@"email":self.accountField.text,@"name":self.nameField.text,@"coin":[NSString stringWithFormat:@"%d",_currentCoins*10]};
     
     [[WPSyncService alloc]syncWithRoute:parm Block:^(id resp) {
