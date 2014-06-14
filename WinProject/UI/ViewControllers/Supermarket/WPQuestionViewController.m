@@ -32,6 +32,9 @@
 {
     [super viewDidLoad];
     
+    self.optionData = [@{} mutableCopy];
+    self.optionResultArray = [@[] mutableCopy];
+    
     [self prepareData];
     [self showQusetionContainer];
     [self prepareOptionData];
@@ -79,6 +82,11 @@
 
 - (void)questionCompletion
 {
+    if (self.optionResultArray.count < self.questionArray.count)
+    {
+        [[WPAlertView alloc]showWithMessage:@"未完成所有题目"];
+        return;
+    }
     [self popNavigation:nil];
 }
 

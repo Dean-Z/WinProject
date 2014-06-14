@@ -14,6 +14,7 @@
 #import "RDVTabBarItem.h"
 #import "LoginViewController.h"
 #import "CCUpdataApp.h"
+//#import "CrittercismSDK.h"
 
 @implementation AppDelegate
 
@@ -26,6 +27,7 @@
 {
     [WeiboSDK enableDebugMode:YES];
     [WeiboSDK registerApp:kAppKey];
+//    [Crittercism enableWithAppID:@"539c7d1c83fb796851000006"];
     
     self.device_ = [[UIDevice alloc] init];
     [[CCGetContactPerson shareCCGetContactPerson] cheackGranted];

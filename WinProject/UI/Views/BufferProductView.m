@@ -42,7 +42,7 @@
 #pragma mark WPProductDetailViewDelegate
 - (void)productDownload:(WPProductInfo *)productInfo
 {
-    NSDictionary* parm = @{@"app":@"screen",@"act":@"download",@"id":productInfo.picId};
+    NSDictionary* parm = @{@"app":@"screen",@"act":@"finish",@"id":productInfo.picId};
     
     [[WPSyncService alloc]downloadImageWithRoute:parm Block:^(id respData)
      {

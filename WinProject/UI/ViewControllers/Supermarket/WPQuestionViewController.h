@@ -14,4 +14,7 @@
 @property(nonatomic,strong) NSDictionary* requestResult;
 @property(nonatomic,strong) WPOptionView *optionView;
 
+@property(nonatomic,strong) NSMutableArray* optionResultArray;
+@property(nonatomic,strong) NSMutableDictionary* optionData;
+
 @end

@@ -20,6 +20,9 @@
     NSMutableArray* _countryRake;
 }
 
+@property(nonatomic,weak) IBOutlet UILabel* positionLabel;
+@property(nonatomic,weak) IBOutlet UILabel* rateLabel;
+@property(nonatomic,weak) IBOutlet UILabel* gapLabel;
 @property(nonatomic,weak) IBOutlet UIView* switchBarContainer;
 @property(nonatomic,weak) IBOutlet UITableView* friendTableView;
 @property(nonatomic,weak) IBOutlet UITableView* countryTableView;

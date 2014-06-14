@@ -38,7 +38,18 @@
     [self.coinButton setTitle:[NSString stringWithFormat:@"奖励%@金币",self.marketInfo.coins] forState:UIControlStateNormal];
     self.titleLabel.text = self.marketInfo.title;
     self.descLabel.text = self.marketInfo.desc;
-    self.timeLabel.text = self.marketInfo.timeLimit;
+    if ([self.marketInfo.end_time integerValue]>0)
+    {
+        NSDate* endDate = [NSDate dateWithTimeIntervalSince1970:[self.marketInfo.end_time integerValue]];
+        NSDateFormatter* formatter = [[NSDateFormatter alloc]init];
+        [formatter setDateFormat:@"yyyy-MM-dd"];
+        
+        self.timeLabel.text = [NSString stringWithFormat:@"有效期至:%@",[formatter stringFromDate:endDate]];
+    }
+    else
+    {
+        self.timeLabel.text = self.marketInfo.timeLimit;
+    }
 }
 
 @end

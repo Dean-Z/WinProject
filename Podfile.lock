@@ -12,6 +12,7 @@ PODS:
     - Reachability
   - ASIHTTPRequest/S3 (1.8.2):
     - ASIHTTPRequest/Core
+  - CrittercismSDK (4.3.3)
   - InnerBand (1.0.6)
   - RDVTabBarController (1.1.3)
   - Reachability (3.1.1)
@@ -27,6 +28,7 @@ PODS:
 
 DEPENDENCIES:
   - ASIHTTPRequest (~> 1.8.2)
+  - CrittercismSDK
   - InnerBand (~> 1.0.6)
   - RDVTabBarController (~> 1.1.3)
   - Reachability (~> 3.1.1)
@@ -39,16 +41,17 @@ DEPENDENCIES:
   - Weibo (~> 2.4.2)
 
 SPEC CHECKSUMS:
-  ASIHTTPRequest: 0b05282cf3c422c3474eff98c5bb8c1192b91b86
-  InnerBand: 35a7b4f965322f75449a5d5d9329d07725a77abb
-  RDVTabBarController: 98bb589109d139821ac08e26ab9215b9057285f6
-  Reachability: be4883bb93f31e38266ae3365e5600a317aae735
-  SBJson: 9749a0365b005bcb0b7adf74579d79372c11cc4f
-  SDWebImage: 7eb273e54ca8a2e506ad9bd5e80c35b2a4d7c95e
-  SVProgressHUD: 5e10939a296debf5fe5a5895eda9539b8b2114f1
-  TSValidatedTextField: bf275ccfaa61e29efed284a8a564f59e275abfdb
-  TTTAttributedLabel: 6154fd2407a03fb8d71abfa36f4710fff26a168e
-  WeChatSDK: 8cabf6a191621494bc38e25c06b41c7bd2029322
-  Weibo: 6a997663c8022500eb30ee93d42c67f85149e372
+  ASIHTTPRequest: 2c8335b49410c0e2ad42829c438e74d454b77590
+  CrittercismSDK: 9f19db3a1f0c16b35d8c29c69406852d184a7650
+  InnerBand: 06b6d56d575405dbd84ecafb9af3c0776448b6aa
+  RDVTabBarController: 46702bfe72cfea027a6b68f64ba7caf2d5ca7b41
+  Reachability: 8e9635e3cb4f98e7f825e51147f677ecc694d0e7
+  SBJson: d71212c078abf4679d54b0d0565260c474e46235
+  SDWebImage: c6989652c1cdf27cbdf3f56957e2030f825af5bc
+  SVProgressHUD: 5034c6e22b8c2ca3e09402e48d41ed0340aa1c50
+  TSValidatedTextField: 5f90b3b777f8c739a7ba7f5c452cb82171c6655f
+  TTTAttributedLabel: 9f727215d63a358f92317a24c83c94c72de78e80
+  WeChatSDK: e9dd2b6d48d825f26221669a3a1300fe0bef58e0
+  Weibo: 8ac9c24884290718ca62da62301165d209f7336c
 
-COCOAPODS: 0.32.1
+COCOAPODS: 0.33.1

@@ -113,6 +113,16 @@
                     {
                         DLog(@"NO DATA");
                     }
+                    
+                    NSDictionary* dict = [date objectForKey:@"result"];
+                    if ([dict isKindOfClass:[NSDictionary class]])
+                    {
+                        NSString* postionString = [dict objectForKey:@"position"];
+                        self.positionLabel.text = postionString;
+//                        NSString *str = @"%";
+//                        self.rateLabel.text = [NSString stringWithFormat:@"%@%@",dict[@"rate"],str];
+//                        self.gapLabel.text = dict[@"gap"];
+                    }
                 }
             }
         }
