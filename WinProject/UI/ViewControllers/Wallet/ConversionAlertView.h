@@ -26,7 +26,7 @@
 @property(nonatomic,strong) UIView* backgroundView;
 @property(nonatomic,strong) WPConversionInfo* conversionInfo;
 @property(nonatomic,assign) id<ConversionAlertViewDelegate> delegate;
-@property(nonatomic,assign) NSInteger _count;
+@property(nonatomic,assign) NSInteger amount;
 
 - (void)showInWindows;
 

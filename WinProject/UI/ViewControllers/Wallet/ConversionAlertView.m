@@ -65,7 +65,20 @@
 
 - (IBAction)sure:(id)sender
 {
-    [self dismiass];
+    NSDictionary* parm = @{@"app":@"exchange",
+                           @"act":@"do",
+                           @"id":self.conversionInfo.producId,
+                           @"amount":[NSString stringWithFormat:@"%d",self.amount]};
+    
+    [SVProgressHUD showWithStatus:@"正在提交.."];
+    [[WPSyncService alloc]syncWithRoute:parm Block:^(id resp) {
+        if (resp)
+        {
+            [[WPAlertView viewFromXib] showWithMessage:@"兑换成功"];
+            [SVProgressHUD dismiss];
+            [self dismiass];
+        }
+    }];
 }
 
 - (IBAction)addressContainerHidden:(id)sender
@@ -83,7 +96,7 @@
 - (void)dateSelecterAtIndex:(NSInteger)index
 {
     [self.productCount setTitle:[NSString stringWithFormat:@"%d",index] forState:UIControlStateNormal];
-    self._count = index;
+    self.amount = index;
     
     self.needCoins.text = [NSString stringWithFormat:@"%d金币",[self.conversionInfo.coins integerValue]*index];
     

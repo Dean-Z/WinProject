@@ -118,6 +118,12 @@
                     [self resetRakes];
                 }
             }
+            else
+            {
+                self.positionLabel.text = @"--";
+                self.rateLabel.text = @"--";
+                self.gapLabel.text = @"--";
+            }
         }
     }];
     
@@ -164,11 +170,11 @@
 {
     if ([self.resultDict isKindOfClass:[NSDictionary class]])
     {
-//        NSString* postionString = [self.resultDict objectForKey:@"position"];
-//        self.positionLabel.text = postionString;
+        NSString* postionString = [self.resultDict objectForKey:@"position"];
+        self.positionLabel.text = [NSString stringWithFormat:@"%@",postionString];
         NSString *str = @"%";
         self.rateLabel.text = [NSString stringWithFormat:@"%@%@",self.resultDict[@"rate"],str];
-//        self.gapLabel.text = self.resultDict[@"gap"];
+        self.gapLabel.text = [NSString stringWithFormat:@"%@",self.resultDict[@"gap"]];
     }
 }
 
