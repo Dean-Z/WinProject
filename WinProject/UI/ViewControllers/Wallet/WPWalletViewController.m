@@ -123,7 +123,11 @@
     }
     self.bgImageView.originX = bgOriginX;
     
-    if (scrollView.contentOffset.y == 0 && rakeView != nil)
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    if (scrollView.contentOffset.y == 0)
     {
         [rakeView prepareData];
     }
