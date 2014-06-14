@@ -184,12 +184,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (!isInProduct)
+    MarketInTableViewCell* cell = (MarketInTableViewCell*)[self tableView:tableView cellForRowAtIndexPath:indexPath];
+    if (!isInProduct && cell.marketInfo.type != Market_Invite_Type)
     {
         return;
     }
-    
-    MarketInTableViewCell* cell = (MarketInTableViewCell*)[self tableView:tableView cellForRowAtIndexPath:indexPath];
     
     if (cell.marketInfo.type == Market_Invite_Type)
     {
@@ -215,6 +214,7 @@
                 {
                     NSDictionary* result = [data objectForKey:@"result"];
                     WPQuestionViewController* question = [[WPQuestionViewController alloc]viewControllerFromXib];
+                    question.questionId = cell.marketInfo.question_id;
                     question.requestResult = result;
                     [market.app.aTabBarController.navigationController pushViewController:question animated:YES];
                     question = nil;

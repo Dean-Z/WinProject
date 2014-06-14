@@ -47,6 +47,15 @@
     NSURL *url = [NSURL URLWithString:@"http://LookRult"];
     [self.rultLabel addLinkToURL:url withRange:range];
     
+    if (self.questionArray.count <= 1)
+    {
+        self.finishButton.hidden = NO;
+    }
+    else
+    {
+        self.finishButton.hidden = YES;
+    }
+    
     [self prepareData];
 }
 

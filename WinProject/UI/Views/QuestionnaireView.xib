@@ -28,7 +28,7 @@
                     <color key="shadowColor" red="0.10980392160000001" green="0.41960784309999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
                     <size key="shadowOffset" width="1" height="1"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="查看规则" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ENl-xY-oO9" customClass="TTTAttributedLabel">
+                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="查看规则" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ENl-xY-oO9" customClass="TTTAttributedLabel">
                     <rect key="frame" x="36" y="302" width="51" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="12"/>
@@ -59,6 +59,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="finishButton" destination="1pT-ma-ZSj" id="FR4-mi-nBQ"/>
                 <outlet property="questionContainer" destination="3Gy-lp-c1n" id="jaf-UB-kGk"/>
                 <outlet property="rultLabel" destination="ENl-xY-oO9" id="29Q-Q2-Lya"/>
             </connections>

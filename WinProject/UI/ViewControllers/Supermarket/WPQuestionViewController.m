@@ -77,23 +77,61 @@
         _questionContainer.delegate = self;
         [_questionContainer renderView];
         [_questionContainer showInView:self.view];
+        
+        WPQuestionInfo* info = [self.questionArray firstObject];
+        [self.optionResultArray addObject:[info.options firstObject]];
     }
 }
 
 - (void)questionCompletion
 {
-    if (self.optionResultArray.count < self.questionArray.count)
+    NSMutableDictionary *parm = [@{@"app":@"survey",@"act":@"submit",@"id":self.questionId} mutableCopy];
+    
+    NSMutableArray* resutlArray = [@[] mutableCopy];
+    
+    for (WPOptionInfo* info in self.optionResultArray)
     {
-        [[WPAlertView alloc]showWithMessage:@"未完成所有题目"];
-        return;
+        NSDictionary* dict = @{info.survey_problem_id:@[info.optionId]};
+        [resutlArray addObject:dict];
     }
-    [self popNavigation:nil];
+    
+    NSString* resultString = [NSObject toJSONString:resutlArray];
+    [parm setObject:resultString forKey:@"params"];
+    
+    [[WPSyncService alloc]syncWithRoute:parm Block:^(id resp) {
+        if (resp)
+        {
+            [self popNavigation:nil];
+        }
+    }];
 }
 
 #pragma mark  QuestionnaireViewDelegate
 
 - (void)optionWithOptionInfo:(WPQuestionInfo *)info
 {
+    BOOL hasExite = NO;
+    for (WPOptionInfo* optionInfo in self.optionResultArray)
+    {
+        if ([optionInfo.survey_problem_id isEqualToString:info.questionId])
+        {
+            hasExite = YES;
+        }
+    }
+    if (!hasExite)
+    {
+        [self.optionResultArray addObject:[info.options firstObject]];
+    }
+    
+    if (self.optionResultArray.count == self.questionArray.count)
+    {
+        _questionContainer.finishButton.hidden = NO;
+    }
+    else
+    {
+        _questionContainer.finishButton.hidden = YES;
+    }
+    
     self.optionView.options = info.options;
     self.optionView.originY = -self.optionView.sizeH;
 }
@@ -112,6 +150,16 @@
     }];
     
     _questionContainer.currentCell.optionLabel.text = info.title;
+    
+    NSInteger i=0;
+    for (WPOptionInfo* optionInfo in self.optionResultArray)
+    {
+        if ([optionInfo.survey_problem_id isEqualToString:info.survey_problem_id])
+        {
+            [self.optionResultArray replaceObjectAtIndex:i withObject:info];
+        }
+        i++;
+    }
 }
 
 

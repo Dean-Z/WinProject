@@ -16,6 +16,7 @@
 
 @property(nonatomic,weak) IBOutlet TTTAttributedLabel* rultLabel;
 @property(nonatomic,weak) IBOutlet UIScrollView* questionContainer;
+@property(nonatomic,weak) IBOutlet UIButton*    finishButton;
 @property(nonatomic,strong) NSMutableArray *questionArray;
 @property(nonatomic,strong)  QuestionCell* currentCell;
 

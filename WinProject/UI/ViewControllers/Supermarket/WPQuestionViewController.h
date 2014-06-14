@@ -16,5 +16,6 @@
 
 @property(nonatomic,strong) NSMutableArray* optionResultArray;
 @property(nonatomic,strong) NSMutableDictionary* optionData;
+@property(nonatomic,strong) NSString* questionId;
 
 @end

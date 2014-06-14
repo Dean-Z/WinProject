@@ -28,6 +28,10 @@ static const NSString *S_VALUE_TYPES = @"cislqCISLQfdB";
 	{
 		jsonString = [(NSDictionary *)jsonObject JSONString];
 	}
+    else if([jsonObject isKindOfClass:[NSArray class]])
+    {
+        jsonString = [(NSArray *)jsonObject JSONString];
+    }
 	
     return jsonString;
 }

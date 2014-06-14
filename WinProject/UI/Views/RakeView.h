@@ -26,6 +26,7 @@
 @property(nonatomic,weak) IBOutlet UIView* switchBarContainer;
 @property(nonatomic,weak) IBOutlet UITableView* friendTableView;
 @property(nonatomic,weak) IBOutlet UITableView* countryTableView;
+@property(nonatomic,strong) NSDictionary* resultDict;
 @property(nonatomic,assign) BOOL hasLoadData;
 
 - (void)prepareData;
