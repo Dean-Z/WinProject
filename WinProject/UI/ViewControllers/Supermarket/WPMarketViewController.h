@@ -9,6 +9,7 @@
 #import "BaseXibViewController.h"
 #import "WPInformationView.h"
 #import "WPInviteView.h"
+#import "WPQuestionViewController.h"
 
 @interface WPMarketViewController : BaseXibViewController<UITableViewDataSource,UITableViewDelegate,WPInformationViewDelegate,WPInviteViewDelegate>
 

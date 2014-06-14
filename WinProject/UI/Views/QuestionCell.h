@@ -9,11 +9,21 @@
 #import "WPBaseView.h"
 #import "WPQuestionInfo.h"
 
+@protocol QuestionCellDelegate;
+
 @interface QuestionCell : WPBaseView
 
 @property(nonatomic,weak) IBOutlet UILabel *questionTitle;
+@property(nonatomic,weak) IBOutlet UILabel *optionLabel;
 @property(nonatomic,weak) IBOutlet UIButton *answerButton;
 
 @property(nonatomic,strong) WPQuestionInfo* questionInfo;
+@property(nonatomic,assign) id<QuestionCellDelegate> deleagte;
+
+@end
+
+@protocol QuestionCellDelegate <NSObject>
+
+- (void)showOptions;
 
 @end

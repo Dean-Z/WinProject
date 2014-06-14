@@ -26,7 +26,15 @@
     self.cellbgView.layer.masksToBounds = YES;
     self.cellbgView.layer.cornerRadius = 3.0f;
     
-    self.coverImage.image = [UIImage imageNamed:self.marketInfo.cover];
+    if (self.marketInfo.type == Market_Question_Type)
+    {
+       [self.coverImage setImageWithURL:[NSURL URLWithString:self.marketInfo.cover] placeholderImage:[UIImage imageNamed:@"icon-ask.png"]];
+    }
+    else
+    {
+        self.coverImage.image = [UIImage imageNamed:self.marketInfo.cover];
+    }
+    
     [self.coinButton setTitle:[NSString stringWithFormat:@"奖励%@金币",self.marketInfo.coins] forState:UIControlStateNormal];
     self.titleLabel.text = self.marketInfo.title;
     self.descLabel.text = self.marketInfo.desc;

@@ -22,6 +22,16 @@
 - (void)renderView
 {
     [super renderView];
+    
+    self.questionTitle.text = self.questionInfo.questionTitle;
+    
+    WPOptionInfo* option = [self.questionInfo.options firstObject];
+    self.optionLabel.text = option.title;
+}
+
+- (IBAction)showOptionsView:(id)sender
+{
+    [self.deleagte showOptions];
 }
 
 @end

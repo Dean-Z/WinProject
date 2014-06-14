@@ -7,6 +7,7 @@
 //
 
 #import "WPBaseInfo.h"
+#import "WPOptionInfo.h"
 
 @interface WPQuestionInfo : WPBaseInfo
 
@@ -15,6 +16,8 @@
 @property(nonatomic,strong) NSString *muti;
 @property(nonatomic,strong) NSString *survey_id;
 @property(nonatomic,strong) NSString *type;
-@property(nonatomic,strong) NSArray *options;
+@property(nonatomic,strong) NSMutableArray *options;
+
+@property(nonatomic,strong) NSDictionary* data;
 
 @end

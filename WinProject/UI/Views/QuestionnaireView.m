@@ -8,11 +8,12 @@
 
 #import "QuestionnaireView.h"
 #import "FTAnimationManager.h"
-#import "QuestionCell.h"
+#import "WPRultView.h"
 
 #define QuestionWidth 268.0f
 
 @implementation QuestionnaireView
+
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -51,40 +52,69 @@
 
 - (void)prepareData
 {
-    for (NSInteger i=0; i<3; i++)
+    for (NSInteger i=0; i<self.questionArray.count; i++)
     {
         QuestionCell* cell = [QuestionCell viewFromXib];
+        cell.deleagte = self;
+        cell.questionInfo = self.questionArray[i];
+        cell.tag = 100+i;
         cell.originX = QuestionWidth*i;
         [cell renderView];
         [self.questionContainer addSubview:cell];
+        if (i==0)
+        {
+            self.currentCell = cell;
+        }
     }
     
-    [self.questionContainer setContentSize:CGSizeMake(QuestionWidth*3, 0)];
+    [self.questionContainer setContentSize:CGSizeMake(QuestionWidth*self.questionArray.count, 0)];
 }
 
 - (IBAction)completion:(id)sender
 {
-    [self dismiss];
+    [self.delegate questionCompletion];
 }
 
 - (void)showInView:(UIView*)view
 {
     self.center = view.center;
-    self.hidden = YES;
+    if (!IS_IPHONE_5)
+    {
+        self.centerY -= 30;
+    }
     [view addSubview:self];
-    
-    CAAnimation* popAnim = [[FTAnimationManager sharedManager]popInAnimationFor:self duration:0.3 delegate:nil startSelector:nil stopSelector:nil];
-    [self.layer addAnimation:popAnim forKey:@"POP"];
-    
 }
 
+- (void)showOptions
+{
+    [self.delegate showOptionsView];
+}
+
+- (void) prepareOptionsViewWithOptionInfo:(WPQuestionInfo*)question
+{
+    [self.delegate optionWithOptionInfo:question];
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    NSInteger index = scrollView.contentOffset.x/QuestionWidth;
+    WPQuestionInfo* question = self.questionArray[index];
+    [self prepareOptionsViewWithOptionInfo:question];
+    
+    self.currentCell = (QuestionCell*)[scrollView viewWithTag:100+index];
+}
+
+- (void) setCellOptionButtonContent:(NSString*)option
+{
+    self.currentCell.optionLabel.text = option;
+}
 
 - (void)dismiss
 {
-    CAAnimation* popAnim = [[FTAnimationManager sharedManager]popOutAnimationFor:self duration:0.3 delegate:nil startSelector:nil stopSelector:nil];
-    [self.layer addAnimation:popAnim forKey:@"POP"];
-    
-    [self performSelector:@selector(clean) withObject:nil afterDelay:0.4];
+//    CAAnimation* popAnim = [[FTAnimationManager sharedManager]popOutAnimationFor:self duration:0.3 delegate:nil startSelector:nil stopSelector:nil];
+//    [self.layer addAnimation:popAnim forKey:@"POP"];
+//    
+//    [self performSelector:@selector(clean) withObject:nil afterDelay:0.4];
 }
 
 - (void)clean
@@ -93,13 +123,15 @@
     {
         [view removeFromSuperview];
     }
+    
+    [self removeFromSuperview];
 }
 
 - (void)attributedLabel:(TTTAttributedLabel *)label didSelectLinkWithURL:(NSURL *)url
 {
     if ([label.text isEqualToString:self.rultLabel.text])
     {
-        
+        [[WPRultView viewFromXib]showWithMessage:@"gygyguyyugyuguygyugyuguyguyuygyugyugyuguygyugyuguyguygyuguyguyguygyuguyguyguyguyguyguybiuibbjkbkjbkjbjbkjbbkjbkjbkjbkjbkjbkjvyuvyjhfyucucuycuyuyuycuycuycuyucucucuycuy" title:@"条款协议"];
     }
 }
 

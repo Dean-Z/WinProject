@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "WPMarketInfo.h"
+#import "UIImageView+WebCache.h"
 
 @interface MarketInTableViewCell : UITableViewCell
 

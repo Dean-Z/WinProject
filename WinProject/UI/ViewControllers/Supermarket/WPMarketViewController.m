@@ -10,13 +10,11 @@
 #import "WPSwitchBar.h"
 #import "WPMarketInfo.h"
 #import "MarketInTableViewCell.h"
-#import "QuestionnaireView.h"
 
 @interface WPMarketViewController ()
 {
     WPSwitchBar* switchBar;
     WPInformationView* informationView;
-    QuestionnaireView* questionContainer;
     NSMutableArray* _inProductArray;
     NSMutableArray* _outProductArray;
     BOOL  isInProduct;
@@ -78,15 +76,6 @@
         [_inProductArray addObject:info];
     }
     
-    WPMarketInfo* info2 = [[WPMarketInfo alloc]init];
-    info2.cover = @"icon-ask.png";
-    info2.title = @"问卷调查";
-    info2.desc = @"完成【赢屏】的问卷调查";
-    info2.timeLimit = @"长期有效";
-    info2.coins = @"20";
-    info2.type = Market_Question_Type;
-    [_inProductArray addObject:info2];
-    
     WPMarketInfo* info3 = [[WPMarketInfo alloc]init];
     info3.cover = @"icon-information.png";
     info3.title = @"初来咋到";
@@ -105,6 +94,37 @@
 
     isInProduct = YES;
     [self.productTabelView reloadData];
+    
+    NSDictionary* parm = @{@"app":@"survey",@"act":@"index",@"page":@"1"};
+    [[WPSyncService alloc]syncWithRoute:parm Block:^(id resp) {
+        if (resp)
+        {
+            id data = [NSObject toJSONValue:resp];
+            
+            if ([data isKindOfClass:[NSDictionary class]])
+            {
+                NSDictionary* result = [data objectForKey:@"result"];
+                if ([result isKindOfClass:[NSDictionary class]]) {
+                    NSArray* questionArray = [result objectForKey:@"data"];
+                    for (NSDictionary* dict in questionArray)
+                    {
+                        WPMarketInfo* info = [[WPMarketInfo alloc]init];
+                        info.question_id = [dict objectForKey:@"id"];
+                        info.cover = [dict objectForKey:@"logo"];
+                        info.title = [dict objectForKey:@"title"];
+                        info.desc = [dict objectForKey:@"description"];
+                        info.end_time = [dict objectForKey:@"end_time"];
+                        info.coins = [dict objectForKey:@"coins"];
+                        info.type = Market_Question_Type;
+                        [_inProductArray addObject:info];
+                        info = nil;
+                    }
+                    
+                     [self.productTabelView reloadData];
+                }
+            }
+        }
+    }];
 }
 
 - (void) switchBarValueChanged
@@ -183,17 +203,25 @@
     }
     else if(cell.marketInfo.type == Market_Question_Type)
     {
-        [self showQusetionContainer];
-    }
-}
-
-- (void)showQusetionContainer
-{
-    if (questionContainer == nil)
-    {
-        questionContainer = [QuestionnaireView viewFromXib];
-        [questionContainer renderView];
-        [questionContainer showInView:self.view];
+        __weak WPMarketViewController* market = self;
+        NSDictionary* parm = @{@"app":@"survey",@"act":@"info",@"id":cell.marketInfo.question_id};
+        [SVProgressHUD showWithStatus:@"正在加载"];
+        [[WPSyncService alloc]syncWithRoute:parm Block:^(id resp) {
+            if (resp)
+            {
+                id data = [NSObject toJSONValue:resp];
+                
+                if ([data isKindOfClass:[NSDictionary class]])
+                {
+                    NSDictionary* result = [data objectForKey:@"result"];
+                    WPQuestionViewController* question = [[WPQuestionViewController alloc]viewControllerFromXib];
+                    question.requestResult = result;
+                    [market.app.aTabBarController.navigationController pushViewController:question animated:YES];
+                    question = nil;
+                }
+            }
+            [SVProgressHUD dismiss];
+        }];
     }
 }
 

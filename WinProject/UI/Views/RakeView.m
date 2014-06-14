@@ -94,21 +94,25 @@
             
             if ([date isKindOfClass:[NSDictionary class]])
             {
-                NSArray* result = [date objectForKey:@"result"][@"data"];
-                
-                if (result > 0)
+                NSDictionary* result = [date objectForKey:@"result"];
+                if ([result isKindOfClass:[NSDictionary class]])
                 {
-                    for (NSDictionary* dict in result)
+                    NSArray* resultData = [date objectForKey:@"result"][@"data"];
+                    
+                    if (resultData > 0)
                     {
-                        WPRakeInfo* info = [[WPRakeInfo alloc] init];
-                        info.data = dict;
-                        [_countryRake addObject:info];
+                        for (NSDictionary* dict in resultData)
+                        {
+                            WPRakeInfo* info = [[WPRakeInfo alloc] init];
+                            info.data = dict;
+                            [_countryRake addObject:info];
+                        }
+                        [rake.countryTableView reloadData];
                     }
-                    [rake.countryTableView reloadData];
-                }
-                else
-                {
-                    DLog(@"NO DATA");
+                    else
+                    {
+                        DLog(@"NO DATA");
+                    }
                 }
             }
         }

@@ -17,6 +17,8 @@ typedef enum
 
 @interface WPMarketInfo : WPBaseInfo
 
+@property (nonatomic,strong) NSString* question_id;
+@property (nonatomic,strong) NSString* end_time;
 @property (nonatomic,strong) NSString* cover;
 @property (nonatomic,strong) NSString* title;
 @property (nonatomic,strong) NSString* desc;

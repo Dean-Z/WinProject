@@ -8,12 +8,27 @@
 
 #import "WPBaseView.h"
 #import "TTTAttributedLabel.h"
+#import "WPQuestionInfo.h"
+#import "QuestionCell.h"
 
-@interface QuestionnaireView : WPBaseView<TTTAttributedLabelDelegate>
+@protocol QuestionnaireViewDelegate;
+@interface QuestionnaireView : WPBaseView<TTTAttributedLabelDelegate,UIScrollViewDelegate,QuestionCellDelegate>
 
 @property(nonatomic,weak) IBOutlet TTTAttributedLabel* rultLabel;
 @property(nonatomic,weak) IBOutlet UIScrollView* questionContainer;
+@property(nonatomic,strong) NSMutableArray *questionArray;
+@property(nonatomic,strong)  QuestionCell* currentCell;
+
+@property(nonatomic,assign) id<QuestionnaireViewDelegate> delegate;
 
 - (void)showInView:(UIView*)view;
+- (void) setCellOptionButtonContent:(NSString*)option;
+@end
+
+@protocol QuestionnaireViewDelegate <NSObject>
+
+- (void)questionCompletion;
+- (void)optionWithOptionInfo:(WPQuestionInfo*)info;
+- (void)showOptionsView;
 
 @end
