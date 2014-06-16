@@ -9,6 +9,7 @@
 #import "RakeView.h"
 #import "RakeFriendCell.h"
 #import "WPRakeInfo.h"
+#import "WPHistoryView.h"
 
 @implementation RakeView
 
@@ -267,6 +268,25 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 27.0f;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    WPRakeInfo* info;
+    if (tableView == self.friendTableView)
+    {
+        info = _friendsRake[indexPath.row];
+    }
+    else
+    {
+        info = _countryRake[indexPath.row];
+    }
+    
+    WPHistoryView* history = [WPHistoryView viewFromXib];
+    history.userId = info.userId;
+    history.userName = info.nickname;
+    [history renderView];
+    [history showInWindow];
 }
 
 @end

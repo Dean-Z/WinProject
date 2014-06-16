@@ -99,6 +99,10 @@
 		CB9B02BC1949E611002FAAD6 /* QuestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB9B02BB1949E611002FAAD6 /* QuestionCell.xib */; };
 		CB9B02BF1949E641002FAAD6 /* QuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9B02BE1949E641002FAAD6 /* QuestionCell.m */; };
 		CB9B02C21949E804002FAAD6 /* WPQuestionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9B02C11949E804002FAAD6 /* WPQuestionInfo.m */; };
+		CBA00490194EC61E00730739 /* WPHistoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA0048F194EC61E00730739 /* WPHistoryView.m */; };
+		CBA00492194EC62C00730739 /* WPHistoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBA00491194EC62C00730739 /* WPHistoryView.xib */; };
+		CBA00496194EC7B200730739 /* WPHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA00494194EC7B200730739 /* WPHistoryCell.m */; };
+		CBA00497194EC7B200730739 /* WPHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBA00495194EC7B200730739 /* WPHistoryCell.xib */; };
 		CBA0E87E19012EED007119C0 /* Functions.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA0E87019012EED007119C0 /* Functions.m */; };
 		CBA0E87F19012EED007119C0 /* NSString+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA0E87319012EED007119C0 /* NSString+Extention.m */; };
 		CBA0E88019012EED007119C0 /* QQImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA0E87619012EED007119C0 /* QQImageView.m */; };
@@ -124,6 +128,8 @@
 		CBBBA8DB194C8EBA00A11015 /* WPOptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBBBA8DA194C8EBA00A11015 /* WPOptionView.m */; };
 		CBBBA8DD194C912000A11015 /* WPOptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBBBA8DC194C912000A11015 /* WPOptionView.xib */; };
 		CBBBA8E0194E907A00A11015 /* WPHistoryInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CBBBA8DF194E907A00A11015 /* WPHistoryInfo.m */; };
+		CBBBA8ED194E9F4F00A11015 /* WPBillCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CBBBA8EC194E9F4F00A11015 /* WPBillCell.m */; };
+		CBBBA8EF194E9F5F00A11015 /* WPBillCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBBBA8EE194E9F5F00A11015 /* WPBillCell.xib */; };
 		CBCBF1FA190F48BF003439DB /* MarketInTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCBF1F8190F48BF003439DB /* MarketInTableViewCell.m */; };
 		CBCBF1FB190F48BF003439DB /* MarketInTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBCBF1F9190F48BF003439DB /* MarketInTableViewCell.xib */; };
 		CBD9624F192F6D7800825CE7 /* WPAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD9624E192F6D7800825CE7 /* WPAlertView.m */; };
@@ -314,6 +320,14 @@
 		CB9B02BE1949E641002FAAD6 /* QuestionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionCell.m; sourceTree = "<group>"; };
 		CB9B02C01949E804002FAAD6 /* WPQuestionInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPQuestionInfo.h; sourceTree = "<group>"; };
 		CB9B02C11949E804002FAAD6 /* WPQuestionInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPQuestionInfo.m; sourceTree = "<group>"; };
+		CBA0048E194EC61E00730739 /* WPHistoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPHistoryView.h; sourceTree = "<group>"; };
+		CBA0048F194EC61E00730739 /* WPHistoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPHistoryView.m; sourceTree = "<group>"; };
+		CBA00491194EC62C00730739 /* WPHistoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPHistoryView.xib; sourceTree = "<group>"; };
+		CBA00493194EC7B200730739 /* WPHistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPHistoryCell.h; sourceTree = "<group>"; };
+		CBA00494194EC7B200730739 /* WPHistoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPHistoryCell.m; sourceTree = "<group>"; };
+		CBA00495194EC7B200730739 /* WPHistoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPHistoryCell.xib; sourceTree = "<group>"; };
+		CBA00498194ED1AA00730739 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		CBA00499194ED1AA00730739 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		CBA0E86F19012EED007119C0 /* Functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Functions.h; sourceTree = "<group>"; };
 		CBA0E87019012EED007119C0 /* Functions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Functions.m; sourceTree = "<group>"; };
 		CBA0E87219012EED007119C0 /* NSString+Extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extention.h"; sourceTree = "<group>"; };
@@ -360,6 +374,9 @@
 		CBBBA8DC194C912000A11015 /* WPOptionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPOptionView.xib; sourceTree = "<group>"; };
 		CBBBA8DE194E907A00A11015 /* WPHistoryInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPHistoryInfo.h; sourceTree = "<group>"; };
 		CBBBA8DF194E907A00A11015 /* WPHistoryInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPHistoryInfo.m; sourceTree = "<group>"; };
+		CBBBA8EB194E9F4F00A11015 /* WPBillCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPBillCell.h; sourceTree = "<group>"; };
+		CBBBA8EC194E9F4F00A11015 /* WPBillCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPBillCell.m; sourceTree = "<group>"; };
+		CBBBA8EE194E9F5F00A11015 /* WPBillCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPBillCell.xib; sourceTree = "<group>"; };
 		CBCBF1F7190F48BF003439DB /* MarketInTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarketInTableViewCell.h; sourceTree = "<group>"; };
 		CBCBF1F8190F48BF003439DB /* MarketInTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarketInTableViewCell.m; sourceTree = "<group>"; };
 		CBCBF1F9190F48BF003439DB /* MarketInTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MarketInTableViewCell.xib; sourceTree = "<group>"; };
@@ -495,6 +512,9 @@
 				CB4E1398190FF0130048709B /* RakeView.m */,
 				CB4E139A190FF0220048709B /* RakeView.xib */,
 				CBD9626B193369F300825CE7 /* RakeView_iPhone5.xib */,
+				CBBBA8EB194E9F4F00A11015 /* WPBillCell.h */,
+				CBBBA8EC194E9F4F00A11015 /* WPBillCell.m */,
+				CBBBA8EE194E9F5F00A11015 /* WPBillCell.xib */,
 				CB2DAF3B1910E16600DD29C1 /* BillView.h */,
 				CB2DAF3C1910E16600DD29C1 /* BillView.m */,
 				CB2DAF3E1910E18700DD29C1 /* BillView.xib */,
@@ -527,6 +547,12 @@
 				CB6342AE1945E607001D40D0 /* ConversionAlertView.h */,
 				CB6342AF1945E607001D40D0 /* ConversionAlertView.m */,
 				CB6342B11945E616001D40D0 /* ConversionAlertView.xib */,
+				CBA0048E194EC61E00730739 /* WPHistoryView.h */,
+				CBA0048F194EC61E00730739 /* WPHistoryView.m */,
+				CBA00491194EC62C00730739 /* WPHistoryView.xib */,
+				CBA00493194EC7B200730739 /* WPHistoryCell.h */,
+				CBA00494194EC7B200730739 /* WPHistoryCell.m */,
+				CBA00495194EC7B200730739 /* WPHistoryCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -991,6 +1017,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				"zh-Hans",
 			);
 			mainGroup = CBDD250718FF8CC9009043FE;
 			productRefGroup = CBDD251118FF8CCA009043FE /* Products */;
@@ -1026,6 +1053,7 @@
 				CB45CC4019210B330020D76C /* WPRegisterAlert.xib in Resources */,
 				CBD9626C193369F300825CE7 /* RakeView_iPhone5.xib in Resources */,
 				CB6342B21945E616001D40D0 /* ConversionAlertView.xib in Resources */,
+				CBA00497194EC7B200730739 /* WPHistoryCell.xib in Resources */,
 				CBF4AFC819407C830028588E /* WPInviteView.xib in Resources */,
 				CBA0E89719013908007119C0 /* LoginViewController_iPhone5.xib in Resources */,
 				CB2FAD181902C3DA00F46A0A /* WPWalletViewController_iPhone5.xib in Resources */,
@@ -1045,6 +1073,7 @@
 				CBD96251192F6F2E00825CE7 /* WPAlertView.xib in Resources */,
 				CB924BFA19094F14000389CB /* CheckItemView.xib in Resources */,
 				CB11DDEF194B2DA4000C8CE9 /* WPQuestionViewController.xib in Resources */,
+				CBBBA8EF194E9F5F00A11015 /* WPBillCell.xib in Resources */,
 				CB6B7998191C995900610CD6 /* WPPasswordView.xib in Resources */,
 				CBD9626A193368D600825CE7 /* WPSigninView_iPhone5.xib in Resources */,
 				CB39659C19444B0700ADE846 /* ConversionProductCell.xib in Resources */,
@@ -1061,6 +1090,7 @@
 				CB4542CE1918DFCD00BFE852 /* WPSettingViewController_iPhone.xib in Resources */,
 				CB2DAF3F1910E18700DD29C1 /* BillView.xib in Resources */,
 				CBBBA8DD194C912000A11015 /* WPOptionView.xib in Resources */,
+				CBA00492194EC62C00730739 /* WPHistoryView.xib in Resources */,
 				CB4542B61915F79B00BFE852 /* WPProductButton.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1113,6 +1143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBBBA8ED194E9F4F00A11015 /* WPBillCell.m in Sources */,
 				CB9589C01940325700C94AD5 /* WPMarketInfo.m in Sources */,
 				CB4211D41907A5DC001AC70B /* BufferProductView.m in Sources */,
 				CB827E17192BAB0400AFDBBF /* WPBaseInfo.m in Sources */,
@@ -1166,6 +1197,7 @@
 				CB45CC31192101510020D76C /* SBJSON.m in Sources */,
 				CBF4AFB9194059E00028588E /* WPConversionView.m in Sources */,
 				CBA0E88319012EED007119C0 /* UIView+XibView.m in Sources */,
+				CBA00490194EC61E00730739 /* WPHistoryView.m in Sources */,
 				CB9B02BF1949E641002FAAD6 /* QuestionCell.m in Sources */,
 				CB6B798A191B902600610CD6 /* WPAuthView.m in Sources */,
 				CBF4AFBE19405C820028588E /* WPConversionInfo.m in Sources */,
@@ -1194,6 +1226,7 @@
 				CB2FAD0D1902C3A800F46A0A /* WPSettingViewController.m in Sources */,
 				CB2FAD171902C3DA00F46A0A /* WPWalletViewController.m in Sources */,
 				CBDD252018FF8CCA009043FE /* main.m in Sources */,
+				CBA00496194EC7B200730739 /* WPHistoryCell.m in Sources */,
 				CB45CC2E192101510020D76C /* NSObject+JSON.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1221,6 +1254,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CBDD251D18FF8CCA009043FE /* en */,
+				CBA00498194ED1AA00730739 /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1229,6 +1263,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CBDD253618FF8CCA009043FE /* en */,
+				CBA00499194ED1AA00730739 /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1253,8 +1288,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: The eve of the Shanghai information technology co., LTD";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: The eve of the Shanghai information technology co., LTD";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Zhou Dean (7KC978Z4P2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Zhou Dean (7KC978Z4P2)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1272,7 +1307,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "82EDE1A4-DAF5-4DF5-8E16-AB9FB04C93DB";
+				PROVISIONING_PROFILE = "284A015A-5A35-48C3-B527-91DDE936E655";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1294,8 +1329,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: The eve of the Shanghai information technology co., LTD";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: The eve of the Shanghai information technology co., LTD";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Zhou Dean (7KC978Z4P2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Zhou Dean (7KC978Z4P2)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1306,7 +1341,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PROVISIONING_PROFILE = "82EDE1A4-DAF5-4DF5-8E16-AB9FB04C93DB";
+				PROVISIONING_PROFILE = "284A015A-5A35-48C3-B527-91DDE936E655";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1318,14 +1353,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: The eve of the Shanghai information technology co., LTD";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: The eve of the Shanghai information technology co., LTD";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Zhou Dean (7KC978Z4P2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Zhou Dean (7KC978Z4P2)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WinProject/WinProject-Prefix.pch";
 				INFOPLIST_FILE = "WinProject/WinProject-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "82EDE1A4-DAF5-4DF5-8E16-AB9FB04C93DB";
+				PROVISIONING_PROFILE = "284A015A-5A35-48C3-B527-91DDE936E655";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1336,14 +1371,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: The eve of the Shanghai information technology co., LTD";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: The eve of the Shanghai information technology co., LTD";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Zhou Dean (7KC978Z4P2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Zhou Dean (7KC978Z4P2)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WinProject/WinProject-Prefix.pch";
 				INFOPLIST_FILE = "WinProject/WinProject-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "82EDE1A4-DAF5-4DF5-8E16-AB9FB04C93DB";
+				PROVISIONING_PROFILE = "284A015A-5A35-48C3-B527-91DDE936E655";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

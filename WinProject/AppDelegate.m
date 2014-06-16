@@ -14,7 +14,8 @@
 #import "RDVTabBarItem.h"
 #import "LoginViewController.h"
 #import "CCUpdataApp.h"
-//#import "CrittercismSDK.h"
+#import "Crittercism.h"
+#import "Flurry.h"
 
 @implementation AppDelegate
 
@@ -27,7 +28,6 @@
 {
     [WeiboSDK enableDebugMode:YES];
     [WeiboSDK registerApp:kAppKey];
-//    [Crittercism enableWithAppID:@"539c7d1c83fb796851000006"];
     
     self.device_ = [[UIDevice alloc] init];
     [[CCGetContactPerson shareCCGetContactPerson] cheackGranted];
@@ -52,9 +52,18 @@
     
     [self versionCheck];
     
+    [self initAnalytics];
+    
     return YES;
 }
 
+- (void)initAnalytics
+{
+    [Crittercism enableWithAppID:CrittercismID];
+    
+    [Flurry setCrashReportingEnabled:YES];
+    [Flurry startSession:FlurryID];
+}
 
 - (void)loginSucceed
 {

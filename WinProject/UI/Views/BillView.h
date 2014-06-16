@@ -7,6 +7,7 @@
 //
 
 #import "WPBaseView.h"
+#import "WPHistoryInfo.h"
 
 @interface BillView : WPBaseView <UITableViewDataSource,UITableViewDelegate>
 {

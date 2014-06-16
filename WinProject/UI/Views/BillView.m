@@ -8,6 +8,7 @@
 
 #import "BillView.h"
 #import "WPHistoryInfo.h"
+#import "WPBillCell.h"
 
 @implementation BillView
 
@@ -63,7 +64,25 @@
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return nil;
+    
+    static NSString* billCell = @"billCell";
+    
+    WPBillCell *cell = [tableView dequeueReusableCellWithIdentifier:billCell];
+    
+    if (cell == nil)
+    {
+        cell = [[[NSBundle mainBundle]loadNibNamed:@"WPBillCell" owner:self options:nil]lastObject];
+    }
+    
+    cell.historyInfo = self.historyData[indexPath.row];
+    [cell renderCell];
+    
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 30;
 }
 
 @end
