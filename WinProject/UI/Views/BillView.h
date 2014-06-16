@@ -16,6 +16,7 @@
 
 @property(nonatomic,weak) IBOutlet UITableView* tableview;
 @property(nonatomic,strong) NSMutableArray* historyData;
+@property(nonatomic,weak) IBOutlet UILabel* coinsLabel;
 
 - (void)prepareData;
 

@@ -103,6 +103,8 @@
 		CBA00492194EC62C00730739 /* WPHistoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBA00491194EC62C00730739 /* WPHistoryView.xib */; };
 		CBA00496194EC7B200730739 /* WPHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA00494194EC7B200730739 /* WPHistoryCell.m */; };
 		CBA00497194EC7B200730739 /* WPHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBA00495194EC7B200730739 /* WPHistoryCell.xib */; };
+		CBA0049D194ED90600730739 /* WPPullCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA0049B194ED90600730739 /* WPPullCell.m */; };
+		CBA0049E194ED90600730739 /* WPPullCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBA0049C194ED90600730739 /* WPPullCell.xib */; };
 		CBA0E87E19012EED007119C0 /* Functions.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA0E87019012EED007119C0 /* Functions.m */; };
 		CBA0E87F19012EED007119C0 /* NSString+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA0E87319012EED007119C0 /* NSString+Extention.m */; };
 		CBA0E88019012EED007119C0 /* QQImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA0E87619012EED007119C0 /* QQImageView.m */; };
@@ -328,6 +330,9 @@
 		CBA00495194EC7B200730739 /* WPHistoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPHistoryCell.xib; sourceTree = "<group>"; };
 		CBA00498194ED1AA00730739 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		CBA00499194ED1AA00730739 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		CBA0049A194ED90600730739 /* WPPullCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPPullCell.h; sourceTree = "<group>"; };
+		CBA0049B194ED90600730739 /* WPPullCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPPullCell.m; sourceTree = "<group>"; };
+		CBA0049C194ED90600730739 /* WPPullCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPPullCell.xib; sourceTree = "<group>"; };
 		CBA0E86F19012EED007119C0 /* Functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Functions.h; sourceTree = "<group>"; };
 		CBA0E87019012EED007119C0 /* Functions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Functions.m; sourceTree = "<group>"; };
 		CBA0E87219012EED007119C0 /* NSString+Extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extention.h"; sourceTree = "<group>"; };
@@ -525,6 +530,9 @@
 				CBF4AFB7194059E00028588E /* WPConversionView.h */,
 				CBF4AFB8194059E00028588E /* WPConversionView.m */,
 				CBF4AFBA19405A0E0028588E /* WPConversionView.xib */,
+				CBA0049A194ED90600730739 /* WPPullCell.h */,
+				CBA0049B194ED90600730739 /* WPPullCell.m */,
+				CBA0049C194ED90600730739 /* WPPullCell.xib */,
 				CB6B7983191B7F7800610CD6 /* WPPullView.h */,
 				CB6B7984191B7F7800610CD6 /* WPPullView.m */,
 				CB6B7986191B7F8A00610CD6 /* WPPullView.xib */,
@@ -1078,6 +1086,7 @@
 				CBD9626A193368D600825CE7 /* WPSigninView_iPhone5.xib in Resources */,
 				CB39659C19444B0700ADE846 /* ConversionProductCell.xib in Resources */,
 				CB4E1395190FE6970048709B /* WawaSC-Regular.otf in Resources */,
+				CBA0049E194ED90600730739 /* WPPullCell.xib in Resources */,
 				CB4542CA1918DCC800BFE852 /* WPBuffetViewController_iPhone.xib in Resources */,
 				CB9B02BC1949E611002FAAD6 /* QuestionCell.xib in Resources */,
 				CBD9627019336BF500825CE7 /* BillView_iPhone5.xib in Resources */,
@@ -1210,6 +1219,7 @@
 				CBB0B589193C30AC0069C360 /* QuestionnaireView.m in Sources */,
 				CB45CC3B192106B30020D76C /* LoadData.m in Sources */,
 				CB7EDB64190D445600089DE8 /* WPSwitchBar.m in Sources */,
+				CBA0049D194ED90600730739 /* WPPullCell.m in Sources */,
 				CB3965241942BF2200ADE846 /* WPAlipayView.m in Sources */,
 				CB59813419211056000AF16A /* WPRultView.m in Sources */,
 				CB827E13192BA6AB00AFDBBF /* WPUserInfo.m in Sources */,

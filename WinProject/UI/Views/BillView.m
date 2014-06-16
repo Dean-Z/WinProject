@@ -18,6 +18,8 @@
     
     self.historyData = [@[] mutableCopy];
     [self prepareData];
+    
+    self.coinsLabel.text = self.app.userInfo.coins;
 }
 
 - (void)prepareData

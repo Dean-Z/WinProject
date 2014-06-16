@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -8,13 +8,22 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="EnG-6d-eic" customClass="WPPullView">
-            <rect key="frame" x="0.0" y="0.0" width="204" height="26"/>
+            <rect key="frame" x="0.0" y="0.0" width="204" height="27"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="bg_exchange_selected" id="Zj1-Te-GRt">
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="bg_exchange_selected" id="Zj1-Te-GRt">
                     <rect key="frame" x="0.0" y="0.0" width="204" height="170"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
+                <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="25" sectionHeaderHeight="22" sectionFooterHeight="22" id="bRP-gf-9gw">
+                    <rect key="frame" x="0.0" y="0.0" width="204" height="150"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="EnG-6d-eic" id="eNH-I7-Zt7"/>
+                        <outlet property="delegate" destination="EnG-6d-eic" id="3sL-ok-6AB"/>
+                    </connections>
+                </tableView>
                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="bg_exchange_normal" id="50l-sa-2y3">
                     <rect key="frame" x="0.0" y="-3" width="204" height="32"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -27,7 +36,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="iKf-Is-d8i">
-                    <rect key="frame" x="0.0" y="0.0" width="204" height="26"/>
+                    <rect key="frame" x="0.0" y="-143" width="204" height="26"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -43,6 +52,7 @@
                 <outlet property="firstCellLabel" destination="DuT-9q-UFc" id="vtI-5s-1tU"/>
                 <outlet property="pullViewNormal" destination="Zj1-Te-GRt" id="Ka3-xT-ggo"/>
                 <outlet property="pullViewSelected" destination="50l-sa-2y3" id="v1e-Wc-Fnc"/>
+                <outlet property="tableview" destination="bRP-gf-9gw" id="mX5-yS-jDh"/>
             </connections>
         </view>
     </objects>
