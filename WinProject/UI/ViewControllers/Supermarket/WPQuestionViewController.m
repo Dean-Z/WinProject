@@ -151,14 +151,13 @@
     
     _questionContainer.currentCell.optionLabel.text = info.title;
     
-    NSInteger i=0;
-    for (WPOptionInfo* optionInfo in self.optionResultArray)
+    for (NSInteger i=0;i<self.optionResultArray.count;i++)
     {
+        WPOptionInfo* optionInfo = self.optionResultArray[i];
         if ([optionInfo.survey_problem_id isEqualToString:info.survey_problem_id])
         {
             [self.optionResultArray replaceObjectAtIndex:i withObject:info];
         }
-        i++;
     }
 }
 

@@ -127,9 +127,13 @@
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    if (scrollView.contentOffset.y == 0)
+    if (scrollView.contentOffset.x == 0)
     {
         [rakeView prepareData];
+    }
+    else if (scrollView.contentOffset.x/320 == 2)
+    {
+        [billView prepareData];
     }
 }
 

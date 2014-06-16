@@ -14,5 +14,8 @@
 }
 
 @property(nonatomic,weak) IBOutlet UITableView* tableview;
+@property(nonatomic,strong) NSMutableArray* historyData;
+
+- (void)prepareData;
 
 @end

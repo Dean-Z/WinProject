@@ -123,6 +123,7 @@
 		CBBBA8D8194C892F00A11015 /* WPOptionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CBBBA8D7194C892F00A11015 /* WPOptionInfo.m */; };
 		CBBBA8DB194C8EBA00A11015 /* WPOptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBBBA8DA194C8EBA00A11015 /* WPOptionView.m */; };
 		CBBBA8DD194C912000A11015 /* WPOptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBBBA8DC194C912000A11015 /* WPOptionView.xib */; };
+		CBBBA8E0194E907A00A11015 /* WPHistoryInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CBBBA8DF194E907A00A11015 /* WPHistoryInfo.m */; };
 		CBCBF1FA190F48BF003439DB /* MarketInTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCBF1F8190F48BF003439DB /* MarketInTableViewCell.m */; };
 		CBCBF1FB190F48BF003439DB /* MarketInTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBCBF1F9190F48BF003439DB /* MarketInTableViewCell.xib */; };
 		CBD9624F192F6D7800825CE7 /* WPAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD9624E192F6D7800825CE7 /* WPAlertView.m */; };
@@ -357,6 +358,8 @@
 		CBBBA8D9194C8EBA00A11015 /* WPOptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPOptionView.h; sourceTree = "<group>"; };
 		CBBBA8DA194C8EBA00A11015 /* WPOptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPOptionView.m; sourceTree = "<group>"; };
 		CBBBA8DC194C912000A11015 /* WPOptionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPOptionView.xib; sourceTree = "<group>"; };
+		CBBBA8DE194E907A00A11015 /* WPHistoryInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPHistoryInfo.h; sourceTree = "<group>"; };
+		CBBBA8DF194E907A00A11015 /* WPHistoryInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPHistoryInfo.m; sourceTree = "<group>"; };
 		CBCBF1F7190F48BF003439DB /* MarketInTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarketInTableViewCell.h; sourceTree = "<group>"; };
 		CBCBF1F8190F48BF003439DB /* MarketInTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarketInTableViewCell.m; sourceTree = "<group>"; };
 		CBCBF1F9190F48BF003439DB /* MarketInTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MarketInTableViewCell.xib; sourceTree = "<group>"; };
@@ -564,6 +567,8 @@
 				CB9B02C11949E804002FAAD6 /* WPQuestionInfo.m */,
 				CBBBA8D6194C892F00A11015 /* WPOptionInfo.h */,
 				CBBBA8D7194C892F00A11015 /* WPOptionInfo.m */,
+				CBBBA8DE194E907A00A11015 /* WPHistoryInfo.h */,
+				CBBBA8DF194E907A00A11015 /* WPHistoryInfo.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1127,6 +1132,7 @@
 				CBA0E89D19013A7A007119C0 /* WPSigninView.m in Sources */,
 				CB2FAD121902C3C000F46A0A /* WPMarketViewController.m in Sources */,
 				CB4542B41915F78C00BFE852 /* WPProductButton.m in Sources */,
+				CBBBA8E0194E907A00A11015 /* WPHistoryInfo.m in Sources */,
 				CB924BF819094F04000389CB /* CheckItemView.m in Sources */,
 				CBA0E890190133D4007119C0 /* FTAnimationManager.m in Sources */,
 				CB39659519444A2400ADE846 /* WPConversionProductView.m in Sources */,
