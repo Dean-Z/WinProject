@@ -44,6 +44,9 @@
                     <state key="normal" title="继续赚钱" backgroundImage="btn_shouzhi_blue">
                         <color key="titleShadowColor" red="0.098039215686274508" green="0.21568627450980393" blue="0.54509803921568623" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="continueEarn:" destination="hGr-kz-DHT" eventType="touchUpInside" id="yHR-5j-Ghk"/>
+                    </connections>
                 </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="OcM-2C-gzr">
                     <rect key="frame" x="19" y="20" width="232" height="244"/>

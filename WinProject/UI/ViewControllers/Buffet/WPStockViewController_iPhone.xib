@@ -65,7 +65,7 @@
                     <rect key="frame" x="320" y="95" width="320" height="350"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <subviews>
-                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="noData" id="Ire-jV-SM3">
+                        <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="noData" id="Ire-jV-SM3">
                             <rect key="frame" x="38" y="90" width="243" height="184"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </imageView>

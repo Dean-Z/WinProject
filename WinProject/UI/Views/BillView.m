@@ -87,4 +87,9 @@
     return 30;
 }
 
+- (IBAction)continueEarn:(id)sender
+{
+    [self.app.aTabBarController setSelectedIndex:1];
+}
+
 @end

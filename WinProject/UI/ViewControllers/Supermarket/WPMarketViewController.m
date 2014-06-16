@@ -66,15 +66,7 @@
     info.timeLimit = @"长期有效";
     info.coins = @"20";
     info.type = Market_Invite_Type;
-    
-    if ([[userDefault objectForKey:MARKET_INVITE] isEqualToString:MARKET_INVITE])
-    {
-        [_outProductArray addObject:info];
-    }
-    else
-    {
-        [_inProductArray addObject:info];
-    }
+    [_inProductArray addObject:info];
     
     WPMarketInfo* info3 = [[WPMarketInfo alloc]init];
     info3.cover = @"icon-information.png";
@@ -273,12 +265,12 @@
 #pragma mark WPInviteViewDelegate
 - (void)inviteSucceed
 {
-    [_outProductArray addObject:[_inProductArray firstObject]];
-    [_inProductArray removeObject:[_inProductArray firstObject]];
-    NSUserDefaults* user = [NSUserDefaults standardUserDefaults];
-    [user setObject:MARKET_INVITE forKey:MARKET_INVITE];
-    [user synchronize];
-    [self.productTabelView reloadData];
+//    [_outProductArray addObject:[_inProductArray firstObject]];
+//    [_inProductArray removeObject:[_inProductArray firstObject]];
+//    NSUserDefaults* user = [NSUserDefaults standardUserDefaults];
+//    [user setObject:MARKET_INVITE forKey:MARKET_INVITE];
+//    [user synchronize];
+//    [self.productTabelView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
