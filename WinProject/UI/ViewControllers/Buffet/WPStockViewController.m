@@ -8,6 +8,9 @@
 
 #import "WPStockViewController.h"
 
+#define QBaseTag 10000
+#define CBaseTag 20000
+
 @interface WPStockViewController ()
 {
     WPSwitchBar* switchBar;
@@ -86,6 +89,7 @@
                         self.nextButton.hidden = NO;
                         self.preButton.hidden = NO;
                         self.cNoDataImageView.hidden = YES;
+                        self.cProductPage = 2;
                     }
                     else
                     {
@@ -128,6 +132,7 @@
                     self.qDataArray = [NSMutableArray arrayWithArray:qDataInfo.qBaseDateArray];
                     [self prepareQScrollviewContainer];
                     self.qNoDataImageView.hidden = YES;
+                    self.qProductPage = 2;
                 }
                 
                 if (self.qDataArray.count == 0)
@@ -142,10 +147,18 @@
 
 - (void) prepareQScrollviewContainer
 {
+    UIView* tmpView = [self.qScrollViewController.subviews lastObject];
+    NSInteger maxTag = tmpView.tag;
+    
     for (NSInteger i=0; i<self.qDataArray.count; i++)
     {
+        if (maxTag > QBaseTag + i)
+        {
+            continue;
+        }
         BufferProductView* product = [BufferProductView viewFromXib];
         product.dateInfo = self.qDataArray[i];
+        product.tag = QBaseTag + i;
         product.originX = i%2 * (product.sizeW + 20)+10;
         product.originY = i/2 * (product.sizeH + 20);
         [product renderView];
@@ -158,10 +171,18 @@
 
 - (void) prepareCScrollviewContainer
 {
+    UIView* tmpView = [self.cScrollViewController.subviews lastObject];
+    NSInteger maxTag = tmpView.tag;
+    
     for (NSInteger i=0; i<self.cDataArray.count; i++)
     {
+        if (maxTag > CBaseTag + i)
+        {
+            continue;
+        }
         BufferCProcudtView* cProduct = [BufferCProcudtView viewFromXib];
         cProduct.dataInfo = self.cDataArray[i];
+        cProduct.tag = CBaseTag + i;
         cProduct.originX = (self.view.sizeW - cProduct.sizeW)/2 + self.view.sizeW*i;
         cProduct.originY = IS_IPHONE_5 ?(self.cScrollViewController.sizeH - cProduct.sizeH)/2 : 10;
         [cProduct renderView];
@@ -228,6 +249,23 @@
         cCurrentPage = currentPage;
         
         [self resetButtons];
+        
+        if(cCurrentPage == self.cDataArray.count-1)
+        {
+            [self loadMoreCProduct];
+        }
+    }
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if (scrollView == self.qScrollViewController)
+    {
+        CGPoint offset = scrollView.contentOffset;
+        if (scrollView.contentSize.height - 400 < offset.y && scrollView.isDragging)
+        {
+            [self loadMoreQProduct];
+        }
     }
 }
 
@@ -237,18 +275,54 @@
     
 }
 
-- (void) loadMoreCProduct:(NSInteger)page
+- (void) loadMoreCProduct
 {
+    if (self.cProductPageLoading)
+    {
+        return;
+    }
+    __weak WPStockViewController* stock = self;
+    self.cProductPageLoading = YES;
     [[WPSyncService alloc]syncWithRoute:@{@"app":@"screen",
                                           @"act":@"index",
-                                          @"phone":self.app.phoneNumber,
-                                          @"page":[NSString stringWithFormat:@"%d",page],
+                                          @"page":[NSString stringWithFormat:@"%d",self.cProductPage],
                                           @"type":@"0"}
                                   Block:^(id resp) {
                                       if (resp)
                                       {
-                                          
+                                          WPCDataInfo* cDataInfo = [[WPCDataInfo alloc]init];
+                                          cDataInfo.rowDate = resp;
+                                          [stock.cDataArray addObjectsFromArray:cDataInfo.cBaseDateArray];
+                                          [stock prepareCScrollviewContainer];
+                                          stock.cProductPage ++;
                                       }
+                                      stock.cProductPageLoading = NO;
+                                  }];
+}
+
+- (void) loadMoreQProduct
+{
+    if (self.qProductPageLoading)
+    {
+        return;
+    }
+    __weak WPStockViewController* stock = self;
+    self.qProductPageLoading = YES;
+    NSDictionary* parm = @{@"app":@"screen",
+                           @"act":@"index",
+                           @"page":[NSString stringWithFormat:@"%d",self.qProductPage],
+                           @"type":@"1"};
+    [[WPSyncService alloc]syncWithRoute:parm
+                                  Block:^(id resp) {
+                                      if (resp)
+                                      {
+                                          WPQDateInfo* cDataInfo = [[WPQDateInfo alloc]init];
+                                          cDataInfo.rowDate = resp;
+                                          [stock.qDataArray addObjectsFromArray:cDataInfo.qBaseDateArray];
+                                          [stock prepareQScrollviewContainer];
+                                          stock.qProductPage ++;
+                                      }
+                                      stock.qProductPageLoading = NO;
                                   }];
 }
 

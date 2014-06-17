@@ -80,7 +80,7 @@
     }
     
     [self.addressField resignFirstResponder];
-    
+    [self setUserInteractionEnabled:NO];
     NSDictionary* parm = @{@"app":@"address",
                           @"act":@"add",
                           @"address":self.addressField.text,
@@ -91,6 +91,7 @@
             [self.delegate addAddressDone];
             [[WPAlertView viewFromXib] showWithMessage:@"添加成功"];
             [self dismiss];
+            [self setUserInteractionEnabled:YES];
         }
     }];
 }

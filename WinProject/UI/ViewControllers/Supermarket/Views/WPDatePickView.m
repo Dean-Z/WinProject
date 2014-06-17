@@ -1,14 +1,14 @@
 //
-//  WPDateSelecter.m
+//  WPDatePickView.m
 //  WinProject
 //
-//  Created by Dean-Z on 14-6-5.
+//  Created by Dean-Z on 14-6-17.
 //  Copyright (c) 2014年 Dean. All rights reserved.
 //
 
-#import "WPDateSelecter.h"
+#import "WPDatePickView.h"
 
-@implementation WPDateSelecter
+@implementation WPDatePickView
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -27,24 +27,20 @@
     self.backgroundView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
 }
 
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
-{
-    return self.rowCount;
-}
-
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
-{
-    return 1;
-}
-
-- (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
-{
-    return [NSString stringWithFormat:@"%d",row+1];
-}
-
 - (IBAction)selectAtIndex:(id)sender
 {
-    [self.delegate dateSelecterAtIndex:[self.pickView selectedRowInComponent:0]+1];
+    NSDate* date = self.pickView.date;
+    
+    NSDateFormatter* formatter = [[NSDateFormatter alloc]init];
+    [formatter setDateFormat:@"YYYY"];
+    NSString* year = [formatter stringFromDate:date];
+    [formatter setDateFormat:@"MM"];
+    NSString* mouth = [formatter stringFromDate:date];
+    [formatter setDateFormat:@"dd"];
+    NSString* day = [formatter stringFromDate:date];
+    
+    [self.delegate datePickerDidSelectAt:year mouth:mouth day:day];
+    
     [self dismiss];
 }
 
@@ -74,5 +70,6 @@
         [self removeFromSuperview];
     }];
 }
+
 
 @end

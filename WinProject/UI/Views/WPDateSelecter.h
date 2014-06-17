@@ -13,6 +13,7 @@
 @interface WPDateSelecter : WPBaseView<UIPickerViewDataSource,UIPickerViewDelegate>
 
 @property(nonatomic,strong) IBOutlet UIPickerView* pickView;
+@property(nonatomic,strong) UIView* backgroundView;
 @property(nonatomic,assign) NSInteger rowCount;
 
 @property(nonatomic,assign) id<WPDateSelecterDelegate> delegate;

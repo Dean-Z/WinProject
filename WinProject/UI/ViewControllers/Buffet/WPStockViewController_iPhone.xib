@@ -60,6 +60,9 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </imageView>
                     </subviews>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="Lym-lo-MHA"/>
+                    </connections>
                 </scrollView>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="N12-PR-Fky">
                     <rect key="frame" x="320" y="95" width="320" height="350"/>

@@ -139,6 +139,8 @@
 		CBCD62F419502F0600C590D9 /* WPAddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCD62F319502F0600C590D9 /* WPAddressCell.m */; };
 		CBCD62F619502F1300C590D9 /* WPAddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBCD62F519502F1300C590D9 /* WPAddressCell.xib */; };
 		CBCD62F91950303700C590D9 /* WPAddressInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCD62F81950303700C590D9 /* WPAddressInfo.m */; };
+		CBCD62FC1950715700C590D9 /* WPDatePickView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCD62FB1950715700C590D9 /* WPDatePickView.m */; };
+		CBCD62FE1950718300C590D9 /* WPDatePickView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBCD62FD1950718300C590D9 /* WPDatePickView.xib */; };
 		CBD9624F192F6D7800825CE7 /* WPAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD9624E192F6D7800825CE7 /* WPAlertView.m */; };
 		CBD96251192F6F2E00825CE7 /* WPAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBD96250192F6F2E00825CE7 /* WPAlertView.xib */; };
 		CBD9626A193368D600825CE7 /* WPSigninView_iPhone5.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBD96269193368D600825CE7 /* WPSigninView_iPhone5.xib */; };
@@ -398,6 +400,9 @@
 		CBCD62F519502F1300C590D9 /* WPAddressCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPAddressCell.xib; sourceTree = "<group>"; };
 		CBCD62F71950303700C590D9 /* WPAddressInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPAddressInfo.h; sourceTree = "<group>"; };
 		CBCD62F81950303700C590D9 /* WPAddressInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPAddressInfo.m; sourceTree = "<group>"; };
+		CBCD62FA1950715700C590D9 /* WPDatePickView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPDatePickView.h; sourceTree = "<group>"; };
+		CBCD62FB1950715700C590D9 /* WPDatePickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPDatePickView.m; sourceTree = "<group>"; };
+		CBCD62FD1950718300C590D9 /* WPDatePickView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPDatePickView.xib; sourceTree = "<group>"; };
 		CBD9624D192F6D7800825CE7 /* WPAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPAlertView.h; sourceTree = "<group>"; };
 		CBD9624E192F6D7800825CE7 /* WPAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPAlertView.m; sourceTree = "<group>"; };
 		CBD96250192F6F2E00825CE7 /* WPAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPAlertView.xib; sourceTree = "<group>"; };
@@ -899,6 +904,9 @@
 				CBBBA8D9194C8EBA00A11015 /* WPOptionView.h */,
 				CBBBA8DA194C8EBA00A11015 /* WPOptionView.m */,
 				CBBBA8DC194C912000A11015 /* WPOptionView.xib */,
+				CBCD62FA1950715700C590D9 /* WPDatePickView.h */,
+				CBCD62FB1950715700C590D9 /* WPDatePickView.m */,
+				CBCD62FD1950718300C590D9 /* WPDatePickView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1066,6 +1074,7 @@
 			files = (
 				CBB0B58B193C30BE0069C360 /* QuestionnaireView.xib in Resources */,
 				CB9F47F71950285F007C2B65 /* WPAddressView.xib in Resources */,
+				CBCD62FE1950718300C590D9 /* WPDatePickView.xib in Resources */,
 				CBF4AFBB19405A0E0028588E /* WPConversionView.xib in Resources */,
 				CB3965261942BF3300ADE846 /* WPAlipayView.xib in Resources */,
 				CB4542B11915ED2A00BFE852 /* WPStockViewController_iPhone5.xib in Resources */,
@@ -1257,6 +1266,7 @@
 				CBDD252418FF8CCA009043FE /* AppDelegate.m in Sources */,
 				CB45CC2F192101510020D76C /* NSObject+SBJSON.m in Sources */,
 				CBCBF1FA190F48BF003439DB /* MarketInTableViewCell.m in Sources */,
+				CBCD62FC1950715700C590D9 /* WPDatePickView.m in Sources */,
 				CB3965291942C88400ADE846 /* AlipayView.m in Sources */,
 				CB827E1F192CE93200AFDBBF /* WPCDataInfo.m in Sources */,
 				CB2FAD0D1902C3A800F46A0A /* WPSettingViewController.m in Sources */,

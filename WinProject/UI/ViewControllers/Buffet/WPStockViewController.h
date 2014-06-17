@@ -30,6 +30,11 @@
 @property(nonatomic,weak) IBOutlet UIButton* nextButton;
 @property(nonatomic,weak) IBOutlet UIButton* preButton;
 
+@property(nonatomic,assign) NSInteger cProductPage;
+@property(nonatomic,assign) NSInteger qProductPage;
+@property(nonatomic,assign) BOOL cProductPageLoading;
+@property(nonatomic,assign) BOOL qProductPageLoading;
+
 @end
 
 
