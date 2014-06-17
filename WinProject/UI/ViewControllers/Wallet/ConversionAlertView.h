@@ -33,7 +33,6 @@
 @property(nonatomic,assign) NSInteger amount;
 
 
-
 - (void)showInWindows;
 
 @end

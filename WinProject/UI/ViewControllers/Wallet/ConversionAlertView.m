@@ -89,6 +89,7 @@
         return;
     }
     
+    __weak ConversionAlertView* alert = self;
     NSDictionary* parm = @{@"app":@"exchange",
                            @"act":@"do",
                            @"id":self.conversionInfo.producId,
@@ -99,9 +100,14 @@
     [[WPSyncService alloc]syncWithRoute:parm Block:^(id resp) {
         if (resp)
         {
+            WPUserInfo* userInfo = alert.app.userInfo;
+            id data = [NSObject toJSONValue:resp];
+            id result = [data objectForKey:@"result"];
+            userInfo.coins = [result objectForKey:@"balance"];
+            
             [[WPAlertView viewFromXib] showWithMessage:@"兑换成功"];
             [SVProgressHUD dismiss];
-            [self dismiass];
+            [alert dismiass];
         }
     }];
 }
@@ -113,6 +119,7 @@
     [address renderView];
     [address showInWindow];
 }
+
 
 #pragma mark WPAddressViewDelegate
 - (void)addAddressDone

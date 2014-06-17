@@ -289,6 +289,9 @@
 
 - (void)conversionProductCancel
 {
+    self.isYuan = !self.isYuan;
+    [self coinExchange:nil];
+    
     [UIView animateWithDuration:0.3 animations:^{
         conversionView.alpha = 1.0f;
         conversionProductView.originX = self.view.sizeW;
