@@ -52,6 +52,7 @@
                 <outlet property="numberProductLabel" destination="eYO-90-Rvn" id="LSY-ob-flX"/>
                 <outlet property="priceBtnContainer" destination="Avd-X2-9ps" id="EUE-0r-HOF"/>
                 <outlet property="productImage" destination="nWb-Fh-CQi" id="335-W1-zLR"/>
+                <outlet property="touchButton" destination="QpG-g7-qqs" id="Gjk-k5-qjk"/>
             </connections>
         </view>
     </objects>

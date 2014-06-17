@@ -45,7 +45,7 @@
     }
     else
     {
-        self.coinLabel.text = self.app.userInfo.coins;
+        self.coinLabel.text = [NSString stringWithFormat:@"%.1f",[self.app.userInfo.coins integerValue]/10.0f];
     }
     
     if ([NSString isNilOrEmpty:self.app.userInfo.nickname])

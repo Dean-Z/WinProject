@@ -20,6 +20,7 @@
 @property(nonatomic,weak) IBOutlet UIImageView* pullViewSelected;
 @property(nonatomic,strong) NSMutableArray* historyData;
 @property(nonatomic,strong) WPRakeInfo* rakeInfo;
+@property(nonatomic,assign) BOOL shouldHidden;
 
 - (void)fillDate;
 - (void)showView;

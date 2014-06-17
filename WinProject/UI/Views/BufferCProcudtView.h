@@ -18,6 +18,7 @@
 @property(nonatomic,weak) IBOutlet UILabel* logoLabel;
 @property(nonatomic,weak) IBOutlet UILabel* endTimeLabel;
 @property(nonatomic,weak) IBOutlet UILabel* remainLabel;
+@property(nonatomic,weak) IBOutlet UIButton* touchButton;
 
 @property(nonatomic,weak) WPCBaseDateInfo* dataInfo;
 

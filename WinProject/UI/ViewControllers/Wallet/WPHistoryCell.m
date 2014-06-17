@@ -23,6 +23,9 @@
 
 - (void)renderCell
 {
+    [self.timeLabel setFont:[UIFont fontWithName:@"DFWaWaSC-W5" size:12]];
+    [self.coinLabel setFont:[UIFont fontWithName:@"DFWaWaSC-W5" size:12]];
+    
     self.coinLabel.text = [NSString stringWithFormat:@"兑换了%@金币",self.historyInfo.coins];
     NSInteger timeInterval = [self.historyInfo.create_time integerValue];
     NSDate* date = [NSDate dateWithTimeIntervalSince1970:timeInterval];

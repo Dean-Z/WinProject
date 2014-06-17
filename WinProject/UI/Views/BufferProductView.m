@@ -37,7 +37,8 @@
 
 - (IBAction)touched:(id)sender
 {
-   [self prepareInfo:self.dateInfo.picId];
+    self.touchButton.enabled = NO;
+    [self prepareInfo:self.dateInfo.picId];
 }
 
 #pragma mark WPProductDetailViewDelegate
@@ -54,6 +55,10 @@
     }];
 }
 
+- (void)productCancel:(WPProductInfo *)productInfo
+{
+    self.touchButton.enabled = YES;
+}
 
 - (void)saveDate
 {

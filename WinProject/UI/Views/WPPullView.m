@@ -95,7 +95,10 @@
                         {
                             WPHistoryInfo* info = [history.historyData firstObject];
                             self.firstCellLabel.text = [NSString stringWithFormat:@"%@兑换了%@",self.rakeInfo.nickname,info.goods];
-                            self.hidden = NO;
+                            if (!self.shouldHidden)
+                            {
+                             self.hidden = NO;
+                            }
                         }
                         else
                         {
@@ -111,7 +114,7 @@
 
 - (void)showView
 {
-    if (self.historyData.count==0)
+    if (self.historyData.count==0 || self.shouldHidden)
     {
         self.hidden = YES;
     }
@@ -143,5 +146,6 @@
     
     return cell;
 }
+
 
 @end

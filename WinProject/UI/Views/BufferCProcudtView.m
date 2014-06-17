@@ -42,6 +42,7 @@
 
 - (IBAction)touched:(id)sender
 {
+    self.touchButton.enabled = NO;
     [self prepareInfo:self.dataInfo.picId];
 }
 
@@ -78,6 +79,8 @@
 #pragma mark WPProductDetailViewDelegate
 - (void)productDownload:(WPProductInfo *)productInfo
 {
+    self.touchButton.enabled = YES;
+    
     NSDictionary* parm = @{@"app":@"screen",@"act":@"finish",@"id":productInfo.picId};
     
     [[WPSyncService alloc]downloadImageWithRoute:parm Block:^(id respData)
@@ -91,6 +94,10 @@
      }];
 }
 
+- (void)productCancel:(WPProductInfo *)productInfo
+{
+    self.touchButton.enabled = YES;
+}
 
 - (void)saveDate
 {

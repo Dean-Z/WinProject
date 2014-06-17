@@ -44,6 +44,7 @@
 
 - (IBAction)cancel:(id)sender
 {
+    [self.delegate productCancel:self.productInfo];
     [self dismiss];
 }
 

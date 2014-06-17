@@ -26,5 +26,6 @@
 @protocol WPProductDetailViewDelegate <NSObject>
 
 - (void) productDownload:(WPProductInfo*)productInfo;
+- (void)productCancel:(WPProductInfo *)productInfo;
 
 @end

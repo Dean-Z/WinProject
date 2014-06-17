@@ -60,12 +60,14 @@
 {
     if (switchBar.selectAtIndex == 0)
     {
+        pullView.shouldHidden = NO;
         [pullView showView];
         self.friendTableView.hidden = NO;
         self.countryTableView.hidden = YES;
     }
     else
     {
+        pullView.shouldHidden = YES;
         pullView.hidden = YES;
         self.friendTableView.hidden = YES;
         self.countryTableView.hidden = NO;
