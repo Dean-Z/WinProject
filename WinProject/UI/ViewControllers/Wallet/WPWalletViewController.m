@@ -60,7 +60,7 @@
     
     [self.mainScrollView setContentSize:CGSizeMake(320*3, 0)];
     [self.mainScrollView setContentOffset:CGPointMake(320, 0)];
-    
+    self.pageControl.currentPage = 1;
 }
 
 - (void)updateUserInfo
@@ -130,10 +130,16 @@
     if (scrollView.contentOffset.x == 0)
     {
         [rakeView prepareData];
+        self.pageControl.currentPage = 0;
     }
     else if (scrollView.contentOffset.x/320 == 2)
     {
         [billView prepareData];
+        self.pageControl.currentPage = 2;
+    }
+    else
+    {
+        self.pageControl.currentPage = 1;
     }
 }
 

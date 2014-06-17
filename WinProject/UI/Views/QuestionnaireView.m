@@ -65,6 +65,7 @@
     {
         QuestionCell* cell = [QuestionCell viewFromXib];
         cell.deleagte = self;
+        cell.questionCount = i+1;
         cell.questionInfo = self.questionArray[i];
         cell.tag = 100+i;
         cell.originX = QuestionWidth*i;

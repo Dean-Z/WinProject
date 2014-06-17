@@ -36,10 +36,17 @@
                         <action selector="showOptionsView:" destination="acy-kW-FB4" eventType="touchUpInside" id="H3Y-3S-vt2"/>
                     </connections>
                 </button>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="问题：赢屏给你的用户体验如何？" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MQ3-L6-xgW">
-                    <rect key="frame" x="12" y="18" width="244" height="59"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="问题：赢屏给你的用户体验如何？" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MQ3-L6-xgW">
+                    <rect key="frame" x="12" y="49" width="244" height="59"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="14"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="问题1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="o5k-R6-ZkS">
+                    <rect key="frame" x="66" y="11" width="136" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="16"/>
                     <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -50,6 +57,7 @@
                 <outlet property="answerButton" destination="Xbf-uM-6CF" id="Hnx-Gm-ls2"/>
                 <outlet property="optionLabel" destination="nvo-ns-gBa" id="pSl-XD-6C6"/>
                 <outlet property="questionTitle" destination="MQ3-L6-xgW" id="a8v-tF-C4j"/>
+                <outlet property="titleLabel" destination="o5k-R6-ZkS" id="czX-GH-dr1"/>
             </connections>
         </view>
     </objects>

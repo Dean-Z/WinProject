@@ -23,6 +23,7 @@
 {
     [super renderView];
     
+    [self.titleLabel setText:[NSString stringWithFormat:@"问题%d",self.questionCount]];
     self.questionTitle.text = self.questionInfo.questionTitle;
     
     WPOptionInfo* option = [self.questionInfo.options firstObject];

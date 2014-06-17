@@ -77,11 +77,11 @@
 
 - (void)prepareData
 {
-//    if (self.hasLoadData)
-//    {
-//        return;
-//    }
-//    self.hasLoadData = YES;
+    if (self.hasLoadData)
+    {
+        return;
+    }
+    
     __weak RakeView* rake = self;
     
     NSMutableDictionary* parm = [@{@"app":@"rank",@"act":@"index"} mutableCopy];
@@ -108,6 +108,7 @@
                             [_countryRake addObject:info];
                         }
                         [rake.countryTableView reloadData];
+                        self.hasLoadData = YES;
                     }
                     else
                     {
@@ -153,6 +154,7 @@
                         [rake.friendTableView reloadData];
                         pullView.rakeInfo = [_friendsRake firstObject];
                         [pullView fillDate];
+                        self.hasLoadData = YES;
                     }
                     else
                     {

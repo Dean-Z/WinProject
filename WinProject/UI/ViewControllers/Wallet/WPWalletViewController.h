@@ -23,6 +23,7 @@
 @property(nonatomic,weak) IBOutlet UILabel*  coinLabel;
 @property(nonatomic,weak) IBOutlet UILabel*  yuanLabel;
 @property(nonatomic,weak) IBOutlet UILabel*  titleLabel;
+@property(nonatomic,weak) IBOutlet UIPageControl*  pageControl;
 
 - (void)updateUserInfo;
 

@@ -11,6 +11,7 @@
                 <outlet property="coinLabel" destination="X0c-JS-TMD" id="7dw-RU-9wO"/>
                 <outlet property="exchangeButton" destination="oUi-jr-Lgn" id="wcf-Dn-pR0"/>
                 <outlet property="mainScrollView" destination="xPt-DE-0SW" id="EuZ-aT-J5L"/>
+                <outlet property="pageControl" destination="ffn-TE-UEF" id="ABe-AV-RuY"/>
                 <outlet property="shareButton" destination="WZC-1Q-ieQ" id="1Yj-nb-TpH"/>
                 <outlet property="titleLabel" destination="oTd-8M-2K4" id="gf4-H8-2Nq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -81,6 +82,13 @@
                         <outlet property="delegate" destination="-1" id="izF-vh-1df"/>
                     </connections>
                 </scrollView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="ffn-TE-UEF">
+                    <rect key="frame" x="141" y="487" width="38" height="36"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="tintColor" red="0.2901960784" green="0.25490196079999999" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="pageIndicatorTintColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="0.5" colorSpace="deviceRGB"/>
+                    <color key="currentPageIndicatorTintColor" red="0.62745098039215685" green="0.62745098039215685" blue="0.62745098039215685" alpha="0.59999999999999998" colorSpace="deviceRGB"/>
+                </pageControl>
                 <view contentMode="scaleToFill" id="9LK-8N-QKh">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
