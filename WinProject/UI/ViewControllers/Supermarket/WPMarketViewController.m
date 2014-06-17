@@ -117,6 +117,36 @@
             }
         }
     }];
+    
+    
+    NSDictionary* outParm = @{@"app":@"survey",@"act":@"expired",@"page":@"1"};
+    [[WPSyncService alloc]syncWithRoute:outParm Block:^(id resp) {
+        if (resp)
+        {
+            id data = [NSObject toJSONValue:resp];
+            
+            if ([data isKindOfClass:[NSDictionary class]])
+            {
+                NSDictionary* result = [data objectForKey:@"result"];
+                if ([result isKindOfClass:[NSDictionary class]]) {
+                    NSArray* questionArray = [result objectForKey:@"data"];
+                    for (NSDictionary* dict in questionArray)
+                    {
+                        WPMarketInfo* info = [[WPMarketInfo alloc]init];
+                        info.question_id = [dict objectForKey:@"id"];
+                        info.cover = [dict objectForKey:@"logo"];
+                        info.title = [dict objectForKey:@"title"];
+                        info.desc = [dict objectForKey:@"description"];
+                        info.end_time = [dict objectForKey:@"end_time"];
+                        info.coins = [dict objectForKey:@"coins"];
+                        info.type = Market_Question_Type;
+                        [_outProductArray addObject:info];
+                        info = nil;
+                    }
+                }
+            }
+        }
+    }];
 }
 
 - (void) switchBarValueChanged
