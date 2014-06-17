@@ -77,11 +77,11 @@
 
 - (void)prepareData
 {
-    if (self.hasLoadData)
-    {
-        return;
-    }
-    self.hasLoadData = YES;
+//    if (self.hasLoadData)
+//    {
+//        return;
+//    }
+//    self.hasLoadData = YES;
     __weak RakeView* rake = self;
     
     NSMutableDictionary* parm = [@{@"app":@"rank",@"act":@"index"} mutableCopy];

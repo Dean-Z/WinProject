@@ -12,8 +12,8 @@
 @interface BaseXibViewController : UIViewController
 
 @property(nonatomic,strong) AppDelegate*    app;
-
 @property(nonatomic,weak) IBOutlet UIView* navigationContiner;
+
 
 -(id)viewControllerFromXib;
 

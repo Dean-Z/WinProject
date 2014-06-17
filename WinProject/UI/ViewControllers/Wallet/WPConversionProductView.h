@@ -15,6 +15,7 @@
 
 @property(nonatomic,weak) IBOutlet UITableView* tableview;
 @property(nonatomic,assign) NSInteger page;
+@property(nonatomic,assign) BOOL pageLoading;
 
 @property(nonatomic,assign) id<WPConversionProductViewDelegate> delegate;
 

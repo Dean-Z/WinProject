@@ -14,6 +14,7 @@
 @property (nonatomic,weak) IBOutlet UILabel* nameLabel;
 @property (nonatomic,weak) IBOutlet UILabel* rakeLabel;
 @property (nonatomic,weak) IBOutlet UILabel* coinLabel;
+@property (nonatomic,weak) IBOutlet UIImageView* rakeTopImageView;
 
 @property (nonatomic,strong) WPRakeInfo* rakeInfo;
 @property (nonatomic,assign) NSInteger rakeIndex;

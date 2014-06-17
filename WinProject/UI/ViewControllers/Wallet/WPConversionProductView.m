@@ -25,12 +25,19 @@
 
 - (void)prepareDateWithPage:(NSInteger)page
 {
-    NSDictionary* parm = @{@"app":@"exchange",@"act":@"list",@"page":[NSString stringWithFormat:@"%d",page]};
+    if (self.pageLoading)
+    {
+        return;
+    }
+    self.pageLoading = YES;
+    NSDictionary* parm = @{@"app":@"exchange",
+                           @"act":@"list",
+                           @"page":[NSString stringWithFormat:@"%d",page]};
     
     [[WPSyncService alloc]syncWithRoute:parm Block:^(id resp) {
         
         [SVProgressHUD dismiss];
-        
+        self.pageLoading = NO;
         if (resp)
         {
             if (page == 1)
@@ -100,11 +107,16 @@
     [alertView showInWindows];
 }
 
+
+
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    DLog(@"%f ----- %f",scrollView.contentSize.height,scrollView.contentOffset.y);
+    CGPoint offset = scrollView.contentOffset;
+    if (scrollView.contentSize.height - 320 < offset.y && scrollView.isDragging)
+    {
+        [self prepareDateWithPage:self.page];
+    }
 }
-
 
 - (IBAction)cancel:(id)sender
 {

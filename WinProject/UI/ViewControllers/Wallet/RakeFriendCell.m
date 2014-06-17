@@ -36,8 +36,18 @@
     [self.nameLabel setFont:[UIFont fontWithName:@"DFWaWaSC-W5" size:[self sizeWithRake:self.rakeIndex]]];
     [self.nameLabel setTextColor:[self colorWithRake:self.rakeIndex]];
     
-    [self.rakeLabel setFont:[UIFont fontWithName:@"DFWaWaSC-W5" size:[self sizeWithRake:self.rakeIndex]]];
-    [self.rakeLabel setTextColor:[self colorWithRake:self.rakeIndex]];
+    if (self.rakeIndex<4)
+    {
+        self.rakeTopImageView.image = [self topImageWithRake:self.rakeIndex];
+        self.rakeTopImageView.hidden = NO;
+        self.rakeLabel.hidden = YES;
+    }
+    else
+    {
+        self.rakeTopImageView.hidden = YES;
+        [self.rakeLabel setFont:[UIFont fontWithName:@"DFWaWaSC-W5" size:[self sizeWithRake:self.rakeIndex]]];
+        [self.rakeLabel setTextColor:[self colorWithRake:self.rakeIndex]];
+    }
     
     [self.coinLabel setFont:[UIFont fontWithName:@"DFWaWaSC-W5" size:[self sizeWithRake:self.rakeIndex]]];
     [self.coinLabel setTextColor:[self colorWithRake:self.rakeIndex]];
@@ -45,6 +55,7 @@
     self.nameLabel.text = self.rakeInfo.nickname;
     self.coinLabel.text = [NSString stringWithFormat:@"%@金币",self.rakeInfo.coins];
     self.rakeLabel.text = [NSString stringWithFormat:@"%d",self.rakeIndex];
+    
 }
 
 - (UIColor*)colorWithRake:(NSInteger)rake
@@ -85,6 +96,23 @@
     {
         return 10;
     }
+}
+
+- (UIImage*)topImageWithRake:(NSInteger)rake
+{
+    if (rake == 1)
+    {
+        return [UIImage imageNamed:@"top1.png"];
+    }
+    else if (rake == 2)
+    {
+        return [UIImage imageNamed:@"top2.png"];
+    }
+    else if (rake == 3)
+    {
+        return [UIImage imageNamed:@"top3.png"];
+    }
+    return nil;
 }
 
 - (UIColor*)selfColor

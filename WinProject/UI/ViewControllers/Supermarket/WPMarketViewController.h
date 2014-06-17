@@ -20,4 +20,9 @@
 @property(nonatomic,weak) IBOutlet UIButton* refreshButton;
 @property(nonatomic,weak) IBOutlet UIButton* cancelButton;
 
+@property(nonatomic,assign) NSInteger inPage;
+@property(nonatomic,assign) NSInteger outPage;
+@property(nonatomic,assign) BOOL inPageLoading;
+@property(nonatomic,assign) BOOL outPageLoading;
+
 @end

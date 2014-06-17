@@ -33,6 +33,10 @@
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top1" id="pZw-lc-W08">
+                        <rect key="frame" x="7" y="1" width="19" height="26"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </tableViewCellContentView>
@@ -41,7 +45,11 @@
                 <outlet property="coinLabel" destination="9Hj-5T-tJc" id="Wvk-v0-RXQ"/>
                 <outlet property="nameLabel" destination="e8B-nR-o8v" id="ArQ-Er-Gkv"/>
                 <outlet property="rakeLabel" destination="nKj-FT-tK9" id="7hY-gN-TD1"/>
+                <outlet property="rakeTopImageView" destination="pZw-lc-W08" id="6mP-ad-EaM"/>
             </connections>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="top1" width="20" height="28"/>
+    </resources>
 </document>

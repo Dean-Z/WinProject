@@ -57,6 +57,8 @@
 
 - (void)prepareData
 {
+    [_inProductArray removeAllObjects];
+    [_outProductArray removeAllObjects];
     NSUserDefaults* userDefault = [NSUserDefaults standardUserDefaults];
     
     WPMarketInfo* info = [[WPMarketInfo alloc]init];
@@ -91,6 +93,7 @@
     [[WPSyncService alloc]syncWithRoute:parm Block:^(id resp) {
         if (resp)
         {
+            self.inPage = 2;
             id data = [NSObject toJSONValue:resp];
             
             if ([data isKindOfClass:[NSDictionary class]])
@@ -123,6 +126,7 @@
     [[WPSyncService alloc]syncWithRoute:outParm Block:^(id resp) {
         if (resp)
         {
+            self.outPage = 2;
             id data = [NSObject toJSONValue:resp];
             
             if ([data isKindOfClass:[NSDictionary class]])
@@ -143,6 +147,8 @@
                         [_outProductArray addObject:info];
                         info = nil;
                     }
+                    
+                    [self.productTabelView reloadData];
                 }
             }
         }
@@ -280,6 +286,11 @@
     }];
 }
 
+- (IBAction)refresh:(id)sender
+{
+    [self prepareData];
+}
+
 #pragma mark WPInformationViewDelegate
 - (void)completeInformation
 {
@@ -301,6 +312,113 @@
 //    [user setObject:MARKET_INVITE forKey:MARKET_INVITE];
 //    [user synchronize];
 //    [self.productTabelView reloadData];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGPoint offset = scrollView.contentOffset;
+    if (scrollView.contentSize.height - 320 < offset.y && scrollView.isDragging)
+    {
+        if (isInProduct)
+        {
+            [self loadMoreInSurvey];
+        }
+        else
+        {
+            [self loadMoreOutSurvey];
+        }
+    }
+}
+
+- (void)loadMoreInSurvey
+{
+    if (self.inPageLoading)
+    {
+        return;
+    }
+    self.inPageLoading = YES;
+    NSDictionary* parm = @{@"app":@"survey",
+                           @"act":@"index",
+                           @"page":[NSString stringWithFormat:@"%d",self.inPage]};
+    [[WPSyncService alloc]syncWithRoute:parm Block:^(id resp) {
+        if (resp)
+        {
+            id data = [NSObject toJSONValue:resp];
+            
+            if ([data isKindOfClass:[NSDictionary class]])
+            {
+                NSDictionary* result = [data objectForKey:@"result"];
+                if ([result isKindOfClass:[NSDictionary class]]) {
+                    NSArray* questionArray = [result objectForKey:@"data"];
+                    for (NSDictionary* dict in questionArray)
+                    {
+                        WPMarketInfo* info = [[WPMarketInfo alloc]init];
+                        info.question_id = [dict objectForKey:@"id"];
+                        info.cover = [dict objectForKey:@"logo"];
+                        info.title = [dict objectForKey:@"title"];
+                        info.desc = [dict objectForKey:@"description"];
+                        info.end_time = [dict objectForKey:@"end_time"];
+                        info.coins = [dict objectForKey:@"coins"];
+                        info.type = Market_Question_Type;
+                        [_inProductArray addObject:info];
+                        info = nil;
+                    }
+                    if (questionArray.count>0)
+                    {
+                        self.inPage++;
+                    }
+                    [self.productTabelView reloadData];
+                }
+            }
+        }
+        self.inPageLoading = NO;
+    }];
+}
+
+- (void)loadMoreOutSurvey
+{
+    if (self.outPageLoading)
+    {
+        return;
+    }
+    
+    self.outPageLoading = YES;
+    NSDictionary* outParm = @{@"app":@"survey",
+                              @"act":@"expired",
+                              @"page":[NSString stringWithFormat:@"%d",self.outPage]};
+    [[WPSyncService alloc]syncWithRoute:outParm Block:^(id resp) {
+        if (resp)
+        {
+            id data = [NSObject toJSONValue:resp];
+            
+            if ([data isKindOfClass:[NSDictionary class]])
+            {
+                NSDictionary* result = [data objectForKey:@"result"];
+                if ([result isKindOfClass:[NSDictionary class]]) {
+                    NSArray* questionArray = [result objectForKey:@"data"];
+                    for (NSDictionary* dict in questionArray)
+                    {
+                        WPMarketInfo* info = [[WPMarketInfo alloc]init];
+                        info.question_id = [dict objectForKey:@"id"];
+                        info.cover = [dict objectForKey:@"logo"];
+                        info.title = [dict objectForKey:@"title"];
+                        info.desc = [dict objectForKey:@"description"];
+                        info.end_time = [dict objectForKey:@"end_time"];
+                        info.coins = [dict objectForKey:@"coins"];
+                        info.type = Market_Question_Type;
+                        [_outProductArray addObject:info];
+                        info = nil;
+                    }
+                    if (questionArray.count>0)
+                    {
+                        self.outPage++;
+                    }
+                    [self.productTabelView reloadData];
+                }
+            }
+            self.outPageLoading = NO;
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning
