@@ -77,7 +77,7 @@
 
 - (void)prepareData
 {
-    if (self.hasLoadData)
+    if (loadFriends && loadContry)
     {
         return;
     }
@@ -108,7 +108,7 @@
                             [_countryRake addObject:info];
                         }
                         [rake.countryTableView reloadData];
-                        self.hasLoadData = YES;
+                        loadContry = YES;
                     }
                     else
                     {
@@ -154,7 +154,7 @@
                         [rake.friendTableView reloadData];
                         pullView.rakeInfo = [_friendsRake firstObject];
                         [pullView fillDate];
-                        self.hasLoadData = YES;
+                        loadFriends = YES;
                     }
                     else
                     {

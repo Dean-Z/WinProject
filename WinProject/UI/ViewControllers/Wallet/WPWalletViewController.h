@@ -24,6 +24,7 @@
 @property(nonatomic,weak) IBOutlet UILabel*  yuanLabel;
 @property(nonatomic,weak) IBOutlet UILabel*  titleLabel;
 @property(nonatomic,weak) IBOutlet UIPageControl*  pageControl;
+@property(nonatomic,assign) BOOL isYuan;
 
 - (void)updateUserInfo;
 

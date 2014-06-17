@@ -34,7 +34,7 @@
     
     if ([NSString isNilOrEmpty:self.historyInfo.goods])
     {
-       self.contentlabel.text = [NSString stringWithFormat:@"%@兑换了%@金币",self.userName,self.historyInfo.coins];
+       self.contentlabel.text = [NSString stringWithFormat:@"%@提现了%@金币",self.userName,self.historyInfo.coins];
     }
     else
     {

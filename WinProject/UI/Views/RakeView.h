@@ -15,7 +15,8 @@
     WPSwitchBar* switchBar;
     WPPullView* pullView;
     BOOL noData;
-    
+    BOOL loadContry;
+    BOOL loadFriends;
     NSMutableArray* _friendsRake;
     NSMutableArray* _countryRake;
 }
@@ -27,7 +28,6 @@
 @property(nonatomic,weak) IBOutlet UITableView* friendTableView;
 @property(nonatomic,weak) IBOutlet UITableView* countryTableView;
 @property(nonatomic,strong) NSDictionary* resultDict;
-@property(nonatomic,assign) BOOL hasLoadData;
 
 - (void)prepareData;
 

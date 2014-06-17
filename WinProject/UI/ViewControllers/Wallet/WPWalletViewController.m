@@ -48,6 +48,8 @@
         self.coinLabel.text = [NSString stringWithFormat:@"%.1f",[self.app.userInfo.coins integerValue]/10.0f];
     }
     
+    self.isYuan = YES;
+    
     if ([NSString isNilOrEmpty:self.app.userInfo.nickname])
         self.titleLabel.text = @"收钱柜";
     else
@@ -147,6 +149,22 @@
 {
     WPShareManager* share = [[WPShareManager alloc]init];
     [share shareWithSina:[UIImage imageNamed:@"refresh.png"] message:@"21121"];
+}
+
+- (IBAction)coinExchange:(id)sender
+{
+    self.isYuan = !self.isYuan;
+    
+    if (self.isYuan)
+    {
+        self.coinLabel.text = [NSString stringWithFormat:@"%.1f",[self.app.userInfo.coins integerValue]/10.0f];
+        self.yuanLabel.text = @"元";
+    }
+    else
+    {
+        self.coinLabel.text = self.app.userInfo.coins;
+        self.yuanLabel.text = @"金币";
+    }
 }
 
 - (IBAction)conversion:(id)sender
