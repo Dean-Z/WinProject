@@ -34,53 +34,53 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="兑换数量:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f88-nc-ysR">
-                            <rect key="frame" x="5" y="53" width="63" height="16"/>
+                            <rect key="frame" x="5" y="36" width="63" height="16"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="13"/>
                             <color key="textColor" red="0.34509803919999998" green="0.30588235289999999" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200金币" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Af4-nY-Ovb">
-                            <rect key="frame" x="92" y="97" width="121" height="16"/>
+                            <rect key="frame" x="92" y="63" width="121" height="16"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="13"/>
                             <color key="textColor" red="0.34509803919999998" green="0.30588235289999999" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="对应金币数量:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="57t-OM-3Fn">
-                            <rect key="frame" x="5" y="97" width="91" height="16"/>
+                            <rect key="frame" x="5" y="63" width="91" height="16"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="13"/>
                             <color key="textColor" red="0.34509803919999998" green="0.30588235289999999" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200金币" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YHu-V5-OKx">
-                            <rect key="frame" x="132" y="129" width="75" height="16"/>
+                            <rect key="frame" x="132" y="86" width="75" height="16"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="13"/>
                             <color key="textColor" red="0.34509803919999998" green="0.30588235289999999" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="送货地址：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gQv-37-ZeO">
-                            <rect key="frame" x="5" y="109" width="75" height="16"/>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="送货地址：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gQv-37-ZeO">
+                            <rect key="frame" x="5" y="110" width="75" height="16"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="13"/>
                             <color key="textColor" red="0.34509803919999998" green="0.30588235289999999" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="兑换后剩余金币数量：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h3S-04-0dn">
-                            <rect key="frame" x="5" y="129" width="131" height="16"/>
+                            <rect key="frame" x="5" y="86" width="131" height="16"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="13"/>
                             <color key="textColor" red="0.34509803919999998" green="0.30588235289999999" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="icon-convince-bt-bg" id="igu-e1-z2I">
-                            <rect key="frame" x="71" y="46" width="88" height="27"/>
+                            <rect key="frame" x="71" y="29" width="88" height="27"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="JVj-Fp-Dau">
-                            <rect key="frame" x="73" y="49" width="83" height="21"/>
+                            <rect key="frame" x="73" y="32" width="83" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="14"/>
                             <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="60" maxY="0.0"/>
@@ -93,11 +93,11 @@
                                 <action selector="selectCount:" destination="eZD-Kr-Fv3" eventType="touchUpInside" id="vse-WX-Feg"/>
                             </connections>
                         </button>
-                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="JRp-RT-xNC">
-                            <rect key="frame" x="5" y="135" width="55" height="22"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="JRp-RT-xNC">
+                            <rect key="frame" x="5" y="139" width="60" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
-                            <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="10"/>
+                            <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="11"/>
                             <state key="normal" title="+新增地址">
                                 <color key="titleColor" red="0.34509803919999998" green="0.30588235289999999" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -106,33 +106,9 @@
                                 <action selector="addAddress:" destination="eZD-Kr-Fv3" eventType="touchUpInside" id="sdK-ZJ-LZN"/>
                             </connections>
                         </button>
-                        <view hidden="YES" contentMode="scaleToFill" id="O5o-qw-ajg" userLabel="View - address">
-                            <rect key="frame" x="6" y="130" width="208" height="30"/>
+                        <view contentMode="scaleToFill" id="hK2-sn-C3a" userLabel="View - addressContainer">
+                            <rect key="frame" x="5" y="128" width="200" height="10"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  请输入地址" minimumFontSize="17" background="textfield-bg" id="fmC-62-kcR">
-                                    <rect key="frame" x="0.0" y="0.0" width="154" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                    <connections>
-                                        <outlet property="delegate" destination="eZD-Kr-Fv3" id="DLb-W0-bW1"/>
-                                    </connections>
-                                </textField>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="smZ-EG-VeA">
-                                    <rect key="frame" x="162" y="2" width="44" height="25"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="13"/>
-                                    <state key="normal" title="完成">
-                                        <color key="titleColor" red="0.34509803919999998" green="0.30588235289999999" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="addressContainerHidden:" destination="eZD-Kr-Fv3" eventType="touchUpInside" id="lmq-DT-8kW"/>
-                                    </connections>
-                                </button>
-                            </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
                     </subviews>
@@ -163,9 +139,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="addressButton" destination="JRp-RT-xNC" id="2lq-Ve-M0J"/>
-                <outlet property="addressContainer" destination="O5o-qw-ajg" id="3dp-ls-Kv5"/>
-                <outlet property="addressField" destination="fmC-62-kcR" id="Myr-N7-ER3"/>
-                <outlet property="cancelButton" destination="smZ-EG-VeA" id="Tet-y4-iSX"/>
+                <outlet property="addressContainer" destination="hK2-sn-C3a" id="SOY-8v-jwn"/>
                 <outlet property="hasCoins" destination="YHu-V5-OKx" id="LjP-6u-J7u"/>
                 <outlet property="mainScrollView" destination="RVs-0S-HfX" id="brn-Ne-0xO"/>
                 <outlet property="needCoins" destination="Af4-nY-Ovb" id="das-wH-VJC"/>
@@ -180,6 +154,5 @@
         <image name="icon-convince-bt-bg" width="88" height="27"/>
         <image name="icon-down" width="12" height="8"/>
         <image name="item_line" width="222" height="1"/>
-        <image name="textfield-bg" width="207" height="38"/>
     </resources>
 </document>
