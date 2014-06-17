@@ -16,6 +16,8 @@
 @property(nonatomic,weak) IBOutlet UIView* productBtnContainer;
 @property(nonatomic,weak) IBOutlet UIImageView* productImageView;
 @property(nonatomic,weak) IBOutlet UILabel* logoLabel;
+@property(nonatomic,weak) IBOutlet UILabel* endTimeLabel;
+@property(nonatomic,weak) IBOutlet UILabel* remainLabel;
 
 @property(nonatomic,weak) WPCBaseDateInfo* dataInfo;
 

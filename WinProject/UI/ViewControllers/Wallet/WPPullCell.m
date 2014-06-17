@@ -27,11 +27,19 @@
 {
     [self.contentlabel setFont:[UIFont fontWithName:@"DFWaWaSC-W5" size:12]];
     
-    NSInteger timeInterval = [self.historyInfo.create_time integerValue];
-    NSDate* date = [NSDate dateWithTimeIntervalSince1970:timeInterval];
-    NSString *timeString = [date dateTimeAgo];
-    timeString = [timeString stringByReplacingOccurrencesOfString:@"day ago" withString:@"天前"];
-    self.contentlabel.text = [NSString stringWithFormat:@"%@ %@兑换了%@金币",self.userName,timeString,self.historyInfo.coins];
+//    NSInteger timeInterval = [self.historyInfo.create_time integerValue];
+//    NSDate* date = [NSDate dateWithTimeIntervalSince1970:timeInterval];
+//    NSString *timeString = [date dateTimeAgo];
+//    timeString = [timeString stringByReplacingOccurrencesOfString:@"day ago" withString:@"天前"];
+    
+    if ([NSString isNilOrEmpty:self.historyInfo.goods])
+    {
+       self.contentlabel.text = [NSString stringWithFormat:@"%@兑换了%@金币",self.userName,self.historyInfo.coins];
+    }
+    else
+    {
+        self.contentlabel.text = [NSString stringWithFormat:@"%@兑换了%@",self.userName,self.historyInfo.goods];
+    }
 }
 
 @end

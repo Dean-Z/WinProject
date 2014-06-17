@@ -29,6 +29,9 @@
     self.remain = [data objectForKey:@"remain"];
     self.coin = [data objectForKey:@"coin"];
     self.status = [data objectForKey:@"status"];
+    self.brand = [data objectForKey:@"brand"];
+    self.start_time = [data objectForKey:@"start_time"];
+    self.end_time = [data objectForKey:@"end_time"];
 }
 
 @end

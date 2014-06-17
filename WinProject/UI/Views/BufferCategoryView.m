@@ -25,16 +25,15 @@
     [super renderView];
  
     [self.picImageView setImageWithURL:[NSURL URLWithString:self.dataInfo.url] placeholderImage:[UIImage imageNamed:@"icon-qProduct-loading.png"]];
-    self.coinLabel.text = self.dataInfo.coin;
+    self.coinLabel.text = [NSString stringWithFormat:@"%d",[self.dataInfo.coin integerValue]/10];
     
-    NSDate* endDate = [NSDate dateWithTimeIntervalSince1970:[self.dataInfo.exprie integerValue]];
+    NSDate* endDate = [NSDate dateWithTimeIntervalSince1970:[self.dataInfo.end_time integerValue]];
     NSDateFormatter* formatter = [[NSDateFormatter alloc]init];
     [formatter setDateFormat:@"MM-dd"];
     
     self.endTimeLabel.text = [NSString stringWithFormat:@"%@",[formatter stringFromDate:endDate]];
-    
     self.typeLabel.text = [self.dataInfo.type isEqualToString:@"1"] ? @"切糕":@"茶叶蛋";
-    self.brandLabel.text = self.dataInfo.title;
+    self.brandLabel.text = self.dataInfo.brand;
 }
 
 @end

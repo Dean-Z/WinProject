@@ -33,18 +33,20 @@
 
 - (void)renderCell
 {
-    NSInteger type = [self.historyInfo.type integerValue];
+//    NSInteger type = [self.historyInfo.type integerValue];
     
-    self.NameType.text = type == 0? @"切糕":@"茶叶蛋";
+//    self.NameType.text = type == 0? @"壁纸收入":@"茶叶蛋";
     
-    if ([NSString isNilOrEmpty:self.historyInfo.goods])
+    if ([self.historyInfo.type integerValue] ==0)
     {
         self.coinType.text = @"收入";
+        self.NameType.text = @"壁纸收入";
         self.coinType.textColor = [UIColor colorWithHexString:@"009a57"];
     }
     else
     {
         self.coinType.text = @"支出";
+        self.NameType.text = @"兑换支出";
         self.coinType.textColor = [UIColor colorWithHexString:@"dd7271"];
     }
     

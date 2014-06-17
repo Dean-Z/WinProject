@@ -85,7 +85,9 @@
 
 - (void)questionCompletion
 {
-    NSMutableDictionary *parm = [@{@"app":@"survey",@"act":@"submit",@"id":self.questionId} mutableCopy];
+    NSMutableDictionary *parm = [@{@"app":@"survey",
+                                   @"act":@"submit",
+                                   @"id":self.questionId} mutableCopy];
     
     NSMutableArray* resutlArray = [@[] mutableCopy];
     

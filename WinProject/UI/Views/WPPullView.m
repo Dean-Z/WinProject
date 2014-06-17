@@ -94,11 +94,7 @@
                         if (history.historyData.count>0)
                         {
                             WPHistoryInfo* info = [history.historyData firstObject];
-                            NSInteger timeInterval = [info.create_time integerValue];
-                            NSDate* date = [NSDate dateWithTimeIntervalSince1970:timeInterval];
-                            NSString *timeString = [date dateTimeAgo];
-                            timeString = [timeString stringByReplacingOccurrencesOfString:@"day ago" withString:@"天前"];
-                            self.firstCellLabel.text = [NSString stringWithFormat:@"%@ %@兑换了%@金币",self.rakeInfo.nickname,timeString,info.coins];
+                            self.firstCellLabel.text = [NSString stringWithFormat:@"%@兑换了%@",self.rakeInfo.nickname,info.goods];
                             self.hidden = NO;
                         }
                         else
@@ -111,6 +107,18 @@
         }
     }];
 
+}
+
+- (void)showView
+{
+    if (self.historyData.count==0)
+    {
+        self.hidden = YES;
+    }
+    else
+    {
+        self.hidden = NO;
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

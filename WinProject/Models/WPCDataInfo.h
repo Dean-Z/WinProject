@@ -20,6 +20,9 @@
 @property(nonatomic,strong) NSString* remain;
 @property(nonatomic,strong) NSString* coin;
 @property(nonatomic,strong) NSString* status;
+@property(nonatomic,strong) NSString* brand;
+@property(nonatomic,strong) NSString* start_time;
+@property(nonatomic,strong) NSString* end_time;
 
 @property(nonatomic,strong) NSDictionary* data;
 

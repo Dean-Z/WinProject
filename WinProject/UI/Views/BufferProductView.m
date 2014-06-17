@@ -26,12 +26,13 @@
 {
     [self prepareProductButton];
     
-    NSDate* endDate = [NSDate dateWithTimeIntervalSince1970:[self.dateInfo.exprie integerValue]];
+    NSDate* endDate = [NSDate dateWithTimeIntervalSince1970:[self.dateInfo.end_time integerValue]];
     NSDateFormatter* formatter = [[NSDateFormatter alloc]init];
     [formatter setDateFormat:@"MM-dd"];
 
     self.endTimeLabel.text = [NSString stringWithFormat:@"有效期至: %@",[formatter stringFromDate:endDate]];
     [self.productImage setImageWithURL:[NSURL URLWithString:self.dateInfo.url] placeholderImage:[UIImage imageNamed:@"icon-qProduct-loading.png"]];
+    self.numberProductLabel.text = [NSString stringWithFormat:@"%@份",self.dateInfo.remain];
 }
 
 - (IBAction)touched:(id)sender
@@ -103,7 +104,7 @@
     if (productBtn == nil)
     {
         productBtn = [WPProductButton viewFromXib];
-        productBtn.coins = [self.dateInfo.coin integerValue];
+        productBtn.coins = [self.dateInfo.coin integerValue]/10;
         [productBtn renderView];
         [self.priceBtnContainer addSubview:productBtn];
     }

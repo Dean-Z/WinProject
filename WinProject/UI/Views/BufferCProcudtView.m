@@ -28,7 +28,16 @@
 {
     [self prepareProductBtn];
     [self.productImageView setImageWithURL:[NSURL URLWithString:self.dataInfo.url] placeholderImage:[UIImage imageNamed:@"icon-cProduct-loading.png"]];
-    self.logoLabel.text = self.dataInfo.logo;
+    self.logoLabel.text = [NSString stringWithFormat:@"品牌:%@",self.dataInfo.brand];
+    
+    NSDateFormatter* formatter = [[NSDateFormatter alloc]init];
+    [formatter setDateFormat:@"yyyy-MM-dd"];
+    NSInteger time = [self.dataInfo.end_time integerValue];
+    NSDate *end_date = [NSDate dateWithTimeIntervalSince1970:time];
+    self.endTimeLabel.text = [NSString stringWithFormat:@"有效期至:%@",[formatter stringFromDate:end_date]];
+    formatter = nil;
+    
+    self.remainLabel.text = [NSString stringWithFormat:@"剩余：%@份",self.dataInfo.remain];
 }
 
 - (IBAction)touched:(id)sender
@@ -41,7 +50,7 @@
     if(productBtn == nil)
     {
         productBtn = [WPCProductButton viewFromXib];
-        productBtn.coins = [self.dataInfo.coin integerValue];
+        productBtn.coins = [self.dataInfo.coin integerValue]/10;
         [productBtn renderView];
         [self.productBtnContainer addSubview:productBtn];
     }
@@ -77,6 +86,8 @@
          UIImage *picImage = self.productImageView.image;
          UIImageWriteToSavedPhotosAlbum(picImage, nil, nil,nil);
          [[WPAlertView viewFromXib]showWithMessage:@"保存成功"];
+         
+         self.remainLabel.text = [NSString stringWithFormat:@"剩余：%d份",[self.dataInfo.remain integerValue]-1];
      }];
 }
 

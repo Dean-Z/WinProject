@@ -21,7 +21,7 @@
 @property(nonatomic,strong) NSMutableArray* historyData;
 @property(nonatomic,strong) WPRakeInfo* rakeInfo;
 
-
 - (void)fillDate;
+- (void)showView;
 
 @end
