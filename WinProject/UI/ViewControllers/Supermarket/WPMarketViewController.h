@@ -11,7 +11,7 @@
 #import "WPInviteView.h"
 #import "WPQuestionViewController.h"
 
-@interface WPMarketViewController : BaseXibViewController<UITableViewDataSource,UITableViewDelegate,WPInformationViewDelegate,WPInviteViewDelegate>
+@interface WPMarketViewController : BaseXibViewController<UITableViewDataSource,UITableViewDelegate,WPInformationViewDelegate,WPInviteViewDelegate,WPQuestionViewControllerDelegate>
 
 @property(nonatomic,weak) IBOutlet UITableView* productTabelView;
 @property(nonatomic,weak) IBOutlet UIView*      switchBarContainer;

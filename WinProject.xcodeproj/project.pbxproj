@@ -46,7 +46,6 @@
 		CB4542D01918E04B00BFE852 /* WPMarketViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB4542CF1918E04B00BFE852 /* WPMarketViewController_iPhone.xib */; };
 		CB4542D21918E09A00BFE852 /* WPWalletViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB4542D11918E09A00BFE852 /* WPWalletViewController_iPhone.xib */; };
 		CB45CBFD19206C950020D76C /* WPSyncService.m in Sources */ = {isa = PBXBuildFile; fileRef = CB45CBFC19206C950020D76C /* WPSyncService.m */; };
-		CB45CC2A192101510020D76C /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CB45CC13192101510020D76C /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CB45CC2B192101510020D76C /* JSONMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = CB45CC15192101510020D76C /* JSONMutableArray.m */; };
 		CB45CC2C192101510020D76C /* JsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CB45CC17192101510020D76C /* JsonParser.m */; };
 		CB45CC2D192101510020D76C /* NSArray+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = CB45CC19192101510020D76C /* NSArray+JSON.m */; };
@@ -239,8 +238,6 @@
 		CB4542D11918E09A00BFE852 /* WPWalletViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPWalletViewController_iPhone.xib; sourceTree = "<group>"; };
 		CB45CBFB19206C950020D76C /* WPSyncService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPSyncService.h; sourceTree = "<group>"; };
 		CB45CBFC19206C950020D76C /* WPSyncService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPSyncService.m; sourceTree = "<group>"; };
-		CB45CC12192101510020D76C /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
-		CB45CC13192101510020D76C /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		CB45CC14192101510020D76C /* JSONMutableArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONMutableArray.h; sourceTree = "<group>"; };
 		CB45CC15192101510020D76C /* JSONMutableArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONMutableArray.m; sourceTree = "<group>"; };
 		CB45CC16192101510020D76C /* JsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonParser.h; sourceTree = "<group>"; };
@@ -474,7 +471,6 @@
 		CB45CC10192101510020D76C /* Json */ = {
 			isa = PBXGroup;
 			children = (
-				CB45CC11192101510020D76C /* JSONKit */,
 				CB45CC14192101510020D76C /* JSONMutableArray.h */,
 				CB45CC15192101510020D76C /* JSONMutableArray.m */,
 				CB45CC16192101510020D76C /* JsonParser.h */,
@@ -486,15 +482,6 @@
 				CB45CC1C192101510020D76C /* SBJSON */,
 			);
 			path = Json;
-			sourceTree = "<group>";
-		};
-		CB45CC11192101510020D76C /* JSONKit */ = {
-			isa = PBXGroup;
-			children = (
-				CB45CC12192101510020D76C /* JSONKit.h */,
-				CB45CC13192101510020D76C /* JSONKit.m */,
-			);
-			path = JSONKit;
 			sourceTree = "<group>";
 		};
 		CB45CC1C192101510020D76C /* SBJSON */ = {
@@ -1260,7 +1247,6 @@
 				CB827E13192BA6AB00AFDBBF /* WPUserInfo.m in Sources */,
 				CB4E1399190FF0130048709B /* RakeView.m in Sources */,
 				CBF4AFC219405E600028588E /* ConversionCell.m in Sources */,
-				CB45CC2A192101510020D76C /* JSONKit.m in Sources */,
 				CB9589B6193F571600C94AD5 /* WPInformationView.m in Sources */,
 				CBA0E892190133D4007119C0 /* UIView+CCAnimation.m in Sources */,
 				CBDD252418FF8CCA009043FE /* AppDelegate.m in Sources */,

@@ -9,6 +9,8 @@
 #import "BaseXibViewController.h"
 #import "WPOptionView.h"
 
+@protocol WPQuestionViewControllerDelegate;
+
 @interface WPQuestionViewController : BaseXibViewController<WPOptionViewDelegate>
 
 @property(nonatomic,strong) NSDictionary* requestResult;
@@ -17,5 +19,13 @@
 @property(nonatomic,strong) NSMutableArray* optionResultArray;
 @property(nonatomic,strong) NSMutableDictionary* optionData;
 @property(nonatomic,strong) NSString* questionId;
+
+@property(nonatomic,assign) id<WPQuestionViewControllerDelegate> delegate;
+
+@end
+
+@protocol WPQuestionViewControllerDelegate <NSObject>
+
+- (void) finishQuestion:(NSString*)questionId;
 
 @end

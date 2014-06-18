@@ -12,6 +12,7 @@ PODS:
     - Reachability
   - ASIHTTPRequest/S3 (1.8.2):
     - ASIHTTPRequest/Core
+  - BaiduPushSDK (1.1.0)
   - CrittercismSDK (4.3.3)
   - FlurrySDK (5.0.0):
     - FlurrySDK/FlurrySDK
@@ -32,6 +33,7 @@ PODS:
 
 DEPENDENCIES:
   - ASIHTTPRequest (~> 1.8.2)
+  - BaiduPushSDK
   - CrittercismSDK
   - FlurrySDK (~> 5.0.0)
   - InnerBand (~> 1.0.6)
@@ -48,6 +50,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   ASIHTTPRequest: 2c8335b49410c0e2ad42829c438e74d454b77590
+  BaiduPushSDK: 90f4838d12a5b3c860e8325a939880352504f549
   CrittercismSDK: 9f19db3a1f0c16b35d8c29c69406852d184a7650
   FlurrySDK: 1fa28436e86e533e51ab1164c43d8f3b5f8ff99f
   InnerBand: 06b6d56d575405dbd84ecafb9af3c0776448b6aa

@@ -100,9 +100,16 @@
     NSString* resultString = [NSObject toJSONString:resutlArray];
     [parm setObject:resultString forKey:@"params"];
     
+    __weak WPQuestionViewController* question = self;
     [[WPSyncService alloc]syncWithRoute:parm Block:^(id resp) {
         if (resp)
         {
+            WPUserInfo* userInfo = question.app.userInfo;
+            id data = [NSObject toJSONValue:resp];
+            id result = [data objectForKey:@"result"];
+            userInfo.coins = [result objectForKey:@"balance"];
+            
+            [[WPAlertView viewFromXib] showWithMessage:@"完成答卷"];
             [self popNavigation:nil];
         }
     }];
@@ -166,6 +173,7 @@
 
 - (IBAction)popNavigation:(id)sender
 {
+    [self.delegate finishQuestion:self.questionId];
     [self.navigationController popViewControllerAnimated:YES];
     [_questionContainer removeFromSuperview];
     _questionContainer = nil;

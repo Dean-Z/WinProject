@@ -41,6 +41,7 @@
     _inProductArray = [@[] mutableCopy];
     _outProductArray = [@[] mutableCopy];
     
+    isInProduct = YES;
     [self perpareSwitchBar];
     [self prepareData];
 }
@@ -86,7 +87,6 @@
         [_inProductArray addObject:info3];
     }
 
-    isInProduct = YES;
     [self.productTabelView reloadData];
     
     NSDictionary* parm = @{@"app":@"survey",@"act":@"index",@"page":@"1"};
@@ -242,6 +242,7 @@
                 {
                     NSDictionary* result = [data objectForKey:@"result"];
                     WPQuestionViewController* question = [[WPQuestionViewController alloc]viewControllerFromXib];
+                    question.delegate = market;
                     question.questionId = cell.marketInfo.question_id;
                     question.requestResult = result;
                     [market.app.aTabBarController.navigationController pushViewController:question animated:YES];
@@ -419,6 +420,11 @@
             self.outPageLoading = NO;
         }
     }];
+}
+
+- (void)finishQuestion:(NSString *)questionId
+{
+    [self prepareData];
 }
 
 - (void)didReceiveMemoryWarning
