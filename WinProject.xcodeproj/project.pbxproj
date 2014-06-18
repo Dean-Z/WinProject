@@ -140,6 +140,7 @@
 		CBCD62F91950303700C590D9 /* WPAddressInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCD62F81950303700C590D9 /* WPAddressInfo.m */; };
 		CBCD62FC1950715700C590D9 /* WPDatePickView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCD62FB1950715700C590D9 /* WPDatePickView.m */; };
 		CBCD62FE1950718300C590D9 /* WPDatePickView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBCD62FD1950718300C590D9 /* WPDatePickView.xib */; };
+		CBCD63031951943300C590D9 /* BPushConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = CBCD63021951943300C590D9 /* BPushConfig.plist */; };
 		CBD9624F192F6D7800825CE7 /* WPAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD9624E192F6D7800825CE7 /* WPAlertView.m */; };
 		CBD96251192F6F2E00825CE7 /* WPAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBD96250192F6F2E00825CE7 /* WPAlertView.xib */; };
 		CBD9626A193368D600825CE7 /* WPSigninView_iPhone5.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBD96269193368D600825CE7 /* WPSigninView_iPhone5.xib */; };
@@ -400,6 +401,7 @@
 		CBCD62FA1950715700C590D9 /* WPDatePickView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPDatePickView.h; sourceTree = "<group>"; };
 		CBCD62FB1950715700C590D9 /* WPDatePickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPDatePickView.m; sourceTree = "<group>"; };
 		CBCD62FD1950718300C590D9 /* WPDatePickView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPDatePickView.xib; sourceTree = "<group>"; };
+		CBCD63021951943300C590D9 /* BPushConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BPushConfig.plist; sourceTree = "<group>"; };
 		CBD9624D192F6D7800825CE7 /* WPAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPAlertView.h; sourceTree = "<group>"; };
 		CBD9624E192F6D7800825CE7 /* WPAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPAlertView.m; sourceTree = "<group>"; };
 		CBD96250192F6F2E00825CE7 /* WPAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPAlertView.xib; sourceTree = "<group>"; };
@@ -956,6 +958,7 @@
 				CBDD251C18FF8CCA009043FE /* InfoPlist.strings */,
 				CBDD251F18FF8CCA009043FE /* main.m */,
 				CBDD252118FF8CCA009043FE /* WinProject-Prefix.pch */,
+				CBCD63021951943300C590D9 /* BPushConfig.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1066,6 +1069,7 @@
 				CB3965261942BF3300ADE846 /* WPAlipayView.xib in Resources */,
 				CB4542B11915ED2A00BFE852 /* WPStockViewController_iPhone5.xib in Resources */,
 				CB5981361921106C000AF16A /* WPRultView.xib in Resources */,
+				CBCD63031951943300C590D9 /* BPushConfig.plist in Resources */,
 				CBA0E8A419013ABB007119C0 /* WPSignupView.xib in Resources */,
 				CB6B7987191B7F8A00610CD6 /* WPPullView.xib in Resources */,
 				CBDD251E18FF8CCA009043FE /* InfoPlist.strings in Resources */,
