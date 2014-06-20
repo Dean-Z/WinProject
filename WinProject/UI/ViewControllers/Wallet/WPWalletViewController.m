@@ -148,7 +148,8 @@
 - (IBAction)share:(id)sender
 {
     WPShareManager* share = [[WPShareManager alloc]init];
-    [share shareWithSina:[UIImage imageNamed:@"refresh.png"] message:@"21121"];
+//    [share shareWithSina:[UIImage imageNamed:@"refresh.png"] message:@"21121"];
+    [share shareWithTCWeiBo:self];
 }
 
 - (IBAction)coinExchange:(id)sender

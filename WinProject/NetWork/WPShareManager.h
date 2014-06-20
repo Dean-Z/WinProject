@@ -8,10 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "WeiboSDK.h"
-
+#import <MessageUI/MessageUI.h>
+#import <Social/Social.h>
 
 @interface WPShareManager : NSObject
 
 -(void)shareWithSina:(UIImage*)image message:(NSString*)message;
+
+- (void)shareWithTCWeiBo:(UIViewController*)viewController;
 
 @end

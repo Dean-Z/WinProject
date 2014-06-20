@@ -20,7 +20,7 @@
     }
     else
     {
-        [[WPAlertView viewFromXib]showWithMessage:@"未安装微博客户端！"];
+        [[WPAlertView viewFromXib]showWithMessage:@"未安装新浪微博客户端！"];
     }
 }
 
@@ -28,7 +28,7 @@
 {
     WBMessageObject *message = [WBMessageObject message];
     
-    message.text = @"测试通过WeiboSDK发送文字到微博!";
+    message.text = @"动漫壁纸免费下，商家互动赚外快。有看有赚!";
     
     WBImageObject *aImage = [WBImageObject object];
     aImage.imageData = UIImagePNGRepresentation(image);
@@ -37,5 +37,37 @@
     return message;
 }
 
+
+- (void)shareWithTCWeiBo:(UIViewController*)viewController
+{
+    if([SLComposeViewController isAvailableForServiceType:SLServiceTypeTencentWeibo])
+    {
+        
+        SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTencentWeibo];
+        
+        SLComposeViewControllerCompletionHandler myBlock = ^(SLComposeViewControllerResult result){
+            
+            if (result == SLComposeViewControllerResultCancelled)
+            {
+                
+            }
+            else
+            {
+                
+            }
+            [controller dismissViewControllerAnimated:YES completion:Nil];
+        };
+        controller.completionHandler = myBlock;
+        
+        [controller setInitialText:@"动漫壁纸免费下，商家互动赚外快。有看有赚!"];
+        
+        [viewController presentViewController:controller animated:YES completion:Nil];
+        
+    }
+    else
+    {
+        [[WPAlertView viewFromXib] showWithMessage:@"请先在手机设置的腾讯微博里登陆您的微博!"];
+    }
+}
 
 @end
