@@ -40,7 +40,10 @@
     NSUserDefaults* user = [NSUserDefaults standardUserDefaults];
     NSString* dataString = [user objectForKey:CORVER_DATA];
     
-    if([NSString isNilOrEmpty:dataString]) return;
+    if([NSString isNilOrEmpty:dataString]){
+        self.noDataImageView.hidden = NO;
+        return;
+    }
     
     id dataDict = [NSObject toJSONValue:dataString];
     
@@ -71,6 +74,15 @@
         buffer.originX = i%2 * (buffer.sizeW +6) + 6;
         [self.productContainerView addSubview:buffer];
         [buffer renderView];
+    }
+    
+    if (dataInfoArray.count == 0)
+    {
+        self.noDataImageView.hidden = NO;
+    }
+    else
+    {
+        self.noDataImageView.hidden = YES;
     }
     
     self.productContainerView.contentSize = CGSizeMake(0, MAX(self.view.sizeH-44, (dataInfoArray.count/2+1)*120));
@@ -119,6 +131,10 @@
 {
     for(UIView *view in self.productContainerView.subviews)
     {
+        if (view == self.noDataImageView)
+        {
+            continue;
+        }
         [view removeFromSuperview];
     }
 }

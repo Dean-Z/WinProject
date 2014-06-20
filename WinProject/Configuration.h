@@ -21,6 +21,7 @@
 
 #define UserName                            @"UserName"
 #define UserPassword                        @"UserPassword"
+#define AppGuide                            @"AppGuide"
 
 typedef enum
 {

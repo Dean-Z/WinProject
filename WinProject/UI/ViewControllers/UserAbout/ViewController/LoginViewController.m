@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "WPGuideView.h"
 
 #define InputAccessory IS_IPHONE_5? 0 : 50
 
@@ -18,6 +19,7 @@
     WPPasswordView* password;
     WPNickName*   nickView;
     WPRegisterAlert* alertView;
+    WPGuideView* guideView;
     
     NSString* phoneNumber;
     NSString* passwordString;
@@ -49,16 +51,6 @@
 {
     [super viewDidLoad];
     
-//    [[NSNotificationCenter defaultCenter] addObserver:self
-//                                             selector:@selector(keyboardDidShow)
-//                                                 name:UIKeyboardWillShowNotification
-//                                               object:nil];
-//    
-//    [[NSNotificationCenter defaultCenter] addObserver:self
-//                                             selector:@selector(keyboardDidHidden)
-//                                                 name:UIKeyboardWillHideNotification
-//                                               object:nil];
-    
     switch (self.viewType)
     {
         case VIEW_RESET_PASSWORD:
@@ -77,6 +69,8 @@
         }
             break;
     }
+    
+    [self prepareGuide];
 }
 
 - (void)prepareResetPasswordOnly
@@ -453,6 +447,18 @@
 - (void)registerSucceed
 {
     [self nickNameBack];
+}
+
+
+- (void)prepareGuide
+{
+    if (guideView == nil)
+    {
+        [signinView.phoneTextField resignFirstResponder];
+        guideView = [WPGuideView viewFromXib];
+        [guideView renderView];
+        [self.view addSubview:guideView];
+    }
 }
 
 - (void)didReceiveMemoryWarning

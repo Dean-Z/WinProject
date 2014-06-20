@@ -2,13 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "third_selected.png"
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "third_selected@2x.png"
+      "filename" : "guide-03-ip5@2x.png"
     }
   ],
   "info" : {

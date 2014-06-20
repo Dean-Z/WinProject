@@ -68,7 +68,7 @@ NSInteger MAX_RETRY_LIMIT = 3;
     
     self.request.requestCookies = [NSMutableArray arrayWithArray:self.app.cookies];
     self.request.useSessionPersistence = YES;
-    self.request.timeOutSeconds = 45.0f;
+    self.request.timeOutSeconds = 15.0f;
     
     [self addPostValue:param];
     
@@ -96,7 +96,7 @@ NSInteger MAX_RETRY_LIMIT = 3;
     
     failedBlock = ^
     {
-        
+        [[WPAlertView viewFromXib] showWithMessage:@"网络链接中断，请稍后再试"];
         DLog(@"%@",ser.request.responseString);
         response_codes += 1;
         processBlock(nil);
@@ -104,7 +104,7 @@ NSInteger MAX_RETRY_LIMIT = 3;
     };
     
     [self.request setCompletionBlock:completionBlock];
-    
+
     [self.request setFailedBlock:failedBlock];
     
     if (self.app.isNetworkAvailable)

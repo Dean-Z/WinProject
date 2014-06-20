@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WPBuffetViewController">
             <connections>
+                <outlet property="noDataImageView" destination="Bg1-PG-1Mr" id="qh4-6A-L0F"/>
                 <outlet property="productContainerView" destination="YVM-NA-2GR" id="5Xg-pn-TUa"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -23,6 +24,12 @@
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="YVM-NA-2GR">
                     <rect key="frame" x="0.0" y="44" width="320" height="391"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="noData" id="Bg1-PG-1Mr">
+                            <rect key="frame" x="39" y="116" width="243" height="184"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </imageView>
+                    </subviews>
                 </scrollView>
                 <view contentMode="scaleToFill" id="izh-Wh-UVi">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -66,6 +73,7 @@
     </objects>
     <resources>
         <image name="buffet_in_proudct" width="56" height="27"/>
+        <image name="noData" width="243" height="184"/>
         <image name="view_bg" width="320" height="568"/>
     </resources>
 </document>
