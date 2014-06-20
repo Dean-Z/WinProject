@@ -70,7 +70,14 @@
             break;
     }
     
-    [self prepareGuide];
+    NSUserDefaults* user = [NSUserDefaults standardUserDefaults];
+    
+    if([NSString isNilOrEmpty:[user objectForKey:AppGuide]])
+    {
+        [self prepareGuide];
+        [user setObject:AppGuide forKey:AppGuide];
+        [user synchronize];
+    }
 }
 
 - (void)prepareResetPasswordOnly
