@@ -13,7 +13,7 @@
 #import "WPAlipayView.h"
 #import "WPConversionProductView.h"
 
-@interface WPWalletViewController : BaseXibViewController<UIScrollViewDelegate,WPConversionViewDelegate,WPAlipayViewDelegate,WPConversionProductViewDelegate>
+@interface WPWalletViewController : BaseXibViewController<UIScrollViewDelegate,WPConversionViewDelegate,WPAlipayViewDelegate,WPConversionProductViewDelegate,UIActionSheetDelegate>
 
 @property(nonatomic,weak) IBOutlet UIButton* exchangeButton;
 @property(nonatomic,weak) IBOutlet UIButton* shareButton;

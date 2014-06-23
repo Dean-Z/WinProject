@@ -44,6 +44,7 @@ typedef enum
 #define SERVICE_PHONE_NUMBER @"400399929993"
 #define IAD_PHONE_NUMBER @"02165656565"
 
+#define WXAPPKey       @"wx72899e9b506caf7f"
 #define CrittercismID  @"539c7d1c83fb796851000006"
 #define FlurryID       @"KBNY4SCV8NKKY989SHS6"
 

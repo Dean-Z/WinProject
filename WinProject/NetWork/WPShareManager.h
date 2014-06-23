@@ -10,11 +10,14 @@
 #import "WeiboSDK.h"
 #import <MessageUI/MessageUI.h>
 #import <Social/Social.h>
+#import "WXApi.h"
 
 @interface WPShareManager : NSObject
 
 -(void)shareWithSina:(UIImage*)image message:(NSString*)message;
 
-- (void)shareWithTCWeiBo:(UIViewController*)viewController;
+- (void)shareWithTCWeiBo:(UIViewController*)viewController image:(UIImage*)image;
+
+- (void)shareWithWx:(enum WXScene)scene;
 
 @end

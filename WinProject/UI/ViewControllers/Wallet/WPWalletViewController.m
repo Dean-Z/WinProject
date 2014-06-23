@@ -17,6 +17,9 @@
     WPAlipayView* alipayView;
     WPConversionProductView* conversionProductView;
 }
+
+@property(nonatomic,strong) UIImage* shareImage;
+
 @end
 
 @implementation WPWalletViewController
@@ -147,9 +150,40 @@
 
 - (IBAction)share:(id)sender
 {
+    if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)])
+        UIGraphicsBeginImageContextWithOptions(self.app.window.bounds.size, NO, [UIScreen mainScreen].scale);
+    else
+        UIGraphicsBeginImageContext(self.app.window.bounds.size);
+    
+    [self.app.window.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    self.shareImage = image;
+    
+    UIActionSheet* sheet = [[UIActionSheet alloc]initWithTitle:@"分享" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"新浪微博",@"微信好友",@"微信朋友圈",@"腾讯微博", nil];
+    [sheet showInView:self.view];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
     WPShareManager* share = [[WPShareManager alloc]init];
-//    [share shareWithSina:[UIImage imageNamed:@"refresh.png"] message:@"21121"];
-    [share shareWithTCWeiBo:self];
+    switch (buttonIndex) {
+        case 0:
+            [share shareWithSina:self.shareImage message:@"21121"];
+            break;
+        case 1:
+            [share shareWithWx:WXSceneSession];
+            break;
+        case 2:
+            [share shareWithWx:WXSceneTimeline];
+            break;
+        case 3:
+            [share shareWithTCWeiBo:self image:self.shareImage];
+            break;
+        default:
+            break;
+    }
 }
 
 - (IBAction)coinExchange:(id)sender

@@ -29,7 +29,7 @@
     WBMessageObject *message = [WBMessageObject message];
     
     message.text = @"动漫壁纸免费下，商家互动赚外快。有看有赚!";
-    
+
     WBImageObject *aImage = [WBImageObject object];
     aImage.imageData = UIImagePNGRepresentation(image);
     message.imageObject = aImage;
@@ -38,36 +38,39 @@
 }
 
 
-- (void)shareWithTCWeiBo:(UIViewController*)viewController
+- (void)shareWithTCWeiBo:(UIViewController*)viewController image:(UIImage*)image
 {
     if([SLComposeViewController isAvailableForServiceType:SLServiceTypeTencentWeibo])
     {
-        
         SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTencentWeibo];
         
         SLComposeViewControllerCompletionHandler myBlock = ^(SLComposeViewControllerResult result){
-            
             if (result == SLComposeViewControllerResultCancelled)
             {
-                
-            }
-            else
-            {
-                
             }
             [controller dismissViewControllerAnimated:YES completion:Nil];
         };
         controller.completionHandler = myBlock;
-        
         [controller setInitialText:@"动漫壁纸免费下，商家互动赚外快。有看有赚!"];
-        
+        [controller addImage:image];
         [viewController presentViewController:controller animated:YES completion:Nil];
-        
     }
     else
     {
         [[WPAlertView viewFromXib] showWithMessage:@"请先在手机设置的腾讯微博里登陆您的微博!"];
     }
+}
+
+- (void)shareWithWx:(enum WXScene)scene
+{
+    [WXApi registerApp:WXAPPKey withDescription:@"win 1.0"];
+    
+    SendMessageToWXReq* req = [[SendMessageToWXReq alloc] init];
+    req.text = @"动漫壁纸免费下，商家互动赚外快。有看有赚!";
+    req.bText = YES;
+    req.scene = scene;
+    
+    [WXApi sendReq:req];
 }
 
 @end

@@ -48,6 +48,16 @@
 				<string>wb2824257247</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>wxopenapi</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>wx72899e9b506caf7f</string>
+			</array>
+		</dict>
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
