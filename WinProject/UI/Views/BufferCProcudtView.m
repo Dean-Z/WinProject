@@ -51,7 +51,7 @@
     if(productBtn == nil)
     {
         productBtn = [WPCProductButton viewFromXib];
-        productBtn.coins = [self.dataInfo.coin integerValue]/10;
+        productBtn.coins = [self.dataInfo.coin integerValue];
         [productBtn renderView];
         [self.productBtnContainer addSubview:productBtn];
     }

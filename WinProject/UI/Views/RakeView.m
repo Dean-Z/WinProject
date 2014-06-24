@@ -74,7 +74,6 @@
     }
 }
 
-
 - (void)prepareData
 {
     if (loadFriends && loadContry)
@@ -280,6 +279,7 @@
     }
     else
     {
+        return;
         info = _countryRake[indexPath.row];
     }
     

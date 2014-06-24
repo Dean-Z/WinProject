@@ -109,7 +109,7 @@
     if (productBtn == nil)
     {
         productBtn = [WPProductButton viewFromXib];
-        productBtn.coins = [self.dateInfo.coin integerValue]/10;
+        productBtn.coins = [self.dateInfo.coin integerValue];
         [productBtn renderView];
         [self.priceBtnContainer addSubview:productBtn];
     }

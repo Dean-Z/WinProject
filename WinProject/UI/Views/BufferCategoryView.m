@@ -25,7 +25,7 @@
     [super renderView];
  
     [self.picImageView setImageWithURL:[NSURL URLWithString:self.dataInfo.url] placeholderImage:[UIImage imageNamed:@"icon-qProduct-loading.png"]];
-    self.coinLabel.text = [NSString stringWithFormat:@"%d",[self.dataInfo.coin integerValue]/10];
+    self.coinLabel.text = [NSString stringWithFormat:@"%d",[self.dataInfo.coin integerValue]];
     
     NSDate* endDate = [NSDate dateWithTimeIntervalSince1970:[self.dataInfo.end_time integerValue]];
     NSDateFormatter* formatter = [[NSDateFormatter alloc]init];

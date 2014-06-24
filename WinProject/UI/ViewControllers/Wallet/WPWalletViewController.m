@@ -76,6 +76,8 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    self.mainScrollView.contentOffset = CGPointMake(320.0f, 0);
 }
 
 - (void) dealCoinLabel

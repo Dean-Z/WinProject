@@ -27,7 +27,7 @@
     self.exprie = [data objectForKey:@"exprie"];
     self.copies = [data objectForKey:@"copies"];
     self.remain = [data objectForKey:@"remain"];
-    self.coin = [data objectForKey:@"coin"];
+    self.coin = [data objectForKey:@"coin_ios"];
     self.status = [data objectForKey:@"status"];
     self.brand = [data objectForKey:@"brand"];
     self.start_time = [data objectForKey:@"start_time"];

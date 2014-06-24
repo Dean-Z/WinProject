@@ -63,6 +63,11 @@
 
 - (void)shareWithWx:(enum WXScene)scene
 {
+    if (![WXApi isWXAppInstalled])
+    {
+        [[WPAlertView viewFromXib]showWithMessage:@"未安装微信！"];
+        return;
+    }
     [WXApi registerApp:WXAPPKey withDescription:@"win 1.0"];
     
     SendMessageToWXReq* req = [[SendMessageToWXReq alloc] init];
