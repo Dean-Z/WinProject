@@ -81,7 +81,7 @@
 {
     self.touchButton.enabled = YES;
     
-    NSDictionary* parm = @{@"app":@"screen",@"act":@"finish",@"id":productInfo.picId};
+    NSDictionary* parm = @{@"app":@"screen",@"act":@"download",@"id":productInfo.picId};
     
     [[WPSyncService alloc]downloadImageWithRoute:parm Block:^(id respData)
      {
