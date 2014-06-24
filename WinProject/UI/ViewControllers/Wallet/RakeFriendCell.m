@@ -55,7 +55,14 @@
     self.nameLabel.text = self.rakeInfo.nickname;
     self.coinLabel.text = [NSString stringWithFormat:@"%@金币",self.rakeInfo.coins];
     self.rakeLabel.text = [NSString stringWithFormat:@"%d",self.rakeIndex];
-    
+
+    AppDelegate* app = [AppDelegate shareAppDelegate];
+    if ([self.rakeInfo.userId isEqualToString:app.userInfo.userId])
+    {
+        self.coinLabel.textColor = [UIColor colorWithHexString:@"db6363"];
+        self.rakeLabel.textColor = [UIColor colorWithHexString:@"db6363"];
+        self.nameLabel.textColor = [UIColor colorWithHexString:@"db6363"];
+    }
 }
 
 - (UIColor*)colorWithRake:(NSInteger)rake
