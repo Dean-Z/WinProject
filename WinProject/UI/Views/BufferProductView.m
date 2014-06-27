@@ -24,6 +24,7 @@
 
 - (void) renderView
 {
+    [super renderView];
     [self prepareProductButton];
     
     NSDate* endDate = [NSDate dateWithTimeIntervalSince1970:[self.dateInfo.end_time integerValue]];
@@ -46,8 +47,21 @@
 {
     NSDictionary* parm = @{@"app":@"screen",@"act":@"download",@"id":productInfo.picId};
     
-    [[WPSyncService alloc]downloadImageWithRoute:parm Block:^(id respData)
+    [[WPSyncService alloc]syncWithRoute:parm Block:^(id respData)
      {
+         if (respData)
+        {
+            id resp = [NSObject toJSONValue:respData];
+            if ([resp isKindOfClass:[NSDictionary class]])
+            {
+                if ([[resp objectForKey:@"state"] intValue] == 1)
+                {
+                    id result = resp[@"result"];
+                    self.app.userInfo.coins = [result objectForKey:@"balance"];
+                }
+            }
+            DLog(@"%@",respData);
+        }
          [self saveDate];
          UIImage *picImage = self.productImage.image;
          UIImageWriteToSavedPhotosAlbum(picImage, nil, nil,nil);

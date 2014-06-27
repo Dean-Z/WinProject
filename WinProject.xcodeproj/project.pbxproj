@@ -123,6 +123,8 @@
 		CBA0E89F19013A8E007119C0 /* WPSigninView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBA0E89E19013A8E007119C0 /* WPSigninView.xib */; };
 		CBA0E8A219013AAD007119C0 /* WPSignupView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA0E8A119013AAD007119C0 /* WPSignupView.m */; };
 		CBA0E8A419013ABB007119C0 /* WPSignupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBA0E8A319013ABB007119C0 /* WPSignupView.xib */; };
+		CBA65FCE195D4DF300C65464 /* WPScollImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA65FCC195D4DF300C65464 /* WPScollImageViewController.m */; };
+		CBA65FCF195D4DF300C65464 /* WPScollImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBA65FCD195D4DF300C65464 /* WPScollImageViewController.xib */; };
 		CBABE33019495A130099B13F /* CCGetContactPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = CBABE32F19495A130099B13F /* CCGetContactPerson.m */; };
 		CBABE33219495A240099B13F /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBABE33119495A240099B13F /* AddressBook.framework */; };
 		CBB0B589193C30AC0069C360 /* QuestionnaireView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB0B588193C30AC0069C360 /* QuestionnaireView.m */; };
@@ -377,6 +379,9 @@
 		CBA0E8A019013AAD007119C0 /* WPSignupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPSignupView.h; sourceTree = "<group>"; };
 		CBA0E8A119013AAD007119C0 /* WPSignupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPSignupView.m; sourceTree = "<group>"; };
 		CBA0E8A319013ABB007119C0 /* WPSignupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPSignupView.xib; sourceTree = "<group>"; };
+		CBA65FCB195D4DF300C65464 /* WPScollImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPScollImageViewController.h; sourceTree = "<group>"; };
+		CBA65FCC195D4DF300C65464 /* WPScollImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPScollImageViewController.m; sourceTree = "<group>"; };
+		CBA65FCD195D4DF300C65464 /* WPScollImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPScollImageViewController.xib; sourceTree = "<group>"; };
 		CBABE32E19495A130099B13F /* CCGetContactPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCGetContactPerson.h; sourceTree = "<group>"; };
 		CBABE32F19495A130099B13F /* CCGetContactPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCGetContactPerson.m; sourceTree = "<group>"; };
 		CBABE33119495A240099B13F /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
@@ -838,6 +843,9 @@
 				CB4542AE1915ED2A00BFE852 /* WPStockViewController.m */,
 				CB4542CB1918DD0500BFE852 /* WPStockViewController_iPhone.xib */,
 				CB4542AF1915ED2A00BFE852 /* WPStockViewController_iPhone5.xib */,
+				CBA65FCB195D4DF300C65464 /* WPScollImageViewController.h */,
+				CBA65FCC195D4DF300C65464 /* WPScollImageViewController.m */,
+				CBA65FCD195D4DF300C65464 /* WPScollImageViewController.xib */,
 			);
 			path = Buffet;
 			sourceTree = "<group>";
@@ -1119,6 +1127,7 @@
 				CBBBA8EF194E9F5F00A11015 /* WPBillCell.xib in Resources */,
 				CB6B7998191C995900610CD6 /* WPPasswordView.xib in Resources */,
 				CBD9626A193368D600825CE7 /* WPSigninView_iPhone5.xib in Resources */,
+				CBA65FCF195D4DF300C65464 /* WPScollImageViewController.xib in Resources */,
 				CB39659C19444B0700ADE846 /* ConversionProductCell.xib in Resources */,
 				CBCD631C1953179D00C590D9 /* WPGuideView_iPhone5.xib in Resources */,
 				CB4E1395190FE6970048709B /* WawaSC-Regular.otf in Resources */,
@@ -1267,6 +1276,7 @@
 				CBF4AFC219405E600028588E /* ConversionCell.m in Sources */,
 				CB9589B6193F571600C94AD5 /* WPInformationView.m in Sources */,
 				CBA0E892190133D4007119C0 /* UIView+CCAnimation.m in Sources */,
+				CBA65FCE195D4DF300C65464 /* WPScollImageViewController.m in Sources */,
 				CBDD252418FF8CCA009043FE /* AppDelegate.m in Sources */,
 				CB45CC2F192101510020D76C /* NSObject+SBJSON.m in Sources */,
 				CBCBF1FA190F48BF003439DB /* MarketInTableViewCell.m in Sources */,

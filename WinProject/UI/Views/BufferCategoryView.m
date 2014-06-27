@@ -36,4 +36,9 @@
     self.brandLabel.text = self.dataInfo.brand;
 }
 
+- (IBAction)bufferTouched:(id)sender
+{
+    [self.delegate bufferCategoryViewTouched:self.dataInfo];
+}
+
 @end

@@ -26,6 +26,7 @@
 
 - (void) renderView
 {
+    [super renderView];
     [self prepareProductBtn];
     [self.productImageView setImageWithURL:[NSURL URLWithString:self.dataInfo.url] placeholderImage:[UIImage imageNamed:@"icon-cProduct-loading.png"]];
     self.logoLabel.text = [NSString stringWithFormat:@"品牌:%@",self.dataInfo.brand];
@@ -83,8 +84,17 @@
     
     NSDictionary* parm = @{@"app":@"screen",@"act":@"download",@"id":productInfo.picId};
     
-    [[WPSyncService alloc]downloadImageWithRoute:parm Block:^(id respData)
+    [[WPSyncService alloc]syncWithRoute:parm Block:^(id respData)
      {
+         id resp = [NSObject toJSONValue:respData];
+         if ([resp isKindOfClass:[NSDictionary class]])
+         {
+             if ([[resp objectForKey:@"state"] intValue] == 1)
+             {
+                 id result = resp[@"result"];
+                 self.app.userInfo.coins = [result objectForKey:@"balance"];
+             }
+         }
          [self saveDate];
          UIImage *picImage = self.productImageView.image;
          UIImageWriteToSavedPhotosAlbum(picImage, nil, nil,nil);

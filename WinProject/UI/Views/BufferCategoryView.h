@@ -9,6 +9,7 @@
 #import "WPBaseView.h"
 #import "WPCDataInfo.h"
 
+@protocol BufferCategoryViewDelegate;
 @interface BufferCategoryView : WPBaseView
 
 @property(nonatomic,strong)WPCBaseDateInfo* dataInfo;
@@ -18,5 +19,13 @@
 @property(nonatomic,weak) IBOutlet UILabel* coinLabel;
 @property(nonatomic,weak) IBOutlet UILabel* endTimeLabel;
 @property(nonatomic,weak) IBOutlet UIImageView* picImageView;
+
+@property(nonatomic,assign) id<BufferCategoryViewDelegate> delegate;
+
+@end
+
+@protocol BufferCategoryViewDelegate <NSObject>
+
+- (void) bufferCategoryViewTouched:(WPCBaseDateInfo*)dataInfo;
 
 @end

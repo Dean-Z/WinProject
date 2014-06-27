@@ -78,6 +78,15 @@
     [super viewWillAppear:animated];
     
     self.mainScrollView.contentOffset = CGPointMake(320.0f, 0);
+    if (self.isYuan)
+    {
+        self.coinLabel.text = [NSString stringWithFormat:@"%.1f",[self.app.userInfo.coins integerValue]/10.0f];
+    }
+    else
+    {
+       self.coinLabel.text = [NSString stringWithFormat:@"%@",self.app.userInfo.coins];
+    }
+    [self dealCoinLabel];
 }
 
 - (void) dealCoinLabel
@@ -199,7 +208,7 @@
     }
     else
     {
-        self.coinLabel.text = self.app.userInfo.coins;
+        self.coinLabel.text = [NSString stringWithFormat:@"%@",self.app.userInfo.coins];
         self.yuanLabel.text = @"金币";
     }
 }

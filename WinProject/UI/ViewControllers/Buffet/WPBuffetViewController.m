@@ -8,8 +8,9 @@
 
 #import "WPBuffetViewController.h"
 #import "BufferCategoryView.h"
+#import "WPScollImageViewController.h"
 
-@interface WPBuffetViewController ()
+@interface WPBuffetViewController ()<BufferCategoryViewDelegate>
 {
     WPStockViewController* stock;
 }
@@ -69,6 +70,7 @@
         }
         
         BufferCategoryView* buffer = [BufferCategoryView viewFromXib];
+        buffer.delegate = self;
         buffer.dataInfo = dataInfoArray[i];
         buffer.originY = i/2 * (120) + 10;
         buffer.originX = i%2 * (buffer.sizeW +6) + 6;
@@ -137,6 +139,13 @@
         }
         [view removeFromSuperview];
     }
+}
+
+- (void)bufferCategoryViewTouched:(WPCBaseDateInfo *)dataInfo
+{
+    WPScollImageViewController* scroll = [[WPScollImageViewController alloc]viewControllerFromXib];
+    scroll.dataInfo = dataInfo;
+    [self.app.aTabBarController.navigationController pushViewController:scroll animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
