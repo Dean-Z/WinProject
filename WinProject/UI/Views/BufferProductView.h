@@ -11,7 +11,9 @@
 #import "WPProductButton.h"
 #import "WPQDateInfo.h"
 #import "WPProductDetailView.h"
+#import "BufferCProcudtView.h"
 
+@protocol BufferProcudtViewDelegate;
 @interface BufferProductView : WPBaseView<WPProductDetailViewDelegate>
 
 @property(nonatomic,weak) IBOutlet UIImageView* productImage;
@@ -19,7 +21,7 @@
 @property(nonatomic,weak) IBOutlet UILabel*     numberProductLabel;
 @property(nonatomic,weak) IBOutlet UIView*      priceBtnContainer;
 @property(nonatomic,weak) IBOutlet UIButton* touchButton;
-
+@property(nonatomic,assign) id<BufferProcudtViewDelegate> delegate;
 @property(nonatomic,weak) WPQBaseDateInfo* dateInfo;
 
 @end

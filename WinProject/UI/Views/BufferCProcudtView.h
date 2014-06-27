@@ -11,6 +11,7 @@
 #import "UIImageView+WebCache.h"
 #import "WPProductDetailView.h"
 
+@protocol BufferProcudtViewDelegate;
 @interface BufferCProcudtView : WPBaseView<WPProductDetailViewDelegate>
 
 @property(nonatomic,weak) IBOutlet UIView* productBtnContainer;
@@ -21,5 +22,11 @@
 @property(nonatomic,weak) IBOutlet UIButton* touchButton;
 
 @property(nonatomic,weak) WPCBaseDateInfo* dataInfo;
+@property(nonatomic,assign) id<BufferProcudtViewDelegate> delegate;
+@end
+
+@protocol BufferProcudtViewDelegate <NSObject>
+
+- (void)downloadPicdidFinish;
 
 @end

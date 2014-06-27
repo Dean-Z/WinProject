@@ -66,6 +66,8 @@
          UIImage *picImage = self.productImage.image;
          UIImageWriteToSavedPhotosAlbum(picImage, nil, nil,nil);
          [[WPAlertView viewFromXib]showWithMessage:@"保存成功"];
+         
+         [self.delegate downloadPicdidFinish];
     }];
 }
 

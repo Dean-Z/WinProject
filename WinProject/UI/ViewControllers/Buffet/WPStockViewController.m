@@ -157,6 +157,7 @@
             continue;
         }
         BufferProductView* product = [BufferProductView viewFromXib];
+        product.delegate = self;
         product.dateInfo = self.qDataArray[i];
         product.tag = QBaseTag + i;
         product.originX = i%2 * (product.sizeW + 20)+10;
@@ -181,6 +182,7 @@
             continue;
         }
         BufferCProcudtView* cProduct = [BufferCProcudtView viewFromXib];
+        cProduct.delegate = self;
         cProduct.dataInfo = self.cDataArray[i];
         cProduct.tag = CBaseTag + i;
         cProduct.originX = (self.view.sizeW - cProduct.sizeW)/2 + self.view.sizeW*i;
@@ -190,6 +192,11 @@
     }
     
     [self.cScrollViewController setContentSize:CGSizeMake(self.view.sizeW*self.cDataArray.count, 0)];
+}
+
+- (void)downloadPicdidFinish
+{
+    [self close:nil];
 }
 
 - (IBAction)close:(id)sender

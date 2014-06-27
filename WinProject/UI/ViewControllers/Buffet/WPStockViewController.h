@@ -15,7 +15,7 @@
 
 @protocol WPStockViewControllerDelegate;
 
-@interface WPStockViewController : BaseXibViewController<UIScrollViewDelegate>
+@interface WPStockViewController : BaseXibViewController<UIScrollViewDelegate,BufferProcudtViewDelegate>
 
 @property(nonatomic,weak) IBOutlet UIView*      switchBarContainer;
 

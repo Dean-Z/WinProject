@@ -100,6 +100,8 @@
          UIImageWriteToSavedPhotosAlbum(picImage, nil, nil,nil);
          [[WPAlertView viewFromXib]showWithMessage:@"保存成功"];
          
+         [self.delegate downloadPicdidFinish];
+         
          self.remainLabel.text = [NSString stringWithFormat:@"剩余：%d份",[self.dataInfo.remain integerValue]-1];
      }];
 }
