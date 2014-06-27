@@ -28,7 +28,7 @@
     
     self.titleLabel.text = title;
     
-    self.messageLabel.text = [NSString stringWithFormat:@"%@%@%@%@",message,message,message,message];
+    self.messageLabel.text = [NSString stringWithFormat:@"%@",message];
     
     CGSize size = [self.messageLabel.text sizeWithFont:self.messageLabel.font constrainedToSize:CGSizeMake(190, 2000) lineBreakMode:self.messageLabel.lineBreakMode];
     
