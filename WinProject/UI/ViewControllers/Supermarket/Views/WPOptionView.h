@@ -17,6 +17,8 @@
 
 @property(nonatomic,strong) NSMutableArray* tagImageViews;
 
+@property(nonatomic,strong) WPOptionInfo* selectedOptionsinfo;
+
 @property(nonatomic,assign) id<WPOptionViewDelegate> delegate;
 
 @end

@@ -106,4 +106,40 @@
     [self.delegate optionViewDidSelected:self.options[tag] optionView:self];
 }
 
+- (void) setSelectedOptionsinfo:(WPOptionInfo *)selectedOptionsinfo
+{
+    if (_selectedOptionsinfo)
+    {
+        _selectedOptionsinfo = nil;
+    }
+    
+    _selectedOptionsinfo = selectedOptionsinfo;
+    
+    NSInteger index = 0;
+    for (NSInteger i=0; i<self.options.count; i++)
+    {
+        WPOptionInfo* info = self.options[i];
+        
+        if ([info.optionId isEqualToString: _selectedOptionsinfo.optionId])
+        {
+            index = i;
+            break;
+        }
+    }
+    
+    NSInteger i =0;
+    for (UIImageView* tagImageView in self.tagImageViews)
+    {
+        if (i!=index)
+        {
+            [tagImageView setImage:[UIImage imageNamed:@"icon-normal.png"]];
+        }
+        else
+        {
+            tagImageView.image = [UIImage imageNamed:@"icon-selected.png"];
+        }
+        i++;
+    }
+}
+
 @end

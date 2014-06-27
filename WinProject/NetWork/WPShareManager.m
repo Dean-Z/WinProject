@@ -20,7 +20,7 @@
     }
     else
     {
-        [[WPAlertView viewFromXib]showWithMessage:@"未安装新浪微博客户端！"];
+        [[WPAlertView viewFromXib]showWithMessage:@"未安装新浪微博客户端！ http://jbp.allgather.net"];
     }
 }
 
@@ -28,7 +28,7 @@
 {
     WBMessageObject *message = [WBMessageObject message];
     
-    message.text = @"动漫壁纸免费下，商家互动赚外快。有看有赚!";
+    message.text = @"动漫壁纸免费下，商家互动赚外快。有看有赚! http://jbp.allgather.net";
 
     WBImageObject *aImage = [WBImageObject object];
     aImage.imageData = UIImagePNGRepresentation(image);
@@ -51,7 +51,7 @@
             [controller dismissViewControllerAnimated:YES completion:Nil];
         };
         controller.completionHandler = myBlock;
-        [controller setInitialText:@"动漫壁纸免费下，商家互动赚外快。有看有赚!"];
+        [controller setInitialText:@"动漫壁纸免费下，商家互动赚外快。有看有赚! http://jbp.allgather.net"];
         [controller addImage:image];
         [viewController presentViewController:controller animated:YES completion:Nil];
     }
@@ -63,15 +63,15 @@
 
 - (void)shareWithWx:(enum WXScene)scene
 {
-    if (![WXApi isWXAppInstalled])
-    {
-        [[WPAlertView viewFromXib]showWithMessage:@"未安装微信！"];
-        return;
-    }
+//    if (![WXApi isWXAppInstalled])
+//    {
+//        [[WPAlertView viewFromXib]showWithMessage:@"未安装微信！"];
+//        return;
+//    }
     [WXApi registerApp:WXAPPKey withDescription:@"win 1.0"];
     
     SendMessageToWXReq* req = [[SendMessageToWXReq alloc] init];
-    req.text = @"动漫壁纸免费下，商家互动赚外快。有看有赚!";
+    req.text = @"动漫壁纸免费下，商家互动赚外快。有看有赚! http://jbp.allgather.net";
     req.bText = YES;
     req.scene = scene;
     

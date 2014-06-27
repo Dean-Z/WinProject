@@ -47,14 +47,15 @@
     NSURL *url = [NSURL URLWithString:@"http://LookRult"];
     [self.rultLabel addLinkToURL:url withRange:range];
     
-    if (self.questionArray.count <= 1)
+    self.canFinish = YES;
+    if (self.questionArray.count > 1)
     {
-        self.finishButton.hidden = NO;
+        self.canFinish = NO;
+        [self.finishButton setTitle:@"下一题" forState:UIControlStateNormal];
     }
-    else
-    {
-        self.finishButton.hidden = YES;
-    }
+    
+    self.currentPage = 1;
+    self.countLabel.text = [NSString stringWithFormat:@"1/%d",self.questionArray.count];
     
     [self prepareData];
 }
@@ -82,7 +83,14 @@
 
 - (IBAction)completion:(id)sender
 {
-    [self.delegate questionCompletion];
+    if (self.canFinish)
+    {
+        [self.delegate questionCompletion];
+    }
+    else
+    {
+        [self.questionContainer setContentOffset:CGPointMake(self.questionContainer.contentOffset.x + QuestionWidth , 0) animated:YES];
+    }
 }
 
 - (void)showInView:(UIView*)view
@@ -112,6 +120,42 @@
     [self prepareOptionsViewWithOptionInfo:question];
     
     self.currentCell = (QuestionCell*)[scrollView viewWithTag:100+index];
+    if (index+1>self.currentPage)
+    {
+        self.currentPage = index + 1;
+        self.countLabel.text = [NSString stringWithFormat:@"%d/%d",self.currentPage,self.questionArray.count];
+    }
+    
+    if (index == self.questionArray.count -1)
+    {
+        self.canFinish = YES;
+        [self.finishButton setTitle:@"完成" forState:UIControlStateNormal];
+    }
+    else
+    {
+        self.canFinish = NO;
+        [self.finishButton setTitle:@"下一题" forState:UIControlStateNormal];
+    }
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
+{
+    NSInteger index = scrollView.contentOffset.x/QuestionWidth;
+    WPQuestionInfo* question = self.questionArray[index];
+    [self prepareOptionsViewWithOptionInfo:question];
+    
+    self.currentCell = (QuestionCell*)[scrollView viewWithTag:100+index];
+
+    if (index == self.questionArray.count -1)
+    {
+        self.canFinish = YES;
+        [self.finishButton setTitle:@"完成" forState:UIControlStateNormal];
+    }
+    else
+    {
+        self.canFinish = NO;
+        [self.finishButton setTitle:@"下一题" forState:UIControlStateNormal];
+    }
 }
 
 - (void) setCellOptionButtonContent:(NSString*)option

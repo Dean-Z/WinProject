@@ -17,9 +17,11 @@
 @property(nonatomic,weak) IBOutlet TTTAttributedLabel* rultLabel;
 @property(nonatomic,weak) IBOutlet UIScrollView* questionContainer;
 @property(nonatomic,weak) IBOutlet UIButton*    finishButton;
+@property(nonatomic,weak) IBOutlet UILabel*     countLabel;
 @property(nonatomic,strong) NSMutableArray *questionArray;
 @property(nonatomic,strong)  QuestionCell* currentCell;
-
+@property(nonatomic,assign) NSInteger currentPage;
+@property(nonatomic,assign) BOOL      canFinish;
 @property(nonatomic,assign) id<QuestionnaireViewDelegate> delegate;
 
 - (void)showInView:(UIView*)view;

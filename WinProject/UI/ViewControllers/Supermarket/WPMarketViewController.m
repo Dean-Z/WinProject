@@ -60,7 +60,6 @@
 {
     [_inProductArray removeAllObjects];
     [_outProductArray removeAllObjects];
-    NSUserDefaults* userDefault = [NSUserDefaults standardUserDefaults];
     
     WPMarketInfo* info = [[WPMarketInfo alloc]init];
     info.cover = @"icon-invite.png";
@@ -78,7 +77,7 @@
     info3.timeLimit = @"长期有效";
     info3.coins = @"20";
     info3.type = Market_Information_Type;
-    if ([[userDefault objectForKey:MARKET_INFORMATION] isEqualToString:MARKET_INFORMATION])
+    if ([self.app.userInfo.complete isEqualToString:@"1"])
     {
         [_outProductArray addObject:info3];
     }

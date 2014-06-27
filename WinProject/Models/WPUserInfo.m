@@ -36,6 +36,7 @@
             self.income = [result objectForKey:@"income"];
             self.login_times = [result objectForKey:@"login_times"];
             self.token = [result objectForKey:@"token"];
+            self.complete = [result objectForKey:@"complete"];
         }
     }
 }

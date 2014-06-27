@@ -86,6 +86,7 @@
              }
              else
              {
+                 [self saveCookie:network];
                  processBlock(resp);
              }
          }
@@ -126,6 +127,31 @@
         resultString = [resultString stringByAppendingString:[NSString stringWithFormat:@"/%@",[term objectForKey:keys]]];
     }
     return resultString;
+}
+
+- (void) saveCookie:(CHDNetwork*)network
+{
+    if (network.request.responseCookies.count != 0)
+    {
+        self.app = [AppDelegate shareAppDelegate];
+        self.app.cookies = [NSArray arrayWithArray:network.request.responseCookies];
+        
+        for (NSHTTPCookie* cookie in network.request.responseCookies)
+        {
+            if ([[cookie.properties objectForKey:@"Name"] isEqualToString:@"Session"])
+            {
+                AppDelegate* app = [AppDelegate shareAppDelegate];
+                
+                NSUserDefaults* user = [NSUserDefaults standardUserDefaults];
+                if ([cookie.properties allKeys].count > 0)
+                {
+                    app.userInfo.cookies = [cookie.properties objectForKey:@"Value"];
+                    [user setObject:[cookie.properties objectForKey:@"Value"] forKey:ACCOUNT_KEY_COOKIE];
+                }
+                [user synchronize];
+            }
+        }
+    }
 }
 
 @end

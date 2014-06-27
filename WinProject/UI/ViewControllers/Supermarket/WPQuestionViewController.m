@@ -119,30 +119,23 @@
 
 - (void)optionWithOptionInfo:(WPQuestionInfo *)info
 {
+    self.optionView.options = info.options;
+    self.optionView.originY = -self.optionView.sizeH;
+    
     BOOL hasExite = NO;
     for (WPOptionInfo* optionInfo in self.optionResultArray)
     {
         if ([optionInfo.survey_problem_id isEqualToString:info.questionId])
         {
             hasExite = YES;
+            self.optionView.selectedOptionsinfo = optionInfo;
+            break;
         }
     }
     if (!hasExite)
     {
         [self.optionResultArray addObject:[info.options firstObject]];
     }
-    
-    if (self.optionResultArray.count == self.questionArray.count)
-    {
-        _questionContainer.finishButton.hidden = NO;
-    }
-    else
-    {
-        _questionContainer.finishButton.hidden = YES;
-    }
-    
-    self.optionView.options = info.options;
-    self.optionView.originY = -self.optionView.sizeH;
 }
 
 - (void)showOptionsView
