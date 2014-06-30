@@ -24,6 +24,7 @@
 
 - (void)renderView
 {
+    [super renderView];
     [self prepareSwithBar];
     [self preparePullView];
     
@@ -91,20 +92,63 @@
         {
             id date = [NSObject toJSONValue:resp];
             
+            [_countryRake removeAllObjects];
+            
             if ([date isKindOfClass:[NSDictionary class]])
             {
                 NSDictionary* result = [date objectForKey:@"result"];
+                NSInteger postition = [date[@"result"][@"position"] integerValue];
                 if ([result isKindOfClass:[NSDictionary class]])
                 {
                     NSArray* resultData = [date objectForKey:@"result"][@"data"];
                     
                     if (resultData > 0)
                     {
+                        NSInteger i = 1;
+                        BOOL rakeThird = NO;
                         for (NSDictionary* dict in resultData)
                         {
                             WPRakeInfo* info = [[WPRakeInfo alloc] init];
                             info.data = dict;
-                            [_countryRake addObject:info];
+                            if (i<4)
+                            {
+                                info.rake = i;
+                                if (postition == i)
+                                {
+                                    rakeThird = YES;
+                                }
+                                [_countryRake addObject:info];
+                            }
+                            else if(i==4)
+                            {
+                                if (postition == i)
+                                {
+                                    rakeThird = YES;
+                                    info.rake = i;
+                                    [_countryRake addObject:info];
+                                }
+                                else if(!rakeThird)
+                                {
+                                    WPRakeInfo* moreRake = [[WPRakeInfo alloc]init];
+                                    moreRake.rake = -1;
+                                    [_countryRake addObject:moreRake];
+                                    
+                                    info.rake = postition;
+                                    [_countryRake addObject:info];
+                                    i = postition;
+                                }
+                                else
+                                {
+                                    info.rake = i;
+                                    [_countryRake addObject:info];
+                                }
+                            }
+                            else
+                            {
+                                info.rake = i;
+                                [_countryRake addObject:info];
+                            }
+                            i++;
                         }
                         [rake.countryTableView reloadData];
                         loadContry = YES;
@@ -136,6 +180,7 @@
         [[WPSyncService alloc]syncWithRoute:parm Block:^(id resp) {
             if (resp)
             {
+                [_friendsRake removeAllObjects];
                 id date = [NSObject toJSONValue:resp];
                 
                 if ([date isKindOfClass:[NSDictionary class]])
@@ -143,11 +188,14 @@
                     NSArray* result = [date objectForKey:@"result"][@"data"];
                     if (result.count > 0)
                     {
+                        NSInteger i = 1;
                         for (NSDictionary* dict in result)
                         {
                             WPRakeInfo* info = [[WPRakeInfo alloc] init];
                             info.data = dict;
+                            info.rake = i;
                             [_friendsRake addObject:info];
+                            i++;
                         }
                         
                         [rake.friendTableView reloadData];

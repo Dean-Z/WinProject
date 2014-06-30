@@ -246,6 +246,7 @@
     [UIView animateWithDuration:0.3 animations:^{
         conversionView.originX = 0;
         self.mainScrollView.alpha = 0.0f;
+        self.pageControl.alpha = 0.0f;
     }];
 }
 
@@ -266,6 +267,7 @@
     [UIView animateWithDuration:0.3 animations:^{
         conversionView.originX = self.view.sizeW;
         self.mainScrollView.alpha = 1.0f;
+        self.pageControl.alpha = 1.0f;
     } completion:^(BOOL finished) {
         [conversionView removeFromSuperview];
         conversionView = nil;

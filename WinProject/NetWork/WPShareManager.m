@@ -20,7 +20,7 @@
     }
     else
     {
-        [[WPAlertView viewFromXib]showWithMessage:@"未安装新浪微博客户端！ http://jbp.allgather.net"];
+        [[WPAlertView viewFromXib]showWithMessage:@"未安装新浪微博客户端!"];
     }
 }
 

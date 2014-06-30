@@ -94,7 +94,14 @@
                         if (history.historyData.count>0)
                         {
                             WPHistoryInfo* info = [history.historyData firstObject];
-                            self.firstCellLabel.text = [NSString stringWithFormat:@"%@兑换了%@",self.rakeInfo.nickname,info.goods];
+                            if (![NSString isNilOrEmpty:info.goods])
+                            {
+                                self.firstCellLabel.text = [NSString stringWithFormat:@"%@兑换了%@",self.rakeInfo.nickname,info.goods];
+                            }
+                            else
+                            {
+                                self.firstCellLabel.text = [NSString stringWithFormat:@"%@提现了%@金币",self.rakeInfo.nickname,info.coins];
+                            }
                             if (!self.shouldHidden)
                             {
                              self.hidden = NO;

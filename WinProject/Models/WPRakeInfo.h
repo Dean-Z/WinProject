@@ -14,6 +14,7 @@
 @property (nonatomic,strong) NSString* nickname;
 @property (nonatomic,strong) NSString* account;
 @property (nonatomic,strong) NSString* coins;
+@property (nonatomic,assign) NSInteger rake;
 
 @property (nonatomic,strong) NSDictionary* data;
 @end

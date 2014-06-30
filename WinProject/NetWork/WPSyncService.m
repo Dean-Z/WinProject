@@ -23,12 +23,22 @@
      {
          BOOL isSuccend = NO;
          id date = [NSObject toJSONValue:resp];
+         self.app = [AppDelegate shareAppDelegate];
          if (date)
          {
              if ([date[@"state"] intValue] != 1)
              {
-                 [[WPAlertView viewFromXib] showWithMessage:date[@"message"]];
-                 processBlock(nil);
+                 NSString* message = [date[@"message"] lowercaseString];
+                 
+                 if ([message isEqualToString:@"not login!"])
+                 {
+//                     [[WPAlertView viewFromXib] showWithMessage:date[@"网络链接错误，请重新登陆！"]];
+                 }
+                 else
+                 {
+                     [[WPAlertView viewFromXib] showWithMessage:date[@"message"]];
+                     processBlock(nil);
+                 }
              }
              else
              {
@@ -81,8 +91,16 @@
          {
              if ([date[@"state"] intValue] != 1)
              {
-                 [[WPAlertView viewFromXib] showWithMessage:date[@"message"]];
-                 processBlock(nil);
+                 NSString* message = date[@"message"];
+                 if ([message isEqualToString:@"Not Login!"])
+                 {
+//                     [[WPAlertView viewFromXib] showWithMessage:@"网络链接错误，请重新登陆！"];
+                 }
+                 else
+                 {
+                     [[WPAlertView viewFromXib] showWithMessage:date[@"message"]];
+                     processBlock(nil);
+                 }
              }
              else
              {

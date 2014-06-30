@@ -33,28 +33,37 @@
 
 - (void)renderView
 {
-    [self.nameLabel setFont:[UIFont fontWithName:@"DFWaWaSC-W5" size:[self sizeWithRake:self.rakeIndex]]];
-    [self.nameLabel setTextColor:[self colorWithRake:self.rakeIndex]];
+    [self.nameLabel setFont:[UIFont fontWithName:@"DFWaWaSC-W5" size:[self sizeWithRake:self.rakeInfo.rake]]];
+    [self.nameLabel setTextColor:[self colorWithRake:self.rakeInfo.rake]];
     
-    if (self.rakeIndex<4)
+    if (self.rakeInfo.rake<4 && self.rakeInfo.rake != -1)
     {
-        self.rakeTopImageView.image = [self topImageWithRake:self.rakeIndex];
+        self.rakeTopImageView.image = [self topImageWithRake:self.rakeInfo.rake];
         self.rakeTopImageView.hidden = NO;
         self.rakeLabel.hidden = YES;
     }
     else
     {
         self.rakeTopImageView.hidden = YES;
-        [self.rakeLabel setFont:[UIFont fontWithName:@"DFWaWaSC-W5" size:[self sizeWithRake:self.rakeIndex]]];
-        [self.rakeLabel setTextColor:[self colorWithRake:self.rakeIndex]];
+        [self.rakeLabel setFont:[UIFont fontWithName:@"DFWaWaSC-W5" size:[self sizeWithRake:self.rakeInfo.rake]]];
+        [self.rakeLabel setTextColor:[self colorWithRake:self.rakeInfo.rake]];
     }
     
-    [self.coinLabel setFont:[UIFont fontWithName:@"DFWaWaSC-W5" size:[self sizeWithRake:self.rakeIndex]]];
-    [self.coinLabel setTextColor:[self colorWithRake:self.rakeIndex]];
+    [self.coinLabel setFont:[UIFont fontWithName:@"DFWaWaSC-W5" size:[self sizeWithRake:self.rakeInfo.rake]]];
+    [self.coinLabel setTextColor:[self colorWithRake:self.rakeInfo.rake]];
     
-    self.nameLabel.text = self.rakeInfo.nickname;
-    self.coinLabel.text = [NSString stringWithFormat:@"%@金币",self.rakeInfo.coins];
-    self.rakeLabel.text = [NSString stringWithFormat:@"%d",self.rakeIndex];
+    if (self.rakeInfo.rake != -1)
+    {
+        self.nameLabel.text = self.rakeInfo.nickname;
+        self.coinLabel.text = [NSString stringWithFormat:@"%@金币",self.rakeInfo.coins];
+        self.rakeLabel.text = [NSString stringWithFormat:@"%d",self.rakeInfo.rake];
+    }
+    else
+    {
+        [self.rakeLabel setFont:[UIFont fontWithName:@"DFWaWaSC-W5" size:[self sizeWithRake:1]]];
+        [self.nameLabel setFont:[UIFont fontWithName:@"DFWaWaSC-W5" size:[self sizeWithRake:1]]];
+        [self.coinLabel setFont:[UIFont fontWithName:@"DFWaWaSC-W5" size:[self sizeWithRake:1]]];
+    }
 
     AppDelegate* app = [AppDelegate shareAppDelegate];
     if ([self.rakeInfo.userId isEqualToString:app.userInfo.userId])
