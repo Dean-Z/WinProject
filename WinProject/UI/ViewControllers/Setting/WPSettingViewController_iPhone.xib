@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -83,35 +83,11 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         </view>
                         <view contentMode="scaleToFill" id="P3I-BP-VcF">
-                            <rect key="frame" x="8" y="140" width="305" height="140"/>
+                            <rect key="frame" x="8" y="138" width="305" height="103"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="IO5-ul-RB5">
-                                    <rect key="frame" x="12" y="9" width="117" height="24"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="16"/>
-                                    <state key="normal" title="服务热线">
-                                        <color key="titleColor" white="0.0" alpha="0.84999999999999998" colorSpace="calibratedWhite"/>
-                                        <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="callServe:" destination="-1" eventType="touchUpInside" id="eY8-np-kIm"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sfY-3n-aKb">
-                                    <rect key="frame" x="129" y="9" width="110" height="24"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="16"/>
-                                    <state key="normal" title="400399929993">
-                                        <color key="titleColor" red="0.58823529409999997" green="0.58823529409999997" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="callServe:" destination="-1" eventType="touchUpInside" id="S1p-AW-UJW"/>
-                                    </connections>
-                                </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UwV-If-zKd">
-                                    <rect key="frame" x="12" y="112" width="117" height="24"/>
+                                    <rect key="frame" x="12" y="75" width="117" height="24"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="16"/>
                                     <state key="normal" title="广告投放热线">
@@ -123,7 +99,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="FNA-Nv-IO4">
-                                    <rect key="frame" x="129" y="112" width="121" height="24"/>
+                                    <rect key="frame" x="129" y="75" width="121" height="24"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="16"/>
                                     <state key="normal" title="02165656565">
@@ -135,7 +111,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fhx-nv-9tn">
-                                    <rect key="frame" x="12" y="42" width="247" height="24"/>
+                                    <rect key="frame" x="12" y="5" width="291" height="24"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="16"/>
                                     <state key="normal" title="检测更新">
@@ -147,7 +123,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5ra-tn-Gt2">
-                                    <rect key="frame" x="12" y="77" width="247" height="24"/>
+                                    <rect key="frame" x="12" y="40" width="292" height="24"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="16"/>
                                     <state key="normal" title="关于我们">
@@ -158,18 +134,13 @@
                                         <action selector="aboutUs:" destination="-1" eventType="touchUpInside" id="s5s-Jm-vG7"/>
                                     </connections>
                                 </button>
-                                <view contentMode="scaleToFill" id="9lp-U8-vZI">
-                                    <rect key="frame" x="5" y="35" width="298" height="1"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.87154995440000005" alpha="1" colorSpace="calibratedWhite"/>
-                                </view>
                                 <view contentMode="scaleToFill" id="auU-bi-oNQ">
-                                    <rect key="frame" x="5" y="70" width="298" height="1"/>
+                                    <rect key="frame" x="5" y="33" width="298" height="1"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.87154995440000005" alpha="1" colorSpace="calibratedWhite"/>
                                 </view>
                                 <view contentMode="scaleToFill" id="yxV-om-XZX">
-                                    <rect key="frame" x="6" y="105" width="298" height="1"/>
+                                    <rect key="frame" x="6" y="68" width="298" height="1"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.87154995440000005" alpha="1" colorSpace="calibratedWhite"/>
                                 </view>
@@ -177,7 +148,7 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3St-ea-zy4">
-                            <rect key="frame" x="56" y="312" width="208" height="44"/>
+                            <rect key="frame" x="56" y="315" width="208" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="15"/>
