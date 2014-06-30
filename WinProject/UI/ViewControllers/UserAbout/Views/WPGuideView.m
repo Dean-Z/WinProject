@@ -30,13 +30,18 @@
 {
     if (scrollView.contentOffset.x > 640.0f)
     {
-        [UIView animateWithDuration:0.3 animations:^{
-            self.originX = - 320.0f;
-        } completion:^(BOOL finished) {
-            [self removeFromSuperview];
-        }];
+        [self skip:nil];
     }
 }
 
+
+- (IBAction)skip:(id)sender
+{
+    [UIView animateWithDuration:0.3 animations:^{
+        self.originX = - 320.0f;
+    } completion:^(BOOL finished) {
+        [self removeFromSuperview];
+    }];
+}
 
 @end
