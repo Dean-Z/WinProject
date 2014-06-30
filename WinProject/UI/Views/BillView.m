@@ -19,11 +19,12 @@
     self.historyData = [@[] mutableCopy];
     [self prepareData];
     
-    self.coinsLabel.text = self.app.userInfo.coins;
+    self.coinsLabel.text = [NSString stringWithFormat:@"%@",self.app.userInfo.coins];
 }
 
 - (void)prepareData
 {
+    self.coinsLabel.text = [NSString stringWithFormat:@"%@",self.app.userInfo.coins];
     NSDictionary* parm = @{@"app":@"user",
                            @"act":@"history",
                            @"perpage":@"10",

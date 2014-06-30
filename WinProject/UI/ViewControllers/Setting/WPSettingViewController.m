@@ -38,9 +38,9 @@
     self.loadingView.layer.cornerRadius = 5.0f;
     self.loadingView.layer.masksToBounds = YES;
     
-    [[WPSyncService alloc]syncWithRoute:@{@"app":@"screen",@"act":@"index",@"phone":@"18217144855",@"page":@"1",@"type":@"1"} Block:^(id resp) {
-        DLog(@"%@",resp);
-    }];
+//    [[WPSyncService alloc]syncWithRoute:@{@"app":@"screen",@"act":@"index",@"phone":@"18217144855",@"page":@"1",@"type":@"1"} Block:^(id resp) {
+//        DLog(@"%@",resp);
+//    }];
 }
 
 - (void) makeCornerRadiusAtView:(UIView*)view

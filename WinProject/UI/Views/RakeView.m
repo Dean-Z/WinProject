@@ -76,10 +76,10 @@
 
 - (void)prepareData
 {
-    if (loadFriends && loadContry)
-    {
-        return;
-    }
+//    if (loadFriends && loadContry)
+//    {
+//        return;
+//    }
     
     __weak RakeView* rake = self;
     
