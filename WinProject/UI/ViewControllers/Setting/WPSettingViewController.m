@@ -69,7 +69,7 @@
 
 - (IBAction)callServe:(id)sender
 {
-    NSString *telUrl = [NSString stringWithFormat:@"telprompt:%@",SERVICE_PHONE_NUMBER];
+    NSString *telUrl = [NSString stringWithFormat:@"telprompt:%@",CONTENT_US];
     NSURL *url = [[NSURL alloc] initWithString:telUrl];
     [[UIApplication sharedApplication] openURL:url];
 }

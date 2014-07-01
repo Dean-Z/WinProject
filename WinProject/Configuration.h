@@ -41,8 +41,9 @@ typedef enum
 #define APP_ID          @"861905235"
 #define App_Version     @"1.0"
 
-#define SERVICE_PHONE_NUMBER @"400399929993"
-#define IAD_PHONE_NUMBER @"02165656565"
+#define SERVICE_PHONE_NUMBER    @"400399929993"
+#define IAD_PHONE_NUMBER        @"021-61318578"
+#define CONTENT_US              @""
 
 #define WXAPPKey       @"wx72899e9b506caf7f"
 #define CrittercismID  @"539c7d1c83fb796851000006"

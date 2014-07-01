@@ -64,7 +64,7 @@
     WPMarketInfo* info = [[WPMarketInfo alloc]init];
     info.cover = @"icon-invite.png";
     info.title = @"推荐好友";
-    info.desc = @"推荐好友使用【赢屏】";
+    info.desc = @"推荐好友使用【聚宝屏】";
     info.timeLimit = @"长期有效";
     info.coins = @"20";
     info.type = Market_Invite_Type;
