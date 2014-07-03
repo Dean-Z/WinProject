@@ -45,8 +45,9 @@
         SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTencentWeibo];
         
         SLComposeViewControllerCompletionHandler myBlock = ^(SLComposeViewControllerResult result){
-            if (result == SLComposeViewControllerResultCancelled)
+            if (result == SLComposeViewControllerResultDone)
             {
+                [[WPAlertView viewFromXib]showWithMessage:@"分享成功"];
             }
             [controller dismissViewControllerAnimated:YES completion:Nil];
         };
