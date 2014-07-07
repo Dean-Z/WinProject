@@ -5,19 +5,19 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>00BD95CC-E94E-4C75-AD9C-D5EEC285964F</string>
+	<string>5CF07BA9-6749-4EF2-B631-E14CAC497197</string>
 	<key>IDESourceControlProjectName</key>
 	<string>WinProject</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>0C5C0601-188F-4345-9F25-E52B48B59037</key>
+		<key>9974313F-C564-4E73-9CDA-3A31F00F2522</key>
 		<string>https://github.com/Dean-Z/WinProject.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>WinProject.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>0C5C0601-188F-4345-9F25-E52B48B59037</key>
+		<key>9974313F-C564-4E73-9CDA-3A31F00F2522</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>0C5C0601-188F-4345-9F25-E52B48B59037</string>
+	<string>9974313F-C564-4E73-9CDA-3A31F00F2522</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>0C5C0601-188F-4345-9F25-E52B48B59037</string>
+			<string>9974313F-C564-4E73-9CDA-3A31F00F2522</string>
 			<key>IDESourceControlWCCName</key>
 			<string>WinProject</string>
 		</dict>

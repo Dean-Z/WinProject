@@ -103,6 +103,7 @@
 
 - (IBAction)showRult:(id)sender
 {
+    return;
     [[WPRultView viewFromXib]showWithMessage:@"gygyguyyugyuguygyugyuguyguyuygyugyugyuguygyugyuguyguygyuguyguyguygyuguyguyguyguyguyguybiuibbjkbkjbkjbjbkjbbkjbkjbkjbkjbkjbkjvyuvyjhfyucucuycuyuyuycuycuycuyucucucuycuy" title:@"条款协议"];
 }
 
