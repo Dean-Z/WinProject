@@ -123,9 +123,16 @@
     }
     NSDictionary* parm = @{@"app":@"cash",@"act":@"do",@"email":self.accountField.text,@"name":self.nameField.text,@"coin":[NSString stringWithFormat:@"%d",_currentCoins*10]};
     
+    
+    __weak AlipayView *alipay = self;
     [[WPSyncService alloc]syncWithRoute:parm Block:^(id resp) {
         if (resp)
         {
+            WPUserInfo* userInfo = alipay.app.userInfo;
+            id data = [NSObject toJSONValue:resp];
+            id result = [data objectForKey:@"result"];
+            userInfo.coins = [result objectForKey:@"balance"];
+            
             Alert(@"兑换成功");
             [self.delegate alipayDismiss];
         }
