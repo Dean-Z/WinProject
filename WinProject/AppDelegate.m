@@ -143,11 +143,11 @@
     [item1 setFinishedSelectedImage:item1_image withFinishedUnselectedImage:item1_image];
     
     RDVTabBarItem* item2 = [[[tabBarController tabBar] items] objectAtIndex:1];
-    UIImage* item2_image = [UIImage imageNamed:@"shopping-bag"];
+    UIImage* item2_image = [UIImage imageNamed:@"market"];
     [item2 setFinishedSelectedImage:item2_image withFinishedUnselectedImage:item2_image];
     
     RDVTabBarItem* item3 = [[[tabBarController tabBar] items] objectAtIndex:2];
-    UIImage* item3_image = [UIImage imageNamed:@"market"];
+    UIImage* item3_image = [UIImage imageNamed:@"shopping-bag"];
     [item3 setFinishedSelectedImage:item3_image withFinishedUnselectedImage:item3_image];
     
     RDVTabBarItem* item4 = [[[tabBarController tabBar] items] objectAtIndex:3];

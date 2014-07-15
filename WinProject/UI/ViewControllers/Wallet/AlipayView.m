@@ -125,6 +125,7 @@
     
     
     __weak AlipayView *alipay = self;
+    self.userInteractionEnabled = NO;
     [[WPSyncService alloc]syncWithRoute:parm Block:^(id resp) {
         if (resp)
         {
@@ -132,6 +133,7 @@
             id data = [NSObject toJSONValue:resp];
             id result = [data objectForKey:@"result"];
             userInfo.coins = [result objectForKey:@"balance"];
+            alipay.userInteractionEnabled = YES;
             
             Alert(@"兑换成功");
             [self.delegate alipayDismiss];

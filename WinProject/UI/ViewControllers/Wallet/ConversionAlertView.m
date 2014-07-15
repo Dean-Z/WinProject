@@ -97,6 +97,7 @@
                            @"address":addressId};
     
     [SVProgressHUD showWithStatus:@"正在提交.."];
+    self.userInteractionEnabled = NO;
     [[WPSyncService alloc]syncWithRoute:parm Block:^(id resp) {
         if (resp)
         {
@@ -108,6 +109,7 @@
             [[WPAlertView viewFromXib] showWithMessage:@"兑换成功"];
             [SVProgressHUD dismiss];
             [alert dismiass];
+            self.userInteractionEnabled = YES;
         }
     }];
 }

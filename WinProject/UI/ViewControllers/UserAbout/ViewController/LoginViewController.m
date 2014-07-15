@@ -80,6 +80,11 @@
     }
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+}
+
 - (void)prepareResetPasswordOnly
 {
     if (password == nil)
@@ -112,11 +117,6 @@
     [nickView.nickTextField becomeFirstResponder];
 }
 
-- (void) viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    
-}
 
 - (void)keyboardDidShow
 {
