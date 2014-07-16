@@ -81,8 +81,8 @@
         if (resp)
         {
             [self next];
-            [self setUserInteractionEnabled:YES];
         }
+        [self setUserInteractionEnabled:YES];
     }];
     
 }
