@@ -232,6 +232,7 @@
         __weak WPMarketViewController* market = self;
         NSDictionary* parm = @{@"app":@"survey",@"act":@"info",@"id":cell.marketInfo.question_id};
         [SVProgressHUD showWithStatus:@"正在加载"];
+        self.view.userInteractionEnabled = NO;
         [[WPSyncService alloc]syncWithRoute:parm Block:^(id resp) {
             if (resp)
             {
@@ -245,6 +246,7 @@
                     question.questionId = cell.marketInfo.question_id;
                     question.requestResult = result;
                     [market.app.aTabBarController.navigationController pushViewController:question animated:YES];
+                    market.view.userInteractionEnabled = YES;
                     question = nil;
                 }
             }

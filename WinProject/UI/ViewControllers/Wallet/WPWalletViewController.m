@@ -173,7 +173,7 @@
     self.shareImage = image;
     
     UIActionSheet* sheet = [[UIActionSheet alloc]initWithTitle:@"分享" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"新浪微博",@"微信好友",@"微信朋友圈",@"腾讯微博", nil];
-    [sheet showInView:self.view];
+    [sheet showInView:self.app.window];
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
@@ -272,6 +272,8 @@
         [conversionView removeFromSuperview];
         conversionView = nil;
     }];
+    
+    [self resetCoin];
 }
 
 #pragma mark About AlipayView
@@ -347,6 +349,19 @@
         [conversionProductView removeFromSuperview];
         conversionProductView = nil;
     }];
+}
+
+- (void)resetCoin
+{
+    if (self.isYuan)
+    {
+        self.coinLabel.text = [NSString stringWithFormat:@"%.1f",[self.app.userInfo.coins integerValue]/10.0f];
+    }
+    else
+    {
+        self.coinLabel.text = [NSString stringWithFormat:@"%@",self.app.userInfo.coins];
+    }
+    [self dealCoinLabel];
 }
 
 @end

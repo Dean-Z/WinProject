@@ -355,6 +355,7 @@
 {
     if (self.forFindPassword)
     {
+        [self.view setUserInteractionEnabled:NO];
         [[WPSyncService alloc]syncWithRoute:@{@"app":@"index",
                                              @"act":@"forgetPwd",
                                              @"phone":phoneNumber,
@@ -366,6 +367,7 @@
                                                      ;
                                                      [self passwordBack];
                                                      self.forFindPassword = NO;
+                                                     [self.view setUserInteractionEnabled:YES];
                                                  }
                                              }];
         return;
@@ -373,6 +375,7 @@
     
     if (self.viewType == VIEW_RESET_PASSWORD)
     {
+        [self.view setUserInteractionEnabled:NO];
         [[WPSyncService alloc]syncWithRoute:@{@"app":@"user",
                                               @"act":@"pwd",
                                               @"password":[aPassword MD5]} Block:^(id resp) {
@@ -384,6 +387,7 @@
                                                       [user synchronize];
                                                   }
                                                   [self.navigationController popViewControllerAnimated:YES];
+                                                  [self.view setUserInteractionEnabled:YES];
                                               }];
         return;
     }

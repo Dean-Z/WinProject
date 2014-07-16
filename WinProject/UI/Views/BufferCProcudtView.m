@@ -84,6 +84,8 @@
     
     NSDictionary* parm = @{@"app":@"screen",@"act":@"download",@"id":productInfo.picId};
     
+    __weak BufferCProcudtView *weakSelf = self;
+    self.userInteractionEnabled = NO;
     [[WPSyncService alloc]syncWithRoute:parm Block:^(id respData)
      {
          id resp = [NSObject toJSONValue:respData];
@@ -100,9 +102,10 @@
          UIImageWriteToSavedPhotosAlbum(picImage, nil, nil,nil);
          [[WPAlertView viewFromXib]showWithMessage:@"保存成功"];
          
-         [self.delegate downloadPicdidFinish];
+         [weakSelf.delegate downloadPicdidFinish];
          
-         self.remainLabel.text = [NSString stringWithFormat:@"剩余：%d份",[self.dataInfo.remain integerValue]-1];
+         weakSelf.remainLabel.text = [NSString stringWithFormat:@"剩余：%d份",[self.dataInfo.remain integerValue]-1];
+         self.userInteractionEnabled = YES;
      }];
 }
 

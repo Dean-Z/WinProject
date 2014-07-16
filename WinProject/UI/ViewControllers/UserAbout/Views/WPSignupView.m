@@ -76,10 +76,12 @@
         [term setObject:@"codeFind" forKey:@"act"];
     }
     
+    [self setUserInteractionEnabled:NO];
     [[WPSyncService alloc]syncWithRoute:term Block:^(id resp) {
         if (resp)
         {
             [self next];
+            [self setUserInteractionEnabled:YES];
         }
     }];
     
