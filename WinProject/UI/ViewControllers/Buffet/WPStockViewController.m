@@ -52,7 +52,7 @@
     if (switchBar == nil)
     {
         switchBar = [WPSwitchBar viewFromXib];
-        [switchBar renderBarWithLeftContenct:@"切糕" RightContent:@"茶叶蛋" action:@selector(switchBarSelected) target:self];
+        [switchBar renderBarWithLeftContenct:@"小生意" RightContent:@"大买卖" action:@selector(switchBarSelected) target:self];
         [self.switchBarContainer addSubview:switchBar];
     }
 }

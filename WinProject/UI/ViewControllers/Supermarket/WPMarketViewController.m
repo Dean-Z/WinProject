@@ -27,7 +27,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = @"大超市";
+        self.title = @"有奖竞答";
     }
     return self;
 }
@@ -51,7 +51,7 @@
     if (switchBar == nil)
     {
         switchBar = [WPSwitchBar viewFromXib];
-        [switchBar renderBarWithLeftContenct:@"进货" RightContent:@"出货" action:@selector(switchBarValueChanged) target:self];
+        [switchBar renderBarWithLeftContenct:@"做任务" RightContent:@"任务仓库" action:@selector(switchBarValueChanged) target:self];
         [self.switchBarContainer addSubview:switchBar];
     }
 }

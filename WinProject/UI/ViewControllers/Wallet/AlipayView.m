@@ -75,7 +75,7 @@
         [self drawButtonsWithButton:self.coin20 isSelected:NO];
         [self drawButtonsWithButton:self.coin50 isSelected:NO];
         
-        _currentCoins = 1;
+        _currentCoins = 30;
     }
     else if (sender == self.coin10)
     {
@@ -84,7 +84,7 @@
         [self drawButtonsWithButton:self.coin20 isSelected:NO];
         [self drawButtonsWithButton:self.coin50 isSelected:NO];
         
-        _currentCoins = 10;
+        _currentCoins = 50;
     }
     else if (sender == self.coin20)
     {
@@ -93,7 +93,7 @@
         [self drawButtonsWithButton:self.coin20 isSelected:YES];
         [self drawButtonsWithButton:self.coin50 isSelected:NO];
         
-        _currentCoins = 20;
+        _currentCoins = 100;
     }
     else if (sender == self.coin50)
     {
@@ -102,7 +102,7 @@
         [self drawButtonsWithButton:self.coin20 isSelected:NO];
         [self drawButtonsWithButton:self.coin50 isSelected:YES];
         
-        _currentCoins = 50;
+        _currentCoins = 200;
     }
     
     self.needCoins.text = [NSString stringWithFormat:@"%d金币",_currentCoins*10];
