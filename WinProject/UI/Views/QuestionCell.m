@@ -26,8 +26,8 @@
     [self.titleLabel setText:[NSString stringWithFormat:@"问题%d",self.questionCount]];
     self.questionTitle.text = self.questionInfo.questionTitle;
     
-    WPOptionInfo* option = [self.questionInfo.options firstObject];
-    self.optionLabel.text = option.title;
+//    WPOptionInfo* option = [self.questionInfo.options firstObject];
+    self.optionLabel.text = @"请选择";
 }
 
 - (IBAction)showOptionsView:(id)sender

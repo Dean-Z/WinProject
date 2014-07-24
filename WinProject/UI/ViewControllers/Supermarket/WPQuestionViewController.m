@@ -79,7 +79,11 @@
         [_questionContainer showInView:self.view];
         
         WPQuestionInfo* info = [self.questionArray firstObject];
-        [self.optionResultArray addObject:[info.options firstObject]];
+        WPOptionInfo *tmp = [info.options firstObject];
+        WPOptionInfo *option = [WPOptionInfo new];
+        option.survey_problem_id = tmp.survey_problem_id;
+        option.title = @"请选择";
+        [self.optionResultArray addObject:option];
     }
 }
 
@@ -90,6 +94,15 @@
                                    @"id":self.questionId} mutableCopy];
     
     NSMutableArray* resutlArray = [@[] mutableCopy];
+    
+    for (WPOptionInfo* info in self.optionResultArray)
+    {
+        if ([info.title isEqualToString:@"请选择"])
+        {
+            [[WPAlertView viewFromXib] showWithMessage:@"请完成所有题目再提交问卷"];
+            return;
+        }
+    }
     
     for (WPOptionInfo* info in self.optionResultArray)
     {
@@ -134,7 +147,11 @@
     }
     if (!hasExite)
     {
-        [self.optionResultArray addObject:[info.options firstObject]];
+        WPOptionInfo *tmp = [info.options firstObject];
+        WPOptionInfo *option = [WPOptionInfo new];
+        option.survey_problem_id = tmp.survey_problem_id;
+        option.title = @"请选择";
+        [self.optionResultArray addObject:option];
     }
 }
 

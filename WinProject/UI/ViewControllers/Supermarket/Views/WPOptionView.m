@@ -45,20 +45,31 @@
     [self.tagImageViews removeAllObjects];
     
     NSInteger i=0;
+    CGFloat baseOrigY = 25;
     for (WPOptionInfo* info in _options)
     {
         
-        UILabel* optionTitleLabel = [[UILabel alloc]initWithFrame:CGRectMake(15, 15+35*i, 300, 30)];
+        UILabel* optionTitleLabel = [[UILabel alloc]initWithFrame:CGRectMake(15, baseOrigY, 250, 30)];
         optionTitleLabel.text = info.title;
+        optionTitleLabel.numberOfLines = 0;
         optionTitleLabel.backgroundColor = [UIColor clearColor];
         optionTitleLabel.textColor = [UIColor whiteColor];
+        CGSize size = CGSizeMake(optionTitleLabel.sizeW,CGFLOAT_MAX);
+        NSDictionary *attribute = @{NSFontAttributeName: optionTitleLabel.font};
+        CGSize retSize = [info.title boundingRectWithSize:size
+                                                        options:NSStringDrawingTruncatesLastVisibleLine |NSStringDrawingUsesLineFragmentOrigin |     NSStringDrawingUsesFontLeading
+                                                     attributes:attribute
+                                                        context:nil].size;
+        optionTitleLabel.sizeH = retSize.height;
         [self addSubview:optionTitleLabel];
+        baseOrigY += 5 + retSize.height;
         
         if (i<_options.count-1)
         {
-            UIView* line = [[UIView alloc]initWithFrame:CGRectMake(15, 15+35*i+30, 310, 1)];
+            UIView* line = [[UIView alloc]initWithFrame:CGRectMake(15, baseOrigY, 310, 1)];
             line.backgroundColor = [UIColor whiteColor];
             [self addSubview:line];
+            baseOrigY += 5;
         }
         
         UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -67,7 +78,7 @@
         button.tag = 100 + i;
         [self addSubview:button];
         
-        UIImageView* tagImageView = [[UIImageView alloc]initWithFrame:CGRectMake(290, 25+35*i, 14, 14)];
+        UIImageView* tagImageView = [[UIImageView alloc]initWithFrame:CGRectMake(290, optionTitleLabel.center.y - 3, 14, 14)];
         if (i!=0)
         {
             tagImageView.image = [UIImage imageNamed:@"icon-normal.png"];
@@ -82,7 +93,7 @@
         i++;
     }
     
-    self.sizeH = 35*i + 25;
+    self.sizeH = baseOrigY + 25;
 }
 
 - (void)optionSelected:(UIButton*)sender

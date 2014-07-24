@@ -89,6 +89,7 @@
     }
     else
     {
+        [self setUserInteractionEnabled:NO];
         [self.questionContainer setContentOffset:CGPointMake(self.questionContainer.contentOffset.x + QuestionWidth , 0) animated:YES];
     }
 }
@@ -156,6 +157,7 @@
         self.canFinish = NO;
         [self.finishButton setTitle:@"下一题" forState:UIControlStateNormal];
     }
+    [self setUserInteractionEnabled:YES];
 }
 
 - (void) setCellOptionButtonContent:(NSString*)option
