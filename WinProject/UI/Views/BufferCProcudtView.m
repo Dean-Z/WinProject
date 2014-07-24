@@ -60,6 +60,12 @@
 
 - (void) prepareInfo:(NSString*)productId
 {
+    if ([self.dataInfo.remain integerValue] == 0)
+    {
+        [[WPAlertView viewFromXib] showWithMessage:@"已售完"];
+        return;
+    }
+    
     NSDictionary* term = @{@"app":@"screen",@"act":@"info",@"id":productId};
     
     [[WPSyncService alloc]syncWithRoute:term Block:^(id resp) {
