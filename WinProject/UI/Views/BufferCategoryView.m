@@ -32,7 +32,7 @@
     [formatter setDateFormat:@"MM-dd"];
     
     self.endTimeLabel.text = [NSString stringWithFormat:@"%@",[formatter stringFromDate:endDate]];
-    self.typeLabel.text = [self.dataInfo.type isEqualToString:@"1"] ? @"切糕":@"茶叶蛋";
+    self.typeLabel.text = [self.dataInfo.type isEqualToString:@"1"] ? @"小生意":@"大买卖";
     self.brandLabel.text = self.dataInfo.brand;
 }
 
