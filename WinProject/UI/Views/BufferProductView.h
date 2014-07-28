@@ -12,6 +12,7 @@
 #import "WPQDateInfo.h"
 #import "WPProductDetailView.h"
 #import "BufferCProcudtView.h"
+#import "MarqueeLabel.h"
 
 @protocol BufferProcudtViewDelegate;
 @interface BufferProductView : WPBaseView<WPProductDetailViewDelegate>
@@ -21,6 +22,7 @@
 @property(nonatomic,weak) IBOutlet UILabel*     numberProductLabel;
 @property(nonatomic,weak) IBOutlet UIView*      priceBtnContainer;
 @property(nonatomic,weak) IBOutlet UIButton* touchButton;
+@property(nonatomic,strong) MarqueeLabel *brandLoopView;
 @property(nonatomic,assign) id<BufferProcudtViewDelegate> delegate;
 @property(nonatomic,weak) WPQBaseDateInfo* dateInfo;
 

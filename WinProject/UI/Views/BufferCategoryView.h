@@ -8,6 +8,7 @@
 
 #import "WPBaseView.h"
 #import "WPCDataInfo.h"
+#import "MarqueeLabel.h"
 
 @protocol BufferCategoryViewDelegate;
 @interface BufferCategoryView : WPBaseView
@@ -19,6 +20,7 @@
 @property(nonatomic,weak) IBOutlet UILabel* coinLabel;
 @property(nonatomic,weak) IBOutlet UILabel* endTimeLabel;
 @property(nonatomic,weak) IBOutlet UIImageView* picImageView;
+@property(nonatomic,strong) MarqueeLabel* brandLoopView;
 
 @property(nonatomic,assign) id<BufferCategoryViewDelegate> delegate;
 

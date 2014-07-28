@@ -28,6 +28,7 @@
 		CB39659719444A3200ADE846 /* WPConversionProductView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB39659619444A3200ADE846 /* WPConversionProductView.xib */; };
 		CB39659B19444B0700ADE846 /* ConversionProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB39659919444B0700ADE846 /* ConversionProductCell.m */; };
 		CB39659C19444B0700ADE846 /* ConversionProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB39659A19444B0700ADE846 /* ConversionProductCell.xib */; };
+		CB3AD22D198653290060F1E9 /* MarqueeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3AD22C198653290060F1E9 /* MarqueeLabel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CB4211D41907A5DC001AC70B /* BufferProductView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4211D31907A5DC001AC70B /* BufferProductView.m */; };
 		CB4211D61907A5EC001AC70B /* BufferProductView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB4211D51907A5EC001AC70B /* BufferProductView.xib */; };
 		CB4211D91907ADBC001AC70B /* BufferCategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4211D81907ADBC001AC70B /* BufferCategoryView.m */; };
@@ -219,6 +220,8 @@
 		CB39659819444B0700ADE846 /* ConversionProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversionProductCell.h; sourceTree = "<group>"; };
 		CB39659919444B0700ADE846 /* ConversionProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversionProductCell.m; sourceTree = "<group>"; };
 		CB39659A19444B0700ADE846 /* ConversionProductCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConversionProductCell.xib; sourceTree = "<group>"; };
+		CB3AD22B198653290060F1E9 /* MarqueeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarqueeLabel.h; sourceTree = "<group>"; };
+		CB3AD22C198653290060F1E9 /* MarqueeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarqueeLabel.m; sourceTree = "<group>"; };
 		CB4211D21907A5DC001AC70B /* BufferProductView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BufferProductView.h; sourceTree = "<group>"; };
 		CB4211D31907A5DC001AC70B /* BufferProductView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BufferProductView.m; sourceTree = "<group>"; };
 		CB4211D51907A5EC001AC70B /* BufferProductView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BufferProductView.xib; sourceTree = "<group>"; };
@@ -806,6 +809,8 @@
 		CBA0E87719012EED007119C0 /* UIview */ = {
 			isa = PBXGroup;
 			children = (
+				CB3AD22B198653290060F1E9 /* MarqueeLabel.h */,
+				CB3AD22C198653290060F1E9 /* MarqueeLabel.m */,
 				CBA0E87819012EED007119C0 /* BaseXibViewController.h */,
 				CBA0E87919012EED007119C0 /* BaseXibViewController.m */,
 				CBA0E87A19012EED007119C0 /* UIView+Utils.h */,
@@ -1266,6 +1271,7 @@
 				CBCD63181953173800C590D9 /* WPGuideView.m in Sources */,
 				CBA0E891190133D4007119C0 /* FTUtils+NSObject.m in Sources */,
 				CBB0B589193C30AC0069C360 /* QuestionnaireView.m in Sources */,
+				CB3AD22D198653290060F1E9 /* MarqueeLabel.m in Sources */,
 				CB45CC3B192106B30020D76C /* LoadData.m in Sources */,
 				CB7EDB64190D445600089DE8 /* WPSwitchBar.m in Sources */,
 				CBA0049D194ED90600730739 /* WPPullCell.m in Sources */,

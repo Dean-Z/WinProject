@@ -81,7 +81,7 @@
 
 - (IBAction)aboutUs:(id)sender
 {
-    [[WPRultView viewFromXib]showWithMessage:@"上海合源文化传媒有限公司         All Gather Culture media Co., Ltd.                                  联系方式：上海市黄浦区成都北路500号（南京西路口）峻岭大厦2203" title:@"关于我们"];
+    [[WPRultView viewFromXib]showWithMessage:@"上海合源文化传媒有限公司         All Gather Culture media Co., Ltd.                                  联系方式：上海市黄浦区成都北路500号（南京西路口）峻岭大厦2006" title:@"关于我们"];
 }
 
 - (IBAction)callForIAd:(id)sender

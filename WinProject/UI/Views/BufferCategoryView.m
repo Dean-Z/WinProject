@@ -34,6 +34,14 @@
     self.endTimeLabel.text = [NSString stringWithFormat:@"%@",[formatter stringFromDate:endDate]];
     self.typeLabel.text = [self.dataInfo.type isEqualToString:@"1"] ? @"小生意":@"大买卖";
     self.brandLabel.text = self.dataInfo.brand;
+    
+    self.brandLabel.hidden = YES;
+    self.brandLoopView = [[MarqueeLabel alloc]initWithFrame:self.brandLabel.frame rate:20.0f andFadeLength:10];
+    self.brandLoopView.font = self.brandLabel.font;
+    self.brandLoopView.textColor = self.brandLabel.textColor;
+    self.brandLoopView.text = self.dataInfo.brand;
+    self.brandLoopView.enabled = YES;
+    [self insertSubview:self.brandLoopView aboveSubview:self.brandLabel];
 }
 
 - (IBAction)bufferTouched:(id)sender

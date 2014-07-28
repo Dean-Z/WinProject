@@ -34,6 +34,16 @@
     self.endTimeLabel.text = [NSString stringWithFormat:@"有效期至: %@",[formatter stringFromDate:endDate]];
     [self.productImage setImageWithURL:[NSURL URLWithString:self.dateInfo.url] placeholderImage:[UIImage imageNamed:@"icon-qProduct-loading.png"]];
     self.numberProductLabel.text = [NSString stringWithFormat:@"%@份",self.dateInfo.remain];
+    self.numberProductLabel.hidden = YES;
+    
+    self.brandLoopView = [[MarqueeLabel alloc]initWithFrame:self.numberProductLabel.frame rate:20.0f andFadeLength:5];
+    self.brandLoopView.textAlignment = UITextAlignmentRight;
+    self.brandLoopView.font = self.numberProductLabel.font;
+    self.brandLoopView.textColor = self.numberProductLabel.textColor;
+    self.brandLoopView.text = self.numberProductLabel.text;
+    self.brandLoopView.enabled = YES;
+    [self insertSubview:self.brandLoopView aboveSubview:self.numberProductLabel];
+
 }
 
 - (IBAction)touched:(id)sender
