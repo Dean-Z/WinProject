@@ -14,11 +14,9 @@
 @interface WPOptionView : WPBaseView
 
 @property(nonatomic,strong) NSMutableArray* options;
-
 @property(nonatomic,strong) NSMutableArray* tagImageViews;
-
+@property(nonatomic,strong) IBOutlet UIScrollView *optionsContainer;
 @property(nonatomic,strong) WPOptionInfo* selectedOptionsinfo;
-
 @property(nonatomic,assign) id<WPOptionViewDelegate> delegate;
 
 @end

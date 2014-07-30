@@ -24,6 +24,8 @@
 
 @property(nonatomic,assign) id<BufferCategoryViewDelegate> delegate;
 
+- (void)loopBrand;
+
 @end
 
 @protocol BufferCategoryViewDelegate <NSObject>

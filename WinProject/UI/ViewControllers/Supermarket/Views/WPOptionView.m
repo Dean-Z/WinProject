@@ -36,7 +36,7 @@
     {
         _options = nil;
         
-        for (UIView* view in self.subviews)
+        for (UIView* view in self.optionsContainer.subviews)
         {
             [view removeFromSuperview];
         }
@@ -61,14 +61,14 @@
                                                      attributes:attribute
                                                         context:nil].size;
         optionTitleLabel.sizeH = retSize.height;
-        [self addSubview:optionTitleLabel];
+        [self.optionsContainer addSubview:optionTitleLabel];
         baseOrigY += 5 + retSize.height;
         
         if (i<_options.count-1)
         {
             UIView* line = [[UIView alloc]initWithFrame:CGRectMake(15, baseOrigY, 310, 1)];
             line.backgroundColor = [UIColor whiteColor];
-            [self addSubview:line];
+            [self.optionsContainer addSubview:line];
             baseOrigY += 5;
         }
         
@@ -76,7 +76,7 @@
         [button addTarget:self action:@selector(optionSelected:) forControlEvents:UIControlEventTouchUpInside];
         [button setFrame:optionTitleLabel.frame];
         button.tag = 100 + i;
-        [self addSubview:button];
+        [self.optionsContainer addSubview:button];
         
         UIImageView* tagImageView = [[UIImageView alloc]initWithFrame:CGRectMake(290, optionTitleLabel.center.y - 3, 14, 14)];
         if (i!=0)
@@ -87,13 +87,20 @@
         {
             tagImageView.image = [UIImage imageNamed:@"icon-selected.png"];
         }
-        [self addSubview:tagImageView];
+        [self.optionsContainer addSubview:tagImageView];
         [self.tagImageViews addObject:tagImageView];
         
         i++;
     }
     
     self.sizeH = baseOrigY + 25;
+    
+    if (self.sizeH > self.app.window.sizeH)
+    {
+        self.sizeH = self.app.window.sizeH;
+    }
+    
+    self.optionsContainer.contentSize = CGSizeMake(0, baseOrigY + 25 + 30);
 }
 
 - (void)optionSelected:(UIButton*)sender

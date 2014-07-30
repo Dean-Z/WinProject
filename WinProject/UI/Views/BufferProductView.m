@@ -37,7 +37,7 @@
     self.numberProductLabel.hidden = YES;
     
     self.brandLoopView = [[MarqueeLabel alloc]initWithFrame:self.numberProductLabel.frame rate:20.0f andFadeLength:5];
-    self.brandLoopView.textAlignment = UITextAlignmentRight;
+    self.brandLoopView.textAlignment = NSTextAlignmentCenter;
     self.brandLoopView.font = self.numberProductLabel.font;
     self.brandLoopView.textColor = self.numberProductLabel.textColor;
     self.brandLoopView.text = self.numberProductLabel.text;

@@ -49,4 +49,9 @@
     [self.delegate bufferCategoryViewTouched:self.dataInfo];
 }
 
+- (void)loopBrand
+{
+    [self.brandLoopView restartLabel];
+}
+
 @end

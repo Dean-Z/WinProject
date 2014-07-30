@@ -14,6 +14,9 @@
 {
     WPStockViewController* stock;
 }
+
+@property (nonatomic,strong) NSMutableArray *buffersArray;
+
 @end
 
 @implementation WPBuffetViewController
@@ -33,11 +36,27 @@
     
     [self.navigationController setNavigationBarHidden:YES];
     
+   self.buffersArray = [@[] mutableCopy];
+    
     [self prepareProductContainerView];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    if (self.buffersArray.count > 0)
+    {
+        for (BufferCategoryView* buffer in self.buffersArray)
+        {
+            [buffer loopBrand];
+        }
+    }
 }
 
 - (void)prepareProductContainerView
 {
+    [self.buffersArray removeAllObjects];
     NSUserDefaults* user = [NSUserDefaults standardUserDefaults];
     NSString* dataString = [user objectForKey:CORVER_DATA];
     
@@ -75,6 +94,7 @@
         buffer.originY = i/2 * (120) + 10;
         buffer.originX = i%2 * (buffer.sizeW +6) + 6;
         [self.productContainerView addSubview:buffer];
+        [self.buffersArray addObject:buffer];
         [buffer renderView];
     }
     
