@@ -10,6 +10,7 @@
 #import "WPCDataInfo.h"
 #import "UIImageView+WebCache.h"
 #import "WPProductDetailView.h"
+#import "MarqueeLabel.h"
 
 @protocol BufferProcudtViewDelegate;
 @interface BufferCProcudtView : WPBaseView<WPProductDetailViewDelegate>
@@ -20,6 +21,7 @@
 @property(nonatomic,weak) IBOutlet UILabel* endTimeLabel;
 @property(nonatomic,weak) IBOutlet UILabel* remainLabel;
 @property(nonatomic,weak) IBOutlet UIButton* touchButton;
+@property(nonatomic,strong) MarqueeLabel* brandLoopView;
 
 @property(nonatomic,weak) WPCBaseDateInfo* dataInfo;
 @property(nonatomic,assign) id<BufferProcudtViewDelegate> delegate;

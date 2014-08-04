@@ -31,7 +31,7 @@
                             <rect key="frame" x="10" y="48" width="280" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入登陆密码" minimumFontSize="17" id="X3Q-BC-ctD">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入登录密码" minimumFontSize="17" id="X3Q-BC-ctD">
                             <rect key="frame" x="20" y="48" width="270" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="textColor" red="0.28627450980000002" green="0.25490196079999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>

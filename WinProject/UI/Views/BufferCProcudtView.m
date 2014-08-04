@@ -39,6 +39,14 @@
     formatter = nil;
     
     self.remainLabel.text = [NSString stringWithFormat:@"剩余：%@份",self.dataInfo.remain];
+    
+    self.logoLabel.hidden = YES;
+    self.brandLoopView = [[MarqueeLabel alloc]initWithFrame:self.logoLabel.frame rate:20.0f andFadeLength:10];
+    self.brandLoopView.font = self.logoLabel.font;
+    self.brandLoopView.textColor = self.logoLabel.textColor;
+    self.brandLoopView.text = self.dataInfo.brand;
+    self.brandLoopView.enabled = YES;
+    [self insertSubview:self.brandLoopView aboveSubview:self.logoLabel];
 }
 
 - (IBAction)touched:(id)sender

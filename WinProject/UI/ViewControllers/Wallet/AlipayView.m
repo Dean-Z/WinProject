@@ -58,10 +58,12 @@
     if (selected)
     {
         button.layer.borderColor = [UIColor colorWithHexString:@"f18d0c"].CGColor;
+        [button setTitleColor:[UIColor colorWithHexString:@"f18d0c"] forState:UIControlStateNormal];
     }
     else
     {
         button.layer.borderColor = [UIColor colorWithHexString:@"9d9d9d"].CGColor;
+        [button setTitleColor:[UIColor colorWithHexString:@"9d9d9d"] forState:UIControlStateNormal];
     }
     button.layer.borderWidth = 2.f;
 }
