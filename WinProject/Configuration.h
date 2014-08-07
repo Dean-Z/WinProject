@@ -47,7 +47,7 @@ typedef enum
 
 #define WSinaAppKey         @"2824257247"
 #define WSinaSecret         @"9fee95fb8cd104dd516344c4e840f2b6"
-#define WSinaRedirectURI    @"http://www.kibey.com"
+#define WSinaRedirectURI    @"http://sns.whalecloud.com"
 
 #define WXAPPKey       @"wx72899e9b506caf7f"
 #define CrittercismID  @"539c7d1c83fb796851000006"
