@@ -17,6 +17,7 @@
 - (NSString*)MD5;
 
 + (BOOL)checkTel:(NSString *)str;
++ (BOOL) validateEmail:(NSString *)email;
 
 - (BOOL) contains:(NSString *) value;
 

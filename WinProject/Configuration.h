@@ -45,8 +45,13 @@ typedef enum
 #define IAD_PHONE_NUMBER        @"021-61318578"
 #define CONTENT_US              @""
 
+#define WSinaAppKey         @"3898630147"
+#define WSinaSecret         @"ad1c016cbf3c2165b5fba4faf3663fb3"
+#define WSinaRedirectURI    @"http://www.kibey.com"
+
 #define WXAPPKey       @"wx72899e9b506caf7f"
 #define CrittercismID  @"539c7d1c83fb796851000006"
 #define FlurryID       @"KBNY4SCV8NKKY989SHS6"
+
 
 #endif

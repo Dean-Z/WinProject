@@ -56,6 +56,7 @@
     
     self.currentPage = 1;
     self.countLabel.text = [NSString stringWithFormat:@"1/%d",self.questionArray.count];
+    self.questionContainer.scrollEnabled = NO;
     
     [self prepareData];
 }
@@ -89,6 +90,13 @@
     }
     else
     {
+        NSInteger index = self.questionContainer.contentOffset.x/QuestionWidth + 100;
+        QuestionCell* cell = (QuestionCell *)[self.questionContainer viewWithTag:index];
+        if ([cell.optionLabel.text isEqualToString:@"请选择"])
+        {
+            [[WPAlertView viewFromXib] showWithMessage:@"请先完成本题!"];
+            return;
+        }
         [self setUserInteractionEnabled:NO];
         [self.questionContainer setContentOffset:CGPointMake(self.questionContainer.contentOffset.x + QuestionWidth , 0) animated:YES];
     }

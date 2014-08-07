@@ -29,7 +29,6 @@ PODS:
   - TSValidatedTextField (1.0.0)
   - TTTAttributedLabel (1.9.5)
   - WeChatSDK (0.0.1)
-  - Weibo (2.4.2)
 
 DEPENDENCIES:
   - ASIHTTPRequest (~> 1.8.2)
@@ -46,7 +45,6 @@ DEPENDENCIES:
   - TSValidatedTextField (~> 1.0.0)
   - TTTAttributedLabel (~> 1.9.5)
   - WeChatSDK (~> 0.0.1)
-  - Weibo (~> 2.4.2)
 
 SPEC CHECKSUMS:
   ASIHTTPRequest: 2c8335b49410c0e2ad42829c438e74d454b77590
@@ -63,6 +61,5 @@ SPEC CHECKSUMS:
   TSValidatedTextField: 5f90b3b777f8c739a7ba7f5c452cb82171c6655f
   TTTAttributedLabel: 9f727215d63a358f92317a24c83c94c72de78e80
   WeChatSDK: e9dd2b6d48d825f26221669a3a1300fe0bef58e0
-  Weibo: 8ac9c24884290718ca62da62301165d209f7336c
 
 COCOAPODS: 0.33.1

@@ -20,4 +20,6 @@
 
 - (void)shareWithWx:(enum WXScene)scene;
 
+- (void)shareMsgWithSina:(UIImage *)image;
+
 @end

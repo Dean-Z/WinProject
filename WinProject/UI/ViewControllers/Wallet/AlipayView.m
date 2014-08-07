@@ -123,6 +123,11 @@
        [[WPAlertView viewFromXib] showWithMessage:@"请完善信息！"];
         return;
     }
+    else if (![NSString checkTel:self.accountField.text] && ![NSString validateEmail:self.accountField.text])
+    {
+        [[WPAlertView viewFromXib] showWithMessage:@"请输入正确的支付宝账号!"];
+        return;
+    }
     NSDictionary* parm = @{@"app":@"cash",@"act":@"do",@"email":self.accountField.text,@"name":self.nameField.text,@"coin":[NSString stringWithFormat:@"%d",_currentCoins*10]};
     
     

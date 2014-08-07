@@ -16,6 +16,7 @@
 #import "CCUpdataApp.h"
 #import "Crittercism.h"
 #import "Flurry.h"
+#import <ShareSDK/ShareSDK.h>
 
 @implementation AppDelegate
 
@@ -63,6 +64,8 @@
     
     [Flurry setCrashReportingEnabled:YES];
     [Flurry startSession:FlurryID];
+    
+    [ShareSDK connectSinaWeiboWithAppKey:WSinaAppKey appSecret:WSinaSecret redirectUri:WSinaRedirectURI weiboSDKCls:[WeiboSDK class]];
 }
 
 - (void)loginSucceed
