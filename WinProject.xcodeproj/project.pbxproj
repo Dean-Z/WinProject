@@ -41,6 +41,7 @@
 		CB11DDEF194B2DA4000C8CE9 /* WPQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB11DDED194B2DA4000C8CE9 /* WPQuestionViewController.xib */; };
 		CB2DAF3D1910E16600DD29C1 /* BillView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DAF3C1910E16600DD29C1 /* BillView.m */; };
 		CB2DAF3F1910E18700DD29C1 /* BillView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB2DAF3E1910E18700DD29C1 /* BillView.xib */; };
+		CB2EE28E19935ACF0062D3DC /* AGViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2EE28D19935ACF0062D3DC /* AGViewDelegate.m */; };
 		CB2FAD081902C37B00F46A0A /* WPBuffetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2FAD061902C37B00F46A0A /* WPBuffetViewController.m */; };
 		CB2FAD091902C37B00F46A0A /* WPBuffetViewController_iPhone5.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB2FAD071902C37B00F46A0A /* WPBuffetViewController_iPhone5.xib */; };
 		CB2FAD0D1902C3A800F46A0A /* WPSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2FAD0B1902C3A800F46A0A /* WPSettingViewController.m */; };
@@ -259,6 +260,8 @@
 		CB2DAF3B1910E16600DD29C1 /* BillView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BillView.h; path = ../../Views/BillView.h; sourceTree = "<group>"; };
 		CB2DAF3C1910E16600DD29C1 /* BillView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BillView.m; path = ../../Views/BillView.m; sourceTree = "<group>"; };
 		CB2DAF3E1910E18700DD29C1 /* BillView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BillView.xib; path = ../../Views/BillView.xib; sourceTree = "<group>"; };
+		CB2EE28C19935ACF0062D3DC /* AGViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGViewDelegate.h; sourceTree = "<group>"; };
+		CB2EE28D19935ACF0062D3DC /* AGViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGViewDelegate.m; sourceTree = "<group>"; };
 		CB2FAD051902C37B00F46A0A /* WPBuffetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPBuffetViewController.h; sourceTree = "<group>"; };
 		CB2FAD061902C37B00F46A0A /* WPBuffetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPBuffetViewController.m; sourceTree = "<group>"; };
 		CB2FAD071902C37B00F46A0A /* WPBuffetViewController_iPhone5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPBuffetViewController_iPhone5.xib; sourceTree = "<group>"; };
@@ -780,6 +783,8 @@
 		CB60BF63190525EB003190C7 /* NetWork */ = {
 			isa = PBXGroup;
 			children = (
+				CB2EE28C19935ACF0062D3DC /* AGViewDelegate.h */,
+				CB2EE28D19935ACF0062D3DC /* AGViewDelegate.m */,
 				CB60BF64190525FC003190C7 /* CHDNetwork.h */,
 				CB60BF65190525FC003190C7 /* CHDNetwork.m */,
 				CB6B7980191A419200610CD6 /* WPShareManager.h */,
@@ -1405,6 +1410,7 @@
 				CB827E17192BAB0400AFDBBF /* WPBaseInfo.m in Sources */,
 				CB4542B91916006700BFE852 /* BufferCProcudtView.m in Sources */,
 				CBA0E89A19013A0C007119C0 /* WPBaseView.m in Sources */,
+				CB2EE28E19935ACF0062D3DC /* AGViewDelegate.m in Sources */,
 				CBA0E8A219013AAD007119C0 /* WPSignupView.m in Sources */,
 				CB45CC2D192101510020D76C /* NSArray+JSON.m in Sources */,
 				CB39659B19444B0700ADE846 /* ConversionProductCell.m in Sources */,

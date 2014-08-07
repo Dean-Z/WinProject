@@ -45,8 +45,8 @@ typedef enum
 #define IAD_PHONE_NUMBER        @"021-61318578"
 #define CONTENT_US              @""
 
-#define WSinaAppKey         @"3898630147"
-#define WSinaSecret         @"ad1c016cbf3c2165b5fba4faf3663fb3"
+#define WSinaAppKey         @"2824257247"
+#define WSinaSecret         @"9fee95fb8cd104dd516344c4e840f2b6"
 #define WSinaRedirectURI    @"http://www.kibey.com"
 
 #define WXAPPKey       @"wx72899e9b506caf7f"
