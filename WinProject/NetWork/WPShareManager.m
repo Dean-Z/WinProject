@@ -41,15 +41,7 @@
     
     AppDelegate *app = [AppDelegate shareAppDelegate];
     
-    id<ISSShareOptions> simpleShareOptions= [ShareSDK defaultShareOptionsWithTitle:@"聚宝屏"
-                                                                   oneKeyShareList:[NSArray defaultOneKeyShareList]
-                                                                    qqButtonHidden:YES
-                                                             wxSessionButtonHidden:YES
-                                                            wxTimelineButtonHidden:YES
-                                                              showKeyboardOnAppear:NO
-                                                                 shareViewDelegate:app.viewDelegate
-                                                               friendsViewDelegate:nil
-                                                             picViewerViewDelegate:nil];
+    id<ISSShareOptions> simpleShareOptions= [ShareSDK simpleShareOptionsWithTitle:@"聚宝屏" shareViewDelegate:app.viewDelegate];
     
     [SVProgressHUD show];
     [ShareSDK showShareViewWithType:ShareTypeSinaWeibo

@@ -49,6 +49,10 @@ typedef enum
 #define WSinaSecret         @"9fee95fb8cd104dd516344c4e840f2b6"
 #define WSinaRedirectURI    @"http://sns.whalecloud.com"
 
+//#define WSinaAppKey         @"3898630147"
+//#define WSinaSecret         @"ad1c016cbf3c2165b5fba4faf3663fb3"
+//#define WSinaRedirectURI    @"http://www.kibey.com"
+
 #define WXAPPKey       @"wx72899e9b506caf7f"
 #define CrittercismID  @"539c7d1c83fb796851000006"
 #define FlurryID       @"KBNY4SCV8NKKY989SHS6"
