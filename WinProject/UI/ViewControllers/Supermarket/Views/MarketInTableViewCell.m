@@ -50,6 +50,12 @@
     {
         self.timeLabel.text = self.marketInfo.timeLimit;
     }
+    
+    if (self.marketInfo.completion)
+    {
+        [self.coinButton setBackgroundImage:[UIImage imageNamed:@"market_blue-2"] forState:UIControlStateNormal];
+        [self.coinButton setTitleShadowColor:[UIColor clearColor] forState:UIControlStateNormal];
+    }
 }
 
 @end

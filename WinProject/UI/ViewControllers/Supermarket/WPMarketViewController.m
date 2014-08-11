@@ -71,7 +71,6 @@
     [_inProductArray addObject:info];
     
     WPMarketInfo* info3 = [[WPMarketInfo alloc]init];
-    info3.cover = @"icon-information.png";
     info3.title = @"初来咋到";
     info3.desc = @"填写完整个人信息";
     info3.timeLimit = @"长期有效";
@@ -79,10 +78,14 @@
     info3.type = Market_Information_Type;
     if ([self.app.userInfo.complete isEqualToString:@"1"])
     {
-        [_outProductArray addObject:info3];
+        info3.cover = @"icon-information-2.png";
+        info3.completion = YES;
+        [_inProductArray addObject:info3];
     }
     else
     {
+        info3.completion = NO;
+        info3.cover = @"icon-information.png";
         [_inProductArray addObject:info3];
     }
 
@@ -225,6 +228,10 @@
     }
     else if (cell.marketInfo.type == Market_Information_Type)
     {
+        if (cell.marketInfo.completion)
+        {
+            return;
+        }
         [self showInformationView];
     }
     else if(cell.marketInfo.type == Market_Question_Type)

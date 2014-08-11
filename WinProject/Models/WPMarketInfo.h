@@ -26,4 +26,6 @@ typedef enum
 @property (nonatomic,strong) NSString* coins;
 @property (nonatomic,assign) MarketType type;
 
+@property (nonatomic,assign) BOOL completion;
+
 @end
