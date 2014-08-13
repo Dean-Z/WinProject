@@ -41,13 +41,15 @@ typedef enum
 #define APP_ID          @"861905235"
 #define App_Version     @"1.0"
 
+#define kUMengKey           @"53a3a4fc56240b5c8407ccd7"
+
 #define SERVICE_PHONE_NUMBER    @"400399929993"
 #define IAD_PHONE_NUMBER        @"021-61318578"
 #define CONTENT_US              @""
 
 #define WSinaAppKey         @"2824257247"
 #define WSinaSecret         @"9fee95fb8cd104dd516344c4e840f2b6"
-#define WSinaRedirectURI    @"http://sns.whalecloud.com"
+#define WSinaRedirectURI    @"http://jbp.allgather.net"
 
 //#define WSinaAppKey         @"3898630147"
 //#define WSinaSecret         @"ad1c016cbf3c2165b5fba4faf3663fb3"

@@ -28,6 +28,7 @@ PODS:
   - SVProgressHUD (1.0)
   - TSValidatedTextField (1.0.0)
   - TTTAttributedLabel (1.9.5)
+  - UMengSocial (4.0)
   - WeChatSDK (0.0.1)
 
 DEPENDENCIES:
@@ -44,6 +45,7 @@ DEPENDENCIES:
   - SVProgressHUD (~> 1.0)
   - TSValidatedTextField (~> 1.0.0)
   - TTTAttributedLabel (~> 1.9.5)
+  - UMengSocial
   - WeChatSDK (~> 0.0.1)
 
 SPEC CHECKSUMS:
@@ -60,6 +62,7 @@ SPEC CHECKSUMS:
   SVProgressHUD: 5034c6e22b8c2ca3e09402e48d41ed0340aa1c50
   TSValidatedTextField: 5f90b3b777f8c739a7ba7f5c452cb82171c6655f
   TTTAttributedLabel: 9f727215d63a358f92317a24c83c94c72de78e80
+  UMengSocial: 981fc7f4c24546d20d01430ff551e3e7c5d46eb9
   WeChatSDK: e9dd2b6d48d825f26221669a3a1300fe0bef58e0
 
 COCOAPODS: 0.33.1

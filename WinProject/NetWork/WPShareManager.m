@@ -8,23 +8,34 @@
 
 #import "WPShareManager.h"
 #import <ShareSDK/ShareSDK.h>
+#import "UMSocial.h"
 
 #define Msg @"动漫壁纸免费下，商家互动赚外快。有看有赚! http://jbp.allgather.net"
 
 @implementation WPShareManager
 
--(void)shareWithSina:(UIImage*)image message:(NSString*)message
+-(BOOL)shareWithSina:(UIImage*)image message:(NSString*)message
 {
     WBSendMessageToWeiboRequest *request = [WBSendMessageToWeiboRequest requestWithMessage:[self messageToShareWithSina:image message:message]];
     
     if ([WeiboSDK isWeiboAppInstalled])
     {
         [WeiboSDK sendRequest:request];
+        return YES;
     }
     else
     {
-        [[WPAlertView viewFromXib]showWithMessage:@"未安装新浪微博客户端!"];
+        return NO;
     }
+}
+
+- (void)shareSinaWithUM:(UIViewController *)viewController image:(UIImage *)image
+{
+    [[UMSocialDataService defaultDataService]  postSNSWithTypes:@[UMShareToSina] content:Msg image:image location:nil urlResource:nil presentedController:viewController completion:^(UMSocialResponseEntity *response){
+        if (response.responseCode == UMSResponseCodeSuccess) {
+            [SVProgressHUD showSuccessWithStatus:@"分享成功"];
+        }
+    }];
 }
 
 - (void)shareMsgWithSina:(UIImage *)image
@@ -37,7 +48,7 @@
                                  title:@"聚宝屏"
                                    url:@"http://jbp.allgather.net"
                            description:@"分享信息"
-                             mediaType:SSPublishContentMediaTypeNews];
+                             mediaType:SSPublishContentMediaTypeImage];
     
     AppDelegate *app = [AppDelegate shareAppDelegate];
     

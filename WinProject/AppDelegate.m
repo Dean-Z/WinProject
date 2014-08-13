@@ -18,6 +18,8 @@
 #import "Flurry.h"
 #import <ShareSDK/ShareSDK.h>
 #import "BPush.h"
+#import "UMSocial.h"
+#import "UMSocialSinaHandler.h"
 
 @implementation AppDelegate
 
@@ -57,6 +59,9 @@
     
     [self initAnalytics];
     
+    [UMSocialData setAppKey:kUMengKey];
+    [UMSocialSinaHandler openSSOWithRedirectURL:WSinaRedirectURI];
+    
     [BPush setupChannel:launchOptions];
     [BPush setDelegate:self];
     
@@ -75,7 +80,9 @@
     [Flurry setCrashReportingEnabled:YES];
     [Flurry startSession:FlurryID];
     
-    [ShareSDK connectSinaWeiboWithAppKey:WSinaAppKey appSecret:WSinaSecret redirectUri:WSinaRedirectURI weiboSDKCls:[WeiboSDK class]];
+    [ShareSDK connectSinaWeiboWithAppKey:WSinaAppKey
+                               appSecret:WSinaSecret
+                             redirectUri:WSinaRedirectURI];
 }
 
 - (void)loginSucceed

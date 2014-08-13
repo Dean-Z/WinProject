@@ -181,7 +181,12 @@
     WPShareManager* share = [[WPShareManager alloc]init];
     switch (buttonIndex) {
         case 0:
-            [share shareMsgWithSina:self.shareImage];
+        {
+            if (![share shareWithSina:self.shareImage message:nil])
+            {
+                [share shareSinaWithUM:self image:self.shareImage];
+            }
+        }
             break;
         case 1:
             [share shareWithWx:WXSceneSession];

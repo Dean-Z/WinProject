@@ -14,12 +14,14 @@
 
 @interface WPShareManager : NSObject
 
--(void)shareWithSina:(UIImage*)image message:(NSString*)message;
+-(BOOL)shareWithSina:(UIImage*)image message:(NSString*)message;
 
 - (void)shareWithTCWeiBo:(UIViewController*)viewController image:(UIImage*)image;
 
 - (void)shareWithWx:(enum WXScene)scene;
 
 - (void)shareMsgWithSina:(UIImage *)image;
+
+- (void)shareSinaWithUM:(UIViewController *)viewController image:(UIImage *)image;
 
 @end

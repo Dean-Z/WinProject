@@ -198,6 +198,14 @@
 		CBDD252F18FF8CCA009043FE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDD251718FF8CCA009043FE /* UIKit.framework */; };
 		CBDD253718FF8CCA009043FE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CBDD253518FF8CCA009043FE /* InfoPlist.strings */; };
 		CBDD253918FF8CCA009043FE /* WinProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDD253818FF8CCA009043FE /* WinProjectTests.m */; };
+		CBE84341199B42CD0097CC8F /* libSocialRenren.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE84330199B42CD0097CC8F /* libSocialRenren.a */; };
+		CBE84342199B42CD0097CC8F /* RennSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE84331199B42CD0097CC8F /* RennSDK.framework */; };
+		CBE84343199B42CD0097CC8F /* libSocialSina.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE84334199B42CD0097CC8F /* libSocialSina.a */; };
+		CBE84344199B42CD0097CC8F /* libSocialQQ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE84337199B42CD0097CC8F /* libSocialQQ.a */; };
+		CBE84345199B42CD0097CC8F /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE84338199B42CD0097CC8F /* TencentOpenAPI.framework */; };
+		CBE84346199B42CD0097CC8F /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CBE84339199B42CD0097CC8F /* TencentOpenApi_IOS_Bundle.bundle */; };
+		CBE84347199B42CD0097CC8F /* libSocialWechat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE8433C199B42CD0097CC8F /* libSocialWechat.a */; };
+		CBE84348199B42CD0097CC8F /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE8433D199B42CD0097CC8F /* libWeChatSDK.a */; };
 		CBF4AFB9194059E00028588E /* WPConversionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF4AFB8194059E00028588E /* WPConversionView.m */; };
 		CBF4AFBB19405A0E0028588E /* WPConversionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBF4AFBA19405A0E0028588E /* WPConversionView.xib */; };
 		CBF4AFBE19405C820028588E /* WPConversionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF4AFBD19405C820028588E /* WPConversionInfo.m */; };
@@ -511,6 +519,20 @@
 		CBDD253418FF8CCA009043FE /* WinProjectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WinProjectTests-Info.plist"; sourceTree = "<group>"; };
 		CBDD253618FF8CCA009043FE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CBDD253818FF8CCA009043FE /* WinProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WinProjectTests.m; sourceTree = "<group>"; };
+		CBE84330199B42CD0097CC8F /* libSocialRenren.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialRenren.a; sourceTree = "<group>"; };
+		CBE84331199B42CD0097CC8F /* RennSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RennSDK.framework; sourceTree = "<group>"; };
+		CBE84332199B42CD0097CC8F /* UMSocialRenrenHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialRenrenHandler.h; sourceTree = "<group>"; };
+		CBE84334199B42CD0097CC8F /* libSocialSina.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialSina.a; sourceTree = "<group>"; };
+		CBE84335199B42CD0097CC8F /* UMSocialSinaHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialSinaHandler.h; sourceTree = "<group>"; };
+		CBE84337199B42CD0097CC8F /* libSocialQQ.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialQQ.a; sourceTree = "<group>"; };
+		CBE84338199B42CD0097CC8F /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
+		CBE84339199B42CD0097CC8F /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
+		CBE8433A199B42CD0097CC8F /* UMSocialQQHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialQQHandler.h; sourceTree = "<group>"; };
+		CBE8433C199B42CD0097CC8F /* libSocialWechat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialWechat.a; sourceTree = "<group>"; };
+		CBE8433D199B42CD0097CC8F /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		CBE8433E199B42CD0097CC8F /* UMSocialWechatHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialWechatHandler.h; sourceTree = "<group>"; };
+		CBE8433F199B42CD0097CC8F /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		CBE84340199B42CD0097CC8F /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		CBF4AFB7194059E00028588E /* WPConversionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPConversionView.h; sourceTree = "<group>"; };
 		CBF4AFB8194059E00028588E /* WPConversionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPConversionView.m; sourceTree = "<group>"; };
 		CBF4AFBA19405A0E0028588E /* WPConversionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPConversionView.xib; sourceTree = "<group>"; };
@@ -534,9 +556,12 @@
 				CB10DC7D1992342C00473758 /* libstdc++.dylib in Frameworks */,
 				CB10DC7B199233F100473758 /* libsqlite3.0.dylib in Frameworks */,
 				CBABE33219495A240099B13F /* AddressBook.framework in Frameworks */,
+				CBE84342199B42CD0097CC8F /* RennSDK.framework in Frameworks */,
 				CB924BF519094578000389CB /* MessageUI.framework in Frameworks */,
 				CB10DC711992336C00473758 /* libWeChatSDK.a in Frameworks */,
 				CB10DC661992336B00473758 /* WeChatConnection.framework in Frameworks */,
+				CBE84341199B42CD0097CC8F /* libSocialRenren.a in Frameworks */,
+				CBE84347199B42CD0097CC8F /* libSocialWechat.a in Frameworks */,
 				CBDD251618FF8CCA009043FE /* CoreGraphics.framework in Frameworks */,
 				CB10DC791992336C00473758 /* ShareSDKShareActionSheet.framework in Frameworks */,
 				CBDD251818FF8CCA009043FE /* UIKit.framework in Frameworks */,
@@ -544,6 +569,9 @@
 				CB10DC621992336B00473758 /* QQConnection.framework in Frameworks */,
 				CB10DC611992336B00473758 /* DouBanConnection.framework in Frameworks */,
 				CB10DC651992336B00473758 /* TencentWeiboConnection.framework in Frameworks */,
+				CBE84348199B42CD0097CC8F /* libWeChatSDK.a in Frameworks */,
+				CBE84345199B42CD0097CC8F /* TencentOpenAPI.framework in Frameworks */,
+				CBE84343199B42CD0097CC8F /* libSocialSina.a in Frameworks */,
 				CB10DC6A1992336C00473758 /* ShareSDKCoreService.framework in Frameworks */,
 				CB10DC741992336C00473758 /* ShareSDKFlatShareViewUI.framework in Frameworks */,
 				CBDD251418FF8CCA009043FE /* Foundation.framework in Frameworks */,
@@ -554,6 +582,7 @@
 				CB10DC781992336C00473758 /* ShareSDKiPhoneSimpleShareViewUI.framework in Frameworks */,
 				44BBC5FDA0E54FBA986976C9 /* libPods.a in Frameworks */,
 				CB10DC641992336B00473758 /* SinaWeiboConnection.framework in Frameworks */,
+				CBE84344199B42CD0097CC8F /* libSocialQQ.a in Frameworks */,
 				CB10DC721992336C00473758 /* ShareSDK.framework in Frameworks */,
 				CB10DC631992336B00473758 /* QZoneConnection.framework in Frameworks */,
 			);
@@ -948,6 +977,7 @@
 		CBA0E86C19012EBC007119C0 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				CBE8432E199B42CD0097CC8F /* UMSocial_Sdk_Extra_Frameworks */,
 				CB10DC391992336B00473758 /* ShareSDK */,
 				CB45CC35192106B30020D76C /* Upload APP */,
 				CB45CC10192101510020D76C /* Json */,
@@ -1199,6 +1229,59 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		CBE8432E199B42CD0097CC8F /* UMSocial_Sdk_Extra_Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CBE8432F199B42CD0097CC8F /* Renren */,
+				CBE84333199B42CD0097CC8F /* Sina */,
+				CBE84336199B42CD0097CC8F /* TencentOpenAPI */,
+				CBE8433B199B42CD0097CC8F /* Wechat */,
+			);
+			path = UMSocial_Sdk_Extra_Frameworks;
+			sourceTree = "<group>";
+		};
+		CBE8432F199B42CD0097CC8F /* Renren */ = {
+			isa = PBXGroup;
+			children = (
+				CBE84330199B42CD0097CC8F /* libSocialRenren.a */,
+				CBE84331199B42CD0097CC8F /* RennSDK.framework */,
+				CBE84332199B42CD0097CC8F /* UMSocialRenrenHandler.h */,
+			);
+			path = Renren;
+			sourceTree = "<group>";
+		};
+		CBE84333199B42CD0097CC8F /* Sina */ = {
+			isa = PBXGroup;
+			children = (
+				CBE84334199B42CD0097CC8F /* libSocialSina.a */,
+				CBE84335199B42CD0097CC8F /* UMSocialSinaHandler.h */,
+			);
+			path = Sina;
+			sourceTree = "<group>";
+		};
+		CBE84336199B42CD0097CC8F /* TencentOpenAPI */ = {
+			isa = PBXGroup;
+			children = (
+				CBE84337199B42CD0097CC8F /* libSocialQQ.a */,
+				CBE84338199B42CD0097CC8F /* TencentOpenAPI.framework */,
+				CBE84339199B42CD0097CC8F /* TencentOpenApi_IOS_Bundle.bundle */,
+				CBE8433A199B42CD0097CC8F /* UMSocialQQHandler.h */,
+			);
+			path = TencentOpenAPI;
+			sourceTree = "<group>";
+		};
+		CBE8433B199B42CD0097CC8F /* Wechat */ = {
+			isa = PBXGroup;
+			children = (
+				CBE8433C199B42CD0097CC8F /* libSocialWechat.a */,
+				CBE8433D199B42CD0097CC8F /* libWeChatSDK.a */,
+				CBE8433E199B42CD0097CC8F /* UMSocialWechatHandler.h */,
+				CBE8433F199B42CD0097CC8F /* WXApi.h */,
+				CBE84340199B42CD0097CC8F /* WXApiObject.h */,
+			);
+			path = Wechat;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1298,6 +1381,7 @@
 				CB4542C0191603B200BFE852 /* WPCProductButton.xib in Resources */,
 				CB4211D61907A5EC001AC70B /* BufferProductView.xib in Resources */,
 				CB4542D01918E04B00BFE852 /* WPMarketViewController_iPhone.xib in Resources */,
+				CBE84346199B42CD0097CC8F /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				CB5FD99C193E109C000BC33F /* RakeFriendCell.xib in Resources */,
 				CBD9626E19336A7D00825CE7 /* WPPullView_iPhone5.xib in Resources */,
 				CBDD252618FF8CCA009043FE /* Images.xcassets in Resources */,
@@ -1589,7 +1673,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "82EDE1A4-DAF5-4DF5-8E16-AB9FB04C93DB";
+				PROVISIONING_PROFILE = "cdb22720-8a37-4744-a0bc-8389aeb164a2";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1627,7 +1711,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PROVISIONING_PROFILE = "82EDE1A4-DAF5-4DF5-8E16-AB9FB04C93DB";
+				PROVISIONING_PROFILE = "5d7f6fd8-3837-4961-8a6c-ade8613fc5de";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1652,6 +1736,8 @@
 					"$(PROJECT_DIR)/WinProject/Library/ShareSDK/Extend/QQConnectSDK",
 					"$(PROJECT_DIR)/WinProject/Library/ShareSDK",
 					"$(PROJECT_DIR)/WinProject/Library/ShareSDK/UI",
+					"$(PROJECT_DIR)/WinProject/Library/UMSocial_Sdk_Extra_Frameworks/Renren",
+					"$(PROJECT_DIR)/WinProject/Library/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WinProject/WinProject-Prefix.pch";
@@ -1662,9 +1748,13 @@
 					"$(PROJECT_DIR)/WinProject/Library/ShareSDK/Extend/SinaWeiboSDK",
 					"$(PROJECT_DIR)/WinProject/Library/ShareSDK/Extend/TencentWeiboSDK",
 					"$(PROJECT_DIR)/WinProject/Library/ShareSDK/Extend/WeChatSDK",
+					"$(PROJECT_DIR)/WinProject/Library/UMSocial_Sdk_Extra_Frameworks/Sina",
+					"$(PROJECT_DIR)/WinProject/Library/UMSocial_Sdk_Extra_Frameworks/Renren",
+					"$(PROJECT_DIR)/WinProject/Library/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
+					"$(PROJECT_DIR)/WinProject/Library/UMSocial_Sdk_Extra_Frameworks/Wechat",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "82EDE1A4-DAF5-4DF5-8E16-AB9FB04C93DB";
+				PROVISIONING_PROFILE = "cdb22720-8a37-4744-a0bc-8389aeb164a2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1688,6 +1778,8 @@
 					"$(PROJECT_DIR)/WinProject/Library/ShareSDK/Extend/QQConnectSDK",
 					"$(PROJECT_DIR)/WinProject/Library/ShareSDK",
 					"$(PROJECT_DIR)/WinProject/Library/ShareSDK/UI",
+					"$(PROJECT_DIR)/WinProject/Library/UMSocial_Sdk_Extra_Frameworks/Renren",
+					"$(PROJECT_DIR)/WinProject/Library/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WinProject/WinProject-Prefix.pch";
@@ -1698,9 +1790,13 @@
 					"$(PROJECT_DIR)/WinProject/Library/ShareSDK/Extend/SinaWeiboSDK",
 					"$(PROJECT_DIR)/WinProject/Library/ShareSDK/Extend/TencentWeiboSDK",
 					"$(PROJECT_DIR)/WinProject/Library/ShareSDK/Extend/WeChatSDK",
+					"$(PROJECT_DIR)/WinProject/Library/UMSocial_Sdk_Extra_Frameworks/Sina",
+					"$(PROJECT_DIR)/WinProject/Library/UMSocial_Sdk_Extra_Frameworks/Renren",
+					"$(PROJECT_DIR)/WinProject/Library/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
+					"$(PROJECT_DIR)/WinProject/Library/UMSocial_Sdk_Extra_Frameworks/Wechat",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "82EDE1A4-DAF5-4DF5-8E16-AB9FB04C93DB";
+				PROVISIONING_PROFILE = "5d7f6fd8-3837-4961-8a6c-ade8613fc5de";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
