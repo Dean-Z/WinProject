@@ -7,7 +7,7 @@
 //
 
 #import "WPShareManager.h"
-#import <ShareSDK/ShareSDK.h>
+#import "WeiboSDK.h"
 #import "UMSocial.h"
 
 #define Msg @"动漫壁纸免费下，商家互动赚外快。有看有赚! http://jbp.allgather.net"
@@ -38,43 +38,6 @@
     }];
 }
 
-- (void)shareMsgWithSina:(UIImage *)image
-{
-    id<ISSCAttachment> shareImage = [ShareSDK pngImageWithImage:image];
-    
-   id<ISSContent> publishContent = [ShareSDK content:Msg
-                        defaultContent:@"请输入分享内容"
-                                 image:shareImage
-                                 title:@"聚宝屏"
-                                   url:@"http://jbp.allgather.net"
-                           description:@"分享信息"
-                             mediaType:SSPublishContentMediaTypeImage];
-    
-    AppDelegate *app = [AppDelegate shareAppDelegate];
-    
-    id<ISSShareOptions> simpleShareOptions= [ShareSDK simpleShareOptionsWithTitle:@"聚宝屏" shareViewDelegate:app.viewDelegate];
-    
-    [SVProgressHUD show];
-    [ShareSDK showShareViewWithType:ShareTypeSinaWeibo
-                          container:nil
-                            content:publishContent
-                      statusBarTips:NO
-                        authOptions:nil
-                       shareOptions:simpleShareOptions
-                             result:^(ShareType type, SSResponseState state, id<ISSPlatformShareInfo> statusInfo, id<ICMErrorInfo> error, BOOL end) {
-                                 if (state == SSResponseStateSuccess)
-                                 {
-                                     [SVProgressHUD showSuccessWithStatus:@"分享成功"];
-                                 }
-                                 else if(error && state == SSResponseStateFail)
-                                 {
-                                     DLog(@"Error : %@", [error errorDescription]);
-                                     [SVProgressHUD showErrorWithStatus:@"分享失败"];
-                                 }
-                                 [SVProgressHUD dismiss];
-                             }];
-    
-}
 
 - (WBMessageObject *)messageToShareWithSina:(UIImage*)image message:(NSString*)messages
 {

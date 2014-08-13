@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "WeiboSDK.h"
 #import <MessageUI/MessageUI.h>
 #import <Social/Social.h>
 #import "WXApi.h"

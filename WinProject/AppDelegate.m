@@ -16,9 +16,9 @@
 #import "CCUpdataApp.h"
 #import "Crittercism.h"
 #import "Flurry.h"
-#import <ShareSDK/ShareSDK.h>
 #import "BPush.h"
 #import "UMSocial.h"
+#import "WeiboSDK.h"
 #import "UMSocialSinaHandler.h"
 
 @implementation AppDelegate
@@ -30,7 +30,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    _viewDelegate = [[AGViewDelegate alloc] init];
     [WeiboSDK enableDebugMode:YES];
     [WeiboSDK registerApp:kAppKey];
     
@@ -60,6 +59,7 @@
     [self initAnalytics];
     
     [UMSocialData setAppKey:kUMengKey];
+    
     [UMSocialSinaHandler openSSOWithRedirectURL:WSinaRedirectURI];
     
     [BPush setupChannel:launchOptions];
@@ -79,10 +79,6 @@
     
     [Flurry setCrashReportingEnabled:YES];
     [Flurry startSession:FlurryID];
-    
-    [ShareSDK connectSinaWeiboWithAppKey:WSinaAppKey
-                               appSecret:WSinaSecret
-                             redirectUri:WSinaRedirectURI];
 }
 
 - (void)loginSucceed

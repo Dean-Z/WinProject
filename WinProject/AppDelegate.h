@@ -9,10 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "Reachability.h"
 #import "RDVTabBarController.h"
-#import "WeiboSDK.h"
 #import "WPUserInfo.h"
 #import "CCGetContactPerson.h"
-#import "AGViewDelegate.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate,RDVTabBarControllerDelegate>
 
@@ -28,7 +26,6 @@
 @property (nonatomic,strong) NSArray* cookies;
 @property (nonatomic,strong) NSString* phoneNumber;
 @property (nonatomic,strong) UIDevice *device_;
-@property (nonatomic,strong) AGViewDelegate *viewDelegate;
 
 +(id)shareAppDelegate;
 
