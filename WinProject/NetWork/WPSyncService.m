@@ -19,6 +19,7 @@
     
     [network createRESTfulRequest:term];
     
+    __weak WPSyncService *weakSelf = self;
     [network startAsynchronousWithProcessBlock:^(id resp)
      {
          BOOL isSuccend = NO;
@@ -32,7 +33,6 @@
                  
                  if ([message isEqualToString:@"not login!"])
                  {
-//                     [[WPAlertView viewFromXib] showWithMessage:date[@"网络链接错误，请重新登陆！"]];
                  }
                  else
                  {
@@ -71,9 +71,23 @@
              }
          }
          
+         [weakSelf postDeviceToken];
+         
      } responseBuildBlock:^id(NSString *respText) {
          return respText;
      }];
+}
+
+- (void) postDeviceToken
+{
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    NSString *token = [user objectForKey:DeviceToken];
+    NSMutableDictionary* dict = [@{@"app":@"index",@"act":@"CreatePushToken",@"push_token":token} mutableCopy];
+    [self syncWithRoute:dict Block:^(id resp) {
+        if (resp) {
+            
+        }
+    }];
 }
 
 - (void) syncWithRoute:(NSDictionary*)term Block: (void (^)(id))processBlock

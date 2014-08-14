@@ -22,6 +22,7 @@
 #define UserName                            @"UserName"
 #define UserPassword                        @"UserPassword"
 #define AppGuide                            @"AppGuide"
+#define DeviceToken                         @"deviceToken"
 
 typedef enum
 {
