@@ -12,7 +12,6 @@ PODS:
     - Reachability
   - ASIHTTPRequest/S3 (1.8.2):
     - ASIHTTPRequest/Core
-  - BaiduPushSDK (1.1.0)
   - CrittercismSDK (4.3.3)
   - FlurrySDK (5.0.0):
     - FlurrySDK/FlurrySDK
@@ -28,13 +27,11 @@ PODS:
   - SVProgressHUD (1.0)
   - TSValidatedTextField (1.0.0)
   - TTTAttributedLabel (1.9.5)
-  - UMengSocial (4.0)
   - WeChatSDK (0.0.1)
   - Weibo (2.4.2)
 
 DEPENDENCIES:
   - ASIHTTPRequest (~> 1.8.2)
-  - BaiduPushSDK
   - CrittercismSDK
   - FlurrySDK (~> 5.0.0)
   - InnerBand (~> 1.0.6)
@@ -46,13 +43,11 @@ DEPENDENCIES:
   - SVProgressHUD (~> 1.0)
   - TSValidatedTextField (~> 1.0.0)
   - TTTAttributedLabel (~> 1.9.5)
-  - UMengSocial
   - WeChatSDK (~> 0.0.1)
   - Weibo (~> 2.4.2)
 
 SPEC CHECKSUMS:
   ASIHTTPRequest: 2c8335b49410c0e2ad42829c438e74d454b77590
-  BaiduPushSDK: 90f4838d12a5b3c860e8325a939880352504f549
   CrittercismSDK: 9f19db3a1f0c16b35d8c29c69406852d184a7650
   FlurrySDK: 1fa28436e86e533e51ab1164c43d8f3b5f8ff99f
   InnerBand: 06b6d56d575405dbd84ecafb9af3c0776448b6aa
@@ -64,7 +59,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 5034c6e22b8c2ca3e09402e48d41ed0340aa1c50
   TSValidatedTextField: 5f90b3b777f8c739a7ba7f5c452cb82171c6655f
   TTTAttributedLabel: 9f727215d63a358f92317a24c83c94c72de78e80
-  UMengSocial: 981fc7f4c24546d20d01430ff551e3e7c5d46eb9
   WeChatSDK: e9dd2b6d48d825f26221669a3a1300fe0bef58e0
   Weibo: 8ac9c24884290718ca62da62301165d209f7336c
 

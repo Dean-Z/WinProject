@@ -16,7 +16,6 @@
 #import "CCUpdataApp.h"
 #import "Crittercism.h"
 #import "Flurry.h"
-#import "BPush.h"
 #import "UMSocial.h"
 #import "WeiboSDK.h"
 #import "UMSocialSinaHandler.h"
@@ -61,9 +60,6 @@
     [UMSocialData setAppKey:kUMengKey];
     
     [UMSocialSinaHandler openSSOWithRedirectURL:WSinaRedirectURI];
-    
-    [BPush setupChannel:launchOptions];
-    [BPush setDelegate:self];
     
     [application registerForRemoteNotificationTypes:
      UIRemoteNotificationTypeAlert
@@ -382,26 +378,6 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 //    [BPush registerDeviceToken:deviceToken]; // 必须
 //    
 //    [BPush bindChannel]; // 必须。可以在其它时机调用，只有在该方法返回（通过onMethod:response:回调）绑定成功时，app才能接收到Push消息。一个app绑定成功至少一次即可（如果access token变更请重新绑定）。
-}
-
-- (void) onMethod:(NSString*)method response:(NSDictionary*)data
-{
-    if ([BPushRequestMethod_Bind isEqualToString:method])
-    {
-//        NSDictionary* res = [[NSDictionary alloc] initWithDictionary:data];
-//        
-//        NSString *appid = [res valueForKey:BPushRequestAppIdKey];
-//        NSString *userid = [res valueForKey:BPushRequestUserIdKey];
-//        NSString *channelid = [res valueForKey:BPushRequestChannelIdKey];
-//        int returnCode = [[res valueForKey:BPushRequestErrorCodeKey] intValue];
-//        NSString *requestid = [res valueForKey:BPushRequestRequestIdKey];
-    }
-}
-
-- (void)application:(UIApplication *)application
-didReceiveRemoteNotification:(NSDictionary *)userInfo
-{
-    [BPush handleNotification:userInfo]; // 可选
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

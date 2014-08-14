@@ -82,12 +82,14 @@
 {
     NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
     NSString *token = [user objectForKey:DeviceToken];
-    NSMutableDictionary* dict = [@{@"app":@"index",@"act":@"CreatePushToken",@"push_token":token} mutableCopy];
-    [self syncWithRoute:dict Block:^(id resp) {
-        if (resp) {
-            
-        }
-    }];
+    if (token) {
+        NSMutableDictionary* dict = [@{@"app":@"index",@"act":@"CreatePushToken",@"push_token":token} mutableCopy];
+        [self syncWithRoute:dict Block:^(id resp) {
+            if (resp) {
+                
+            }
+        }];
+    }
 }
 
 - (void) syncWithRoute:(NSDictionary*)term Block: (void (^)(id))processBlock
