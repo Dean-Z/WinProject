@@ -22,7 +22,7 @@
 @property(nonatomic,weak) IBOutlet UILabel* remainLabel;
 @property(nonatomic,weak) IBOutlet UIButton* touchButton;
 @property(nonatomic,strong) MarqueeLabel* brandLoopView;
-
+@property(nonatomic,strong) NSTimer *downTime;
 @property(nonatomic,weak) WPCBaseDateInfo* dataInfo;
 @property(nonatomic,assign) id<BufferProcudtViewDelegate> delegate;
 @end

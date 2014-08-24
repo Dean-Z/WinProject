@@ -10,6 +10,12 @@
 #import "WPCProductButton.h"
 #import "WPProductInfo.h"
 
+@interface BufferCProcudtView ()
+
+@property(nonatomic, strong) NSDateFormatter* sFormatter;
+
+@end
+
 @implementation BufferCProcudtView
 {
     WPCProductButton* productBtn;
@@ -47,10 +53,52 @@
     self.brandLoopView.text = self.dataInfo.brand;
     self.brandLoopView.enabled = YES;
     [self insertSubview:self.brandLoopView aboveSubview:self.logoLabel];
+    
+    NSTimeInterval date = [[NSDate date] timeIntervalSince1970];
+    if (date < [self.dataInfo.start_time integerValue])
+    {
+        NSTimeInterval time = [self.dataInfo.start_time integerValue] - date;
+        _sFormatter = [[NSDateFormatter alloc]init];
+        [_sFormatter setDateFormat:@"HH:mm:ss"];
+        NSDate *end_date = [NSDate dateWithTimeIntervalSince1970:time];
+        self.endTimeLabel.text = [NSString stringWithFormat:@"离开抢还有:%@",[_sFormatter stringFromDate:end_date]];
+        self.downTime = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(downTime:) userInfo:nil repeats:YES];
+    }
+}
+
+
+- (void)downTime:(NSTimer *)timer
+{
+    NSTimeInterval date = [[NSDate date] timeIntervalSince1970];
+    if (date < [self.dataInfo.start_time integerValue])
+    {
+        NSTimeInterval time = [self.dataInfo.start_time integerValue] - date;
+        _sFormatter = [[NSDateFormatter alloc]init];
+        [_sFormatter setDateFormat:@"HH:mm:ss"];
+        NSDate *end_date = [NSDate dateWithTimeIntervalSince1970:time];
+        self.endTimeLabel.text = [NSString stringWithFormat:@"离开抢还有:%@",[_sFormatter stringFromDate:end_date]];
+    }
+    else
+    {
+        [timer invalidate];
+        timer = nil;
+        NSDateFormatter* formatter = [[NSDateFormatter alloc]init];
+        [formatter setDateFormat:@"yyyy-MM-dd"];
+        NSInteger time = [self.dataInfo.end_time integerValue];
+        NSDate *end_date = [NSDate dateWithTimeIntervalSince1970:time];
+        self.endTimeLabel.text = [NSString stringWithFormat:@"有效期至:%@",[formatter stringFromDate:end_date]];
+        formatter = nil;
+    }
 }
 
 - (IBAction)touched:(id)sender
 {
+    NSTimeInterval date = [[NSDate date] timeIntervalSince1970];
+    if (date < [self.dataInfo.start_time integerValue])
+    {
+        [[WPAlertView viewFromXib] showWithMessage:@"还未到开始时间"];
+        return;
+    }
     self.touchButton.enabled = NO;
     [self prepareInfo:self.dataInfo.picId];
 }
