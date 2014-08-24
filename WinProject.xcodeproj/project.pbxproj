@@ -37,6 +37,7 @@
 		CB4211D61907A5EC001AC70B /* BufferProductView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB4211D51907A5EC001AC70B /* BufferProductView.xib */; };
 		CB4211D91907ADBC001AC70B /* BufferCategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4211D81907ADBC001AC70B /* BufferCategoryView.m */; };
 		CB4211DB1907ADD7001AC70B /* BufferCategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB4211DA1907ADD7001AC70B /* BufferCategoryView.xib */; };
+		CB429F0E19A34FB700BC1D89 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB429F0D19A34FB700BC1D89 /* CoreTelephony.framework */; };
 		CB4542B01915ED2A00BFE852 /* WPStockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4542AE1915ED2A00BFE852 /* WPStockViewController.m */; };
 		CB4542B11915ED2A00BFE852 /* WPStockViewController_iPhone5.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB4542AF1915ED2A00BFE852 /* WPStockViewController_iPhone5.xib */; };
 		CB4542B41915F78C00BFE852 /* WPProductButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4542B31915F78C00BFE852 /* WPProductButton.m */; };
@@ -130,6 +131,8 @@
 		CBA0E8A419013ABB007119C0 /* WPSignupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBA0E8A319013ABB007119C0 /* WPSignupView.xib */; };
 		CBA65FCE195D4DF300C65464 /* WPScollImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA65FCC195D4DF300C65464 /* WPScollImageViewController.m */; };
 		CBA65FCF195D4DF300C65464 /* WPScollImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBA65FCD195D4DF300C65464 /* WPScollImageViewController.xib */; };
+		CBA9561119A9E1FF00E1A4F6 /* WPGoodsInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA9561019A9E1FF00E1A4F6 /* WPGoodsInfo.m */; };
+		CBA9561319A9EE9400E1A4F6 /* WPGoodsViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBA9561219A9EE9400E1A4F6 /* WPGoodsViewController_iPhone.xib */; };
 		CBABE33019495A130099B13F /* CCGetContactPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = CBABE32F19495A130099B13F /* CCGetContactPerson.m */; };
 		CBABE33219495A240099B13F /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBABE33119495A240099B13F /* AddressBook.framework */; };
 		CBB0B589193C30AC0069C360 /* QuestionnaireView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB0B588193C30AC0069C360 /* QuestionnaireView.m */; };
@@ -189,6 +192,8 @@
 		CBDD252F18FF8CCA009043FE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDD251718FF8CCA009043FE /* UIKit.framework */; };
 		CBDD253718FF8CCA009043FE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CBDD253518FF8CCA009043FE /* InfoPlist.strings */; };
 		CBDD253918FF8CCA009043FE /* WinProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDD253818FF8CCA009043FE /* WinProjectTests.m */; };
+		CBE6FAB619A6FCCF0030F0D7 /* WPGoodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE6FAB419A6FCCF0030F0D7 /* WPGoodsViewController.m */; };
+		CBE6FAB719A6FCCF0030F0D7 /* WPGoodsViewController_iPhone5.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBE6FAB519A6FCCF0030F0D7 /* WPGoodsViewController_iPhone5.xib */; };
 		CBF4AFB9194059E00028588E /* WPConversionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF4AFB8194059E00028588E /* WPConversionView.m */; };
 		CBF4AFBB19405A0E0028588E /* WPConversionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBF4AFBA19405A0E0028588E /* WPConversionView.xib */; };
 		CBF4AFBE19405C820028588E /* WPConversionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF4AFBD19405C820028588E /* WPConversionInfo.m */; };
@@ -253,6 +258,7 @@
 		CB4211D71907ADBC001AC70B /* BufferCategoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BufferCategoryView.h; sourceTree = "<group>"; };
 		CB4211D81907ADBC001AC70B /* BufferCategoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BufferCategoryView.m; sourceTree = "<group>"; };
 		CB4211DA1907ADD7001AC70B /* BufferCategoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BufferCategoryView.xib; sourceTree = "<group>"; };
+		CB429F0D19A34FB700BC1D89 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		CB4542AD1915ED2A00BFE852 /* WPStockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPStockViewController.h; sourceTree = "<group>"; };
 		CB4542AE1915ED2A00BFE852 /* WPStockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPStockViewController.m; sourceTree = "<group>"; };
 		CB4542AF1915ED2A00BFE852 /* WPStockViewController_iPhone5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPStockViewController_iPhone5.xib; sourceTree = "<group>"; };
@@ -410,6 +416,9 @@
 		CBA65FCB195D4DF300C65464 /* WPScollImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPScollImageViewController.h; sourceTree = "<group>"; };
 		CBA65FCC195D4DF300C65464 /* WPScollImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPScollImageViewController.m; sourceTree = "<group>"; };
 		CBA65FCD195D4DF300C65464 /* WPScollImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPScollImageViewController.xib; sourceTree = "<group>"; };
+		CBA9560F19A9E1FF00E1A4F6 /* WPGoodsInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPGoodsInfo.h; sourceTree = "<group>"; };
+		CBA9561019A9E1FF00E1A4F6 /* WPGoodsInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPGoodsInfo.m; sourceTree = "<group>"; };
+		CBA9561219A9EE9400E1A4F6 /* WPGoodsViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPGoodsViewController_iPhone.xib; sourceTree = "<group>"; };
 		CBABE32E19495A130099B13F /* CCGetContactPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCGetContactPerson.h; sourceTree = "<group>"; };
 		CBABE32F19495A130099B13F /* CCGetContactPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCGetContactPerson.m; sourceTree = "<group>"; };
 		CBABE33119495A240099B13F /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
@@ -505,6 +514,9 @@
 		CBDD253418FF8CCA009043FE /* WinProjectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WinProjectTests-Info.plist"; sourceTree = "<group>"; };
 		CBDD253618FF8CCA009043FE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CBDD253818FF8CCA009043FE /* WinProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WinProjectTests.m; sourceTree = "<group>"; };
+		CBE6FAB319A6FCCF0030F0D7 /* WPGoodsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPGoodsViewController.h; sourceTree = "<group>"; };
+		CBE6FAB419A6FCCF0030F0D7 /* WPGoodsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPGoodsViewController.m; sourceTree = "<group>"; };
+		CBE6FAB519A6FCCF0030F0D7 /* WPGoodsViewController_iPhone5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPGoodsViewController_iPhone5.xib; sourceTree = "<group>"; };
 		CBF4AFB7194059E00028588E /* WPConversionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPConversionView.h; sourceTree = "<group>"; };
 		CBF4AFB8194059E00028588E /* WPConversionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPConversionView.m; sourceTree = "<group>"; };
 		CBF4AFBA19405A0E0028588E /* WPConversionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPConversionView.xib; sourceTree = "<group>"; };
@@ -523,6 +535,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB429F0E19A34FB700BC1D89 /* CoreTelephony.framework in Frameworks */,
 				CBCC34B9199C9C6300CF6D45 /* libWeChatSDK.a in Frameworks */,
 				CBCC34B2199C9C6300CF6D45 /* libSocialRenren.a in Frameworks */,
 				CB10DC811992346400473758 /* libicucore.dylib in Frameworks */,
@@ -704,6 +717,8 @@
 				CBBBA8D7194C892F00A11015 /* WPOptionInfo.m */,
 				CBBBA8DE194E907A00A11015 /* WPHistoryInfo.h */,
 				CBBBA8DF194E907A00A11015 /* WPHistoryInfo.m */,
+				CBA9560F19A9E1FF00E1A4F6 /* WPGoodsInfo.h */,
+				CBA9561019A9E1FF00E1A4F6 /* WPGoodsInfo.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -962,6 +977,10 @@
 				CB2FAD151902C3DA00F46A0A /* WPWalletViewController.m */,
 				CB4542D11918E09A00BFE852 /* WPWalletViewController_iPhone.xib */,
 				CB2FAD161902C3DA00F46A0A /* WPWalletViewController_iPhone5.xib */,
+				CBE6FAB319A6FCCF0030F0D7 /* WPGoodsViewController.h */,
+				CBE6FAB419A6FCCF0030F0D7 /* WPGoodsViewController.m */,
+				CBA9561219A9EE9400E1A4F6 /* WPGoodsViewController_iPhone.xib */,
+				CBE6FAB519A6FCCF0030F0D7 /* WPGoodsViewController_iPhone5.xib */,
 			);
 			path = Wallet;
 			sourceTree = "<group>";
@@ -1115,6 +1134,7 @@
 		CBDD251218FF8CCA009043FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CB429F0D19A34FB700BC1D89 /* CoreTelephony.framework */,
 				CB10DC801992346400473758 /* libicucore.dylib */,
 				CB10DC7E1992343D00473758 /* libz.1.dylib */,
 				CB10DC7C1992342C00473758 /* libstdc++.dylib */,
@@ -1294,10 +1314,12 @@
 				CBCC34AE199C9C6300CF6D45 /* UMSLoginViewController.xib in Resources */,
 				CB39659719444A3200ADE846 /* WPConversionProductView.xib in Resources */,
 				CB4542BB1916007700BFE852 /* BufferCProcudtView.xib in Resources */,
+				CBA9561319A9EE9400E1A4F6 /* WPGoodsViewController_iPhone.xib in Resources */,
 				CB4542D21918E09A00BFE852 /* WPWalletViewController_iPhone.xib in Resources */,
 				CBCC34AD199C9C6300CF6D45 /* UMShareEditViewControlleriPad.xib in Resources */,
 				CB4211DB1907ADD7001AC70B /* BufferCategoryView.xib in Resources */,
 				CBCBF1FB190F48BF003439DB /* MarketInTableViewCell.xib in Resources */,
+				CBE6FAB719A6FCCF0030F0D7 /* WPGoodsViewController_iPhone5.xib in Resources */,
 				CB9589B8193F573600C94AD5 /* WPInformationView.xib in Resources */,
 				CBA0E89F19013A8E007119C0 /* WPSigninView.xib in Resources */,
 				CB2FAD131902C3C000F46A0A /* WPMarketViewController_iPhone5.xib in Resources */,
@@ -1406,6 +1428,7 @@
 				CB4542B41915F78C00BFE852 /* WPProductButton.m in Sources */,
 				CBBBA8E0194E907A00A11015 /* WPHistoryInfo.m in Sources */,
 				CB924BF819094F04000389CB /* CheckItemView.m in Sources */,
+				CBE6FAB619A6FCCF0030F0D7 /* WPGoodsViewController.m in Sources */,
 				CBA0E890190133D4007119C0 /* FTAnimationManager.m in Sources */,
 				CB39659519444A2400ADE846 /* WPConversionProductView.m in Sources */,
 				CBD9627319336EF500825CE7 /* WPProductDetailView.m in Sources */,
@@ -1428,6 +1451,7 @@
 				CBCD62F91950303700C590D9 /* WPAddressInfo.m in Sources */,
 				CBBBA8D8194C892F00A11015 /* WPOptionInfo.m in Sources */,
 				CBA0E88119012EED007119C0 /* BaseXibViewController.m in Sources */,
+				CBA9561119A9E1FF00E1A4F6 /* WPGoodsInfo.m in Sources */,
 				CB45CC32192101510020D76C /* SBJsonBase.m in Sources */,
 				CBA0E87E19012EED007119C0 /* Functions.m in Sources */,
 				CB45CC3E19210B250020D76C /* WPRegisterAlert.m in Sources */,

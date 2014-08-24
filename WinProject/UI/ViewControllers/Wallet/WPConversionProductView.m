@@ -8,6 +8,7 @@
 
 #import "WPConversionProductView.h"
 #import "ConversionProductCell.h"
+#import "WPGoodsViewController.h"
 
 @implementation WPConversionProductView
 {
@@ -100,6 +101,16 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    __block WPGoodsViewController *goodView = [[WPGoodsViewController alloc] viewControllerFromXib];
+    goodView.conversionInfo = _coinversionArray[indexPath.row];
+    goodView.view.originX = self.sizeW;
+    [self addSubview:goodView.view];
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        goodView.view.originX = 0.0f;
+    }];
+    return;
+    
     ConversionAlertView* alertView = [ConversionAlertView viewFromXib];
     alertView.conversionInfo = _coinversionArray[indexPath.row];
     alertView.delegate = self;
